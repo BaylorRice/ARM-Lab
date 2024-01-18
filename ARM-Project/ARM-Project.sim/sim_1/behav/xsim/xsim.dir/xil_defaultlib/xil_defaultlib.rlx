@@ -1,0 +1,10 @@
+0.7
+2020.2
+Oct 19 2021
+03:16:22
+C:/Users/reese/Documents/GitHub/ARM-Lab/ARM-Lab/code/0_common/definitions.vh,1705099946,verilog,,,,,,,,,,,,
+C:/Users/reese/Documents/GitHub/ARM-Lab/ARM-Lab/code/0_common/oscillator.v,1705099946,verilog,,C:/Users/reese/Documents/GitHub/ARM-Lab/ARM-Lab/code/1_fetch/register.v,C:/Users/reese/Documents/GitHub/ARM-Lab/ARM-Lab/code/0_common/definitions.vh,oscillator,,uvm,../../../../../ARM-Lab/code/0_common,,,,,
+C:/Users/reese/Documents/GitHub/ARM-Lab/ARM-Lab/code/0_common/verification_functions.sv,1705099947,systemVerilog,C:/Users/reese/Documents/GitHub/ARM-Lab/ARM-Lab/code/1_fetch/register_test.sv,C:/Users/reese/Documents/GitHub/ARM-Lab/ARM-Lab/code/1_fetch/register_test.sv,C:/Users/reese/Documents/GitHub/ARM-Lab/ARM-Lab/code/0_common/definitions.vh,verification,,uvm,../../../../../ARM-Lab/code/0_common,,,,,
+C:/Users/reese/Documents/GitHub/ARM-Lab/ARM-Lab/code/1_fetch/register.v,1705099947,verilog,,,C:/Users/reese/Documents/GitHub/ARM-Lab/ARM-Lab/code/0_common/definitions.vh,register,,uvm,../../../../../ARM-Lab/code/0_common,,,,,
+C:/Users/reese/Documents/GitHub/ARM-Lab/ARM-Lab/code/1_fetch/register_test.sv,1705099947,systemVerilog,,,C:/Users/reese/Documents/GitHub/ARM-Lab/ARM-Lab/code/0_common/verification_functions.sv,register_test,,uvm,../../../../../ARM-Lab/code/0_common,,,,,
+C:/Users/reese/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim/glbl.v,1634335545,verilog,,,,glbl,,uvm,,,,,,
