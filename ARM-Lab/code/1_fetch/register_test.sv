@@ -36,7 +36,7 @@ wire[`WORD - 1:0] q;
 reg[`WORD - 1:0] er_q;
 
 // create an instance of the oscillator module (provided) that will toggle the
-// clock signal with a cycle time of 10ns
+// clock signal with a cycle time of 10ns       
 oscillator clk_gen(clk);
 
 // create an instance of the register module called myreg
@@ -78,7 +78,7 @@ begin
     
     // set the expected result (er) to the value that you believe should 
     // be produced on the Q output at this particular point in time
-    er_q=`WORD'dX; 
+    er_q=`WORD'd0; 
     
     // call the verify function from the verification package
     // this function can be viewed in verification_functions.sv
@@ -95,7 +95,7 @@ begin
     $display("\nTest Case %0d", tc++);    
     d = `WORD'd527; 
     #`CYCLE;
-    er_q = `WORD'dX;
+    er_q = `WORD'd527;
     $display("Inputs: rst = %0d | d = %0d", rst, $signed(d)); 
     verify(ts, q_string, er_q, $bits(er_q), q, $bits(q), `S_DEC);
 
@@ -104,7 +104,7 @@ begin
     $display("\nTest Case %0d", tc++);
     d = -`WORD'd8; 
     #`CYCLE;
-    er_q = -`WORD'dX; 
+    er_q = -`WORD'd8; 
     $display("Inputs: rst = %0d | d = %0d", rst, $signed(d)); 
     verify(ts, q_string, er_q, $bits(er_q), q, $bits(q), `S_DEC);
 
@@ -113,7 +113,7 @@ begin
     $display("\nTest Case %0d", tc++);
     d = `WORD'h3456789ABCDEF012; 
     #`CYCLE;
-    er_q = `WORD'hX; 
+    er_q = `WORD'h3456789ABCDEF012; 
     $display("Inputs: rst = %0d | d = %0d", rst, $signed(d)); 
     verify(ts, q_string, er_q, $bits(er_q), q, $bits(q), `HEX);
 
@@ -122,7 +122,7 @@ begin
     $display("\nTest Case %0d", tc++);
     d = `WORD'd77; 
     #`CYCLE;
-    er_q = `WORD'dX; 
+    er_q = `WORD'd77; 
     $display("Inputs: rst = %0d | d = %0d", rst, $signed(d)); 
     verify(ts, q_string, er_q, $bits(er_q), q, $bits(q), `S_DEC);
 
@@ -131,7 +131,7 @@ begin
     $display("\nTest Case %0d", tc++);
     d = `WORD'd4; 
     #(`CYCLE/5);
-    er_q = `WORD'dX; 
+    er_q = `WORD'd77; 
     $display("Inputs: rst = %0d | d = %0d", rst, $signed(d)); 
     verify(ts, q_string, er_q, $bits(er_q), q, $bits(q), `S_DEC);
 
@@ -140,7 +140,7 @@ begin
     $display("\nTest Case %0d", tc++);
     d = `WORD'd18; 
     #(`CYCLE*4/5);
-    er_q = `WORD'dX; 
+    er_q = `WORD'd18; 
     $display("Inputs: rst = %0d | d = %0d", rst, d); 
     verify(ts, q_string, er_q, $bits(er_q), q, $bits(q), `S_DEC);
 
@@ -150,7 +150,7 @@ begin
     #3;
     rst = 1;
     #1;
-    er_q = `WORD'dX;
+    er_q = `WORD'd0;
     $display("Inputs: rst = %0d | d = %0d", rst, $signed(d)); 
     verify(ts, q_string, er_q, $bits(er_q), q, $bits(q), `S_DEC);
 
@@ -161,7 +161,7 @@ begin
     rst = 0;
     d = `WORD'd981;    
     #(`CYCLE/2);
-    er_q = `WORD'dX; 
+    er_q = `WORD'd0; 
     $display("Inputs: rst = %0d | d = %0d", rst, $signed(d)); 
     verify(ts, q_string, er_q, $bits(er_q), q, $bits(q), `S_DEC);
 
@@ -169,7 +169,7 @@ begin
 
     $display("\nTest Case %0d", tc++);
     #(`CYCLE/2);
-    er_q = `WORD'dX; 
+    er_q = `WORD'd981; 
     $display("Inputs: rst = %0d | d = %0d", rst, $signed(d)); 
     verify(ts, q_string, er_q, $bits(er_q), q, $bits(q), `S_DEC);
     
@@ -179,7 +179,7 @@ begin
     #1;
     rst=1;
     #(`CYCLE/2);
-    er_q = `WORD'dX;
+    er_q = `WORD'd0; // TODO: Or 0
     $display("Inputs: rst = %0d | d = %0d", rst, $signed(d)); 
     verify(ts, q_string, er_q, $bits(er_q), q, $bits(q), `S_DEC);
 
@@ -188,7 +188,7 @@ begin
     $display("\nTest Case %0d", tc++);
     #2;
     d = `WORD'd345;
-    er_q = `WORD'dX;
+    er_q = `WORD'd0;
     $display("Inputs: rst = %0d | d = %0d", rst, $signed(d)); 
     verify(ts, q_string, er_q, $bits(er_q), q, $bits(q), `S_DEC);
 
@@ -198,7 +198,7 @@ begin
     #2;    
     rst = 0;
     #1
-    er_q = `WORD'dX;
+    er_q = `WORD'd0;
     $display("Inputs: rst = %0d | d = %0d", rst, $signed(d)); 
     verify(ts, q_string, er_q, $bits(er_q), q, $bits(q), `S_DEC);
 
@@ -206,7 +206,7 @@ begin
     
     $display("\nTest Case %0d", tc++);
     #`CYCLE;    
-    er_q = `WORD'dX;
+    er_q = `WORD'd345;
     $display("Inputs: rst = %0d | d = %0d", rst, $signed(d)); 
     verify(ts, q_string, er_q, $bits(er_q), q, $bits(q), `S_DEC);
     
