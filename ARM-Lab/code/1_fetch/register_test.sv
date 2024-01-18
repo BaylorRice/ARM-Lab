@@ -161,7 +161,7 @@ begin
     rst = 0;
     d = `WORD'd981;    
     #(`CYCLE/2);
-    er_q = `WORD'd18; 
+    er_q = `WORD'd0; 
     $display("Inputs: rst = %0d | d = %0d", rst, $signed(d)); 
     verify(ts, q_string, er_q, $bits(er_q), q, $bits(q), `S_DEC);
 
@@ -179,7 +179,7 @@ begin
     #1;
     rst=1;
     #(`CYCLE/2);
-    er_q = `WORD'd981; // TODO: Or 0
+    er_q = `WORD'd0; // TODO: Or 0
     $display("Inputs: rst = %0d | d = %0d", rst, $signed(d)); 
     verify(ts, q_string, er_q, $bits(er_q), q, $bits(q), `S_DEC);
 
@@ -188,7 +188,7 @@ begin
     $display("\nTest Case %0d", tc++);
     #2;
     d = `WORD'd345;
-    er_q = `WORD'd981;
+    er_q = `WORD'd0;
     $display("Inputs: rst = %0d | d = %0d", rst, $signed(d)); 
     verify(ts, q_string, er_q, $bits(er_q), q, $bits(q), `S_DEC);
 
@@ -198,7 +198,7 @@ begin
     #2;    
     rst = 0;
     #1
-    er_q = `WORD'd981;
+    er_q = `WORD'd0;
     $display("Inputs: rst = %0d | d = %0d", rst, $signed(d)); 
     verify(ts, q_string, er_q, $bits(er_q), q, $bits(q), `S_DEC);
 
