@@ -1,0 +1,66 @@
+Time resolution is 1 ps
+
+******* BEGIN TEST RESULTS *******
+
+Test Case 1
+Inputs: rst = 0 | d = 0
++++ Step 1: Pass: |q| time = 10 ns | er = 0 | ar = 0 | er_bits = 64 | ar_bits = 64 +++
+
+Test Case 2
+Inputs: rst = 0 | d = 527
++++ Step 1: Pass: |q| time = 20 ns | er = 527 | ar = 527 | er_bits = 64 | ar_bits = 64 +++
+
+Test Case 3
+Inputs: rst = 0 | d = -8
++++ Step 1: Pass: |q| time = 30 ns | er = -8 | ar = -8 | er_bits = 64 | ar_bits = 64 +++
+
+Test Case 4
+Inputs: rst = 0 | d = 3771334343958392850
++++ Step 1: Pass: |q| time = 40 ns | er = 3456789abcdef012 | ar = 3456789abcdef012 | er_bits = 64 | ar_bits = 64 +++
+
+Test Case 5
+Inputs: rst = 0 | d = 77
++++ Step 1: Pass: |q| time = 50 ns | er = 77 | ar = 77 | er_bits = 64 | ar_bits = 64 +++
+
+Test Case 6
+Inputs: rst = 0 | d = 4
++++ Step 1: Pass: |q| time = 52 ns | er = 77 | ar = 77 | er_bits = 64 | ar_bits = 64 +++
+
+Test Case 7
+Inputs: rst = 0 | d = 18
++++ Step 1: Pass: |q| time = 60 ns | er = 18 | ar = 18 | er_bits = 64 | ar_bits = 64 +++
+
+Test Case 8
+Inputs: rst = 1 | d = 18
++++ Step 1: Pass: |q| time = 64 ns | er = 0 | ar = 0 | er_bits = 64 | ar_bits = 64 +++
+
+Test Case 9
+Inputs: rst = 0 | d = 981
++++ Step 1: Pass: |q| time = 74 ns | er = 0 | ar = 0 | er_bits = 64 | ar_bits = 64 +++
+
+Test Case 10
+Inputs: rst = 0 | d = 981
++++ Step 1: Pass: |q| time = 79 ns | er = 981 | ar = 981 | er_bits = 64 | ar_bits = 64 +++
+
+Test Case 11
+Inputs: rst = 1 | d = 981
++++ Step 1: Pass: |q| time = 85 ns | er = 0 | ar = 0 | er_bits = 64 | ar_bits = 64 +++
+
+Test Case 12
+Inputs: rst = 1 | d = 345
++++ Step 1: Pass: |q| time = 87 ns | er = 0 | ar = 0 | er_bits = 64 | ar_bits = 64 +++
+
+Test Case 13
+Inputs: rst = 0 | d = 345
++++ Step 1: Pass: |q| time = 90 ns | er = 0 | ar = 0 | er_bits = 64 | ar_bits = 64 +++
+
+Test Case 14
+Inputs: rst = 0 | d = 345
++++ Step 1: Pass: |q| time = 100 ns | er = 345 | ar = 345 | er_bits = 64 | ar_bits = 64 +++
+
+Pass Count = 14
+Fail Count = 0
+
+******* END TEST RESULTS *******
+
+$finish called at time : 110 ns : File "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/1_fetch/register_test.sv" Line 220

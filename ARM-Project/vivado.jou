@@ -16,3 +16,4 @@ update_compile_order -fileset sources_1
 launch_simulation
 open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/register_test_behav.wcfg
 source register_test.tcl
+close_sim

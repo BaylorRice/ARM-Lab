@@ -2,3 +2,6 @@ Running: xsim.dir/register_test_behav/xsimk.exe -simmode gui -wdb register_test_
 Design successfully loaded
 Design Loading Memory Usage: 7800 KB (Peak: 7800 KB)
 Design Loading CPU Usage: 15 ms
+Simulation completed
+Simulation Memory Usage: 9736 KB (Peak: 9736 KB)
+Simulation CPU Usage: 15 ms
