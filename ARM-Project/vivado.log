@@ -2,10 +2,10 @@
 # Vivado v2021.2 (64-bit)
 # SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
 # IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
-# Start of session at: Mon Jan 29 11:52:52 2024
-# Process ID: 13948
+# Start of session at: Mon Jan 29 12:34:25 2024
+# Process ID: 17900
 # Current directory: C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent18444 C:\Users\reese_ford1\Documents\GitHub\ARM-Lab\ARM-Project\ARM-Project.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent4704 C:\Users\reese_ford1\Documents\GitHub\ARM-Lab\ARM-Project\ARM-Project.xpr
 # Log file: C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/vivado.log
 # Journal file: C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project\vivado.jou
 # Running On: ROG-115-12, OS: Windows, CPU Frequency: 2112 MHz, CPU Physical cores: 12, Host memory: 34033 MB
@@ -26,245 +26,26 @@ Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/XilinxVitis/Vivado/2021.2/data/ip'.
-open_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:05 . Memory (MB): peak = 1536.934 ; gain = 0.000
-update_compile_order -fileset sources_1
-close [ open C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/0_common/adder.v w ]
-add_files C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/0_common/adder.v
-update_compile_order -fileset sources_1
-set_property top adder_test [current_fileset]
-update_compile_order -fileset sources_1
-set_property top adder_test [get_filesets sim_1]
-set_property top_lib xil_defaultlib [get_filesets sim_1]
 update_compile_order -fileset sources_1
 launch_simulation
 Command: launch_simulation 
-INFO: [Vivado 12-12493] Simulation top is 'adder_test'
+INFO: [Vivado 12-12493] Simulation top is 'mux_test'
 WARNING: [Vivado 12-12986] Compiled library path does not exist: ''
 INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim'
 INFO: [SIM-utils-51] Simulation object is 'sim_1'
 INFO: [SIM-utils-72] Using boost library from 'C:/XilinxVitis/Vivado/2021.2/tps/boost_1_72_0'
-INFO: [SIM-utils-54] Inspecting design source files for 'adder_test' in fileset 'sim_1'...
+INFO: [SIM-utils-54] Inspecting design source files for 'mux_test' in fileset 'sim_1'...
 INFO: [USF-XSim-97] Finding global include files...
 INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
 INFO: [USF-XSim-2] XSim::Compile design
 INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim'
-"xvlog --incr --relax -L uvm -prj adder_test_vlog.prj"
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/0_common/adder.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module adder
-ERROR: [VRFC 10-3805] use of undefined macro 'WORD' [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/0_common/adder.v:24]
-ERROR: [VRFC 10-3642] port 'a_in' must not be declared to be an array [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/0_common/adder.v:24]
-ERROR: [VRFC 10-3642] port 'b_in' must not be declared to be an array [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/0_common/adder.v:25]
-ERROR: [VRFC 10-3642] port 'add_out' must not be declared to be an array [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/0_common/adder.v:26]
-ERROR: [VRFC 10-3161] cannot assign to memory 'add_out' directly [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/0_common/adder.v:29]
-ERROR: [VRFC 10-3155] cannot access memory 'a_in' directly [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/0_common/adder.v:29]
-ERROR: [VRFC 10-845] illegal operand for operator + [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/0_common/adder.v:29]
-ERROR: [VRFC 10-2865] module 'adder' ignored due to previous errors [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/0_common/adder.v:23]
+"xvlog --incr --relax -L uvm -prj mux_test_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/0_common/mux.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux
+ERROR: [VRFC 10-2951] 'control' is not a constant [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/0_common/mux.v:12]
+ERROR: [VRFC 10-2865] module 'mux' ignored due to previous errors [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/0_common/mux.v:3]
 INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
 INFO: [USF-XSim-99] Step results log file:'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim/xvlog.log'
 ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim/xvlog.log' file for more information.
 ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
 ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
-update_compile_order -fileset sources_1
-launch_simulation
-Command: launch_simulation 
-INFO: [Vivado 12-12493] Simulation top is 'adder_test'
-WARNING: [Vivado 12-12986] Compiled library path does not exist: ''
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-72] Using boost library from 'C:/XilinxVitis/Vivado/2021.2/tps/boost_1_72_0'
-INFO: [SIM-utils-54] Inspecting design source files for 'adder_test' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim'
-"xvlog --incr --relax -L uvm -prj adder_test_vlog.prj"
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/0_common/adder.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module adder
-ERROR: [VRFC 10-3642] port 'a_in' must not be declared to be an array [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/0_common/adder.v:26]
-ERROR: [VRFC 10-3642] port 'b_in' must not be declared to be an array [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/0_common/adder.v:27]
-ERROR: [VRFC 10-3642] port 'add_out' must not be declared to be an array [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/0_common/adder.v:28]
-ERROR: [VRFC 10-3161] cannot assign to memory 'add_out' directly [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/0_common/adder.v:31]
-ERROR: [VRFC 10-3155] cannot access memory 'a_in' directly [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/0_common/adder.v:31]
-ERROR: [VRFC 10-845] illegal operand for operator + [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/0_common/adder.v:31]
-ERROR: [VRFC 10-2865] module 'adder' ignored due to previous errors [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/0_common/adder.v:25]
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [USF-XSim-99] Step results log file:'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim/xvlog.log'
-ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim/xvlog.log' file for more information.
-ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
-ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
-launch_simulation
-Command: launch_simulation 
-INFO: [Vivado 12-12493] Simulation top is 'adder_test'
-WARNING: [Vivado 12-12986] Compiled library path does not exist: ''
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-72] Using boost library from 'C:/XilinxVitis/Vivado/2021.2/tps/boost_1_72_0'
-INFO: [SIM-utils-54] Inspecting design source files for 'adder_test' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim'
-"xvlog --incr --relax -L uvm -prj adder_test_vlog.prj"
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/0_common/adder.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module adder
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/0_common/adder_test.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module adder_test
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim'
-"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot adder_test_behav xil_defaultlib.adder_test xil_defaultlib.glbl -log elaborate.log"
-Vivado Simulator v2021.2
-Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
-Running: C:/XilinxVitis/Vivado/2021.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot adder_test_behav xil_defaultlib.adder_test xil_defaultlib.glbl -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Pass Through NonSizing Optimizer
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package xil_defaultlib.verification
-Compiling module xil_defaultlib.adder
-Compiling module xil_defaultlib.adder_test
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot adder_test_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "adder_test_behav -key {Behavioral:sim_1:Functional:adder_test} -tclbatch {adder_test.tcl} -view {C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/register_test_behav.wcfg} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Time resolution is 1 ps
-open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/register_test_behav.wcfg
-WARNING: Simulation object /register_test/tc was not found in the design.
-WARNING: Simulation object /register_test/ts was not found in the design.
-WARNING: Simulation object /register_test/clk was not found in the design.
-WARNING: Simulation object /register_test/rst was not found in the design.
-WARNING: Simulation object /register_test/d was not found in the design.
-WARNING: Simulation object /register_test/er_q was not found in the design.
-WARNING: Simulation object /register_test/q was not found in the design.
-source adder_test.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 1000ns
-
-******* BEGIN TEST RESULTS *******
-
-Test Case 1
-Inputs: a = 5 | b = 10
-+++ Step 1: Pass: |sum| time = 7 ns | er = 15 | ar = 15 | er_bits = 64 | ar_bits = 64 +++
-
-Test Case 2
-Inputs: a = 280 | b = 1000
-+++ Step 1: Pass: |sum| time = 11 ns | er = 1280 | ar = 1280 | er_bits = 64 | ar_bits = 64 +++
-
-Test Case 3
-Inputs: a = 280 | b = -1000
-+++ Step 1: Pass: |sum| time = 13 ns | er = -720 | ar = -720 | er_bits = 64 | ar_bits = 64 +++
-
-Test Case 4
-Inputs: a = -280 | b = 1000
-+++ Step 1: Pass: |sum| time = 18 ns | er = 720 | ar = 720 | er_bits = 64 | ar_bits = 64 +++
-
-Test Case 5
-Inputs: a = -54321 | b = 1000
-+++ Step 1: Pass: |sum| time = 24 ns | er = -53321 | ar = -53321 | er_bits = 64 | ar_bits = 64 +++
-
-Pass Count = 5
-Fail Count = 0
-
-******* END TEST RESULTS *******
-
-$finish called at time : 24 ns : File "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/0_common/adder_test.sv" Line 105
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'adder_test_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1565.512 ; gain = 28.578
-relaunch_sim
-Command: launch_simulation -step compile -simset sim_1 -mode behavioral
-INFO: [Vivado 12-12493] Simulation top is 'adder_test'
-WARNING: [Vivado 12-12986] Compiled library path does not exist: ''
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-72] Using boost library from 'C:/XilinxVitis/Vivado/2021.2/tps/boost_1_72_0'
-INFO: [SIM-utils-54] Inspecting design source files for 'adder_test' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim'
-"xvlog --incr --relax -L uvm -prj adder_test_vlog.prj"
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
-INFO: [Vivado 12-12493] Simulation top is 'adder_test'
-WARNING: [Vivado 12-12986] Compiled library path does not exist: ''
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim'
-"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot adder_test_behav xil_defaultlib.adder_test xil_defaultlib.glbl -log elaborate.log"
-Vivado Simulator v2021.2
-Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
-Running: C:/XilinxVitis/Vivado/2021.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot adder_test_behav xil_defaultlib.adder_test xil_defaultlib.glbl -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Pass Through NonSizing Optimizer
-Completed static elaboration
-INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-Time resolution is 1 ps
-WARNING: Simulation object /adder_test/sum_string was not traceable in the design for the following reason:
-Vivado Simulator does not support tracing of System Verilog Dynamic Type object.
-
-******* BEGIN TEST RESULTS *******
-
-Test Case 1
-Inputs: a = 5 | b = 10
-+++ Step 1: Pass: |sum| time = 7 ns | er = 15 | ar = 15 | er_bits = 64 | ar_bits = 64 +++
-
-Test Case 2
-Inputs: a = 280 | b = 1000
-+++ Step 1: Pass: |sum| time = 11 ns | er = 1280 | ar = 1280 | er_bits = 64 | ar_bits = 64 +++
-
-Test Case 3
-Inputs: a = 280 | b = -1000
-+++ Step 1: Pass: |sum| time = 13 ns | er = -720 | ar = -720 | er_bits = 64 | ar_bits = 64 +++
-
-Test Case 4
-Inputs: a = -280 | b = 1000
-+++ Step 1: Pass: |sum| time = 18 ns | er = 720 | ar = 720 | er_bits = 64 | ar_bits = 64 +++
-
-Test Case 5
-Inputs: a = -54321 | b = 1000
-+++ Step 1: Pass: |sum| time = 24 ns | er = -53321 | ar = -53321 | er_bits = 64 | ar_bits = 64 +++
-
-Pass Count = 5
-Fail Count = 0
-
-******* END TEST RESULTS *******
-
-$finish called at time : 24 ns : File "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/0_common/adder_test.sv" Line 105
-save_wave_config {C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/adder_test_behav.wcfg}
-add_files -fileset sim_1 -norecurse C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/adder_test_behav.wcfg
-set_property xsim.view {C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/register_test_behav.wcfg C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/adder_test_behav.wcfg} [get_filesets sim_1]
-set_property top mux_test [current_fileset]
-update_compile_order -fileset sources_1
-set_property top mux_test [get_filesets sim_1]
-set_property top_lib xil_defaultlib [get_filesets sim_1]
-launch_simulation
-Command: launch_simulation 
-INFO: [Vivado 12-12493] Simulation top is 'mux_test'
-boost::filesystem::remove: The process cannot access the file because it is being used by another process: "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim/simulate.log"
-launch_simulation
-Command: launch_simulation 
-INFO: [Vivado 12-12493] Simulation top is 'mux_test'
-boost::filesystem::remove: The process cannot access the file because it is being used by another process: "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim/simulate.log"
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
-exit
-INFO: [Common 17-206] Exiting Vivado at Mon Jan 29 12:33:57 2024...

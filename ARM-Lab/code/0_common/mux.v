@@ -8,11 +8,13 @@ module mux#(
     output [SIZE-1:0] mux_out
 );
 
-    // TODO: Add body of mux here
-    if (control) begin
-        assign mux_out = a_in;
-    end else begin
-        assign mux_out = b_in;
+    always begin
+        // DONE: Add body of mux here
+        if (control) begin
+            mux_out = a_in;
+        end else begin
+            mux_out = b_in;
+        end
     end
 
 endmodule
