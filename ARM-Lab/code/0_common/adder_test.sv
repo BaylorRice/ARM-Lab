@@ -28,7 +28,7 @@ int ts = 1;
 string sum_string = "|sum|";
 
 
-// TODO: create an adder instance called UUT
+// DONE: create an adder instance called UUT
 // use signals a, b, and sum to connect to
 // the module ports a_in, b_in, add_out
 adder UUT(
@@ -36,50 +36,67 @@ adder UUT(
     .b_in(b),
     .add_out(sum)
 );
-    
-
-
 
 initial
 begin
     begin_test();
 
-///// TEST CASE 1 /////
+///// TEST CASE 2 /////
     $display("Test Case %0d", tc++);
 	
-	// TODO: add test details here
+	// DONE: add test details here
+	a = `WORD'd5;
+	b = `WORD'd10;
+	er_sum = `WORD'd15;
+	#7
 
-    $display("Inputs: a = %0d | b = %0d", $signed(a), $signed(b));     
-    verify(ts, sum_string, er_sum, $bits(er_sum), sum, $bits(sum), `S_DEC);
-
-///// TEST CASE 2 /////
-    $display("\nTest Case %0d", tc++);            
- 
- 	// TODO: add test details here
- 
     $display("Inputs: a = %0d | b = %0d", $signed(a), $signed(b));     
     verify(ts, sum_string, er_sum, $bits(er_sum), sum, $bits(sum), `S_DEC);
 
 ///// TEST CASE 3 /////
-    $display("\nTest Case %0d", tc++);
-
-	// TODO: add test details here
+    $display("\nTest Case %0d", tc++);            
+ 
+ 	// DONE: add test details here
+ 	a = `WORD'd280;
+ 	b = `WORD'd1000;
+ 	er_sum = `WORD'd1280;
+ 	#4
 
     $display("Inputs: a = %0d | b = %0d", $signed(a), $signed(b));     
     verify(ts, sum_string, er_sum, $bits(er_sum), sum, $bits(sum), `S_DEC);
 
 ///// TEST CASE 4 /////
-    $display("\nTest Case %0d", tc++);  
+    $display("\nTest Case %0d", tc++);
 
-	// TODO: add test details here
+	// DONE: add test details here
+	a = `WORD'd280;
+ 	b = -`WORD'd1000;
+ 	er_sum = -`WORD'd720;
+ 	#2
 
     $display("Inputs: a = %0d | b = %0d", $signed(a), $signed(b));     
     verify(ts, sum_string, er_sum, $bits(er_sum), sum, $bits(sum), `S_DEC);
 
 ///// TEST CASE 5 /////
+    $display("\nTest Case %0d", tc++);  
+
+	// DONE: add test details here
+	a = -`WORD'd280;
+ 	b = `WORD'd1000;
+ 	er_sum = `WORD'd720;
+ 	#5
+
+    $display("Inputs: a = %0d | b = %0d", $signed(a), $signed(b));     
+    verify(ts, sum_string, er_sum, $bits(er_sum), sum, $bits(sum), `S_DEC);
+
+///// TEST CASE 6 /////
     $display("\nTest Case %0d", tc++);    
 	
-	// TODO: add test details here
+	// DONE: add test details here
+	a = -`WORD'd54321;
+ 	b = `WORD'd1000;
+ 	er_sum = -`WORD'd53321;
+ 	#6
 
     $display("Inputs: a = %0d | b = %0d", $signed(a), $signed(b));     
     verify(ts, sum_string, er_sum, $bits(er_sum), sum, $bits(sum), `S_DEC);
