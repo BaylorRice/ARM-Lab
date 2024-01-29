@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="mux_test_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="mux_test" />
+            <top_module name="verification" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="70.001 ns"></ZoomEndTime>
+      <Cursor1Time time="70.000 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="145"></NameColumnWidth>
+      <ValueColumnWidth column_width="144"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="11" />
+   <wvobject fp_name="/mux_test/a_64" type="array">
+      <obj_property name="ElementShortName">a_64[63:0]</obj_property>
+      <obj_property name="ObjectShortName">a_64[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mux_test/b_64" type="array">
+      <obj_property name="ElementShortName">b_64[63:0]</obj_property>
+      <obj_property name="ObjectShortName">b_64[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mux_test/ctl" type="logic">
+      <obj_property name="ElementShortName">ctl</obj_property>
+      <obj_property name="ObjectShortName">ctl</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mux_test/out_64" type="array">
+      <obj_property name="ElementShortName">out_64[63:0]</obj_property>
+      <obj_property name="ObjectShortName">out_64[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mux_test/a_5" type="array">
+      <obj_property name="ElementShortName">a_5[4:0]</obj_property>
+      <obj_property name="ObjectShortName">a_5[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mux_test/b_5" type="array">
+      <obj_property name="ElementShortName">b_5[4:0]</obj_property>
+      <obj_property name="ObjectShortName">b_5[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mux_test/out_5" type="array">
+      <obj_property name="ElementShortName">out_5[4:0]</obj_property>
+      <obj_property name="ObjectShortName">out_5[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mux_test/er_out_64" type="array">
+      <obj_property name="ElementShortName">er_out_64[63:0]</obj_property>
+      <obj_property name="ObjectShortName">er_out_64[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mux_test/er_out_5" type="array">
+      <obj_property name="ElementShortName">er_out_5[4:0]</obj_property>
+      <obj_property name="ObjectShortName">er_out_5[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mux_test/tc" type="array">
+      <obj_property name="ElementShortName">tc[31:0]</obj_property>
+      <obj_property name="ObjectShortName">tc[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mux_test/ts" type="array">
+      <obj_property name="ElementShortName">ts[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ts[31:0]</obj_property>
+   </wvobject>
+</wave_config>
