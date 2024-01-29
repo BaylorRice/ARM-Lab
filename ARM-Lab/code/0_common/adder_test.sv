@@ -31,6 +31,13 @@ string sum_string = "|sum|";
 // TODO: create an adder instance called UUT
 // use signals a, b, and sum to connect to
 // the module ports a_in, b_in, add_out
+adder UUT(
+    .a_in(a),
+    .b_in(b),
+    .add_out(sum)
+);
+    
+
 
 
 initial
