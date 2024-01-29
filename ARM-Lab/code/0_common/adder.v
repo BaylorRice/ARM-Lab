@@ -1,4 +1,6 @@
 `timescale 1ns / 1ps
+`include "definitions.vh"
+
 //////////////////////////////////////////////////////////////////////////////////
 // Company: Baylor University
 // Engineer: Reese Ford
@@ -21,9 +23,9 @@
 
 
 module adder(
-    input a_in[`WORD - 1:0],
-    input b_in[`WORD - 1:0],
-    input add_out[`WORD - 1:0]
+    input [`WORD - 1:0] a_in,
+    input [`WORD - 1:0] b_in,
+    input [`WORD - 1:0] add_out
     );
     
 assign add_out = a_in + b_in;

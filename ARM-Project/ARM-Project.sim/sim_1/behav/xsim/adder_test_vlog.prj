@@ -1,11 +1,10 @@
 # compile verilog/system verilog design source files
 verilog xil_defaultlib  --include "../../../../../ARM-Lab/code/0_common" \
-"../../../../../ARM-Lab/code/0_common/oscillator.v" \
-"../../../../../ARM-Lab/code/1_fetch/register.v" \
+"../../../../../ARM-Lab/code/0_common/adder.v" \
 
 sv xil_defaultlib  --include "../../../../../ARM-Lab/code/0_common" \
 "../../../../../ARM-Lab/code/0_common/verification_functions.sv" \
-"../../../../../ARM-Lab/code/1_fetch/register_test.sv" \
+"../../../../../ARM-Lab/code/0_common/adder_test.sv" \
 
 # compile glbl module
 verilog xil_defaultlib "glbl.v"
