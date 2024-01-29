@@ -26,7 +26,6 @@ module adder(
     input add_out[`WORD - 1:0]
     );
     
-
-
+assign add_out = a_in + b_in;
 
 endmodule
