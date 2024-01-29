@@ -1,4 +1,0 @@
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/0_common/mux.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module mux
-ERROR: [VRFC 10-2951] 'control' is not a constant [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/0_common/mux.v:12]
-ERROR: [VRFC 10-2865] module 'mux' ignored due to previous errors [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/0_common/mux.v:3]
