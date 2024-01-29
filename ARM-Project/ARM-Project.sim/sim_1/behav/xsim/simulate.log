@@ -1,0 +1,39 @@
+Time resolution is 1 ps
+
+******* BEGIN TEST RESULTS *******
+
+
+Test Case 1
+Inputs: a_64 = 5 | b_64 = 10 | ctl = 0
++++ Step 1: Pass: |out_64| time = 1 ns | er = 5 | ar = 5 | er_bits = 64 | ar_bits = 64 +++
+
+Test Case 2
+Inputs: a_64 = 5 | b_64 = 10 | ctl = 1
++++ Step 1: Pass: |out_64| time = 11 ns | er = 10 | ar = 10 | er_bits = 64 | ar_bits = 64 +++
+
+Test Case 3
+Inputs: a_64 = 5 | b_64 = -350 | ctl = 1
++++ Step 1: Pass: |out_64| time = 21 ns | er = -350 | ar = -350 | er_bits = 64 | ar_bits = 64 +++
+
+Test Case 4
+Inputs: a_5 = 5 | b_5 = 10 | ctl = 1
++++ Step 1: Pass: |out_5| time = 31 ns | er = 10 | ar = 10 | er_bits = 5 | ar_bits = 5 +++
+
+Test Case 5
+Inputs: a_5 = 5 | b_5 = 10 | ctl = 0
++++ Step 1: Pass: |out_5| time = 41 ns | er = 5 | ar = 5 | er_bits = 5 | ar_bits = 5 +++
+
+Test Case 6
+Inputs: a_5 = 5 | b_5 = 11 | ctl = 0
++++ Step 1: Pass: |out_5| time = 51 ns | er = 5 | ar = 5 | er_bits = 5 | ar_bits = 5 +++
+
+Test Case 7
+Inputs: a_5 = 22 | b_5 = 11 | ctl = 0
++++ Step 1: Pass: |out_5| time = 61 ns | er = 22 | ar = 22 | er_bits = 5 | ar_bits = 5 +++
+
+Pass Count = 7
+Fail Count = 0
+
+******* END TEST RESULTS *******
+
+$finish called at time : 70 ns : File "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/0_common/mux_test.sv" Line 109
