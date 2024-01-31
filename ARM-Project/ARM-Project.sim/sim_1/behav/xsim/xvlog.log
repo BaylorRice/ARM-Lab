@@ -1,11 +1,11 @@
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/1_fetch/iFetch.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module iFetch
-ERROR: [VRFC 10-3805] use of undefined macro 'WORD' [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/1_fetch/iFetch.v:29]
-ERROR: [VRFC 10-3805] use of undefined macro 'INSTR_LEN' [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/1_fetch/iFetch.v:30]
-INFO: [VRFC 10-2458] undeclared symbol add_out_wire, assumed default net type wire [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/1_fetch/iFetch.v:37]
-INFO: [VRFC 10-2458] undeclared symbol mux_out_wire, assumed default net type wire [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/1_fetch/iFetch.v:39]
-INFO: [VRFC 10-2458] undeclared symbol pc_out_wire, assumed default net type wire [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/1_fetch/iFetch.v:46]
-WARNING: [VRFC 10-2938] 'add_out_wire' is already implicitly declared on line 37 [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/1_fetch/iFetch.v:63]
-WARNING: [VRFC 10-2938] 'pc_out_wire' is already implicitly declared on line 46 [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/1_fetch/iFetch.v:64]
-WARNING: [VRFC 10-2938] 'mux_out_wire' is already implicitly declared on line 39 [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/1_fetch/iFetch.v:65]
-ERROR: [VRFC 10-2865] module 'iFetch' ignored due to previous errors [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/1_fetch/iFetch.v:23]
+INFO: [VRFC 10-2458] undeclared symbol add_out_wire, assumed default net type wire [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/1_fetch/iFetch.v:38]
+INFO: [VRFC 10-2458] undeclared symbol mux_out_wire, assumed default net type wire [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/1_fetch/iFetch.v:40]
+INFO: [VRFC 10-2458] undeclared symbol pc_out_wire, assumed default net type wire [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/1_fetch/iFetch.v:47]
+WARNING: [VRFC 10-2938] 'add_out_wire' is already implicitly declared on line 38 [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/1_fetch/iFetch.v:64]
+WARNING: [VRFC 10-2938] 'pc_out_wire' is already implicitly declared on line 47 [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/1_fetch/iFetch.v:65]
+WARNING: [VRFC 10-2938] 'mux_out_wire' is already implicitly declared on line 40 [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/1_fetch/iFetch.v:66]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/1_fetch/iFetch_test.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module iFetch_test
+INFO: [VRFC 10-2458] undeclared symbol clk_plus_1, assumed default net type wire [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/1_fetch/iFetch_test.sv:23]
