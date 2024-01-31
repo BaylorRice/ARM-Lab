@@ -20,7 +20,8 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module iFetch(
+module iFetch#(
+    parameter SIZE=1024)(
     input wire clk,
     input wire clk_delayed, // Don't use yet
     input wire reset,
@@ -28,7 +29,33 @@ module iFetch(
     input wire [`WORD-1:0] branch_target,
     output reg [`INSTR_LEN-1:0] instruction,
     output reg [`WORD-1:0] cur_pc
+);
+
+    // Module Definitions
+    mux#(`WORD) MUX (
+        .a_in(branch_target),
+        .b_in( ),
+        .control(pc_src),
+        .mux_out( )
     );
-    
-    
+
+    register PC(
+        .clk(clk),
+        .reset(reset),
+        .D( ),
+        .Q( )
+    );
+
+    instr_mem#(SIZE) INS_MEM (
+        .clk(clk),
+        .pc( ),
+        .instruction(instruction)
+    );
+
+    adder ADD (
+        .a_in( ),
+        .b_in( ),
+        .add_out( )
+    );
+
 endmodule
