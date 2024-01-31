@@ -7,5 +7,5 @@
 `define US_DEC 2
 `define BINARY 3
 `define DMEMFILE  "H:/ELC3338/Spring2018/potter/ARM-Lab/testfiles/ramData.data"
-`define IMEMFILE  "H:/ELC3338/Spring2020/ARM-Lab_Development/testfiles/instrData.data"
+`define IMEMFILE  "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/testfiles/instrData.data"
 `define RMEMFILE  "H:/ELC3338/Spring2018/potter/ARM-Lab/testfiles/regData.data"

@@ -5,7 +5,7 @@ module instr_mem#(
     // DONE: Add ports for this module
     input wire clk,
     input wire [`WORD-1:0] pc,
-    output reg [`INSTR_LEN-1:0] instr
+    output reg [`INSTR_LEN-1:0] instruction
 );
 
     // DONE: create imem array here
@@ -14,7 +14,7 @@ module instr_mem#(
     // DONE: insert code here to fetch the correct
     // instruction from imem
     always @(posedge clk) begin
-        instr = imem[pc/4];
+        instruction = imem[pc/4];
     end
 
     //initialize memory from file
