@@ -6,8 +6,9 @@ module mux#(
     input [SIZE-1:0] b_in,
     input control,
     output [SIZE-1:0] mux_out
-    );
-	
-	// TODO: Add body of mux here
-    
+);
+
+    // DONE: Add body of mux here
+    assign mux_out = control ? b_in : a_in;
+
 endmodule

@@ -2,10 +2,10 @@
 # Vivado v2021.2 (64-bit)
 # SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
 # IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
-# Start of session at: Mon Jan 22 13:32:57 2024
-# Process ID: 19812
+# Start of session at: Mon Jan 29 12:56:37 2024
+# Process ID: 1832
 # Current directory: C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent21072 C:\Users\reese_ford1\Documents\GitHub\ARM-Lab\ARM-Project\ARM-Project.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent22408 C:\Users\reese_ford1\Documents\GitHub\ARM-Lab\ARM-Project\ARM-Project.xpr
 # Log file: C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/vivado.log
 # Journal file: C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project\vivado.jou
 # Running On: ROG-115-12, OS: Windows, CPU Frequency: 2112 MHz, CPU Physical cores: 12, Host memory: 34033 MB
@@ -20,46 +20,35 @@ WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld_es:part0:1.0 av
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at C:/XilinxVitis/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld_es:part0:1.0 available at C:/XilinxVitis/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/es/1.0/board.xml as part xczu59dr-ffvf1760-2-i-es1 specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:1.0 available at C:/XilinxVitis/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/1.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
-INFO: [Project 1-313] Project file moved from 'C:/Users/reese/Documents/GitHub/ARM-Lab/ARM-Project' since last save.
-INFO: [filemgmt 56-2] Default IP Output Path : Could not find the directory 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.gen/sources_1', nor could it be found using path 'C:/Users/reese/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.gen/sources_1'.
+INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.gen/sources_1'.
 Scanning sources...
 Finished scanning sources
-INFO: [Project 1-1877] Auto incremental dir location 'C:/Users/reese/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.srcs/utils_1/imports/synth_1' of run 'synth_1' is not writable, setting it to default location 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.srcs/utils_1/imports/synth_1'.
-INFO: [Project 1-1877] Auto incremental dir location 'C:/Users/reese/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.srcs/utils_1/imports/impl_1' of run 'impl_1' is not writable, setting it to default location 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.srcs/utils_1/imports/impl_1'.
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/XilinxVitis/Vivado/2021.2/data/ip'.
 update_compile_order -fileset sources_1
 launch_simulation
 Command: launch_simulation 
-INFO: [Vivado 12-12493] Simulation top is 'register_test'
+INFO: [Vivado 12-12493] Simulation top is 'mux_test'
 WARNING: [Vivado 12-12986] Compiled library path does not exist: ''
 INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim'
 INFO: [SIM-utils-51] Simulation object is 'sim_1'
 INFO: [SIM-utils-72] Using boost library from 'C:/XilinxVitis/Vivado/2021.2/tps/boost_1_72_0'
-INFO: [SIM-utils-54] Inspecting design source files for 'register_test' in fileset 'sim_1'...
+INFO: [SIM-utils-54] Inspecting design source files for 'mux_test' in fileset 'sim_1'...
 INFO: [USF-XSim-97] Finding global include files...
 INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
 INFO: [USF-XSim-2] XSim::Compile design
 INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim'
-"xvlog --incr --relax -L uvm -prj register_test_vlog.prj"
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/0_common/oscillator.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module oscillator
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/1_fetch/register.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module register
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/0_common/verification_functions.sv" into library xil_defaultlib
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/1_fetch/register_test.sv" into library xil_defaultlib
-WARNING: [VRFC 10-3264] design element 'verification' is previously defined, ignoring this definition [../../../../../ARM-Lab/code/0_common/verification_functions.sv:3]
-INFO: [VRFC 10-311] analyzing module register_test
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module glbl
-INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+"xvlog --incr --relax -L uvm -prj mux_test_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/0_common/mux.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
 INFO: [USF-XSim-3] XSim::Elaborate design
 INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim'
-"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot register_test_behav xil_defaultlib.register_test xil_defaultlib.glbl -log elaborate.log"
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot mux_test_behav xil_defaultlib.mux_test xil_defaultlib.glbl -log elaborate.log"
 Vivado Simulator v2021.2
 Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
-Running: C:/XilinxVitis/Vivado/2021.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot register_test_behav xil_defaultlib.register_test xil_defaultlib.glbl -log elaborate.log 
+Running: C:/XilinxVitis/Vivado/2021.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot mux_test_behav xil_defaultlib.mux_test xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
@@ -68,20 +57,35 @@ Starting simulation data flow analysis
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
 Compiling package xil_defaultlib.verification
-Compiling module xil_defaultlib.oscillator
-Compiling module xil_defaultlib.register
-Compiling module xil_defaultlib.register_test
+Compiling module xil_defaultlib.mux(SIZE=64)
+Compiling module xil_defaultlib.mux(SIZE=5)
+Compiling module xil_defaultlib.mux_test
 Compiling module xil_defaultlib.glbl
-Built simulation snapshot register_test_behav
+Built simulation snapshot mux_test_behav
 INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
 INFO: [USF-XSim-4] XSim::Simulate design
 INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim'
 INFO: [USF-XSim-98] *** Running xsim
-   with args "register_test_behav -key {Behavioral:sim_1:Functional:register_test} -tclbatch {register_test.tcl} -view {C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/register_test_behav.wcfg} -log {simulate.log}"
+   with args "mux_test_behav -key {Behavioral:sim_1:Functional:mux_test} -tclbatch {mux_test.tcl} -view {C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/register_test_behav.wcfg} -view {C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/adder_test_behav.wcfg} -view {C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/mux_test_behav.wcfg} -log {simulate.log}"
 INFO: [USF-XSim-8] Loading simulator feature
 Time resolution is 1 ps
 open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/register_test_behav.wcfg
-source register_test.tcl
+WARNING: Simulation object /register_test/tc was not found in the design.
+WARNING: Simulation object /register_test/ts was not found in the design.
+WARNING: Simulation object /register_test/clk was not found in the design.
+WARNING: Simulation object /register_test/rst was not found in the design.
+WARNING: Simulation object /register_test/d was not found in the design.
+WARNING: Simulation object /register_test/er_q was not found in the design.
+WARNING: Simulation object /register_test/q was not found in the design.
+open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/adder_test_behav.wcfg
+WARNING: Simulation object /adder_test/a was not found in the design.
+WARNING: Simulation object /adder_test/b was not found in the design.
+WARNING: Simulation object /adder_test/sum was not found in the design.
+WARNING: Simulation object /adder_test/er_sum was not found in the design.
+WARNING: Simulation object /adder_test/tc was not found in the design.
+WARNING: Simulation object /adder_test/ts was not found in the design.
+open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/mux_test_behav.wcfg
+source mux_test.tcl
 # set curr_wave [current_wave_config]
 # if { [string length $curr_wave] == 0 } {
 #   if { [llength [get_objects]] > 0} {
@@ -95,72 +99,45 @@ source register_test.tcl
 
 ******* BEGIN TEST RESULTS *******
 
+
 Test Case 1
-Inputs: rst = 0 | d = 0
-+++ Step 1: Pass: |q| time = 10 ns | er = 0 | ar = 0 | er_bits = 64 | ar_bits = 64 +++
+Inputs: a_64 = 5 | b_64 = 10 | ctl = 0
++++ Step 1: Pass: |out_64| time = 1 ns | er = 5 | ar = 5 | er_bits = 64 | ar_bits = 64 +++
 
 Test Case 2
-Inputs: rst = 0 | d = 527
-+++ Step 1: Pass: |q| time = 20 ns | er = 527 | ar = 527 | er_bits = 64 | ar_bits = 64 +++
+Inputs: a_64 = 5 | b_64 = 10 | ctl = 1
++++ Step 1: Pass: |out_64| time = 11 ns | er = 10 | ar = 10 | er_bits = 64 | ar_bits = 64 +++
 
 Test Case 3
-Inputs: rst = 0 | d = -8
-+++ Step 1: Pass: |q| time = 30 ns | er = -8 | ar = -8 | er_bits = 64 | ar_bits = 64 +++
+Inputs: a_64 = 5 | b_64 = -350 | ctl = 1
++++ Step 1: Pass: |out_64| time = 21 ns | er = -350 | ar = -350 | er_bits = 64 | ar_bits = 64 +++
 
 Test Case 4
-Inputs: rst = 0 | d = 3771334343958392850
-+++ Step 1: Pass: |q| time = 40 ns | er = 3456789abcdef012 | ar = 3456789abcdef012 | er_bits = 64 | ar_bits = 64 +++
+Inputs: a_5 = 5 | b_5 = 10 | ctl = 1
++++ Step 1: Pass: |out_5| time = 31 ns | er = 10 | ar = 10 | er_bits = 5 | ar_bits = 5 +++
 
 Test Case 5
-Inputs: rst = 0 | d = 77
-+++ Step 1: Pass: |q| time = 50 ns | er = 77 | ar = 77 | er_bits = 64 | ar_bits = 64 +++
+Inputs: a_5 = 5 | b_5 = 10 | ctl = 0
++++ Step 1: Pass: |out_5| time = 41 ns | er = 5 | ar = 5 | er_bits = 5 | ar_bits = 5 +++
 
 Test Case 6
-Inputs: rst = 0 | d = 4
-+++ Step 1: Pass: |q| time = 52 ns | er = 77 | ar = 77 | er_bits = 64 | ar_bits = 64 +++
+Inputs: a_5 = 5 | b_5 = 11 | ctl = 0
++++ Step 1: Pass: |out_5| time = 51 ns | er = 5 | ar = 5 | er_bits = 5 | ar_bits = 5 +++
 
 Test Case 7
-Inputs: rst = 0 | d = 18
-+++ Step 1: Pass: |q| time = 60 ns | er = 18 | ar = 18 | er_bits = 64 | ar_bits = 64 +++
+Inputs: a_5 = 22 | b_5 = 11 | ctl = 0
++++ Step 1: Pass: |out_5| time = 61 ns | er = 22 | ar = 22 | er_bits = 5 | ar_bits = 5 +++
 
-Test Case 8
-Inputs: rst = 1 | d = 18
-+++ Step 1: Pass: |q| time = 64 ns | er = 0 | ar = 0 | er_bits = 64 | ar_bits = 64 +++
-
-Test Case 9
-Inputs: rst = 0 | d = 981
-+++ Step 1: Pass: |q| time = 74 ns | er = 0 | ar = 0 | er_bits = 64 | ar_bits = 64 +++
-
-Test Case 10
-Inputs: rst = 0 | d = 981
-+++ Step 1: Pass: |q| time = 79 ns | er = 981 | ar = 981 | er_bits = 64 | ar_bits = 64 +++
-
-Test Case 11
-Inputs: rst = 1 | d = 981
-+++ Step 1: Pass: |q| time = 85 ns | er = 0 | ar = 0 | er_bits = 64 | ar_bits = 64 +++
-
-Test Case 12
-Inputs: rst = 1 | d = 345
-+++ Step 1: Pass: |q| time = 87 ns | er = 0 | ar = 0 | er_bits = 64 | ar_bits = 64 +++
-
-Test Case 13
-Inputs: rst = 0 | d = 345
-+++ Step 1: Pass: |q| time = 90 ns | er = 0 | ar = 0 | er_bits = 64 | ar_bits = 64 +++
-
-Test Case 14
-Inputs: rst = 0 | d = 345
-+++ Step 1: Pass: |q| time = 100 ns | er = 345 | ar = 345 | er_bits = 64 | ar_bits = 64 +++
-
-Pass Count = 14
+Pass Count = 7
 Fail Count = 0
 
 ******* END TEST RESULTS *******
 
-$finish called at time : 110 ns : File "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/1_fetch/register_test.sv" Line 220
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'register_test_behav' loaded.
+$finish called at time : 70 ns : File "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/0_common/mux_test.sv" Line 109
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'mux_test_behav' loaded.
 INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1552.262 ; gain = 0.000
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1592.211 ; gain = 29.340
 close_sim
 INFO: [Simtcl 6-16] Simulation closed
 exit
-INFO: [Common 17-206] Exiting Vivado at Mon Jan 22 13:55:37 2024...
+INFO: [Common 17-206] Exiting Vivado at Mon Jan 29 12:58:30 2024...
