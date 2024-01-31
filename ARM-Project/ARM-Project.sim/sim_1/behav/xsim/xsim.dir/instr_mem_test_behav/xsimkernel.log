@@ -2,3 +2,6 @@ Running: xsim.dir/instr_mem_test_behav/xsimk.exe -simmode gui -wdb instr_mem_tes
 Design successfully loaded
 Design Loading Memory Usage: 7160 KB (Peak: 7160 KB)
 Design Loading CPU Usage: 0 ms
+Simulation completed
+Simulation Memory Usage: 9144 KB (Peak: 9144 KB)
+Simulation CPU Usage: 0 ms
