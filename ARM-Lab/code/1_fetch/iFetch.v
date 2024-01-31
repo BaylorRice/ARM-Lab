@@ -27,8 +27,8 @@ module iFetch#(
     input wire reset,
     input wire pc_src,
     input wire [`WORD-1:0] branch_target,
-    output reg [`INSTR_LEN-1:0] instruction,
-    output reg [`WORD-1:0] cur_pc
+    output wire [`INSTR_LEN-1:0] instruction,
+    output wire [`WORD-1:0] cur_pc
 );
 
     // Module Definitions
