@@ -34,28 +34,35 @@ module iFetch#(
     // Module Definitions
     mux#(`WORD) MUX (
         .a_in(branch_target),
-        .b_in( ),
+        .b_in(add_out_wire),
         .control(pc_src),
-        .mux_out( )
+        .mux_out(mux_out_wire)
     );
 
     register PC(
         .clk(clk),
         .reset(reset),
-        .D( ),
-        .Q( )
+        .D(mux_out_wire),
+        .Q(pc_out_wire)
     );
 
     instr_mem#(SIZE) INS_MEM (
         .clk(clk),
-        .pc( ),
+        .pc(pc_out_wire),
         .instruction(instruction)
     );
 
     adder ADD (
-        .a_in( ),
-        .b_in( ),
-        .add_out( )
+        .a_in(pc_out_wire),
+        .b_in(`WORD'd4),
+        .add_out(add_out_wire)
     );
+
+
+    // Wire and Reg definitions
+    wire [`WORD-1:0] add_out_wire;
+    wire [`WORD-1:0] pc_out_wire;
+    wire [`WORD-1:0] mux_out_wire;
+    
 
 endmodule
