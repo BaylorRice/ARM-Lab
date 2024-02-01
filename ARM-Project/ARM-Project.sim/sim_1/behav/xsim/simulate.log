@@ -1,0 +1,27 @@
+Time resolution is 1 ps
+
+******* BEGIN TEST RESULTS *******
+
+Test Case 1
++++ Step 1: Pass: |instruction| time = 10 ns | er = abcdef12 | ar = abcdef12 | er_bits = 32 | ar_bits = 32 +++
+Test Case 2
++++ Step 1: Pass: |instruction| time = 20 ns | er = bcdef123 | ar = bcdef123 | er_bits = 32 | ar_bits = 32 +++
+Test Case 3
++++ Step 1: Pass: |instruction| time = 28 ns | er = cdef1234 | ar = cdef1234 | er_bits = 32 | ar_bits = 32 +++
+Test Case 4
++++ Step 1: Pass: |instruction| time = 32 ns | er = cdef1234 | ar = cdef1234 | er_bits = 32 | ar_bits = 32 +++
+Test Case 5
++++ Step 1: Pass: |instruction| time = 36 ns | er = ef123456 | ar = ef123456 | er_bits = 32 | ar_bits = 32 +++
+Test Case 6
++++ Step 1: Pass: |instruction| time = 46 ns | er = 89abcdef | ar = 89abcdef | er_bits = 32 | ar_bits = 32 +++
+Test Case 7
++++ Step 1: Pass: |instruction| time = 56 ns | er = 9abcdef1 | ar = 9abcdef1 | er_bits = 32 | ar_bits = 32 +++
+Test Case 8
++++ Step 1: Pass: |instruction| time = 66 ns | er = 23456789 | ar = 23456789 | er_bits = 32 | ar_bits = 32 +++
+
+Pass Count = 8
+Fail Count = 0
+
+******* END TEST RESULTS *******
+
+$finish called at time : 66 ns : File "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/1_fetch/instr_mem_test.sv" Line 93
