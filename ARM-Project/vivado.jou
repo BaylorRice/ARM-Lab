@@ -20,3 +20,4 @@ open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/mux_t
 open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/instr_mem_test_behav.wcfg
 open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/iFetch_test_behav.wcfg
 source iFetch_test.tcl
+close_sim
