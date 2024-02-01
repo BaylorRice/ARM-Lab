@@ -2,3 +2,6 @@ Running: xsim.dir/iFetch_test_behav/xsimk.exe -simmode gui -wdb iFetch_test_beha
 Design successfully loaded
 Design Loading Memory Usage: 7200 KB (Peak: 7200 KB)
 Design Loading CPU Usage: 0 ms
+Simulation completed
+Simulation Memory Usage: 9208 KB (Peak: 9208 KB)
+Simulation CPU Usage: 0 ms
