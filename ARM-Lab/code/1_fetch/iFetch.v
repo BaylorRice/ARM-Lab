@@ -34,8 +34,8 @@ module iFetch#(
 
     // Module Definitions
     mux#(`WORD) MUX (
-        .a_in(branch_target),
-        .b_in(add_out_wire),
+        .a_in(add_out_wire),
+        .b_in(branch_target),
         .control(pc_src),
         .mux_out(mux_out_wire)
     );
@@ -48,7 +48,7 @@ module iFetch#(
     );
 
     instr_mem#(SIZE) INS_MEM (
-        .clk(clk),
+        .clk(clk_delayed),
         .pc(pc_out_wire),
         .instruction(instruction)
     );
@@ -64,6 +64,8 @@ module iFetch#(
     wire [`WORD-1:0] add_out_wire;
     wire [`WORD-1:0] pc_out_wire;
     wire [`WORD-1:0] mux_out_wire;
+    
+    assign cur_pc = pc_out_wire;
     
 
 endmodule
