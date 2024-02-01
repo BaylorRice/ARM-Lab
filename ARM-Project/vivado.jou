@@ -51,3 +51,20 @@ set_property top instr_mem_test [current_fileset]
 # Re-enabling previously disabled source management mode.
 set_property source_mgmt_mode All [current_project]
 update_compile_order -fileset sources_1
+launch_simulation
+open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/register_test_behav.wcfg
+open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/adder_test_behav.wcfg
+open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/mux_test_behav.wcfg
+open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/instr_mem_test_behav.wcfg
+open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/iFetch_test_behav.wcfg
+source instr_mem_test.tcl
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top iFetch_test [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+set_property top iFetch_test [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+launch_simulation
+close_sim
