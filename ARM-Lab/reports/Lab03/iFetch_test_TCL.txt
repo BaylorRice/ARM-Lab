@@ -1,0 +1,40 @@
+******* BEGIN TEST RESULTS *******
+
+Test Case 1
++++ Step 1: Pass: |cur_pc| time = 10 ns | er = 0 | ar = 0 | er_bits = 64 | ar_bits = 64 +++
++++ Step 2: Pass: |instruction| time = 10 ns | er = abcdef12 | ar = abcdef12 | er_bits = 32 | ar_bits = 32 +++
+Test Case 2
++++ Step 1: Pass: |cur_pc| time = 20 ns | er = 4 | ar = 4 | er_bits = 64 | ar_bits = 64 +++
++++ Step 2: Pass: |instruction| time = 20 ns | er = bcdef123 | ar = bcdef123 | er_bits = 32 | ar_bits = 32 +++
+Test Case 3
++++ Step 1: Pass: |cur_pc| time = 30 ns | er = 8 | ar = 8 | er_bits = 64 | ar_bits = 64 +++
++++ Step 2: Pass: |instruction| time = 30 ns | er = cdef1234 | ar = cdef1234 | er_bits = 32 | ar_bits = 32 +++
+Test Case 4
++++ Step 1: Pass: |cur_pc| time = 42 ns | er = 12 | ar = 12 | er_bits = 64 | ar_bits = 64 +++
++++ Step 2: Pass: |instruction| time = 42 ns | er = def12345 | ar = def12345 | er_bits = 32 | ar_bits = 32 +++
+Test Case 5
++++ Step 1: Pass: |cur_pc| time = 52 ns | er = 44 | ar = 44 | er_bits = 64 | ar_bits = 64 +++
++++ Step 2: Pass: |instruction| time = 52 ns | er = 6789abcd | ar = 6789abcd | er_bits = 32 | ar_bits = 32 +++
+Test Case 6
++++ Step 1: Pass: |cur_pc| time = 62 ns | er = 48 | ar = 48 | er_bits = 64 | ar_bits = 64 +++
++++ Step 2: Pass: |instruction| time = 62 ns | er = 789abcde | ar = 789abcde | er_bits = 32 | ar_bits = 32 +++
+Test Case 7
++++ Step 1: Pass: |cur_pc| time = 64 ns | er = 48 | ar = 48 | er_bits = 64 | ar_bits = 64 +++
++++ Step 2: Pass: |instruction| time = 64 ns | er = 789abcde | ar = 789abcde | er_bits = 32 | ar_bits = 32 +++
+Test Case 8
++++ Step 1: Pass: |cur_pc| time = 74 ns | er = 20 | ar = 20 | er_bits = 64 | ar_bits = 64 +++
++++ Step 2: Pass: |instruction| time = 74 ns | er = f1234567 | ar = f1234567 | er_bits = 32 | ar_bits = 32 +++
+Test Case 9
++++ Step 1: Pass: |cur_pc| time = 84 ns | er = 32 | ar = 32 | er_bits = 64 | ar_bits = 64 +++
++++ Step 2: Pass: |instruction| time = 84 ns | er = 3456789a | ar = 3456789a | er_bits = 32 | ar_bits = 32 +++
+Test Case 10
++++ Step 1: Pass: |cur_pc| time = 94 ns | er = 36 | ar = 36 | er_bits = 64 | ar_bits = 64 +++
++++ Step 2: Pass: |instruction| time = 94 ns | er = 456789ab | ar = 456789ab | er_bits = 32 | ar_bits = 32 +++
+Test Case 11
++++ Step 1: Pass: |cur_pc| time = 104 ns | er = 40 | ar = 40 | er_bits = 64 | ar_bits = 64 +++
++++ Step 2: Pass: |instruction| time = 104 ns | er = 56789abc | ar = 56789abc | er_bits = 32 | ar_bits = 32 +++
+
+Pass Count = 22
+Fail Count = 0
+
+******* END TEST RESULTS *******
