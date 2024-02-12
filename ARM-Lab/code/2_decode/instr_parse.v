@@ -22,6 +22,18 @@
 
 
 module instr_parse(
-
+    input wire [`INSTR_LEN-1:0] instruction,
+    output wire [10:0] opcode,
+    output wire [8:0] address,
+    output wire [4:0] rm_num,
+    output wire [4:0] rn_num,
+    output wire [4:0] rd_num
     );
+    
+    assign opcode = (instruction >> 21) & 11'h7FF;
+    assign address = (instruction >> 12) & 9'h1FF;
+    assign rm_num = (instruction >> 16) & 5'h1F;
+    assign rn_num = (instruction >> 5) & 5'h1F;
+    assign rd_num = instruction & 5'h1F;
+    
 endmodule
