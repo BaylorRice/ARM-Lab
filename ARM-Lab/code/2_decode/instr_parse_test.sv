@@ -97,19 +97,27 @@ ts = 0;
 instruction = `INSTR_LEN'h8B0902AA;
 
 // wait for 2 ns
+#2
 
 // verify rm_num is correct
+er_rm_num = 5'd9;
+verify(ts++, rm_num_string, er_rm_num, $bits(er_rm_num), rm_num, $bits(rm_num), `S_DEC);
 
 // verify rn_num is correct
+er_rn_num = 5'd21;
+verify(ts++, rn_num_string, er_rn_num, $bits(er_rn_num), rn_num, $bits(rn_num), `S_DEC);
 
 // verify rd_num is correct
+er_rd_num = 5'd5;
+verify(ts++, rd_num_string, er_rd_num, $bits(er_rd_num), rd_num, $bits(rd_num), `S_DEC);
 
 // DO NOT verify address is correct because it is not relevant for an R Type instruction
-
 // verify opcode is correct
+er_opcode = 5'd1112;
+verify(ts++, opcode_string, er_opcode, $bits(er_opcode), opcode, $bits(opcode), `S_DEC);
 
 // wait for 8 ns
-
+#8
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
 // STUR X10, [X23, #64]
