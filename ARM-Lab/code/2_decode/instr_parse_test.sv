@@ -40,15 +40,16 @@ begin_test();
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
 // LDUR X9, [X22, #240]
-// 1986 240 0 22 9
-// 11111000010 011110000 00 10110 01001
-instruction = `INSTR_LEN'hF84F02C9;
+
 
 ///// TEST CASE 1 /////
 $display("Test Case %0d", tc++);
 $display("LDUR X9, [X22, #240]");
 
 // set instruction to the binary equivalent of the instruction listed above
+// 1986 240 0 22 9
+// 11111000010 011110000 00 10110 01001
+instruction = `INSTR_LEN'hF84F02C9;
 
 // wait for 2 ns
 
@@ -66,15 +67,15 @@ $display("LDUR X9, [X22, #240]");
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
 // ADD X10, X21, X9
-// 1112 9 0 21 10
-// 10001011000 01001 000000 10101 01010
-instruction = `INSTR_LEN'h8B0902AA;
 
 ///// TEST CASE 2 /////
 $display("\nTest Case %0d", tc++);
 $display("ADD X10, X21, X9");
 
 // set instruction to the binary equivalent of the instruction listed above
+// 1112 9 0 21 10
+// 10001011000 01001 000000 10101 01010
+instruction = `INSTR_LEN'h8B0902AA;
 
 // wait for 2 ns
 
@@ -93,15 +94,15 @@ $display("ADD X10, X21, X9");
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
 // STUR X10, [X23, #64]
-// 1984 64 0 23 10
-// 11111000000 001000000 00 10111 01010
-instruction = `INSTR_LEN'hF80402EA;
 
 ///// TEST CASE 3 /////
 $display("\nTest Case %0d", tc++);
 $display("STUR X10, [X23, #64]");
 
 // set instruction to the binary equivalent of the instruction listed above
+// 1984 64 0 23 10
+// 11111000000 001000000 00 10111 01010
+instruction = `INSTR_LEN'hF80402EA;
 
 // wait for 2 ns
 
