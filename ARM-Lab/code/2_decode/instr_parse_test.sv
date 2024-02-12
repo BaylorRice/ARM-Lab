@@ -132,17 +132,27 @@ $display("STUR X10, [X23, #64]");
 instruction = `INSTR_LEN'hF80402EA;
 
 // wait for 2 ns
+#2
 
 // DO NOT verify rm_num is correct because it is not relevant for a D Type instruction
 // verify rn_num is correct
+er_rn_num = 5'd9;
+verify(ts++, rn_num_string, er_rn_num, $bits(er_rn_num), rn_num, $bits(rn_num), `S_DEC);
 
 // verify rd_num is correct
+er_rd_num = 5'd9;
+verify(ts++, rd_num_string, er_rd_num, $bits(er_rd_num), rd_num, $bits(rd_num), `S_DEC);
 
 // verify address is correct
+er_address = 5'd9;
+verify(ts++, address_string, er_address, $bits(er_address), address, $bits(address), `S_DEC);
 
 // verify opcode is correct
+er_opcode = 5'd9;
+verify(ts++, opcode_string, er_opcode, $bits(er_opcode), opcode, $bits(opcode), `S_DEC);
 
 // wait for 8 ns
+#8
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
 
