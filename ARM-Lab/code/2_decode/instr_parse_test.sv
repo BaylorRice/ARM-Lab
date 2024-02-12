@@ -4,9 +4,20 @@ module instr_parse_test;
 import verification::*;
 
 // create signals to be be passed into/out of the instruction_parse module
+reg [`INSTR_LEN-1:0] instruction;
+wire [10:0] opcode;
+wire [8:0] address;
+wire [4:0] rm_num;
+wire [4:0] rn_num;
+wire [4:0] rd_num;
 
 // create er signals that have the same names of the signals above except that they
 // have er_ appended to the beginning of the name....for example, er_rm_num
+wire [10:0] er_opcode;
+wire [8:0] er_address;
+wire [4:0] er_rm_num;
+wire [4:0] er_rn_num;
+wire [4:0] er_rd_num;
 
 // use this instruction_parse instance for this test
 instr_parse parser(
@@ -29,6 +40,9 @@ begin_test();
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
 // LDUR X9, [X22, #240]
+// 1986 240 0 22 9
+// 11111000010 011110000 00 10110 01001
+instruction = `INSTR_LEN'hF84F02C9;
 
 ///// TEST CASE 1 /////
 $display("Test Case %0d", tc++);
@@ -52,6 +66,9 @@ $display("LDUR X9, [X22, #240]");
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
 // ADD X10, X21, X9
+// 1112 9 0 21 10
+// 10001011000 01001 000000 10101 01010
+instruction = `INSTR_LEN'h8B0902AA;
 
 ///// TEST CASE 2 /////
 $display("\nTest Case %0d", tc++);
@@ -76,6 +93,9 @@ $display("ADD X10, X21, X9");
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
 // STUR X10, [X23, #64]
+// 1984 64 0 23 10
+// 11111000000 001000000 00 10111 01010
+instruction = `INSTR_LEN'hF80402EA;
 
 ///// TEST CASE 3 /////
 $display("\nTest Case %0d", tc++);
