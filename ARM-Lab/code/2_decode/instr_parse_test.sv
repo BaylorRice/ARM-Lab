@@ -24,8 +24,8 @@ string address_string = "|address|";
 string rm_num_string = "|rm_num|";
 string rn_num_string = "|rn_num|";
 string rd_num_string = "|rd_num|";
-int ts = 0;
-int tc = 0;
+int ts = 1;
+int tc = 1;
 
 // use this instruction_parse instance for this test
 instr_parse parser(
@@ -53,7 +53,7 @@ begin_test();
 ///// TEST CASE 1 /////
 $display("Test Case %0d", tc++);
 $display("LDUR X9, [X22, #240]");
-ts = 0;
+ts = 1;
 
 // set instruction to the binary equivalent of the instruction listed above
 // 1986 240 0 22 9
@@ -89,7 +89,7 @@ verify(ts++, opcode_string, er_opcode, $bits(er_opcode), opcode, $bits(opcode), 
 ///// TEST CASE 2 /////
 $display("\nTest Case %0d", tc++);
 $display("ADD X10, X21, X9");
-ts = 0;
+ts = 1;
 
 // set instruction to the binary equivalent of the instruction listed above
 // 1112 9 0 21 10
@@ -108,12 +108,12 @@ er_rn_num = 5'd21;
 verify(ts++, rn_num_string, er_rn_num, $bits(er_rn_num), rn_num, $bits(rn_num), `S_DEC);
 
 // verify rd_num is correct
-er_rd_num = 5'd5;
+er_rd_num = 5'd10;
 verify(ts++, rd_num_string, er_rd_num, $bits(er_rd_num), rd_num, $bits(rd_num), `S_DEC);
 
 // DO NOT verify address is correct because it is not relevant for an R Type instruction
 // verify opcode is correct
-er_opcode = 5'd1112;
+er_opcode = 11'd1112;
 verify(ts++, opcode_string, er_opcode, $bits(er_opcode), opcode, $bits(opcode), `S_DEC);
 
 // wait for 8 ns
@@ -125,6 +125,7 @@ verify(ts++, opcode_string, er_opcode, $bits(er_opcode), opcode, $bits(opcode), 
 ///// TEST CASE 3 /////
 $display("\nTest Case %0d", tc++);
 $display("STUR X10, [X23, #64]");
+ts = 1;
 
 // set instruction to the binary equivalent of the instruction listed above
 // 1984 64 0 23 10
@@ -136,19 +137,19 @@ instruction = `INSTR_LEN'hF80402EA;
 
 // DO NOT verify rm_num is correct because it is not relevant for a D Type instruction
 // verify rn_num is correct
-er_rn_num = 5'd9;
+er_rn_num = 5'd23;
 verify(ts++, rn_num_string, er_rn_num, $bits(er_rn_num), rn_num, $bits(rn_num), `S_DEC);
 
 // verify rd_num is correct
-er_rd_num = 5'd9;
+er_rd_num = 5'd10;
 verify(ts++, rd_num_string, er_rd_num, $bits(er_rd_num), rd_num, $bits(rd_num), `S_DEC);
 
 // verify address is correct
-er_address = 5'd9;
+er_address = 9'd64;
 verify(ts++, address_string, er_address, $bits(er_address), address, $bits(address), `S_DEC);
 
 // verify opcode is correct
-er_opcode = 5'd9;
+er_opcode = 11'd1984;
 verify(ts++, opcode_string, er_opcode, $bits(er_opcode), opcode, $bits(opcode), `S_DEC);
 
 // wait for 8 ns

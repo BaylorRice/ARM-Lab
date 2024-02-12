@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="instr_parse_test_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="instr_parse_test" />
+            <top_module name="verification" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="30.001 ns"></ZoomEndTime>
+      <Cursor1Time time="16.840 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="193"></NameColumnWidth>
+      <ValueColumnWidth column_width="136"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="13" />
+   <wvobject fp_name="/instr_parse_test/tc" type="array">
+      <obj_property name="ElementShortName">tc[31:0]</obj_property>
+      <obj_property name="ObjectShortName">tc[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/instr_parse_test/instruction" type="array">
+      <obj_property name="ElementShortName">instruction[31:0]</obj_property>
+      <obj_property name="ObjectShortName">instruction[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/instr_parse_test/ts" type="array">
+      <obj_property name="ElementShortName">ts[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ts[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/instr_parse_test/er_opcode" type="array">
+      <obj_property name="ElementShortName">er_opcode[10:0]</obj_property>
+      <obj_property name="ObjectShortName">er_opcode[10:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/instr_parse_test/opcode" type="array">
+      <obj_property name="ElementShortName">opcode[10:0]</obj_property>
+      <obj_property name="ObjectShortName">opcode[10:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/instr_parse_test/er_address" type="array">
+      <obj_property name="ElementShortName">er_address[8:0]</obj_property>
+      <obj_property name="ObjectShortName">er_address[8:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/instr_parse_test/address" type="array">
+      <obj_property name="ElementShortName">address[8:0]</obj_property>
+      <obj_property name="ObjectShortName">address[8:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/instr_parse_test/er_rm_num" type="array">
+      <obj_property name="ElementShortName">er_rm_num[4:0]</obj_property>
+      <obj_property name="ObjectShortName">er_rm_num[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/instr_parse_test/rm_num" type="array">
+      <obj_property name="ElementShortName">rm_num[4:0]</obj_property>
+      <obj_property name="ObjectShortName">rm_num[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/instr_parse_test/er_rn_num" type="array">
+      <obj_property name="ElementShortName">er_rn_num[4:0]</obj_property>
+      <obj_property name="ObjectShortName">er_rn_num[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/instr_parse_test/rn_num" type="array">
+      <obj_property name="ElementShortName">rn_num[4:0]</obj_property>
+      <obj_property name="ObjectShortName">rn_num[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/instr_parse_test/er_rd_num" type="array">
+      <obj_property name="ElementShortName">er_rd_num[4:0]</obj_property>
+      <obj_property name="ObjectShortName">er_rd_num[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/instr_parse_test/rd_num" type="array">
+      <obj_property name="ElementShortName">rd_num[4:0]</obj_property>
+      <obj_property name="ObjectShortName">rd_num[4:0]</obj_property>
+   </wvobject>
+</wave_config>
