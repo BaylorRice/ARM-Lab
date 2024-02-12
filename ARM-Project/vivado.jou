@@ -16,3 +16,41 @@ update_compile_order -fileset sources_1
 close [ open C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/2_decode/instr_parse.v w ]
 add_files C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/2_decode/instr_parse.v
 update_compile_order -fileset sources_1
+set_property top instr_parse_test [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top instr_parse_test [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+launch_simulation
+open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/register_test_behav.wcfg
+open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/adder_test_behav.wcfg
+open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/mux_test_behav.wcfg
+open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/instr_mem_test_behav.wcfg
+open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/iFetch_test_behav.wcfg
+source instr_parse_test.tcl
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+save_wave_config {C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/instr_parse_test_behav.wcfg}
+add_files -fileset sim_1 -norecurse C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/instr_parse_test_behav.wcfg
+set_property xsim.view {C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/register_test_behav.wcfg C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/adder_test_behav.wcfg C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/mux_test_behav.wcfg C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/instr_mem_test_behav.wcfg C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/iFetch_test_behav.wcfg C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/instr_parse_test_behav.wcfg} [get_filesets sim_1]
+save_wave_config {C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/instr_parse_test_behav.wcfg}
+relaunch_sim
+close_sim
+launch_simulation
+open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/register_test_behav.wcfg
+open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/adder_test_behav.wcfg
+open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/mux_test_behav.wcfg
+open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/instr_mem_test_behav.wcfg
+open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/iFetch_test_behav.wcfg
+open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/instr_parse_test_behav.wcfg
+source instr_parse_test.tcl
+close [ open C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/2_decode/regfile.v w ]
+add_files C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/2_decode/regfile.v
+update_compile_order -fileset sources_1
+close_sim
