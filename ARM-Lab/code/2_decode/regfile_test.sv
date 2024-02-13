@@ -54,9 +54,9 @@ begin
     $display("Test Case 1: | rr_1 = %0d | rr_2 = %0d | | wr = %0d | | wd = %0d | rw = %0d |", read_register1, read_register2, write_register, $signed(write_data), reg_write); 
     ts=1;
     
-    er_read_data1 = `WORD'dX;
+    er_read_data1 = `WORD'd256;
     verify(ts++, read_data1_string, er_read_data1, $bits(er_read_data1), read_data1, $bits(read_data1), `S_DEC);
-    er_read_data2 = `WORD'dX;
+    er_read_data2 = `WORD'd4;
     verify(ts++, read_data2_string, er_read_data2, $bits(er_read_data2), read_data2, $bits(read_data2), `S_DEC);
 
     // read default values from registers 3 and 19
@@ -66,9 +66,9 @@ begin
 
     $display("\nTest Case 2: | rr_1 = %0d | rr_2 = %0d | | wr = %0d | | wd = %0d | rw = %0d |", read_register1, read_register2, write_register, $signed(write_data), reg_write);    
     ts=1;
-    er_read_data1 = `WORD'dX;
+    er_read_data1 = `WORD'd16;
     verify(ts++, read_data1_string, er_read_data1, $bits(er_read_data1), read_data1, $bits(read_data1), `S_DEC);
-    er_read_data2 = `WORD'dX;
+    er_read_data2 = `WORD'd10;
     verify(ts++, read_data2_string, er_read_data2, $bits(er_read_data2), read_data2, $bits(read_data2), `S_DEC);
 
     // read default values from registers 15 and 12
@@ -78,9 +78,9 @@ begin
 
     $display("\nTest Case 3: | rr_1 = %0d | rr_2 = %0d | | wr = %0d | | wd = %0d | rw = %0d |", read_register1, read_register2, write_register, $signed(write_data), reg_write);    
     ts=1;
-    er_read_data1 = `WORD'dX;
+    er_read_data1 = `WORD'd129;
     verify(ts++, read_data1_string, er_read_data1, $bits(er_read_data1), read_data1, $bits(read_data1), `S_DEC);
-    er_read_data2 = `WORD'dX;
+    er_read_data2 = `WORD'd17;
     verify(ts++, read_data2_string, er_read_data2, $bits(er_read_data2), read_data2, $bits(read_data2), `S_DEC);
 
     // write to register 0, then read the value of register 0 and 12
@@ -92,9 +92,9 @@ begin
 
     $display("\nTest Case 4: | rr_1 = %0d | rr_2 = %0d | | wr = %0d | | wd = %0d | rw = %0d |", read_register1, read_register2, write_register, $signed(write_data), reg_write);        
     ts=1;
-    er_read_data1 = `WORD'dX;
+    er_read_data1 = `WORD'd55;
     verify(ts++, read_data1_string, er_read_data1, $bits(er_read_data1), read_data1, $bits(read_data1), `S_DEC);
-    er_read_data2 = `WORD'dX;
+    er_read_data2 = `WORD'd17;
     verify(ts++, read_data2_string, er_read_data2, $bits(er_read_data2), read_data2, $bits(read_data2), `S_DEC);
     
     // update read_register2 to 15 and re-check the value of register 0 and 15
@@ -103,9 +103,9 @@ begin
 
     $display("\nTest Case 5: | rr_1 = %0d | rr_2 = %0d | | wr = %0d | | wd = %0d | rw = %0d |", read_register1, read_register2, write_register, $signed(write_data), reg_write);    
     ts=1;
-    er_read_data1 = `WORD'dX;
+    er_read_data1 = `WORD'd55;
     verify(ts++, read_data1_string, er_read_data1, $bits(er_read_data1), read_data1, $bits(read_data1), `S_DEC);
-    er_read_data2 = `WORD'dX;
+    er_read_data2 = `WORD'd129;
     verify(ts++, read_data2_string, er_read_data2, $bits(er_read_data2), read_data2, $bits(read_data2), `S_DEC);
 
     // write to register 15 and check the value of registers 0 and 15
@@ -115,9 +115,9 @@ begin
 
     $display("\nTest Case 6: | rr_1 = %0d | rr_2 = %0d | | wr = %0d | | wd = %0d | rw = %0d |", read_register1, read_register2, write_register, $signed(write_data), reg_write);        
     ts=1;
-    er_read_data1 = `WORD'dX;
+    er_read_data1 = `WORD'd55;
     verify(ts++, read_data1_string, er_read_data1, $bits(er_read_data1), read_data1, $bits(read_data1), `S_DEC);
-    er_read_data2 = -`WORD'dX;
+    er_read_data2 = -`WORD'd354;
     verify(ts++, read_data2_string, er_read_data2, $bits(er_read_data2), read_data2, $bits(read_data2), `S_DEC);
     
     // set reg_write back to 0, change write_data, and verify that the registers do not update   
@@ -127,9 +127,9 @@ begin
 
     $display("\nTest Case 7: | rr_1 = %0d | rr_2 = %0d | | wr = %0d | | wd = %0d | rw = %0d |", read_register1, read_register2, write_register, $signed(write_data), reg_write);        
     ts=1;
-    er_read_data1 = `WORD'dX;
+    er_read_data1 = `WORD'd55;
     verify(ts++, read_data1_string, er_read_data1, $bits(er_read_data1), read_data1, $bits(read_data1), `S_DEC);
-    er_read_data2 = -`WORD'dX;
+    er_read_data2 = -`WORD'd354;
     verify(ts++, read_data2_string, er_read_data2, $bits(er_read_data2), read_data2, $bits(read_data2), `S_DEC);
     
     // set read_register1 to 15 and check the value of registers 15 and 15
