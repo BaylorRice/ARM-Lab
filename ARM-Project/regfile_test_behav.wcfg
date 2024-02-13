@@ -12,15 +12,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="28.333 ns"></ZoomStartTime>
-      <ZoomEndTime time="109.534 ns"></ZoomEndTime>
-      <Cursor1Time time="86.946 ns"></Cursor1Time>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="109.701 ns"></ZoomEndTime>
+      <Cursor1Time time="96.000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="341"></NameColumnWidth>
-      <ValueColumnWidth column_width="167"></ValueColumnWidth>
+      <ValueColumnWidth column_width="163"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="14" />
+   <WVObjectSize size="13" />
    <wvobject fp_name="/regfile_test/read_clk" type="logic">
       <obj_property name="ElementShortName">read_clk</obj_property>
       <obj_property name="ObjectShortName">read_clk</obj_property>
@@ -72,171 +72,5 @@
    <wvobject fp_name="/regfile_test/ts" type="array">
       <obj_property name="ElementShortName">ts[31:0]</obj_property>
       <obj_property name="ObjectShortName">ts[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/regfile_test/regfile1/rmem" type="array">
-      <obj_property name="ElementShortName">rmem[31:0][63:0]</obj_property>
-      <obj_property name="ObjectShortName">rmem[31:0][63:0]</obj_property>
-      <obj_property name="isExpanded"></obj_property>
-      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-      <wvobject fp_name="/regfile_test/regfile1/rmem[31]" type="array">
-         <obj_property name="ElementShortName">[31][63:0]</obj_property>
-         <obj_property name="ObjectShortName">[31][63:0]</obj_property>
-         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-      </wvobject>
-      <wvobject fp_name="/regfile_test/regfile1/rmem[30]" type="array">
-         <obj_property name="ElementShortName">[30][63:0]</obj_property>
-         <obj_property name="ObjectShortName">[30][63:0]</obj_property>
-         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-      </wvobject>
-      <wvobject fp_name="/regfile_test/regfile1/rmem[29]" type="array">
-         <obj_property name="ElementShortName">[29][63:0]</obj_property>
-         <obj_property name="ObjectShortName">[29][63:0]</obj_property>
-         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-      </wvobject>
-      <wvobject fp_name="/regfile_test/regfile1/rmem[28]" type="array">
-         <obj_property name="ElementShortName">[28][63:0]</obj_property>
-         <obj_property name="ObjectShortName">[28][63:0]</obj_property>
-         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-      </wvobject>
-      <wvobject fp_name="/regfile_test/regfile1/rmem[27]" type="array">
-         <obj_property name="ElementShortName">[27][63:0]</obj_property>
-         <obj_property name="ObjectShortName">[27][63:0]</obj_property>
-         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-      </wvobject>
-      <wvobject fp_name="/regfile_test/regfile1/rmem[26]" type="array">
-         <obj_property name="ElementShortName">[26][63:0]</obj_property>
-         <obj_property name="ObjectShortName">[26][63:0]</obj_property>
-         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-      </wvobject>
-      <wvobject fp_name="/regfile_test/regfile1/rmem[25]" type="array">
-         <obj_property name="ElementShortName">[25][63:0]</obj_property>
-         <obj_property name="ObjectShortName">[25][63:0]</obj_property>
-         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-      </wvobject>
-      <wvobject fp_name="/regfile_test/regfile1/rmem[24]" type="array">
-         <obj_property name="ElementShortName">[24][63:0]</obj_property>
-         <obj_property name="ObjectShortName">[24][63:0]</obj_property>
-         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-      </wvobject>
-      <wvobject fp_name="/regfile_test/regfile1/rmem[23]" type="array">
-         <obj_property name="ElementShortName">[23][63:0]</obj_property>
-         <obj_property name="ObjectShortName">[23][63:0]</obj_property>
-         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-      </wvobject>
-      <wvobject fp_name="/regfile_test/regfile1/rmem[22]" type="array">
-         <obj_property name="ElementShortName">[22][63:0]</obj_property>
-         <obj_property name="ObjectShortName">[22][63:0]</obj_property>
-         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-      </wvobject>
-      <wvobject fp_name="/regfile_test/regfile1/rmem[21]" type="array">
-         <obj_property name="ElementShortName">[21][63:0]</obj_property>
-         <obj_property name="ObjectShortName">[21][63:0]</obj_property>
-         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-      </wvobject>
-      <wvobject fp_name="/regfile_test/regfile1/rmem[20]" type="array">
-         <obj_property name="ElementShortName">[20][63:0]</obj_property>
-         <obj_property name="ObjectShortName">[20][63:0]</obj_property>
-         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-      </wvobject>
-      <wvobject fp_name="/regfile_test/regfile1/rmem[19]" type="array">
-         <obj_property name="ElementShortName">[19][63:0]</obj_property>
-         <obj_property name="ObjectShortName">[19][63:0]</obj_property>
-         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-      </wvobject>
-      <wvobject fp_name="/regfile_test/regfile1/rmem[18]" type="array">
-         <obj_property name="ElementShortName">[18][63:0]</obj_property>
-         <obj_property name="ObjectShortName">[18][63:0]</obj_property>
-         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-      </wvobject>
-      <wvobject fp_name="/regfile_test/regfile1/rmem[17]" type="array">
-         <obj_property name="ElementShortName">[17][63:0]</obj_property>
-         <obj_property name="ObjectShortName">[17][63:0]</obj_property>
-         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-      </wvobject>
-      <wvobject fp_name="/regfile_test/regfile1/rmem[16]" type="array">
-         <obj_property name="ElementShortName">[16][63:0]</obj_property>
-         <obj_property name="ObjectShortName">[16][63:0]</obj_property>
-         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-      </wvobject>
-      <wvobject fp_name="/regfile_test/regfile1/rmem[15]" type="array">
-         <obj_property name="ElementShortName">[15][63:0]</obj_property>
-         <obj_property name="ObjectShortName">[15][63:0]</obj_property>
-         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-      </wvobject>
-      <wvobject fp_name="/regfile_test/regfile1/rmem[14]" type="array">
-         <obj_property name="ElementShortName">[14][63:0]</obj_property>
-         <obj_property name="ObjectShortName">[14][63:0]</obj_property>
-         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-      </wvobject>
-      <wvobject fp_name="/regfile_test/regfile1/rmem[13]" type="array">
-         <obj_property name="ElementShortName">[13][63:0]</obj_property>
-         <obj_property name="ObjectShortName">[13][63:0]</obj_property>
-         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-      </wvobject>
-      <wvobject fp_name="/regfile_test/regfile1/rmem[12]" type="array">
-         <obj_property name="ElementShortName">[12][63:0]</obj_property>
-         <obj_property name="ObjectShortName">[12][63:0]</obj_property>
-         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-      </wvobject>
-      <wvobject fp_name="/regfile_test/regfile1/rmem[11]" type="array">
-         <obj_property name="ElementShortName">[11][63:0]</obj_property>
-         <obj_property name="ObjectShortName">[11][63:0]</obj_property>
-         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-      </wvobject>
-      <wvobject fp_name="/regfile_test/regfile1/rmem[10]" type="array">
-         <obj_property name="ElementShortName">[10][63:0]</obj_property>
-         <obj_property name="ObjectShortName">[10][63:0]</obj_property>
-         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-      </wvobject>
-      <wvobject fp_name="/regfile_test/regfile1/rmem[9]" type="array">
-         <obj_property name="ElementShortName">[9][63:0]</obj_property>
-         <obj_property name="ObjectShortName">[9][63:0]</obj_property>
-         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-      </wvobject>
-      <wvobject fp_name="/regfile_test/regfile1/rmem[8]" type="array">
-         <obj_property name="ElementShortName">[8][63:0]</obj_property>
-         <obj_property name="ObjectShortName">[8][63:0]</obj_property>
-         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-      </wvobject>
-      <wvobject fp_name="/regfile_test/regfile1/rmem[7]" type="array">
-         <obj_property name="ElementShortName">[7][63:0]</obj_property>
-         <obj_property name="ObjectShortName">[7][63:0]</obj_property>
-         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-      </wvobject>
-      <wvobject fp_name="/regfile_test/regfile1/rmem[6]" type="array">
-         <obj_property name="ElementShortName">[6][63:0]</obj_property>
-         <obj_property name="ObjectShortName">[6][63:0]</obj_property>
-         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-      </wvobject>
-      <wvobject fp_name="/regfile_test/regfile1/rmem[5]" type="array">
-         <obj_property name="ElementShortName">[5][63:0]</obj_property>
-         <obj_property name="ObjectShortName">[5][63:0]</obj_property>
-         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-      </wvobject>
-      <wvobject fp_name="/regfile_test/regfile1/rmem[4]" type="array">
-         <obj_property name="ElementShortName">[4][63:0]</obj_property>
-         <obj_property name="ObjectShortName">[4][63:0]</obj_property>
-         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-      </wvobject>
-      <wvobject fp_name="/regfile_test/regfile1/rmem[3]" type="array">
-         <obj_property name="ElementShortName">[3][63:0]</obj_property>
-         <obj_property name="ObjectShortName">[3][63:0]</obj_property>
-         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-      </wvobject>
-      <wvobject fp_name="/regfile_test/regfile1/rmem[2]" type="array">
-         <obj_property name="ElementShortName">[2][63:0]</obj_property>
-         <obj_property name="ObjectShortName">[2][63:0]</obj_property>
-         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-      </wvobject>
-      <wvobject fp_name="/regfile_test/regfile1/rmem[1]" type="array">
-         <obj_property name="ElementShortName">[1][63:0]</obj_property>
-         <obj_property name="ObjectShortName">[1][63:0]</obj_property>
-         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-      </wvobject>
-      <wvobject fp_name="/regfile_test/regfile1/rmem[0]" type="array">
-         <obj_property name="ElementShortName">[0][63:0]</obj_property>
-         <obj_property name="ObjectShortName">[0][63:0]</obj_property>
-         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-      </wvobject>
    </wvobject>
 </wave_config>

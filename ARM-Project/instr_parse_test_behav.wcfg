@@ -13,12 +13,12 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0.000 ns"></ZoomStartTime>
-      <ZoomEndTime time="30.001 ns"></ZoomEndTime>
-      <Cursor1Time time="16.840 ns"></Cursor1Time>
+      <ZoomEndTime time="36.393 ns"></ZoomEndTime>
+      <Cursor1Time time="9.588 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="193"></NameColumnWidth>
-      <ValueColumnWidth column_width="136"></ValueColumnWidth>
+      <ValueColumnWidth column_width="132"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="13" />
    <wvobject fp_name="/instr_parse_test/tc" type="array">
@@ -37,10 +37,12 @@
    <wvobject fp_name="/instr_parse_test/er_opcode" type="array">
       <obj_property name="ElementShortName">er_opcode[10:0]</obj_property>
       <obj_property name="ObjectShortName">er_opcode[10:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/instr_parse_test/opcode" type="array">
       <obj_property name="ElementShortName">opcode[10:0]</obj_property>
       <obj_property name="ObjectShortName">opcode[10:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/instr_parse_test/er_address" type="array">
       <obj_property name="ElementShortName">er_address[8:0]</obj_property>
