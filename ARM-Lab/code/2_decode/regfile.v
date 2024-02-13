@@ -30,7 +30,7 @@ module regfile(
     input wire [`WORD-1:0] write_data,
     input wire reg_write,
     output reg [`WORD-1:0] read_data1,
-    output reg [`WORD-1:0] read_data2,
+    output reg [`WORD-1:0] read_data2
 );
 
     reg[`WORD-1:0] rmem [31:0];
