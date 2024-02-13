@@ -4,5 +4,5 @@ Running: C:/XilinxVitis/Vivado/2021.2/bin/unwrapped/win64.o/xelab.exe --incr --d
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
-ERROR: [VRFC 10-2063] Module <regfile> not found while processing module instance <regfile1> [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/2_decode/regfile_test.sv:31]
-ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
