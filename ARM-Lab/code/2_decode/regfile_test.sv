@@ -29,7 +29,8 @@ oscillator clk_gen(read_clk);
 delay #(4) del(.a(read_clk), .a_delayed(write_clk));
 
 regfile regfile1(
-    .read_clk(read_clk), .write_clk(write_clk),
+    .read_clk(read_clk), 
+    .write_clk(write_clk),
     .read_register1(read_register1),
     .read_register2(read_register2),
     .write_register(write_register),
