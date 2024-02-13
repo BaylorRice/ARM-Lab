@@ -36,7 +36,7 @@ module regfile(
     reg[`WORD-1:0] rmem [31:0];
 
     initial
-    $readmemh(`RMEMFILE, rmem);
+    $readmemb(`RMEMFILE, rmem);
 
     always @(posedge read_clk) begin
         read_data1 = rmem[read_register1];
