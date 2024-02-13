@@ -44,8 +44,9 @@ module regfile(
     end
 
     always @(posedge write_clk) begin
-        if (reg_write)
+        if (reg_write == 1) begin
             rmem[write_register] = write_data;
+        end
     end
 
 
