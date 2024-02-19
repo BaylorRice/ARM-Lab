@@ -21,6 +21,18 @@
 
 
 module control(
-
+    input wire [10:0] opcode,
+    output reg reg2_loc,
+    output reg uncondbranch,
+    output reg branch,
+    output reg mem_read,
+    output reg mem_to_reg,
+    output reg [1:0] alu_op,
+    output reg mem_write,
+    output reg alu_src,
+    output reg reg_write
     );
+    
+    
+    
 endmodule
