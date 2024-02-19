@@ -25,5 +25,40 @@ module sign_extender(
     output reg [`WORD-1:0] sign_extended_output
     );
     
+    always @(*) begin
+        // Get opcode from instruction
+        reg [10:0] opcode = instruction[31:21];
+        
+        // Run cases
+        casex(opcode)
+            `LDUR, `STUR: begin
+                reg [7:0] address = instruction[20:12];
+                if (address[7] == 0) begin
+                    sign_extended_output[`WORD-1:8] = 0;
+                end else begin
+                    sign_extended_output[`WORD-1:8] = '1;
+                end
+                sign_extended_output[7:0] = address;
+                end
+            `CBZ: begin
+                reg [17:0] address = instruction[23:5];
+                if (address[17] == 0) begin
+                    sign_extended_output[`WORD-1:18] = 0;
+                end else begin
+                    sign_extended_output[`WORD-1:18] = '1;
+                end
+                sign_extended_output[17:0] = address;
+                end
+             `B: begin
+                reg [25:0] address = instruction[25:0];
+                if (address[25] == 0) begin
+                    sign_extended_output[`WORD-1:26] = 0;
+                end else begin
+                    sign_extended_output[`WORD-1:26] = '1;
+                end
+                sign_extended_output[25:0] = address;
+                end
+             endcase
+        end
     
 endmodule
