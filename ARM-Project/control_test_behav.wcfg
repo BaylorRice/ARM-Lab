@@ -12,9 +12,9 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="119,995 ps"></ZoomStartTime>
-      <ZoomEndTime time="120,001 ps"></ZoomEndTime>
-      <Cursor1Time time="120,000 ps"></Cursor1Time>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="120.001 ns"></ZoomEndTime>
+      <Cursor1Time time="119.997 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="193"></NameColumnWidth>
@@ -32,6 +32,7 @@
    <wvobject fp_name="/control_test/opcode" type="array">
       <obj_property name="ElementShortName">opcode[10:0]</obj_property>
       <obj_property name="ObjectShortName">opcode[10:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/control_test/reg2_loc" type="logic">
       <obj_property name="ElementShortName">reg2_loc</obj_property>
@@ -56,6 +57,7 @@
    <wvobject fp_name="/control_test/alu_op" type="array">
       <obj_property name="ElementShortName">alu_op[1:0]</obj_property>
       <obj_property name="ObjectShortName">alu_op[1:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/control_test/mem_write" type="logic">
       <obj_property name="ElementShortName">mem_write</obj_property>
@@ -92,6 +94,7 @@
    <wvobject fp_name="/control_test/er_alu_op" type="array">
       <obj_property name="ElementShortName">er_alu_op[1:0]</obj_property>
       <obj_property name="ObjectShortName">er_alu_op[1:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/control_test/er_mem_write" type="logic">
       <obj_property name="ElementShortName">er_mem_write</obj_property>

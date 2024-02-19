@@ -76,10 +76,10 @@ begin
     er_branch = 0;
     er_mem_read = 0;
     er_mem_to_reg = 0;
-    er_alu_op = 0;
+    er_alu_op = 2'b10;
     er_mem_write = 0;
     er_alu_src = 0;
-    er_reg_write = 0;
+    er_reg_write = 1;
     verify_control_signals();
 
     // SUB instruction
@@ -92,10 +92,10 @@ begin
     er_branch = 0;
     er_mem_read = 0;
     er_mem_to_reg = 0;
-    er_alu_op = 0;
+    er_alu_op = 2'b10;
     er_mem_write = 0;
     er_alu_src = 0;
-    er_reg_write = 0;
+    er_reg_write = 1;
     verify_control_signals();
 
     // AND instruction
@@ -108,10 +108,10 @@ begin
     er_branch = 0;
     er_mem_read = 0;
     er_mem_to_reg = 0;
-    er_alu_op = 0;
+    er_alu_op = 2'b10;
     er_mem_write = 0;
     er_alu_src = 0;
-    er_reg_write = 0;
+    er_reg_write = 1;
     verify_control_signals();
 
     // ORR instruction
@@ -124,10 +124,10 @@ begin
     er_branch = 0;
     er_mem_read = 0;
     er_mem_to_reg = 0;
-    er_alu_op = 0;
+    er_alu_op = 2'b10;
     er_mem_write = 0;
     er_alu_src = 0;
-    er_reg_write = 0;
+    er_reg_write = 1;
     verify_control_signals();
 
     // LDUR instruction
@@ -137,12 +137,12 @@ begin
     er_reg2_loc = 0;
     er_uncondbranch = 0;
     er_branch = 0;
-    er_mem_read = 0;
-    er_mem_to_reg = 0;
-    er_alu_op = 0;
+    er_mem_read = 1;
+    er_mem_to_reg = 1;
+    er_alu_op = 2'b00;
     er_mem_write = 0;
-    er_alu_src = 0;
-    er_reg_write = 0;
+    er_alu_src = 1;
+    er_reg_write = 1;
     #(`CYCLE);    
     verify_control_signals();
 
@@ -151,14 +151,14 @@ begin
     opcode = 11'h7C0;
     $display("Test Case %0d: | STUR | opcode = %0h", tc++, opcode);     
     #(`CYCLE);
-    er_reg2_loc = 0;
+    er_reg2_loc = 1;
     er_uncondbranch = 0;
     er_branch = 0;
     er_mem_read = 0;
     er_mem_to_reg = 0;
     er_alu_op = 0;
-    er_mem_write = 0;
-    er_alu_src = 0;
+    er_mem_write = 1;
+    er_alu_src = 1;
     er_reg_write = 0;
     verify_control_signals();
 
@@ -167,12 +167,12 @@ begin
     opcode = 11'h5A0;
     $display("Test Case %0d: | CBZ | opcode = %0h", tc++, opcode);     
     #(`CYCLE);
-    er_reg2_loc = 0;
+    er_reg2_loc = 1;
     er_uncondbranch = 0;
-    er_branch = 0;
+    er_branch = 1;
     er_mem_read = 0;
     er_mem_to_reg = 0;
-    er_alu_op = 0;
+    er_alu_op = 2'b01;
     er_mem_write = 0;
     er_alu_src = 0;
     er_reg_write = 0;
@@ -183,12 +183,12 @@ begin
     opcode = 11'h5A7;
     $display("Test Case %0d: | CBZ | opcode = %0h", tc++, opcode);     
     #(`CYCLE);
-    er_reg2_loc = 0;
+    er_reg2_loc = 1;
     er_uncondbranch = 0;
-    er_branch = 0;
+    er_branch = 1;
     er_mem_read = 0;
     er_mem_to_reg = 0;
-    er_alu_op = 0;
+    er_alu_op = 2'b01;
     er_mem_write = 0;
     er_alu_src = 0;
     er_reg_write = 0;
@@ -200,7 +200,7 @@ begin
     $display("Test Case %0d: | B | opcode = %0h", tc++, opcode);     
     #(`CYCLE);
     er_reg2_loc = 0;
-    er_uncondbranch = 0;
+    er_uncondbranch = 1;
     er_branch = 0;
     er_mem_read = 0;
     er_mem_to_reg = 0;
@@ -216,7 +216,7 @@ begin
     $display("Test Case %0d: | B | opcode = %0h", tc++, opcode);     
     #(`CYCLE);
     er_reg2_loc = 0;
-    er_uncondbranch = 0;
+    er_uncondbranch = 1;
     er_branch = 0;
     er_mem_read = 0;
     er_mem_to_reg = 0;

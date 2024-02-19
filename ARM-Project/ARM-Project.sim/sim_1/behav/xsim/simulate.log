@@ -8,83 +8,83 @@ Test Case 1: | ADD | opcode = 458
 +++ Step 3: Pass: |branch| time = 10 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
 +++ Step 4: Pass: |mem_read| time = 10 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
 +++ Step 5: Pass: |mem_to_reg| time = 10 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
---- Step 6: Fail: |alu_op| time = 10 ns | er = 0 | ar = 10 | er_bits = 2 | ar_bits = 2 ---
++++ Step 6: Pass: |alu_op| time = 10 ns | er = 10 | ar = 10 | er_bits = 2 | ar_bits = 2 +++
 +++ Step 7: Pass: |mem_write| time = 10 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
 +++ Step 8: Pass: |alu_src| time = 10 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
---- Step 9: Fail: |reg_write| time = 10 ns | er = 0 | ar = 1 | er_bits = 1 | ar_bits = 1 ---
++++ Step 9: Pass: |reg_write| time = 10 ns | er = 1 | ar = 1 | er_bits = 1 | ar_bits = 1 +++
 Test Case 2: | SUB | opcode = 658
 +++ Step 1: Pass: |reg2_loc| time = 20 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
 +++ Step 2: Pass: |uncondbranch| time = 20 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
 +++ Step 3: Pass: |branch| time = 20 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
 +++ Step 4: Pass: |mem_read| time = 20 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
 +++ Step 5: Pass: |mem_to_reg| time = 20 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
---- Step 6: Fail: |alu_op| time = 20 ns | er = 0 | ar = 10 | er_bits = 2 | ar_bits = 2 ---
++++ Step 6: Pass: |alu_op| time = 20 ns | er = 10 | ar = 10 | er_bits = 2 | ar_bits = 2 +++
 +++ Step 7: Pass: |mem_write| time = 20 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
 +++ Step 8: Pass: |alu_src| time = 20 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
---- Step 9: Fail: |reg_write| time = 20 ns | er = 0 | ar = 1 | er_bits = 1 | ar_bits = 1 ---
++++ Step 9: Pass: |reg_write| time = 20 ns | er = 1 | ar = 1 | er_bits = 1 | ar_bits = 1 +++
 Test Case 3: | AND | opcode = 450
 +++ Step 1: Pass: |reg2_loc| time = 30 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
 +++ Step 2: Pass: |uncondbranch| time = 30 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
 +++ Step 3: Pass: |branch| time = 30 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
 +++ Step 4: Pass: |mem_read| time = 30 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
 +++ Step 5: Pass: |mem_to_reg| time = 30 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
-+++ Step 6: Pass: |alu_op| time = 30 ns | er = 0 | ar = 0 | er_bits = 2 | ar_bits = 2 +++
++++ Step 6: Pass: |alu_op| time = 30 ns | er = 10 | ar = 10 | er_bits = 2 | ar_bits = 2 +++
 +++ Step 7: Pass: |mem_write| time = 30 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
 +++ Step 8: Pass: |alu_src| time = 30 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
-+++ Step 9: Pass: |reg_write| time = 30 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 9: Pass: |reg_write| time = 30 ns | er = 1 | ar = 1 | er_bits = 1 | ar_bits = 1 +++
 Test Case 4: | ORR | opcode = 550
 +++ Step 1: Pass: |reg2_loc| time = 40 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
 +++ Step 2: Pass: |uncondbranch| time = 40 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
 +++ Step 3: Pass: |branch| time = 40 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
 +++ Step 4: Pass: |mem_read| time = 40 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
 +++ Step 5: Pass: |mem_to_reg| time = 40 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
---- Step 6: Fail: |alu_op| time = 40 ns | er = 0 | ar = 10 | er_bits = 2 | ar_bits = 2 ---
++++ Step 6: Pass: |alu_op| time = 40 ns | er = 10 | ar = 10 | er_bits = 2 | ar_bits = 2 +++
 +++ Step 7: Pass: |mem_write| time = 40 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
 +++ Step 8: Pass: |alu_src| time = 40 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
---- Step 9: Fail: |reg_write| time = 40 ns | er = 0 | ar = 1 | er_bits = 1 | ar_bits = 1 ---
++++ Step 9: Pass: |reg_write| time = 40 ns | er = 1 | ar = 1 | er_bits = 1 | ar_bits = 1 +++
 Test Case 5: | LDUR | opcode = 7c2
 +++ Step 1: Pass: |reg2_loc| time = 50 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
 +++ Step 2: Pass: |uncondbranch| time = 50 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
 +++ Step 3: Pass: |branch| time = 50 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
---- Step 4: Fail: |mem_read| time = 50 ns | er = 0 | ar = 1 | er_bits = 1 | ar_bits = 1 ---
---- Step 5: Fail: |mem_to_reg| time = 50 ns | er = 0 | ar = 1 | er_bits = 1 | ar_bits = 1 ---
++++ Step 4: Pass: |mem_read| time = 50 ns | er = 1 | ar = 1 | er_bits = 1 | ar_bits = 1 +++
++++ Step 5: Pass: |mem_to_reg| time = 50 ns | er = 1 | ar = 1 | er_bits = 1 | ar_bits = 1 +++
 +++ Step 6: Pass: |alu_op| time = 50 ns | er = 0 | ar = 0 | er_bits = 2 | ar_bits = 2 +++
 +++ Step 7: Pass: |mem_write| time = 50 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
---- Step 8: Fail: |alu_src| time = 50 ns | er = 0 | ar = 1 | er_bits = 1 | ar_bits = 1 ---
---- Step 9: Fail: |reg_write| time = 50 ns | er = 0 | ar = 1 | er_bits = 1 | ar_bits = 1 ---
++++ Step 8: Pass: |alu_src| time = 50 ns | er = 1 | ar = 1 | er_bits = 1 | ar_bits = 1 +++
++++ Step 9: Pass: |reg_write| time = 50 ns | er = 1 | ar = 1 | er_bits = 1 | ar_bits = 1 +++
 Test Case 6: | STUR | opcode = 7c0
---- Step 1: Fail: |reg2_loc| time = 60 ns | er = 0 | ar = 1 | er_bits = 1 | ar_bits = 1 ---
++++ Step 1: Pass: |reg2_loc| time = 60 ns | er = 1 | ar = 1 | er_bits = 1 | ar_bits = 1 +++
 +++ Step 2: Pass: |uncondbranch| time = 60 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
 +++ Step 3: Pass: |branch| time = 60 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
 +++ Step 4: Pass: |mem_read| time = 60 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
 +++ Step 5: Pass: |mem_to_reg| time = 60 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
 +++ Step 6: Pass: |alu_op| time = 60 ns | er = 0 | ar = 0 | er_bits = 2 | ar_bits = 2 +++
---- Step 7: Fail: |mem_write| time = 60 ns | er = 0 | ar = 1 | er_bits = 1 | ar_bits = 1 ---
---- Step 8: Fail: |alu_src| time = 60 ns | er = 0 | ar = 1 | er_bits = 1 | ar_bits = 1 ---
++++ Step 7: Pass: |mem_write| time = 60 ns | er = 1 | ar = 1 | er_bits = 1 | ar_bits = 1 +++
++++ Step 8: Pass: |alu_src| time = 60 ns | er = 1 | ar = 1 | er_bits = 1 | ar_bits = 1 +++
 +++ Step 9: Pass: |reg_write| time = 60 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
 Test Case 7: | CBZ | opcode = 5a0
---- Step 1: Fail: |reg2_loc| time = 70 ns | er = 0 | ar = 1 | er_bits = 1 | ar_bits = 1 ---
++++ Step 1: Pass: |reg2_loc| time = 70 ns | er = 1 | ar = 1 | er_bits = 1 | ar_bits = 1 +++
 +++ Step 2: Pass: |uncondbranch| time = 70 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
---- Step 3: Fail: |branch| time = 70 ns | er = 0 | ar = 1 | er_bits = 1 | ar_bits = 1 ---
++++ Step 3: Pass: |branch| time = 70 ns | er = 1 | ar = 1 | er_bits = 1 | ar_bits = 1 +++
 +++ Step 4: Pass: |mem_read| time = 70 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
 +++ Step 5: Pass: |mem_to_reg| time = 70 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
---- Step 6: Fail: |alu_op| time = 70 ns | er = 0 | ar = 1 | er_bits = 2 | ar_bits = 2 ---
++++ Step 6: Pass: |alu_op| time = 70 ns | er = 1 | ar = 1 | er_bits = 2 | ar_bits = 2 +++
 +++ Step 7: Pass: |mem_write| time = 70 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
 +++ Step 8: Pass: |alu_src| time = 70 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
 +++ Step 9: Pass: |reg_write| time = 70 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
 Test Case 8: | CBZ | opcode = 5a7
---- Step 1: Fail: |reg2_loc| time = 80 ns | er = 0 | ar = 1 | er_bits = 1 | ar_bits = 1 ---
++++ Step 1: Pass: |reg2_loc| time = 80 ns | er = 1 | ar = 1 | er_bits = 1 | ar_bits = 1 +++
 +++ Step 2: Pass: |uncondbranch| time = 80 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
---- Step 3: Fail: |branch| time = 80 ns | er = 0 | ar = 1 | er_bits = 1 | ar_bits = 1 ---
++++ Step 3: Pass: |branch| time = 80 ns | er = 1 | ar = 1 | er_bits = 1 | ar_bits = 1 +++
 +++ Step 4: Pass: |mem_read| time = 80 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
 +++ Step 5: Pass: |mem_to_reg| time = 80 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
---- Step 6: Fail: |alu_op| time = 80 ns | er = 0 | ar = 1 | er_bits = 2 | ar_bits = 2 ---
++++ Step 6: Pass: |alu_op| time = 80 ns | er = 1 | ar = 1 | er_bits = 2 | ar_bits = 2 +++
 +++ Step 7: Pass: |mem_write| time = 80 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
 +++ Step 8: Pass: |alu_src| time = 80 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
 +++ Step 9: Pass: |reg_write| time = 80 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
 Test Case 9: | B | opcode = a0
 +++ Step 1: Pass: |reg2_loc| time = 90 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
---- Step 2: Fail: |uncondbranch| time = 90 ns | er = 0 | ar = 1 | er_bits = 1 | ar_bits = 1 ---
++++ Step 2: Pass: |uncondbranch| time = 90 ns | er = 1 | ar = 1 | er_bits = 1 | ar_bits = 1 +++
 +++ Step 3: Pass: |branch| time = 90 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
 +++ Step 4: Pass: |mem_read| time = 90 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
 +++ Step 5: Pass: |mem_to_reg| time = 90 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
@@ -94,6 +94,6 @@ Test Case 9: | B | opcode = a0
 +++ Step 9: Pass: |reg_write| time = 90 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
 Test Case 10: | B | opcode = af
 +++ Step 1: Pass: |reg2_loc| time = 100 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
---- Step 2: Fail: |uncondbranch| time = 100 ns | er = 0 | ar = 1 | er_bits = 1 | ar_bits = 1 ---
++++ Step 2: Pass: |uncondbranch| time = 100 ns | er = 1 | ar = 1 | er_bits = 1 | ar_bits = 1 +++
 +++ Step 3: Pass: |branch| time = 100 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
-+++ Step 4: Pass: |mem_read| ti
++++ Step 4: Pass: |mem_rea

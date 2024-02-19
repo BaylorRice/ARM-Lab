@@ -13,7 +13,7 @@
 // For Control Unit
 `define ADD 11'b10001011000
 `define SUB 11'b11001011000
-`define AND 11'b10001011000
+`define AND 11'h450
 `define ORR 11'b10101010000
 `define LDUR 11'b11111000010
 `define STUR 11'b11111000000
