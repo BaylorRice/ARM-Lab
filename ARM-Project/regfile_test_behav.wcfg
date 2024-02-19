@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="regfile_test_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="regfile_test" />
+            <top_module name="verification" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="109.701 ns"></ZoomEndTime>
+      <Cursor1Time time="96.000 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="341"></NameColumnWidth>
+      <ValueColumnWidth column_width="163"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="13" />
+   <wvobject fp_name="/regfile_test/read_clk" type="logic">
+      <obj_property name="ElementShortName">read_clk</obj_property>
+      <obj_property name="ObjectShortName">read_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/regfile_test/write_clk" type="logic">
+      <obj_property name="ElementShortName">write_clk</obj_property>
+      <obj_property name="ObjectShortName">write_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/regfile_test/read_register1" type="array">
+      <obj_property name="ElementShortName">read_register1[4:0]</obj_property>
+      <obj_property name="ObjectShortName">read_register1[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/regfile_test/read_register2" type="array">
+      <obj_property name="ElementShortName">read_register2[4:0]</obj_property>
+      <obj_property name="ObjectShortName">read_register2[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/regfile_test/write_register" type="array">
+      <obj_property name="ElementShortName">write_register[4:0]</obj_property>
+      <obj_property name="ObjectShortName">write_register[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/regfile_test/write_data" type="array">
+      <obj_property name="ElementShortName">write_data[63:0]</obj_property>
+      <obj_property name="ObjectShortName">write_data[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/regfile_test/reg_write" type="logic">
+      <obj_property name="ElementShortName">reg_write</obj_property>
+      <obj_property name="ObjectShortName">reg_write</obj_property>
+   </wvobject>
+   <wvobject fp_name="/regfile_test/read_data1" type="array">
+      <obj_property name="ElementShortName">read_data1[63:0]</obj_property>
+      <obj_property name="ObjectShortName">read_data1[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/regfile_test/er_read_data1" type="array">
+      <obj_property name="ElementShortName">er_read_data1[63:0]</obj_property>
+      <obj_property name="ObjectShortName">er_read_data1[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/regfile_test/read_data2" type="array">
+      <obj_property name="ElementShortName">read_data2[63:0]</obj_property>
+      <obj_property name="ObjectShortName">read_data2[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/regfile_test/er_read_data2" type="array">
+      <obj_property name="ElementShortName">er_read_data2[63:0]</obj_property>
+      <obj_property name="ObjectShortName">er_read_data2[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/regfile_test/tc" type="array">
+      <obj_property name="ElementShortName">tc[31:0]</obj_property>
+      <obj_property name="ObjectShortName">tc[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/regfile_test/ts" type="array">
+      <obj_property name="ElementShortName">ts[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ts[31:0]</obj_property>
+   </wvobject>
+</wave_config>

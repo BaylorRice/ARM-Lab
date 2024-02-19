@@ -2,13 +2,13 @@
 # Vivado v2021.2 (64-bit)
 # SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
 # IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
-# Start of session at: Thu Feb  1 16:58:31 2024
-# Process ID: 26208
+# Start of session at: Wed Feb 14 13:58:43 2024
+# Process ID: 11600
 # Current directory: C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent24572 C:\Users\reese_ford1\Documents\GitHub\ARM-Lab\ARM-Project\ARM-Project.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent16764 C:\Users\reese_ford1\Documents\GitHub\ARM-Lab\ARM-Project\ARM-Project.xpr
 # Log file: C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/vivado.log
 # Journal file: C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project\vivado.jou
-# Running On: ROG-112-05, OS: Windows, CPU Frequency: 3192 MHz, CPU Physical cores: 6, Host memory: 34145 MB
+# Running On: ROG-115-12, OS: Windows, CPU Frequency: 2112 MHz, CPU Physical cores: 12, Host memory: 34033 MB
 #-----------------------------------------------------------
 start_gui
 open_project C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.xpr
@@ -26,166 +26,6 @@ Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/XilinxVitis/Vivado/2021.2/data/ip'.
-open_project: Time (s): cpu = 00:00:14 ; elapsed = 00:00:06 . Memory (MB): peak = 1565.371 ; gain = 0.000
 update_compile_order -fileset sources_1
-launch_simulation
-Command: launch_simulation 
-INFO: [Vivado 12-12493] Simulation top is 'iFetch_test'
-WARNING: [Vivado 12-12986] Compiled library path does not exist: ''
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-72] Using boost library from 'C:/XilinxVitis/Vivado/2021.2/tps/boost_1_72_0'
-INFO: [SIM-utils-54] Inspecting design source files for 'iFetch_test' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim'
-"xvlog --incr --relax -L uvm -prj iFetch_test_vlog.prj"
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/0_common/adder.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module adder
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/0_common/delay.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module delay
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/1_fetch/iFetch.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module iFetch
-INFO: [VRFC 10-2458] undeclared symbol add_out_wire, assumed default net type wire [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/1_fetch/iFetch.v:37]
-INFO: [VRFC 10-2458] undeclared symbol mux_out_wire, assumed default net type wire [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/1_fetch/iFetch.v:40]
-INFO: [VRFC 10-2458] undeclared symbol pc_out_wire, assumed default net type wire [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/1_fetch/iFetch.v:47]
-WARNING: [VRFC 10-2938] 'add_out_wire' is already implicitly declared on line 37 [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/1_fetch/iFetch.v:64]
-WARNING: [VRFC 10-2938] 'pc_out_wire' is already implicitly declared on line 47 [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/1_fetch/iFetch.v:65]
-WARNING: [VRFC 10-2938] 'mux_out_wire' is already implicitly declared on line 40 [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/1_fetch/iFetch.v:66]
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/1_fetch/instr_mem.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module instr_mem
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/0_common/mux.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module mux
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/0_common/oscillator.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module oscillator
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/1_fetch/register.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module register
-INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim'
-"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot iFetch_test_behav xil_defaultlib.iFetch_test xil_defaultlib.glbl -log elaborate.log"
-Vivado Simulator v2021.2
-Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
-Running: C:/XilinxVitis/Vivado/2021.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot iFetch_test_behav xil_defaultlib.iFetch_test xil_defaultlib.glbl -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Pass Through NonSizing Optimizer
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package xil_defaultlib.verification
-Compiling module xil_defaultlib.oscillator
-Compiling module xil_defaultlib.delay
-Compiling module xil_defaultlib.mux(SIZE=64)
-Compiling module xil_defaultlib.register
-Compiling module xil_defaultlib.instr_mem(SIZE=16)
-Compiling module xil_defaultlib.adder
-Compiling module xil_defaultlib.iFetch(SIZE=16)
-Compiling module xil_defaultlib.iFetch_test
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot iFetch_test_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "iFetch_test_behav -key {Behavioral:sim_1:Functional:iFetch_test} -tclbatch {iFetch_test.tcl} -view {C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/register_test_behav.wcfg} -view {C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/adder_test_behav.wcfg} -view {C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/mux_test_behav.wcfg} -view {C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/instr_mem_test_behav.wcfg} -view {C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/iFetch_test_behav.wcfg} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Time resolution is 1 ps
-open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/register_test_behav.wcfg
-WARNING: Simulation object /register_test/tc was not found in the design.
-WARNING: Simulation object /register_test/ts was not found in the design.
-WARNING: Simulation object /register_test/clk was not found in the design.
-WARNING: Simulation object /register_test/rst was not found in the design.
-WARNING: Simulation object /register_test/d was not found in the design.
-WARNING: Simulation object /register_test/er_q was not found in the design.
-WARNING: Simulation object /register_test/q was not found in the design.
-open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/adder_test_behav.wcfg
-WARNING: Simulation object /adder_test/a was not found in the design.
-WARNING: Simulation object /adder_test/b was not found in the design.
-WARNING: Simulation object /adder_test/sum was not found in the design.
-WARNING: Simulation object /adder_test/er_sum was not found in the design.
-WARNING: Simulation object /adder_test/tc was not found in the design.
-WARNING: Simulation object /adder_test/ts was not found in the design.
-open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/mux_test_behav.wcfg
-WARNING: Simulation object /mux_test/a_64 was not found in the design.
-WARNING: Simulation object /mux_test/b_64 was not found in the design.
-WARNING: Simulation object /mux_test/ctl was not found in the design.
-WARNING: Simulation object /mux_test/out_64 was not found in the design.
-WARNING: Simulation object /mux_test/a_5 was not found in the design.
-WARNING: Simulation object /mux_test/b_5 was not found in the design.
-WARNING: Simulation object /mux_test/out_5 was not found in the design.
-WARNING: Simulation object /mux_test/er_out_64 was not found in the design.
-WARNING: Simulation object /mux_test/er_out_5 was not found in the design.
-WARNING: Simulation object /mux_test/tc was not found in the design.
-WARNING: Simulation object /mux_test/ts was not found in the design.
-open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/instr_mem_test_behav.wcfg
-WARNING: Simulation object /instr_mem_test/clk was not found in the design.
-WARNING: Simulation object /instr_mem_test/pc was not found in the design.
-WARNING: Simulation object /instr_mem_test/instr was not found in the design.
-WARNING: Simulation object /instr_mem_test/er was not found in the design.
-WARNING: Simulation object /instr_mem_test/tc was not found in the design.
-WARNING: Simulation object /instr_mem_test/ts was not found in the design.
-open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/iFetch_test_behav.wcfg
-source iFetch_test.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 1000ns
-
-******* BEGIN TEST RESULTS *******
-
-Test Case 1
-+++ Step 1: Pass: |cur_pc| time = 10 ns | er = 0 | ar = 0 | er_bits = 64 | ar_bits = 64 +++
-+++ Step 2: Pass: |instruction| time = 10 ns | er = abcdef12 | ar = abcdef12 | er_bits = 32 | ar_bits = 32 +++
-Test Case 2
-+++ Step 1: Pass: |cur_pc| time = 20 ns | er = 4 | ar = 4 | er_bits = 64 | ar_bits = 64 +++
-+++ Step 2: Pass: |instruction| time = 20 ns | er = bcdef123 | ar = bcdef123 | er_bits = 32 | ar_bits = 32 +++
-Test Case 3
-+++ Step 1: Pass: |cur_pc| time = 30 ns | er = 8 | ar = 8 | er_bits = 64 | ar_bits = 64 +++
-+++ Step 2: Pass: |instruction| time = 30 ns | er = cdef1234 | ar = cdef1234 | er_bits = 32 | ar_bits = 32 +++
-Test Case 4
-+++ Step 1: Pass: |cur_pc| time = 42 ns | er = 12 | ar = 12 | er_bits = 64 | ar_bits = 64 +++
-+++ Step 2: Pass: |instruction| time = 42 ns | er = def12345 | ar = def12345 | er_bits = 32 | ar_bits = 32 +++
-Test Case 5
-+++ Step 1: Pass: |cur_pc| time = 52 ns | er = 44 | ar = 44 | er_bits = 64 | ar_bits = 64 +++
-+++ Step 2: Pass: |instruction| time = 52 ns | er = 6789abcd | ar = 6789abcd | er_bits = 32 | ar_bits = 32 +++
-Test Case 6
-+++ Step 1: Pass: |cur_pc| time = 62 ns | er = 48 | ar = 48 | er_bits = 64 | ar_bits = 64 +++
-+++ Step 2: Pass: |instruction| time = 62 ns | er = 789abcde | ar = 789abcde | er_bits = 32 | ar_bits = 32 +++
-Test Case 7
-+++ Step 1: Pass: |cur_pc| time = 64 ns | er = 48 | ar = 48 | er_bits = 64 | ar_bits = 64 +++
-+++ Step 2: Pass: |instruction| time = 64 ns | er = 789abcde | ar = 789abcde | er_bits = 32 | ar_bits = 32 +++
-Test Case 8
-+++ Step 1: Pass: |cur_pc| time = 74 ns | er = 20 | ar = 20 | er_bits = 64 | ar_bits = 64 +++
-+++ Step 2: Pass: |instruction| time = 74 ns | er = f1234567 | ar = f1234567 | er_bits = 32 | ar_bits = 32 +++
-Test Case 9
-+++ Step 1: Pass: |cur_pc| time = 84 ns | er = 32 | ar = 32 | er_bits = 64 | ar_bits = 64 +++
-+++ Step 2: Pass: |instruction| time = 84 ns | er = 3456789a | ar = 3456789a | er_bits = 32 | ar_bits = 32 +++
-Test Case 10
-+++ Step 1: Pass: |cur_pc| time = 94 ns | er = 36 | ar = 36 | er_bits = 64 | ar_bits = 64 +++
-+++ Step 2: Pass: |instruction| time = 94 ns | er = 456789ab | ar = 456789ab | er_bits = 32 | ar_bits = 32 +++
-Test Case 11
-+++ Step 1: Pass: |cur_pc| time = 104 ns | er = 40 | ar = 40 | er_bits = 64 | ar_bits = 64 +++
-+++ Step 2: Pass: |instruction| time = 104 ns | er = 56789abc | ar = 56789abc | er_bits = 32 | ar_bits = 32 +++
-
-Pass Count = 22
-Fail Count = 0
-
-******* END TEST RESULTS *******
-
-$finish called at time : 104 ns : File "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/1_fetch/iFetch_test.sv" Line 160
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'iFetch_test_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-launch_simulation: Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1565.371 ; gain = 0.000
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
 exit
-INFO: [Common 17-206] Exiting Vivado at Thu Feb  1 17:00:28 2024...
+INFO: [Common 17-206] Exiting Vivado at Wed Feb 14 13:59:50 2024...
