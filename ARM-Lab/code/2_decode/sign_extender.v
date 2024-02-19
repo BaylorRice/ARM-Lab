@@ -1,4 +1,5 @@
 `timescale 1ns / 1ps
+`include "definitions.vh"
 //////////////////////////////////////////////////////////////////////////////////
 // Company: Baylor University
 // Engineer: Reese Ford
@@ -23,41 +24,50 @@
 module sign_extender(
     input [`INSTR_LEN-1:0] instruction,
     output reg [`WORD-1:0] sign_extended_output
-    );
+);
+    
+    reg [10:0] opcode;
+    reg [7:0] d_address;
+    reg [17:0] cb_address;
+    reg [25:0] b_address;
     
     always @(*) begin
         // Get opcode from instruction
-        reg [10:0] opcode = instruction[31:21];
+        opcode = instruction[31:21];
         
         // Run cases
         casex(opcode)
             `LDUR, `STUR: begin
-                reg [7:0] address = instruction[20:12];
-                if (address[7] == 0) begin
+                d_address = instruction[20:12];
+                if (d_address[7] == 0) begin
                     sign_extended_output[`WORD-1:8] = 0;
                 end else begin
-                    sign_extended_output[`WORD-1:8] = '1;
+                    sign_extended_output[`WORD-1:8] = {((`WORD-1)-7){1'b1}};
                 end
-                sign_extended_output[7:0] = address;
+                sign_extended_output[7:0] = d_address;
                 end
             `CBZ: begin
-                reg [17:0] address = instruction[23:5];
-                if (address[17] == 0) begin
+                cb_address = instruction[23:5];
+                if (cb_address[17] == 0) begin
                     sign_extended_output[`WORD-1:18] = 0;
                 end else begin
-                    sign_extended_output[`WORD-1:18] = '1;
+                    sign_extended_output[`WORD-1:18] = {((`WORD-1)-17){1'b1}};
                 end
-                sign_extended_output[17:0] = address;
+                sign_extended_output[17:0] = cb_address; 
                 end
              `B: begin
-                reg [25:0] address = instruction[25:0];
-                if (address[25] == 0) begin
+                b_address = instruction[25:0];
+                if (b_address[25] == 0) begin
                     sign_extended_output[`WORD-1:26] = 0;
                 end else begin
-                    sign_extended_output[`WORD-1:26] = '1;
+                    sign_extended_output[`WORD-1:26] = {((`WORD-1)-25){1'b1}};
                 end
-                sign_extended_output[25:0] = address;
+                sign_extended_output[25:0] = b_address;
                 end
+            default: begin
+                sign_extended_output = 0;
+            end
+            
              endcase
         end
     

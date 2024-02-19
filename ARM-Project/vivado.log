@@ -30,3 +30,1620 @@ update_compile_order -fileset sources_1
 close [ open C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/2_decode/control.v w ]
 add_files C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/2_decode/control.v
 update_compile_order -fileset sources_1
+set_property top control_test [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+set_property top control_test [current_fileset]
+update_compile_order -fileset sources_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'control_test'
+WARNING: [Vivado 12-12986] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/XilinxVitis/Vivado/2021.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'control_test' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj control_test_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/2_decode/control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module control
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/0_common/verification_functions.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/2_decode/control_test.sv" into library xil_defaultlib
+WARNING: [VRFC 10-3264] design element 'verification' is previously defined, ignoring this definition [../../../../../ARM-Lab/code/0_common/verification_functions.sv:3]
+INFO: [VRFC 10-311] analyzing module control_test
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot control_test_behav xil_defaultlib.control_test xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2021.2
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: C:/XilinxVitis/Vivado/2021.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot control_test_behav xil_defaultlib.control_test xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package xil_defaultlib.verification
+Compiling module xil_defaultlib.control
+Compiling module xil_defaultlib.control_test
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot control_test_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "control_test_behav -key {Behavioral:sim_1:Functional:control_test} -tclbatch {control_test.tcl} -view {C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/register_test_behav.wcfg} -view {C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/adder_test_behav.wcfg} -view {C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/mux_test_behav.wcfg} -view {C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/instr_mem_test_behav.wcfg} -view {C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/iFetch_test_behav.wcfg} -view {C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/instr_parse_test_behav.wcfg} -view {C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/regfile_test_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/register_test_behav.wcfg
+WARNING: Simulation object /register_test/tc was not found in the design.
+WARNING: Simulation object /register_test/ts was not found in the design.
+WARNING: Simulation object /register_test/clk was not found in the design.
+WARNING: Simulation object /register_test/rst was not found in the design.
+WARNING: Simulation object /register_test/d was not found in the design.
+WARNING: Simulation object /register_test/er_q was not found in the design.
+WARNING: Simulation object /register_test/q was not found in the design.
+open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/adder_test_behav.wcfg
+WARNING: Simulation object /adder_test/a was not found in the design.
+WARNING: Simulation object /adder_test/b was not found in the design.
+WARNING: Simulation object /adder_test/sum was not found in the design.
+WARNING: Simulation object /adder_test/er_sum was not found in the design.
+WARNING: Simulation object /adder_test/tc was not found in the design.
+WARNING: Simulation object /adder_test/ts was not found in the design.
+open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/mux_test_behav.wcfg
+WARNING: Simulation object /mux_test/a_64 was not found in the design.
+WARNING: Simulation object /mux_test/b_64 was not found in the design.
+WARNING: Simulation object /mux_test/ctl was not found in the design.
+WARNING: Simulation object /mux_test/out_64 was not found in the design.
+WARNING: Simulation object /mux_test/a_5 was not found in the design.
+WARNING: Simulation object /mux_test/b_5 was not found in the design.
+WARNING: Simulation object /mux_test/out_5 was not found in the design.
+WARNING: Simulation object /mux_test/er_out_64 was not found in the design.
+WARNING: Simulation object /mux_test/er_out_5 was not found in the design.
+WARNING: Simulation object /mux_test/tc was not found in the design.
+WARNING: Simulation object /mux_test/ts was not found in the design.
+open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/instr_mem_test_behav.wcfg
+WARNING: Simulation object /instr_mem_test/clk was not found in the design.
+WARNING: Simulation object /instr_mem_test/pc was not found in the design.
+WARNING: Simulation object /instr_mem_test/instr was not found in the design.
+WARNING: Simulation object /instr_mem_test/er was not found in the design.
+WARNING: Simulation object /instr_mem_test/tc was not found in the design.
+WARNING: Simulation object /instr_mem_test/ts was not found in the design.
+open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/iFetch_test_behav.wcfg
+WARNING: Simulation object /iFetch_test/clk was not found in the design.
+WARNING: Simulation object /iFetch_test/reset was not found in the design.
+WARNING: Simulation object /iFetch_test/pc_src was not found in the design.
+WARNING: Simulation object /iFetch_test/branch_target was not found in the design.
+WARNING: Simulation object /iFetch_test/cur_pc was not found in the design.
+WARNING: Simulation object /iFetch_test/er_cur_pc was not found in the design.
+WARNING: Simulation object /iFetch_test/instruction was not found in the design.
+WARNING: Simulation object /iFetch_test/er_instruction was not found in the design.
+WARNING: Simulation object /iFetch_test/ts was not found in the design.
+WARNING: Simulation object /iFetch_test/tc was not found in the design.
+WARNING: Simulation object /iFetch_test/clk_plus_1 was not found in the design.
+open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/instr_parse_test_behav.wcfg
+WARNING: Simulation object /instr_parse_test/tc was not found in the design.
+WARNING: Simulation object /instr_parse_test/instruction was not found in the design.
+WARNING: Simulation object /instr_parse_test/ts was not found in the design.
+WARNING: Simulation object /instr_parse_test/er_opcode was not found in the design.
+WARNING: Simulation object /instr_parse_test/opcode was not found in the design.
+WARNING: Simulation object /instr_parse_test/er_address was not found in the design.
+WARNING: Simulation object /instr_parse_test/address was not found in the design.
+WARNING: Simulation object /instr_parse_test/er_rm_num was not found in the design.
+WARNING: Simulation object /instr_parse_test/rm_num was not found in the design.
+WARNING: Simulation object /instr_parse_test/er_rn_num was not found in the design.
+WARNING: Simulation object /instr_parse_test/rn_num was not found in the design.
+WARNING: Simulation object /instr_parse_test/er_rd_num was not found in the design.
+WARNING: Simulation object /instr_parse_test/rd_num was not found in the design.
+open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/regfile_test_behav.wcfg
+WARNING: Simulation object /regfile_test/read_clk was not found in the design.
+WARNING: Simulation object /regfile_test/write_clk was not found in the design.
+WARNING: Simulation object /regfile_test/read_register1 was not found in the design.
+WARNING: Simulation object /regfile_test/read_register2 was not found in the design.
+WARNING: Simulation object /regfile_test/write_register was not found in the design.
+WARNING: Simulation object /regfile_test/write_data was not found in the design.
+WARNING: Simulation object /regfile_test/reg_write was not found in the design.
+WARNING: Simulation object /regfile_test/read_data1 was not found in the design.
+WARNING: Simulation object /regfile_test/er_read_data1 was not found in the design.
+WARNING: Simulation object /regfile_test/read_data2 was not found in the design.
+WARNING: Simulation object /regfile_test/er_read_data2 was not found in the design.
+WARNING: Simulation object /regfile_test/tc was not found in the design.
+WARNING: Simulation object /regfile_test/ts was not found in the design.
+source control_test.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+
+******* BEGIN TEST RESULTS *******
+
+Test Case 1: | ADD | opcode = 458
++++ Step 1: Pass: |reg2_loc| time = 10 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 2: Pass: |uncondbranch| time = 10 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 3: Pass: |branch| time = 10 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 4: Pass: |mem_read| time = 10 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 5: Pass: |mem_to_reg| time = 10 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+--- Step 6: Fail: |alu_op| time = 10 ns | er = 0 | ar = 10 | er_bits = 2 | ar_bits = 2 ---
++++ Step 7: Pass: |mem_write| time = 10 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 8: Pass: |alu_src| time = 10 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+--- Step 9: Fail: |reg_write| time = 10 ns | er = 0 | ar = 1 | er_bits = 1 | ar_bits = 1 ---
+Test Case 2: | SUB | opcode = 658
++++ Step 1: Pass: |reg2_loc| time = 20 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 2: Pass: |uncondbranch| time = 20 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 3: Pass: |branch| time = 20 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 4: Pass: |mem_read| time = 20 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 5: Pass: |mem_to_reg| time = 20 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+--- Step 6: Fail: |alu_op| time = 20 ns | er = 0 | ar = 10 | er_bits = 2 | ar_bits = 2 ---
++++ Step 7: Pass: |mem_write| time = 20 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 8: Pass: |alu_src| time = 20 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+--- Step 9: Fail: |reg_write| time = 20 ns | er = 0 | ar = 1 | er_bits = 1 | ar_bits = 1 ---
+Test Case 3: | AND | opcode = 450
++++ Step 1: Pass: |reg2_loc| time = 30 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 2: Pass: |uncondbranch| time = 30 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 3: Pass: |branch| time = 30 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 4: Pass: |mem_read| time = 30 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 5: Pass: |mem_to_reg| time = 30 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 6: Pass: |alu_op| time = 30 ns | er = 0 | ar = 0 | er_bits = 2 | ar_bits = 2 +++
++++ Step 7: Pass: |mem_write| time = 30 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 8: Pass: |alu_src| time = 30 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 9: Pass: |reg_write| time = 30 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+Test Case 4: | ORR | opcode = 550
++++ Step 1: Pass: |reg2_loc| time = 40 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 2: Pass: |uncondbranch| time = 40 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 3: Pass: |branch| time = 40 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 4: Pass: |mem_read| time = 40 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 5: Pass: |mem_to_reg| time = 40 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+--- Step 6: Fail: |alu_op| time = 40 ns | er = 0 | ar = 10 | er_bits = 2 | ar_bits = 2 ---
++++ Step 7: Pass: |mem_write| time = 40 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 8: Pass: |alu_src| time = 40 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+--- Step 9: Fail: |reg_write| time = 40 ns | er = 0 | ar = 1 | er_bits = 1 | ar_bits = 1 ---
+Test Case 5: | LDUR | opcode = 7c2
++++ Step 1: Pass: |reg2_loc| time = 50 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 2: Pass: |uncondbranch| time = 50 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 3: Pass: |branch| time = 50 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+--- Step 4: Fail: |mem_read| time = 50 ns | er = 0 | ar = 1 | er_bits = 1 | ar_bits = 1 ---
+--- Step 5: Fail: |mem_to_reg| time = 50 ns | er = 0 | ar = 1 | er_bits = 1 | ar_bits = 1 ---
++++ Step 6: Pass: |alu_op| time = 50 ns | er = 0 | ar = 0 | er_bits = 2 | ar_bits = 2 +++
++++ Step 7: Pass: |mem_write| time = 50 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+--- Step 8: Fail: |alu_src| time = 50 ns | er = 0 | ar = 1 | er_bits = 1 | ar_bits = 1 ---
+--- Step 9: Fail: |reg_write| time = 50 ns | er = 0 | ar = 1 | er_bits = 1 | ar_bits = 1 ---
+Test Case 6: | STUR | opcode = 7c0
+--- Step 1: Fail: |reg2_loc| time = 60 ns | er = 0 | ar = 1 | er_bits = 1 | ar_bits = 1 ---
++++ Step 2: Pass: |uncondbranch| time = 60 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 3: Pass: |branch| time = 60 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 4: Pass: |mem_read| time = 60 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 5: Pass: |mem_to_reg| time = 60 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 6: Pass: |alu_op| time = 60 ns | er = 0 | ar = 0 | er_bits = 2 | ar_bits = 2 +++
+--- Step 7: Fail: |mem_write| time = 60 ns | er = 0 | ar = 1 | er_bits = 1 | ar_bits = 1 ---
+--- Step 8: Fail: |alu_src| time = 60 ns | er = 0 | ar = 1 | er_bits = 1 | ar_bits = 1 ---
++++ Step 9: Pass: |reg_write| time = 60 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+Test Case 7: | CBZ | opcode = 5a0
+--- Step 1: Fail: |reg2_loc| time = 70 ns | er = 0 | ar = 1 | er_bits = 1 | ar_bits = 1 ---
++++ Step 2: Pass: |uncondbranch| time = 70 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+--- Step 3: Fail: |branch| time = 70 ns | er = 0 | ar = 1 | er_bits = 1 | ar_bits = 1 ---
++++ Step 4: Pass: |mem_read| time = 70 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 5: Pass: |mem_to_reg| time = 70 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+--- Step 6: Fail: |alu_op| time = 70 ns | er = 0 | ar = 1 | er_bits = 2 | ar_bits = 2 ---
++++ Step 7: Pass: |mem_write| time = 70 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 8: Pass: |alu_src| time = 70 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 9: Pass: |reg_write| time = 70 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+Test Case 8: | CBZ | opcode = 5a7
+--- Step 1: Fail: |reg2_loc| time = 80 ns | er = 0 | ar = 1 | er_bits = 1 | ar_bits = 1 ---
++++ Step 2: Pass: |uncondbranch| time = 80 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+--- Step 3: Fail: |branch| time = 80 ns | er = 0 | ar = 1 | er_bits = 1 | ar_bits = 1 ---
++++ Step 4: Pass: |mem_read| time = 80 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 5: Pass: |mem_to_reg| time = 80 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+--- Step 6: Fail: |alu_op| time = 80 ns | er = 0 | ar = 1 | er_bits = 2 | ar_bits = 2 ---
++++ Step 7: Pass: |mem_write| time = 80 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 8: Pass: |alu_src| time = 80 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 9: Pass: |reg_write| time = 80 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+Test Case 9: | B | opcode = a0
++++ Step 1: Pass: |reg2_loc| time = 90 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+--- Step 2: Fail: |uncondbranch| time = 90 ns | er = 0 | ar = 1 | er_bits = 1 | ar_bits = 1 ---
++++ Step 3: Pass: |branch| time = 90 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 4: Pass: |mem_read| time = 90 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 5: Pass: |mem_to_reg| time = 90 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 6: Pass: |alu_op| time = 90 ns | er = 0 | ar = 0 | er_bits = 2 | ar_bits = 2 +++
++++ Step 7: Pass: |mem_write| time = 90 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 8: Pass: |alu_src| time = 90 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 9: Pass: |reg_write| time = 90 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+Test Case 10: | B | opcode = af
++++ Step 1: Pass: |reg2_loc| time = 100 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+--- Step 2: Fail: |uncondbranch| time = 100 ns | er = 0 | ar = 1 | er_bits = 1 | ar_bits = 1 ---
++++ Step 3: Pass: |branch| time = 100 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 4: Pass: |mem_read| time = 100 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 5: Pass: |mem_to_reg| time = 100 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 6: Pass: |alu_op| time = 100 ns | er = 0 | ar = 0 | er_bits = 2 | ar_bits = 2 +++
++++ Step 7: Pass: |mem_write| time = 100 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 8: Pass: |alu_src| time = 100 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 9: Pass: |reg_write| time = 100 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+Test Case 11: | Invalid | opcode = 765
++++ Step 1: Pass: |reg2_loc| time = 120 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 2: Pass: |uncondbranch| time = 120 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 3: Pass: |branch| time = 120 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 4: Pass: |mem_read| time = 120 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 5: Pass: |mem_to_reg| time = 120 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 6: Pass: |alu_op| time = 120 ns | er = 0 | ar = 0 | er_bits = 2 | ar_bits = 2 +++
++++ Step 7: Pass: |mem_write| time = 120 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 8: Pass: |alu_src| time = 120 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 9: Pass: |reg_write| time = 120 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+
+Pass Count = 78
+Fail Count = 21
+
+******* END TEST RESULTS *******
+
+$finish called at time : 120 ns : File "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/2_decode/control_test.sv" Line 247
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'control_test_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 1555.781 ; gain = 0.000
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'control_test'
+WARNING: [Vivado 12-12986] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/XilinxVitis/Vivado/2021.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'control_test' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj control_test_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/2_decode/control_test.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module control_test
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'control_test'
+WARNING: [Vivado 12-12986] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot control_test_behav xil_defaultlib.control_test xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2021.2
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: C:/XilinxVitis/Vivado/2021.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot control_test_behav xil_defaultlib.control_test xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package xil_defaultlib.verification
+Compiling module xil_defaultlib.control
+Compiling module xil_defaultlib.control_test
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot control_test_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Time resolution is 1 ps
+WARNING: Simulation object /control_test/reg2_loc_string was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of System Verilog Dynamic Type object.
+WARNING: Simulation object /control_test/uncondbranch_string was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of System Verilog Dynamic Type object.
+WARNING: Simulation object /control_test/branch_string was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of System Verilog Dynamic Type object.
+WARNING: Simulation object /control_test/mem_read_string was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of System Verilog Dynamic Type object.
+WARNING: Simulation object /control_test/mem_to_reg_string was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of System Verilog Dynamic Type object.
+WARNING: Simulation object /control_test/alu_op_string was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of System Verilog Dynamic Type object.
+WARNING: Simulation object /control_test/mem_write_string was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of System Verilog Dynamic Type object.
+WARNING: Simulation object /control_test/alu_src_string was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of System Verilog Dynamic Type object.
+WARNING: Simulation object /control_test/reg_write_string was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of System Verilog Dynamic Type object.
+
+******* BEGIN TEST RESULTS *******
+
+Test Case 1: | ADD | opcode = 458
++++ Step 1: Pass: |reg2_loc| time = 10 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 2: Pass: |uncondbranch| time = 10 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 3: Pass: |branch| time = 10 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 4: Pass: |mem_read| time = 10 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 5: Pass: |mem_to_reg| time = 10 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+--- Step 6: Fail: |alu_op| time = 10 ns | er = 0 | ar = 10 | er_bits = 2 | ar_bits = 2 ---
++++ Step 7: Pass: |mem_write| time = 10 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 8: Pass: |alu_src| time = 10 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+--- Step 9: Fail: |reg_write| time = 10 ns | er = 0 | ar = 1 | er_bits = 1 | ar_bits = 1 ---
+Test Case 2: | SUB | opcode = 658
++++ Step 1: Pass: |reg2_loc| time = 20 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 2: Pass: |uncondbranch| time = 20 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 3: Pass: |branch| time = 20 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 4: Pass: |mem_read| time = 20 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 5: Pass: |mem_to_reg| time = 20 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+--- Step 6: Fail: |alu_op| time = 20 ns | er = 0 | ar = 10 | er_bits = 2 | ar_bits = 2 ---
++++ Step 7: Pass: |mem_write| time = 20 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 8: Pass: |alu_src| time = 20 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+--- Step 9: Fail: |reg_write| time = 20 ns | er = 0 | ar = 1 | er_bits = 1 | ar_bits = 1 ---
+Test Case 3: | AND | opcode = 450
++++ Step 1: Pass: |reg2_loc| time = 30 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 2: Pass: |uncondbranch| time = 30 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 3: Pass: |branch| time = 30 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 4: Pass: |mem_read| time = 30 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 5: Pass: |mem_to_reg| time = 30 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 6: Pass: |alu_op| time = 30 ns | er = 0 | ar = 0 | er_bits = 2 | ar_bits = 2 +++
++++ Step 7: Pass: |mem_write| time = 30 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 8: Pass: |alu_src| time = 30 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 9: Pass: |reg_write| time = 30 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+Test Case 4: | ORR | opcode = 550
++++ Step 1: Pass: |reg2_loc| time = 40 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 2: Pass: |uncondbranch| time = 40 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 3: Pass: |branch| time = 40 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 4: Pass: |mem_read| time = 40 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 5: Pass: |mem_to_reg| time = 40 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+--- Step 6: Fail: |alu_op| time = 40 ns | er = 0 | ar = 10 | er_bits = 2 | ar_bits = 2 ---
++++ Step 7: Pass: |mem_write| time = 40 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 8: Pass: |alu_src| time = 40 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+--- Step 9: Fail: |reg_write| time = 40 ns | er = 0 | ar = 1 | er_bits = 1 | ar_bits = 1 ---
+Test Case 5: | LDUR | opcode = 7c2
++++ Step 1: Pass: |reg2_loc| time = 50 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 2: Pass: |uncondbranch| time = 50 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 3: Pass: |branch| time = 50 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+--- Step 4: Fail: |mem_read| time = 50 ns | er = 0 | ar = 1 | er_bits = 1 | ar_bits = 1 ---
+--- Step 5: Fail: |mem_to_reg| time = 50 ns | er = 0 | ar = 1 | er_bits = 1 | ar_bits = 1 ---
++++ Step 6: Pass: |alu_op| time = 50 ns | er = 0 | ar = 0 | er_bits = 2 | ar_bits = 2 +++
++++ Step 7: Pass: |mem_write| time = 50 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+--- Step 8: Fail: |alu_src| time = 50 ns | er = 0 | ar = 1 | er_bits = 1 | ar_bits = 1 ---
+--- Step 9: Fail: |reg_write| time = 50 ns | er = 0 | ar = 1 | er_bits = 1 | ar_bits = 1 ---
+Test Case 6: | STUR | opcode = 7c0
+--- Step 1: Fail: |reg2_loc| time = 60 ns | er = 0 | ar = 1 | er_bits = 1 | ar_bits = 1 ---
++++ Step 2: Pass: |uncondbranch| time = 60 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 3: Pass: |branch| time = 60 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 4: Pass: |mem_read| time = 60 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 5: Pass: |mem_to_reg| time = 60 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 6: Pass: |alu_op| time = 60 ns | er = 0 | ar = 0 | er_bits = 2 | ar_bits = 2 +++
+--- Step 7: Fail: |mem_write| time = 60 ns | er = 0 | ar = 1 | er_bits = 1 | ar_bits = 1 ---
+--- Step 8: Fail: |alu_src| time = 60 ns | er = 0 | ar = 1 | er_bits = 1 | ar_bits = 1 ---
++++ Step 9: Pass: |reg_write| time = 60 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+Test Case 7: | CBZ | opcode = 5a0
+--- Step 1: Fail: |reg2_loc| time = 70 ns | er = 0 | ar = 1 | er_bits = 1 | ar_bits = 1 ---
++++ Step 2: Pass: |uncondbranch| time = 70 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+--- Step 3: Fail: |branch| time = 70 ns | er = 0 | ar = 1 | er_bits = 1 | ar_bits = 1 ---
++++ Step 4: Pass: |mem_read| time = 70 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 5: Pass: |mem_to_reg| time = 70 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+--- Step 6: Fail: |alu_op| time = 70 ns | er = 0 | ar = 1 | er_bits = 2 | ar_bits = 2 ---
++++ Step 7: Pass: |mem_write| time = 70 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 8: Pass: |alu_src| time = 70 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 9: Pass: |reg_write| time = 70 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+Test Case 8: | CBZ | opcode = 5a7
+--- Step 1: Fail: |reg2_loc| time = 80 ns | er = 0 | ar = 1 | er_bits = 1 | ar_bits = 1 ---
++++ Step 2: Pass: |uncondbranch| time = 80 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+--- Step 3: Fail: |branch| time = 80 ns | er = 0 | ar = 1 | er_bits = 1 | ar_bits = 1 ---
++++ Step 4: Pass: |mem_read| time = 80 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 5: Pass: |mem_to_reg| time = 80 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+--- Step 6: Fail: |alu_op| time = 80 ns | er = 0 | ar = 1 | er_bits = 2 | ar_bits = 2 ---
++++ Step 7: Pass: |mem_write| time = 80 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 8: Pass: |alu_src| time = 80 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 9: Pass: |reg_write| time = 80 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+Test Case 9: | B | opcode = a0
++++ Step 1: Pass: |reg2_loc| time = 90 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+--- Step 2: Fail: |uncondbranch| time = 90 ns | er = 0 | ar = 1 | er_bits = 1 | ar_bits = 1 ---
++++ Step 3: Pass: |branch| time = 90 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 4: Pass: |mem_read| time = 90 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 5: Pass: |mem_to_reg| time = 90 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 6: Pass: |alu_op| time = 90 ns | er = 0 | ar = 0 | er_bits = 2 | ar_bits = 2 +++
++++ Step 7: Pass: |mem_write| time = 90 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 8: Pass: |alu_src| time = 90 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 9: Pass: |reg_write| time = 90 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+Test Case 10: | B | opcode = af
++++ Step 1: Pass: |reg2_loc| time = 100 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+--- Step 2: Fail: |uncondbranch| time = 100 ns | er = 0 | ar = 1 | er_bits = 1 | ar_bits = 1 ---
++++ Step 3: Pass: |branch| time = 100 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 4: Pass: |mem_read| time = 100 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 5: Pass: |mem_to_reg| time = 100 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 6: Pass: |alu_op| time = 100 ns | er = 0 | ar = 0 | er_bits = 2 | ar_bits = 2 +++
++++ Step 7: Pass: |mem_write| time = 100 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 8: Pass: |alu_src| time = 100 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 9: Pass: |reg_write| time = 100 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+Test Case 11: | Invalid | opcode = 765
++++ Step 1: Pass: |reg2_loc| time = 120 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 2: Pass: |uncondbranch| time = 120 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 3: Pass: |branch| time = 120 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 4: Pass: |mem_read| time = 120 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 5: Pass: |mem_to_reg| time = 120 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 6: Pass: |alu_op| time = 120 ns | er = 0 | ar = 0 | er_bits = 2 | ar_bits = 2 +++
++++ Step 7: Pass: |mem_write| time = 120 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 8: Pass: |alu_src| time = 120 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 9: Pass: |reg_write| time = 120 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+
+Pass Count = 78
+Fail Count = 21
+
+******* END TEST RESULTS *******
+
+$finish called at time : 120 ns : File "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/2_decode/control_test.sv" Line 247
+save_wave_config {C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/control_test_behav.wcfg}
+add_files -fileset sim_1 -norecurse C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/control_test_behav.wcfg
+set_property xsim.view {C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/register_test_behav.wcfg C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/adder_test_behav.wcfg C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/mux_test_behav.wcfg C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/instr_mem_test_behav.wcfg C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/iFetch_test_behav.wcfg C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/instr_parse_test_behav.wcfg C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/regfile_test_behav.wcfg C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/control_test_behav.wcfg} [get_filesets sim_1]
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'control_test'
+WARNING: [Vivado 12-12986] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj control_test_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/0_common/verification_functions.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/2_decode/control_test.sv" into library xil_defaultlib
+WARNING: [VRFC 10-3264] design element 'verification' is previously defined, ignoring this definition [../../../../../ARM-Lab/code/0_common/verification_functions.sv:3]
+INFO: [VRFC 10-311] analyzing module control_test
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'control_test'
+WARNING: [Vivado 12-12986] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot control_test_behav xil_defaultlib.control_test xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2021.2
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: C:/XilinxVitis/Vivado/2021.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot control_test_behav xil_defaultlib.control_test xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package xil_defaultlib.verification
+Compiling module xil_defaultlib.control
+Compiling module xil_defaultlib.control_test
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot control_test_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Time resolution is 1 ps
+
+******* BEGIN TEST RESULTS *******
+
+Test Case 1: | ADD | opcode = 458
++++ Step 1: Pass: |reg2_loc| time = 10 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 2: Pass: |uncondbranch| time = 10 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 3: Pass: |branch| time = 10 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 4: Pass: |mem_read| time = 10 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 5: Pass: |mem_to_reg| time = 10 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 6: Pass: |alu_op| time = 10 ns | er = 10 | ar = 10 | er_bits = 2 | ar_bits = 2 +++
+--- Step 7: Fail: |mem_write| time = 10 ns | er = 1 | ar = 0 | er_bits = 1 | ar_bits = 1 ---
++++ Step 8: Pass: |alu_src| time = 10 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+--- Step 9: Fail: |reg_write| time = 10 ns | er = 0 | ar = 1 | er_bits = 1 | ar_bits = 1 ---
+Test Case 2: | SUB | opcode = 658
++++ Step 1: Pass: |reg2_loc| time = 20 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 2: Pass: |uncondbranch| time = 20 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 3: Pass: |branch| time = 20 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 4: Pass: |mem_read| time = 20 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 5: Pass: |mem_to_reg| time = 20 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 6: Pass: |alu_op| time = 20 ns | er = 10 | ar = 10 | er_bits = 2 | ar_bits = 2 +++
+--- Step 7: Fail: |mem_write| time = 20 ns | er = 1 | ar = 0 | er_bits = 1 | ar_bits = 1 ---
++++ Step 8: Pass: |alu_src| time = 20 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+--- Step 9: Fail: |reg_write| time = 20 ns | er = 0 | ar = 1 | er_bits = 1 | ar_bits = 1 ---
+Test Case 3: | AND | opcode = 450
++++ Step 1: Pass: |reg2_loc| time = 30 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 2: Pass: |uncondbranch| time = 30 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 3: Pass: |branch| time = 30 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 4: Pass: |mem_read| time = 30 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 5: Pass: |mem_to_reg| time = 30 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+--- Step 6: Fail: |alu_op| time = 30 ns | er = 10 | ar = 0 | er_bits = 2 | ar_bits = 2 ---
+--- Step 7: Fail: |mem_write| time = 30 ns | er = 1 | ar = 0 | er_bits = 1 | ar_bits = 1 ---
++++ Step 8: Pass: |alu_src| time = 30 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 9: Pass: |reg_write| time = 30 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+Test Case 4: | ORR | opcode = 550
++++ Step 1: Pass: |reg2_loc| time = 40 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 2: Pass: |uncondbranch| time = 40 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 3: Pass: |branch| time = 40 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 4: Pass: |mem_read| time = 40 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 5: Pass: |mem_to_reg| time = 40 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 6: Pass: |alu_op| time = 40 ns | er = 10 | ar = 10 | er_bits = 2 | ar_bits = 2 +++
+--- Step 7: Fail: |mem_write| time = 40 ns | er = 1 | ar = 0 | er_bits = 1 | ar_bits = 1 ---
++++ Step 8: Pass: |alu_src| time = 40 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+--- Step 9: Fail: |reg_write| time = 40 ns | er = 0 | ar = 1 | er_bits = 1 | ar_bits = 1 ---
+Test Case 5: | LDUR | opcode = 7c2
++++ Step 1: Pass: |reg2_loc| time = 50 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 2: Pass: |uncondbranch| time = 50 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 3: Pass: |branch| time = 50 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+--- Step 4: Fail: |mem_read| time = 50 ns | er = 0 | ar = 1 | er_bits = 1 | ar_bits = 1 ---
++++ Step 5: Pass: |mem_to_reg| time = 50 ns | er = 1 | ar = 1 | er_bits = 1 | ar_bits = 1 +++
+--- Step 6: Fail: |alu_op| time = 50 ns | er = 10 | ar = 0 | er_bits = 2 | ar_bits = 2 ---
++++ Step 7: Pass: |mem_write| time = 50 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 8: Pass: |alu_src| time = 50 ns | er = 1 | ar = 1 | er_bits = 1 | ar_bits = 1 +++
++++ Step 9: Pass: |reg_write| time = 50 ns | er = 1 | ar = 1 | er_bits = 1 | ar_bits = 1 +++
+Test Case 6: | STUR | opcode = 7c0
++++ Step 1: Pass: |reg2_loc| time = 60 ns | er = 1 | ar = 1 | er_bits = 1 | ar_bits = 1 +++
++++ Step 2: Pass: |uncondbranch| time = 60 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 3: Pass: |branch| time = 60 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 4: Pass: |mem_read| time = 60 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 5: Pass: |mem_to_reg| time = 60 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 6: Pass: |alu_op| time = 60 ns | er = 0 | ar = 0 | er_bits = 2 | ar_bits = 2 +++
++++ Step 7: Pass: |mem_write| time = 60 ns | er = 1 | ar = 1 | er_bits = 1 | ar_bits = 1 +++
++++ Step 8: Pass: |alu_src| time = 60 ns | er = 1 | ar = 1 | er_bits = 1 | ar_bits = 1 +++
++++ Step 9: Pass: |reg_write| time = 60 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+Test Case 7: | CBZ | opcode = 5a0
++++ Step 1: Pass: |reg2_loc| time = 70 ns | er = 1 | ar = 1 | er_bits = 1 | ar_bits = 1 +++
++++ Step 2: Pass: |uncondbranch| time = 70 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 3: Pass: |branch| time = 70 ns | er = 1 | ar = 1 | er_bits = 1 | ar_bits = 1 +++
++++ Step 4: Pass: |mem_read| time = 70 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 5: Pass: |mem_to_reg| time = 70 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 6: Pass: |alu_op| time = 70 ns | er = 1 | ar = 1 | er_bits = 2 | ar_bits = 2 +++
++++ Step 7: Pass: |mem_write| time = 70 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 8: Pass: |alu_src| time = 70 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 9: Pass: |reg_write| time = 70 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+Test Case 8: | CBZ | opcode = 5a7
++++ Step 1: Pass: |reg2_loc| time = 80 ns | er = 1 | ar = 1 | er_bits = 1 | ar_bits = 1 +++
++++ Step 2: Pass: |uncondbranch| time = 80 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 3: Pass: |branch| time = 80 ns | er = 1 | ar = 1 | er_bits = 1 | ar_bits = 1 +++
++++ Step 4: Pass: |mem_read| time = 80 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 5: Pass: |mem_to_reg| time = 80 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 6: Pass: |alu_op| time = 80 ns | er = 1 | ar = 1 | er_bits = 2 | ar_bits = 2 +++
++++ Step 7: Pass: |mem_write| time = 80 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 8: Pass: |alu_src| time = 80 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 9: Pass: |reg_write| time = 80 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+Test Case 9: | B | opcode = a0
++++ Step 1: Pass: |reg2_loc| time = 90 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 2: Pass: |uncondbranch| time = 90 ns | er = 1 | ar = 1 | er_bits = 1 | ar_bits = 1 +++
++++ Step 3: Pass: |branch| time = 90 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 4: Pass: |mem_read| time = 90 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 5: Pass: |mem_to_reg| time = 90 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 6: Pass: |alu_op| time = 90 ns | er = 0 | ar = 0 | er_bits = 2 | ar_bits = 2 +++
++++ Step 7: Pass: |mem_write| time = 90 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 8: Pass: |alu_src| time = 90 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 9: Pass: |reg_write| time = 90 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+Test Case 10: | B | opcode = af
++++ Step 1: Pass: |reg2_loc| time = 100 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 2: Pass: |uncondbranch| time = 100 ns | er = 1 | ar = 1 | er_bits = 1 | ar_bits = 1 +++
++++ Step 3: Pass: |branch| time = 100 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 4: Pass: |mem_read| time = 100 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 5: Pass: |mem_to_reg| time = 100 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 6: Pass: |alu_op| time = 100 ns | er = 0 | ar = 0 | er_bits = 2 | ar_bits = 2 +++
++++ Step 7: Pass: |mem_write| time = 100 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 8: Pass: |alu_src| time = 100 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 9: Pass: |reg_write| time = 100 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+Test Case 11: | Invalid | opcode = 765
++++ Step 1: Pass: |reg2_loc| time = 120 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 2: Pass: |uncondbranch| time = 120 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 3: Pass: |branch| time = 120 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 4: Pass: |mem_read| time = 120 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 5: Pass: |mem_to_reg| time = 120 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 6: Pass: |alu_op| time = 120 ns | er = 0 | ar = 0 | er_bits = 2 | ar_bits = 2 +++
++++ Step 7: Pass: |mem_write| time = 120 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 8: Pass: |alu_src| time = 120 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 9: Pass: |reg_write| time = 120 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+
+Pass Count = 89
+Fail Count = 10
+
+******* END TEST RESULTS *******
+
+$finish called at time : 120 ns : File "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/2_decode/control_test.sv" Line 247
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'control_test'
+WARNING: [Vivado 12-12986] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj control_test_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/0_common/verification_functions.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/2_decode/control_test.sv" into library xil_defaultlib
+WARNING: [VRFC 10-3264] design element 'verification' is previously defined, ignoring this definition [../../../../../ARM-Lab/code/0_common/verification_functions.sv:3]
+INFO: [VRFC 10-311] analyzing module control_test
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'control_test'
+WARNING: [Vivado 12-12986] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot control_test_behav xil_defaultlib.control_test xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2021.2
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: C:/XilinxVitis/Vivado/2021.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot control_test_behav xil_defaultlib.control_test xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package xil_defaultlib.verification
+Compiling module xil_defaultlib.control
+Compiling module xil_defaultlib.control_test
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot control_test_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Time resolution is 1 ps
+
+******* BEGIN TEST RESULTS *******
+
+Test Case 1: | ADD | opcode = 458
++++ Step 1: Pass: |reg2_loc| time = 10 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 2: Pass: |uncondbranch| time = 10 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 3: Pass: |branch| time = 10 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 4: Pass: |mem_read| time = 10 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 5: Pass: |mem_to_reg| time = 10 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 6: Pass: |alu_op| time = 10 ns | er = 10 | ar = 10 | er_bits = 2 | ar_bits = 2 +++
++++ Step 7: Pass: |mem_write| time = 10 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 8: Pass: |alu_src| time = 10 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 9: Pass: |reg_write| time = 10 ns | er = 1 | ar = 1 | er_bits = 1 | ar_bits = 1 +++
+Test Case 2: | SUB | opcode = 658
++++ Step 1: Pass: |reg2_loc| time = 20 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 2: Pass: |uncondbranch| time = 20 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 3: Pass: |branch| time = 20 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 4: Pass: |mem_read| time = 20 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 5: Pass: |mem_to_reg| time = 20 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 6: Pass: |alu_op| time = 20 ns | er = 10 | ar = 10 | er_bits = 2 | ar_bits = 2 +++
++++ Step 7: Pass: |mem_write| time = 20 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 8: Pass: |alu_src| time = 20 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 9: Pass: |reg_write| time = 20 ns | er = 1 | ar = 1 | er_bits = 1 | ar_bits = 1 +++
+Test Case 3: | AND | opcode = 450
++++ Step 1: Pass: |reg2_loc| time = 30 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 2: Pass: |uncondbranch| time = 30 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 3: Pass: |branch| time = 30 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 4: Pass: |mem_read| time = 30 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 5: Pass: |mem_to_reg| time = 30 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+--- Step 6: Fail: |alu_op| time = 30 ns | er = 10 | ar = 0 | er_bits = 2 | ar_bits = 2 ---
++++ Step 7: Pass: |mem_write| time = 30 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 8: Pass: |alu_src| time = 30 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+--- Step 9: Fail: |reg_write| time = 30 ns | er = 1 | ar = 0 | er_bits = 1 | ar_bits = 1 ---
+Test Case 4: | ORR | opcode = 550
++++ Step 1: Pass: |reg2_loc| time = 40 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 2: Pass: |uncondbranch| time = 40 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 3: Pass: |branch| time = 40 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 4: Pass: |mem_read| time = 40 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 5: Pass: |mem_to_reg| time = 40 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 6: Pass: |alu_op| time = 40 ns | er = 10 | ar = 10 | er_bits = 2 | ar_bits = 2 +++
++++ Step 7: Pass: |mem_write| time = 40 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 8: Pass: |alu_src| time = 40 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 9: Pass: |reg_write| time = 40 ns | er = 1 | ar = 1 | er_bits = 1 | ar_bits = 1 +++
+Test Case 5: | LDUR | opcode = 7c2
++++ Step 1: Pass: |reg2_loc| time = 50 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 2: Pass: |uncondbranch| time = 50 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 3: Pass: |branch| time = 50 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+--- Step 4: Fail: |mem_read| time = 50 ns | er = 0 | ar = 1 | er_bits = 1 | ar_bits = 1 ---
++++ Step 5: Pass: |mem_to_reg| time = 50 ns | er = 1 | ar = 1 | er_bits = 1 | ar_bits = 1 +++
+--- Step 6: Fail: |alu_op| time = 50 ns | er = 10 | ar = 0 | er_bits = 2 | ar_bits = 2 ---
++++ Step 7: Pass: |mem_write| time = 50 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 8: Pass: |alu_src| time = 50 ns | er = 1 | ar = 1 | er_bits = 1 | ar_bits = 1 +++
++++ Step 9: Pass: |reg_write| time = 50 ns | er = 1 | ar = 1 | er_bits = 1 | ar_bits = 1 +++
+Test Case 6: | STUR | opcode = 7c0
++++ Step 1: Pass: |reg2_loc| time = 60 ns | er = 1 | ar = 1 | er_bits = 1 | ar_bits = 1 +++
++++ Step 2: Pass: |uncondbranch| time = 60 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 3: Pass: |branch| time = 60 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 4: Pass: |mem_read| time = 60 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 5: Pass: |mem_to_reg| time = 60 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 6: Pass: |alu_op| time = 60 ns | er = 0 | ar = 0 | er_bits = 2 | ar_bits = 2 +++
++++ Step 7: Pass: |mem_write| time = 60 ns | er = 1 | ar = 1 | er_bits = 1 | ar_bits = 1 +++
++++ Step 8: Pass: |alu_src| time = 60 ns | er = 1 | ar = 1 | er_bits = 1 | ar_bits = 1 +++
++++ Step 9: Pass: |reg_write| time = 60 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+Test Case 7: | CBZ | opcode = 5a0
++++ Step 1: Pass: |reg2_loc| time = 70 ns | er = 1 | ar = 1 | er_bits = 1 | ar_bits = 1 +++
++++ Step 2: Pass: |uncondbranch| time = 70 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 3: Pass: |branch| time = 70 ns | er = 1 | ar = 1 | er_bits = 1 | ar_bits = 1 +++
++++ Step 4: Pass: |mem_read| time = 70 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 5: Pass: |mem_to_reg| time = 70 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 6: Pass: |alu_op| time = 70 ns | er = 1 | ar = 1 | er_bits = 2 | ar_bits = 2 +++
++++ Step 7: Pass: |mem_write| time = 70 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 8: Pass: |alu_src| time = 70 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 9: Pass: |reg_write| time = 70 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+Test Case 8: | CBZ | opcode = 5a7
++++ Step 1: Pass: |reg2_loc| time = 80 ns | er = 1 | ar = 1 | er_bits = 1 | ar_bits = 1 +++
++++ Step 2: Pass: |uncondbranch| time = 80 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 3: Pass: |branch| time = 80 ns | er = 1 | ar = 1 | er_bits = 1 | ar_bits = 1 +++
++++ Step 4: Pass: |mem_read| time = 80 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 5: Pass: |mem_to_reg| time = 80 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 6: Pass: |alu_op| time = 80 ns | er = 1 | ar = 1 | er_bits = 2 | ar_bits = 2 +++
++++ Step 7: Pass: |mem_write| time = 80 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 8: Pass: |alu_src| time = 80 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 9: Pass: |reg_write| time = 80 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+Test Case 9: | B | opcode = a0
++++ Step 1: Pass: |reg2_loc| time = 90 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 2: Pass: |uncondbranch| time = 90 ns | er = 1 | ar = 1 | er_bits = 1 | ar_bits = 1 +++
++++ Step 3: Pass: |branch| time = 90 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 4: Pass: |mem_read| time = 90 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 5: Pass: |mem_to_reg| time = 90 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 6: Pass: |alu_op| time = 90 ns | er = 0 | ar = 0 | er_bits = 2 | ar_bits = 2 +++
++++ Step 7: Pass: |mem_write| time = 90 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 8: Pass: |alu_src| time = 90 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 9: Pass: |reg_write| time = 90 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+Test Case 10: | B | opcode = af
++++ Step 1: Pass: |reg2_loc| time = 100 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 2: Pass: |uncondbranch| time = 100 ns | er = 1 | ar = 1 | er_bits = 1 | ar_bits = 1 +++
++++ Step 3: Pass: |branch| time = 100 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 4: Pass: |mem_read| time = 100 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 5: Pass: |mem_to_reg| time = 100 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 6: Pass: |alu_op| time = 100 ns | er = 0 | ar = 0 | er_bits = 2 | ar_bits = 2 +++
++++ Step 7: Pass: |mem_write| time = 100 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 8: Pass: |alu_src| time = 100 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 9: Pass: |reg_write| time = 100 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+Test Case 11: | Invalid | opcode = 765
++++ Step 1: Pass: |reg2_loc| time = 120 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 2: Pass: |uncondbranch| time = 120 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 3: Pass: |branch| time = 120 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 4: Pass: |mem_read| time = 120 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 5: Pass: |mem_to_reg| time = 120 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 6: Pass: |alu_op| time = 120 ns | er = 0 | ar = 0 | er_bits = 2 | ar_bits = 2 +++
++++ Step 7: Pass: |mem_write| time = 120 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 8: Pass: |alu_src| time = 120 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 9: Pass: |reg_write| time = 120 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+
+Pass Count = 95
+Fail Count = 4
+
+******* END TEST RESULTS *******
+
+$finish called at time : 120 ns : File "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/2_decode/control_test.sv" Line 247
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'control_test'
+WARNING: [Vivado 12-12986] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj control_test_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/2_decode/control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module control
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/0_common/verification_functions.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/2_decode/control_test.sv" into library xil_defaultlib
+WARNING: [VRFC 10-3264] design element 'verification' is previously defined, ignoring this definition [../../../../../ARM-Lab/code/0_common/verification_functions.sv:3]
+INFO: [VRFC 10-311] analyzing module control_test
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'control_test'
+WARNING: [Vivado 12-12986] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot control_test_behav xil_defaultlib.control_test xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2021.2
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: C:/XilinxVitis/Vivado/2021.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot control_test_behav xil_defaultlib.control_test xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package xil_defaultlib.verification
+Compiling module xil_defaultlib.control
+Compiling module xil_defaultlib.control_test
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot control_test_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Time resolution is 1 ps
+
+******* BEGIN TEST RESULTS *******
+
+Test Case 1: | ADD | opcode = 458
++++ Step 1: Pass: |reg2_loc| time = 10 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 2: Pass: |uncondbranch| time = 10 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 3: Pass: |branch| time = 10 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 4: Pass: |mem_read| time = 10 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 5: Pass: |mem_to_reg| time = 10 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 6: Pass: |alu_op| time = 10 ns | er = 10 | ar = 10 | er_bits = 2 | ar_bits = 2 +++
++++ Step 7: Pass: |mem_write| time = 10 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 8: Pass: |alu_src| time = 10 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 9: Pass: |reg_write| time = 10 ns | er = 1 | ar = 1 | er_bits = 1 | ar_bits = 1 +++
+Test Case 2: | SUB | opcode = 658
++++ Step 1: Pass: |reg2_loc| time = 20 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 2: Pass: |uncondbranch| time = 20 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 3: Pass: |branch| time = 20 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 4: Pass: |mem_read| time = 20 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 5: Pass: |mem_to_reg| time = 20 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 6: Pass: |alu_op| time = 20 ns | er = 10 | ar = 10 | er_bits = 2 | ar_bits = 2 +++
++++ Step 7: Pass: |mem_write| time = 20 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 8: Pass: |alu_src| time = 20 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 9: Pass: |reg_write| time = 20 ns | er = 1 | ar = 1 | er_bits = 1 | ar_bits = 1 +++
+Test Case 3: | AND | opcode = 450
++++ Step 1: Pass: |reg2_loc| time = 30 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 2: Pass: |uncondbranch| time = 30 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 3: Pass: |branch| time = 30 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 4: Pass: |mem_read| time = 30 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 5: Pass: |mem_to_reg| time = 30 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 6: Pass: |alu_op| time = 30 ns | er = 10 | ar = 10 | er_bits = 2 | ar_bits = 2 +++
++++ Step 7: Pass: |mem_write| time = 30 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 8: Pass: |alu_src| time = 30 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 9: Pass: |reg_write| time = 30 ns | er = 1 | ar = 1 | er_bits = 1 | ar_bits = 1 +++
+Test Case 4: | ORR | opcode = 550
++++ Step 1: Pass: |reg2_loc| time = 40 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 2: Pass: |uncondbranch| time = 40 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 3: Pass: |branch| time = 40 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 4: Pass: |mem_read| time = 40 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 5: Pass: |mem_to_reg| time = 40 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 6: Pass: |alu_op| time = 40 ns | er = 10 | ar = 10 | er_bits = 2 | ar_bits = 2 +++
++++ Step 7: Pass: |mem_write| time = 40 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 8: Pass: |alu_src| time = 40 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 9: Pass: |reg_write| time = 40 ns | er = 1 | ar = 1 | er_bits = 1 | ar_bits = 1 +++
+Test Case 5: | LDUR | opcode = 7c2
++++ Step 1: Pass: |reg2_loc| time = 50 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 2: Pass: |uncondbranch| time = 50 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 3: Pass: |branch| time = 50 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+--- Step 4: Fail: |mem_read| time = 50 ns | er = 0 | ar = 1 | er_bits = 1 | ar_bits = 1 ---
++++ Step 5: Pass: |mem_to_reg| time = 50 ns | er = 1 | ar = 1 | er_bits = 1 | ar_bits = 1 +++
+--- Step 6: Fail: |alu_op| time = 50 ns | er = 10 | ar = 0 | er_bits = 2 | ar_bits = 2 ---
++++ Step 7: Pass: |mem_write| time = 50 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 8: Pass: |alu_src| time = 50 ns | er = 1 | ar = 1 | er_bits = 1 | ar_bits = 1 +++
++++ Step 9: Pass: |reg_write| time = 50 ns | er = 1 | ar = 1 | er_bits = 1 | ar_bits = 1 +++
+Test Case 6: | STUR | opcode = 7c0
++++ Step 1: Pass: |reg2_loc| time = 60 ns | er = 1 | ar = 1 | er_bits = 1 | ar_bits = 1 +++
++++ Step 2: Pass: |uncondbranch| time = 60 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 3: Pass: |branch| time = 60 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 4: Pass: |mem_read| time = 60 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 5: Pass: |mem_to_reg| time = 60 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 6: Pass: |alu_op| time = 60 ns | er = 0 | ar = 0 | er_bits = 2 | ar_bits = 2 +++
++++ Step 7: Pass: |mem_write| time = 60 ns | er = 1 | ar = 1 | er_bits = 1 | ar_bits = 1 +++
++++ Step 8: Pass: |alu_src| time = 60 ns | er = 1 | ar = 1 | er_bits = 1 | ar_bits = 1 +++
++++ Step 9: Pass: |reg_write| time = 60 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+Test Case 7: | CBZ | opcode = 5a0
++++ Step 1: Pass: |reg2_loc| time = 70 ns | er = 1 | ar = 1 | er_bits = 1 | ar_bits = 1 +++
++++ Step 2: Pass: |uncondbranch| time = 70 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 3: Pass: |branch| time = 70 ns | er = 1 | ar = 1 | er_bits = 1 | ar_bits = 1 +++
++++ Step 4: Pass: |mem_read| time = 70 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 5: Pass: |mem_to_reg| time = 70 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 6: Pass: |alu_op| time = 70 ns | er = 1 | ar = 1 | er_bits = 2 | ar_bits = 2 +++
++++ Step 7: Pass: |mem_write| time = 70 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 8: Pass: |alu_src| time = 70 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 9: Pass: |reg_write| time = 70 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+Test Case 8: | CBZ | opcode = 5a7
++++ Step 1: Pass: |reg2_loc| time = 80 ns | er = 1 | ar = 1 | er_bits = 1 | ar_bits = 1 +++
++++ Step 2: Pass: |uncondbranch| time = 80 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 3: Pass: |branch| time = 80 ns | er = 1 | ar = 1 | er_bits = 1 | ar_bits = 1 +++
++++ Step 4: Pass: |mem_read| time = 80 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 5: Pass: |mem_to_reg| time = 80 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 6: Pass: |alu_op| time = 80 ns | er = 1 | ar = 1 | er_bits = 2 | ar_bits = 2 +++
++++ Step 7: Pass: |mem_write| time = 80 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 8: Pass: |alu_src| time = 80 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 9: Pass: |reg_write| time = 80 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+Test Case 9: | B | opcode = a0
++++ Step 1: Pass: |reg2_loc| time = 90 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 2: Pass: |uncondbranch| time = 90 ns | er = 1 | ar = 1 | er_bits = 1 | ar_bits = 1 +++
++++ Step 3: Pass: |branch| time = 90 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 4: Pass: |mem_read| time = 90 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 5: Pass: |mem_to_reg| time = 90 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 6: Pass: |alu_op| time = 90 ns | er = 0 | ar = 0 | er_bits = 2 | ar_bits = 2 +++
++++ Step 7: Pass: |mem_write| time = 90 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 8: Pass: |alu_src| time = 90 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 9: Pass: |reg_write| time = 90 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+Test Case 10: | B | opcode = af
++++ Step 1: Pass: |reg2_loc| time = 100 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 2: Pass: |uncondbranch| time = 100 ns | er = 1 | ar = 1 | er_bits = 1 | ar_bits = 1 +++
++++ Step 3: Pass: |branch| time = 100 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 4: Pass: |mem_read| time = 100 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 5: Pass: |mem_to_reg| time = 100 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 6: Pass: |alu_op| time = 100 ns | er = 0 | ar = 0 | er_bits = 2 | ar_bits = 2 +++
++++ Step 7: Pass: |mem_write| time = 100 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 8: Pass: |alu_src| time = 100 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 9: Pass: |reg_write| time = 100 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+Test Case 11: | Invalid | opcode = 765
++++ Step 1: Pass: |reg2_loc| time = 120 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 2: Pass: |uncondbranch| time = 120 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 3: Pass: |branch| time = 120 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 4: Pass: |mem_read| time = 120 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 5: Pass: |mem_to_reg| time = 120 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 6: Pass: |alu_op| time = 120 ns | er = 0 | ar = 0 | er_bits = 2 | ar_bits = 2 +++
++++ Step 7: Pass: |mem_write| time = 120 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 8: Pass: |alu_src| time = 120 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 9: Pass: |reg_write| time = 120 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+
+Pass Count = 97
+Fail Count = 2
+
+******* END TEST RESULTS *******
+
+$finish called at time : 120 ns : File "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/2_decode/control_test.sv" Line 247
+relaunch_sim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 1555.781 ; gain = 0.000
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'control_test'
+WARNING: [Vivado 12-12986] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj control_test_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/0_common/verification_functions.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/2_decode/control_test.sv" into library xil_defaultlib
+WARNING: [VRFC 10-3264] design element 'verification' is previously defined, ignoring this definition [../../../../../ARM-Lab/code/0_common/verification_functions.sv:3]
+INFO: [VRFC 10-311] analyzing module control_test
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'control_test'
+WARNING: [Vivado 12-12986] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot control_test_behav xil_defaultlib.control_test xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2021.2
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: C:/XilinxVitis/Vivado/2021.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot control_test_behav xil_defaultlib.control_test xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package xil_defaultlib.verification
+Compiling module xil_defaultlib.control
+Compiling module xil_defaultlib.control_test
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot control_test_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Time resolution is 1 ps
+
+******* BEGIN TEST RESULTS *******
+
+Test Case 1: | ADD | opcode = 458
++++ Step 1: Pass: |reg2_loc| time = 10 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 2: Pass: |uncondbranch| time = 10 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 3: Pass: |branch| time = 10 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 4: Pass: |mem_read| time = 10 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 5: Pass: |mem_to_reg| time = 10 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 6: Pass: |alu_op| time = 10 ns | er = 10 | ar = 10 | er_bits = 2 | ar_bits = 2 +++
++++ Step 7: Pass: |mem_write| time = 10 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 8: Pass: |alu_src| time = 10 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 9: Pass: |reg_write| time = 10 ns | er = 1 | ar = 1 | er_bits = 1 | ar_bits = 1 +++
+Test Case 2: | SUB | opcode = 658
++++ Step 1: Pass: |reg2_loc| time = 20 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 2: Pass: |uncondbranch| time = 20 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 3: Pass: |branch| time = 20 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 4: Pass: |mem_read| time = 20 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 5: Pass: |mem_to_reg| time = 20 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 6: Pass: |alu_op| time = 20 ns | er = 10 | ar = 10 | er_bits = 2 | ar_bits = 2 +++
++++ Step 7: Pass: |mem_write| time = 20 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 8: Pass: |alu_src| time = 20 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 9: Pass: |reg_write| time = 20 ns | er = 1 | ar = 1 | er_bits = 1 | ar_bits = 1 +++
+Test Case 3: | AND | opcode = 450
++++ Step 1: Pass: |reg2_loc| time = 30 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 2: Pass: |uncondbranch| time = 30 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 3: Pass: |branch| time = 30 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 4: Pass: |mem_read| time = 30 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 5: Pass: |mem_to_reg| time = 30 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 6: Pass: |alu_op| time = 30 ns | er = 10 | ar = 10 | er_bits = 2 | ar_bits = 2 +++
++++ Step 7: Pass: |mem_write| time = 30 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 8: Pass: |alu_src| time = 30 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 9: Pass: |reg_write| time = 30 ns | er = 1 | ar = 1 | er_bits = 1 | ar_bits = 1 +++
+Test Case 4: | ORR | opcode = 550
++++ Step 1: Pass: |reg2_loc| time = 40 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 2: Pass: |uncondbranch| time = 40 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 3: Pass: |branch| time = 40 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 4: Pass: |mem_read| time = 40 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 5: Pass: |mem_to_reg| time = 40 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 6: Pass: |alu_op| time = 40 ns | er = 10 | ar = 10 | er_bits = 2 | ar_bits = 2 +++
++++ Step 7: Pass: |mem_write| time = 40 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 8: Pass: |alu_src| time = 40 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 9: Pass: |reg_write| time = 40 ns | er = 1 | ar = 1 | er_bits = 1 | ar_bits = 1 +++
+Test Case 5: | LDUR | opcode = 7c2
++++ Step 1: Pass: |reg2_loc| time = 50 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 2: Pass: |uncondbranch| time = 50 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 3: Pass: |branch| time = 50 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 4: Pass: |mem_read| time = 50 ns | er = 1 | ar = 1 | er_bits = 1 | ar_bits = 1 +++
++++ Step 5: Pass: |mem_to_reg| time = 50 ns | er = 1 | ar = 1 | er_bits = 1 | ar_bits = 1 +++
++++ Step 6: Pass: |alu_op| time = 50 ns | er = 0 | ar = 0 | er_bits = 2 | ar_bits = 2 +++
++++ Step 7: Pass: |mem_write| time = 50 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 8: Pass: |alu_src| time = 50 ns | er = 1 | ar = 1 | er_bits = 1 | ar_bits = 1 +++
++++ Step 9: Pass: |reg_write| time = 50 ns | er = 1 | ar = 1 | er_bits = 1 | ar_bits = 1 +++
+Test Case 6: | STUR | opcode = 7c0
++++ Step 1: Pass: |reg2_loc| time = 60 ns | er = 1 | ar = 1 | er_bits = 1 | ar_bits = 1 +++
++++ Step 2: Pass: |uncondbranch| time = 60 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 3: Pass: |branch| time = 60 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 4: Pass: |mem_read| time = 60 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 5: Pass: |mem_to_reg| time = 60 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 6: Pass: |alu_op| time = 60 ns | er = 0 | ar = 0 | er_bits = 2 | ar_bits = 2 +++
++++ Step 7: Pass: |mem_write| time = 60 ns | er = 1 | ar = 1 | er_bits = 1 | ar_bits = 1 +++
++++ Step 8: Pass: |alu_src| time = 60 ns | er = 1 | ar = 1 | er_bits = 1 | ar_bits = 1 +++
++++ Step 9: Pass: |reg_write| time = 60 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+Test Case 7: | CBZ | opcode = 5a0
++++ Step 1: Pass: |reg2_loc| time = 70 ns | er = 1 | ar = 1 | er_bits = 1 | ar_bits = 1 +++
++++ Step 2: Pass: |uncondbranch| time = 70 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 3: Pass: |branch| time = 70 ns | er = 1 | ar = 1 | er_bits = 1 | ar_bits = 1 +++
++++ Step 4: Pass: |mem_read| time = 70 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 5: Pass: |mem_to_reg| time = 70 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 6: Pass: |alu_op| time = 70 ns | er = 1 | ar = 1 | er_bits = 2 | ar_bits = 2 +++
++++ Step 7: Pass: |mem_write| time = 70 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 8: Pass: |alu_src| time = 70 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 9: Pass: |reg_write| time = 70 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+Test Case 8: | CBZ | opcode = 5a7
++++ Step 1: Pass: |reg2_loc| time = 80 ns | er = 1 | ar = 1 | er_bits = 1 | ar_bits = 1 +++
++++ Step 2: Pass: |uncondbranch| time = 80 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 3: Pass: |branch| time = 80 ns | er = 1 | ar = 1 | er_bits = 1 | ar_bits = 1 +++
++++ Step 4: Pass: |mem_read| time = 80 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 5: Pass: |mem_to_reg| time = 80 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 6: Pass: |alu_op| time = 80 ns | er = 1 | ar = 1 | er_bits = 2 | ar_bits = 2 +++
++++ Step 7: Pass: |mem_write| time = 80 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 8: Pass: |alu_src| time = 80 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 9: Pass: |reg_write| time = 80 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+Test Case 9: | B | opcode = a0
++++ Step 1: Pass: |reg2_loc| time = 90 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 2: Pass: |uncondbranch| time = 90 ns | er = 1 | ar = 1 | er_bits = 1 | ar_bits = 1 +++
++++ Step 3: Pass: |branch| time = 90 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 4: Pass: |mem_read| time = 90 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 5: Pass: |mem_to_reg| time = 90 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 6: Pass: |alu_op| time = 90 ns | er = 0 | ar = 0 | er_bits = 2 | ar_bits = 2 +++
++++ Step 7: Pass: |mem_write| time = 90 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 8: Pass: |alu_src| time = 90 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 9: Pass: |reg_write| time = 90 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+Test Case 10: | B | opcode = af
++++ Step 1: Pass: |reg2_loc| time = 100 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 2: Pass: |uncondbranch| time = 100 ns | er = 1 | ar = 1 | er_bits = 1 | ar_bits = 1 +++
++++ Step 3: Pass: |branch| time = 100 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 4: Pass: |mem_read| time = 100 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 5: Pass: |mem_to_reg| time = 100 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 6: Pass: |alu_op| time = 100 ns | er = 0 | ar = 0 | er_bits = 2 | ar_bits = 2 +++
++++ Step 7: Pass: |mem_write| time = 100 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 8: Pass: |alu_src| time = 100 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 9: Pass: |reg_write| time = 100 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+Test Case 11: | Invalid | opcode = 765
++++ Step 1: Pass: |reg2_loc| time = 120 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 2: Pass: |uncondbranch| time = 120 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 3: Pass: |branch| time = 120 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 4: Pass: |mem_read| time = 120 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 5: Pass: |mem_to_reg| time = 120 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 6: Pass: |alu_op| time = 120 ns | er = 0 | ar = 0 | er_bits = 2 | ar_bits = 2 +++
++++ Step 7: Pass: |mem_write| time = 120 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 8: Pass: |alu_src| time = 120 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 9: Pass: |reg_write| time = 120 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+
+Pass Count = 99
+Fail Count = 0
+
+******* END TEST RESULTS *******
+
+$finish called at time : 120 ns : File "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/2_decode/control_test.sv" Line 247
+save_wave_config {C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/control_test_behav.wcfg}
+stop
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close [ open C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/2_decode/sign_extender.v w ]
+add_files C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/2_decode/sign_extender.v
+update_compile_order -fileset sources_1
+set_property top sign_extender_test [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+set_property top sign_extender_test [current_fileset]
+update_compile_order -fileset sources_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'sign_extender_test'
+WARNING: [Vivado 12-12986] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/XilinxVitis/Vivado/2021.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'sign_extender_test' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj sign_extender_test_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/2_decode/sign_extender.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sign_extender
+ERROR: [VRFC 10-3805] use of undefined macro 'INSTR_LEN' [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/2_decode/sign_extender.v:24]
+ERROR: [VRFC 10-3805] use of undefined macro 'WORD' [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/2_decode/sign_extender.v:25]
+ERROR: [VRFC 10-3805] use of undefined macro 'LDUR' [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/2_decode/sign_extender.v:34]
+ERROR: [VRFC 10-4982] syntax error near ',' [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/2_decode/sign_extender.v:34]
+WARNING: [VRFC 10-606] empty item in case item list violates IEEE 1364 syntax [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/2_decode/sign_extender.v:34]
+ERROR: [VRFC 10-4982] syntax error near ''' [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/2_decode/sign_extender.v:39]
+WARNING: [VRFC 10-2096] empty statement in sequential block [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/2_decode/sign_extender.v:38]
+ERROR: [VRFC 10-552] declarations not allowed in unnamed block [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/2_decode/sign_extender.v:34]
+ERROR: [VRFC 10-3805] use of undefined macro 'CBZ' [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/2_decode/sign_extender.v:43]
+ERROR: [VRFC 10-4982] syntax error near 'begin' [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/2_decode/sign_extender.v:43]
+ERROR: [VRFC 10-2790] Verilog 2000 keyword begin used in incorrect context [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/2_decode/sign_extender.v:43]
+ERROR: [VRFC 10-3805] use of undefined macro 'B' [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/2_decode/sign_extender.v:52]
+ERROR: [VRFC 10-4982] syntax error near ''' [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/2_decode/sign_extender.v:57]
+WARNING: [VRFC 10-2096] empty statement in sequential block [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/2_decode/sign_extender.v:56]
+ERROR: [VRFC 10-552] declarations not allowed in unnamed block [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/2_decode/sign_extender.v:52]
+ERROR: [VRFC 10-552] declarations not allowed in unnamed block [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/2_decode/sign_extender.v:28]
+WARNING: [VRFC 10-3824] variable 'opcode' must explicitly be declared as automatic or static [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/2_decode/sign_extender.v:30]
+ERROR: [VRFC 10-2951] 'instruction' is not a constant [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/2_decode/sign_extender.v:30]
+ERROR: [VRFC 10-554] default case should appear only once [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/2_decode/sign_extender.v:43]
+ERROR: [VRFC 10-554] default case should appear only once [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/2_decode/sign_extender.v:44]
+ERROR: [VRFC 10-554] default case should appear only once [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/2_decode/sign_extender.v:46]
+ERROR: [VRFC 10-554] default case should appear only once [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/2_decode/sign_extender.v:48]
+WARNING: [VRFC 10-3824] variable 'address' must explicitly be declared as automatic or static [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/2_decode/sign_extender.v:53]
+ERROR: [VRFC 10-2951] 'instruction' is not a constant [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/2_decode/sign_extender.v:53]
+INFO: [#UNDEF] Sorry, too many errors..
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+update_compile_order -fileset sources_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'sign_extender_test'
+WARNING: [Vivado 12-12986] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/XilinxVitis/Vivado/2021.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'sign_extender_test' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj sign_extender_test_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/2_decode/sign_extender.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sign_extender
+ERROR: [VRFC 10-4982] syntax error near ''' [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/2_decode/sign_extender.v:40]
+WARNING: [VRFC 10-2096] empty statement in sequential block [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/2_decode/sign_extender.v:39]
+ERROR: [VRFC 10-552] declarations not allowed in unnamed block [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/2_decode/sign_extender.v:35]
+ERROR: [VRFC 10-4982] syntax error near ''' [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/2_decode/sign_extender.v:49]
+WARNING: [VRFC 10-2096] empty statement in sequential block [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/2_decode/sign_extender.v:48]
+ERROR: [VRFC 10-552] declarations not allowed in unnamed block [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/2_decode/sign_extender.v:44]
+ERROR: [VRFC 10-4982] syntax error near ''' [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/2_decode/sign_extender.v:58]
+WARNING: [VRFC 10-2096] empty statement in sequential block [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/2_decode/sign_extender.v:57]
+ERROR: [VRFC 10-552] declarations not allowed in unnamed block [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/2_decode/sign_extender.v:53]
+ERROR: [VRFC 10-552] declarations not allowed in unnamed block [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/2_decode/sign_extender.v:29]
+WARNING: [VRFC 10-3824] variable 'opcode' must explicitly be declared as automatic or static [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/2_decode/sign_extender.v:31]
+ERROR: [VRFC 10-2951] 'instruction' is not a constant [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/2_decode/sign_extender.v:31]
+WARNING: [VRFC 10-3824] variable 'address' must explicitly be declared as automatic or static [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/2_decode/sign_extender.v:36]
+ERROR: [VRFC 10-2951] 'instruction' is not a constant [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/2_decode/sign_extender.v:36]
+WARNING: [VRFC 10-3824] variable 'address' must explicitly be declared as automatic or static [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/2_decode/sign_extender.v:45]
+ERROR: [VRFC 10-2951] 'instruction' is not a constant [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/2_decode/sign_extender.v:45]
+WARNING: [VRFC 10-3824] variable 'address' must explicitly be declared as automatic or static [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/2_decode/sign_extender.v:54]
+ERROR: [VRFC 10-2951] 'instruction' is not a constant [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/2_decode/sign_extender.v:54]
+ERROR: [VRFC 10-2865] module 'sign_extender' ignored due to previous errors [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/2_decode/sign_extender.v:24]
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'sign_extender_test'
+WARNING: [Vivado 12-12986] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/XilinxVitis/Vivado/2021.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'sign_extender_test' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj sign_extender_test_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/2_decode/sign_extender.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sign_extender
+ERROR: [VRFC 10-552] declarations not allowed in unnamed block [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/2_decode/sign_extender.v:35]
+ERROR: [VRFC 10-552] declarations not allowed in unnamed block [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/2_decode/sign_extender.v:44]
+ERROR: [VRFC 10-552] declarations not allowed in unnamed block [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/2_decode/sign_extender.v:53]
+ERROR: [VRFC 10-552] declarations not allowed in unnamed block [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/2_decode/sign_extender.v:29]
+WARNING: [VRFC 10-3824] variable 'opcode' must explicitly be declared as automatic or static [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/2_decode/sign_extender.v:31]
+ERROR: [VRFC 10-2951] 'instruction' is not a constant [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/2_decode/sign_extender.v:31]
+WARNING: [VRFC 10-3824] variable 'address' must explicitly be declared as automatic or static [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/2_decode/sign_extender.v:36]
+ERROR: [VRFC 10-2951] 'instruction' is not a constant [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/2_decode/sign_extender.v:36]
+WARNING: [VRFC 10-3824] variable 'address' must explicitly be declared as automatic or static [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/2_decode/sign_extender.v:45]
+ERROR: [VRFC 10-2951] 'instruction' is not a constant [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/2_decode/sign_extender.v:45]
+WARNING: [VRFC 10-3824] variable 'address' must explicitly be declared as automatic or static [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/2_decode/sign_extender.v:54]
+ERROR: [VRFC 10-2951] 'instruction' is not a constant [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/2_decode/sign_extender.v:54]
+ERROR: [VRFC 10-2865] module 'sign_extender' ignored due to previous errors [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/2_decode/sign_extender.v:24]
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'sign_extender_test'
+WARNING: [Vivado 12-12986] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/XilinxVitis/Vivado/2021.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'sign_extender_test' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj sign_extender_test_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/2_decode/sign_extender.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sign_extender
+ERROR: [VRFC 10-2989] 'address' is not declared [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/2_decode/sign_extender.v:42]
+ERROR: [VRFC 10-2989] 'address' is not declared [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/2_decode/sign_extender.v:51]
+ERROR: [VRFC 10-2989] 'address' is not declared [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/2_decode/sign_extender.v:60]
+ERROR: [VRFC 10-2865] module 'sign_extender' ignored due to previous errors [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/2_decode/sign_extender.v:24]
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'sign_extender_test'
+WARNING: [Vivado 12-12986] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/XilinxVitis/Vivado/2021.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'sign_extender_test' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj sign_extender_test_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/2_decode/sign_extender.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sign_extender
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/2_decode/sign_extender_test.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sign_extender_test
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot sign_extender_test_behav xil_defaultlib.sign_extender_test xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2021.2
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: C:/XilinxVitis/Vivado/2021.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot sign_extender_test_behav xil_defaultlib.sign_extender_test xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package xil_defaultlib.verification
+Compiling module xil_defaultlib.sign_extender
+Compiling module xil_defaultlib.sign_extender_test
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot sign_extender_test_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "sign_extender_test_behav -key {Behavioral:sim_1:Functional:sign_extender_test} -tclbatch {sign_extender_test.tcl} -view {C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/register_test_behav.wcfg} -view {C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/adder_test_behav.wcfg} -view {C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/mux_test_behav.wcfg} -view {C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/instr_mem_test_behav.wcfg} -view {C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/iFetch_test_behav.wcfg} -view {C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/instr_parse_test_behav.wcfg} -view {C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/regfile_test_behav.wcfg} -view {C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/control_test_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/register_test_behav.wcfg
+WARNING: Simulation object /register_test/tc was not found in the design.
+WARNING: Simulation object /register_test/ts was not found in the design.
+WARNING: Simulation object /register_test/clk was not found in the design.
+WARNING: Simulation object /register_test/rst was not found in the design.
+WARNING: Simulation object /register_test/d was not found in the design.
+WARNING: Simulation object /register_test/er_q was not found in the design.
+WARNING: Simulation object /register_test/q was not found in the design.
+open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/adder_test_behav.wcfg
+WARNING: Simulation object /adder_test/a was not found in the design.
+WARNING: Simulation object /adder_test/b was not found in the design.
+WARNING: Simulation object /adder_test/sum was not found in the design.
+WARNING: Simulation object /adder_test/er_sum was not found in the design.
+WARNING: Simulation object /adder_test/tc was not found in the design.
+WARNING: Simulation object /adder_test/ts was not found in the design.
+open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/mux_test_behav.wcfg
+WARNING: Simulation object /mux_test/a_64 was not found in the design.
+WARNING: Simulation object /mux_test/b_64 was not found in the design.
+WARNING: Simulation object /mux_test/ctl was not found in the design.
+WARNING: Simulation object /mux_test/out_64 was not found in the design.
+WARNING: Simulation object /mux_test/a_5 was not found in the design.
+WARNING: Simulation object /mux_test/b_5 was not found in the design.
+WARNING: Simulation object /mux_test/out_5 was not found in the design.
+WARNING: Simulation object /mux_test/er_out_64 was not found in the design.
+WARNING: Simulation object /mux_test/er_out_5 was not found in the design.
+WARNING: Simulation object /mux_test/tc was not found in the design.
+WARNING: Simulation object /mux_test/ts was not found in the design.
+open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/instr_mem_test_behav.wcfg
+WARNING: Simulation object /instr_mem_test/clk was not found in the design.
+WARNING: Simulation object /instr_mem_test/pc was not found in the design.
+WARNING: Simulation object /instr_mem_test/instr was not found in the design.
+WARNING: Simulation object /instr_mem_test/er was not found in the design.
+WARNING: Simulation object /instr_mem_test/tc was not found in the design.
+WARNING: Simulation object /instr_mem_test/ts was not found in the design.
+open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/iFetch_test_behav.wcfg
+WARNING: Simulation object /iFetch_test/clk was not found in the design.
+WARNING: Simulation object /iFetch_test/reset was not found in the design.
+WARNING: Simulation object /iFetch_test/pc_src was not found in the design.
+WARNING: Simulation object /iFetch_test/branch_target was not found in the design.
+WARNING: Simulation object /iFetch_test/cur_pc was not found in the design.
+WARNING: Simulation object /iFetch_test/er_cur_pc was not found in the design.
+WARNING: Simulation object /iFetch_test/instruction was not found in the design.
+WARNING: Simulation object /iFetch_test/er_instruction was not found in the design.
+WARNING: Simulation object /iFetch_test/ts was not found in the design.
+WARNING: Simulation object /iFetch_test/tc was not found in the design.
+WARNING: Simulation object /iFetch_test/clk_plus_1 was not found in the design.
+open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/instr_parse_test_behav.wcfg
+WARNING: Simulation object /instr_parse_test/tc was not found in the design.
+WARNING: Simulation object /instr_parse_test/instruction was not found in the design.
+WARNING: Simulation object /instr_parse_test/ts was not found in the design.
+WARNING: Simulation object /instr_parse_test/er_opcode was not found in the design.
+WARNING: Simulation object /instr_parse_test/opcode was not found in the design.
+WARNING: Simulation object /instr_parse_test/er_address was not found in the design.
+WARNING: Simulation object /instr_parse_test/address was not found in the design.
+WARNING: Simulation object /instr_parse_test/er_rm_num was not found in the design.
+WARNING: Simulation object /instr_parse_test/rm_num was not found in the design.
+WARNING: Simulation object /instr_parse_test/er_rn_num was not found in the design.
+WARNING: Simulation object /instr_parse_test/rn_num was not found in the design.
+WARNING: Simulation object /instr_parse_test/er_rd_num was not found in the design.
+WARNING: Simulation object /instr_parse_test/rd_num was not found in the design.
+open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/regfile_test_behav.wcfg
+WARNING: Simulation object /regfile_test/read_clk was not found in the design.
+WARNING: Simulation object /regfile_test/write_clk was not found in the design.
+WARNING: Simulation object /regfile_test/read_register1 was not found in the design.
+WARNING: Simulation object /regfile_test/read_register2 was not found in the design.
+WARNING: Simulation object /regfile_test/write_register was not found in the design.
+WARNING: Simulation object /regfile_test/write_data was not found in the design.
+WARNING: Simulation object /regfile_test/reg_write was not found in the design.
+WARNING: Simulation object /regfile_test/read_data1 was not found in the design.
+WARNING: Simulation object /regfile_test/er_read_data1 was not found in the design.
+WARNING: Simulation object /regfile_test/read_data2 was not found in the design.
+WARNING: Simulation object /regfile_test/er_read_data2 was not found in the design.
+WARNING: Simulation object /regfile_test/tc was not found in the design.
+WARNING: Simulation object /regfile_test/ts was not found in the design.
+open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/control_test_behav.wcfg
+WARNING: Simulation object /control_test/tc was not found in the design.
+WARNING: Simulation object /control_test/ts was not found in the design.
+WARNING: Simulation object /control_test/opcode was not found in the design.
+WARNING: Simulation object /control_test/reg2_loc was not found in the design.
+WARNING: Simulation object /control_test/uncondbranch was not found in the design.
+WARNING: Simulation object /control_test/branch was not found in the design.
+WARNING: Simulation object /control_test/mem_read was not found in the design.
+WARNING: Simulation object /control_test/mem_to_reg was not found in the design.
+WARNING: Simulation object /control_test/alu_op was not found in the design.
+WARNING: Simulation object /control_test/mem_write was not found in the design.
+WARNING: Simulation object /control_test/alu_src was not found in the design.
+WARNING: Simulation object /control_test/reg_write was not found in the design.
+WARNING: Simulation object /control_test/er_reg2_loc was not found in the design.
+WARNING: Simulation object /control_test/er_uncondbranch was not found in the design.
+WARNING: Simulation object /control_test/er_branch was not found in the design.
+WARNING: Simulation object /control_test/er_mem_read was not found in the design.
+WARNING: Simulation object /control_test/er_mem_to_reg was not found in the design.
+WARNING: Simulation object /control_test/er_alu_op was not found in the design.
+WARNING: Simulation object /control_test/er_mem_write was not found in the design.
+WARNING: Simulation object /control_test/er_alu_src was not found in the design.
+WARNING: Simulation object /control_test/er_reg_write was not found in the design.
+source sign_extender_test.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+
+******* BEGIN TEST RESULTS *******
+
+Test Case 1: | instruction = f84402c9
++++ Step 1: Pass: |sign_extended_output| time = 10 ns | er = 64 | ar = 64 | er_bits = 64 | ar_bits = 64 +++
+Test Case 2: | instruction = xxxxxxxx
+--- Step 1: Fail: |sign_extended_output| time = 20 ns | er = 0 | ar = 9223372036854775552 | er_bits = 64 | ar_bits = 64 ---
+Test Case 3: | instruction = cb0a028b
+--- Step 1: Fail: |sign_extended_output| time = 30 ns | er = 0 | ar = 9223372036854775552 | er_bits = 64 | ar_bits = 64 ---
+Test Case 4: | instruction = xxxxxxxx
+--- Step 1: Fail: |sign_extended_output| time = 40 ns | er = 96 | ar = 9223372036854775552 | er_bits = 64 | ar_bits = 64 ---
+Test Case 5: | instruction = b4ffff6b
+--- Step 1: Fail: |sign_extended_output| time = 50 ns | er = -5 | ar = 9223372036854775803 | er_bits = 64 | ar_bits = 64 ---
+Test Case 6: | instruction = xxxxxxxx
+--- Step 1: Fail: |sign_extended_output| time = 60 ns | er = 8 | ar = 9223372036854775552 | er_bits = 64 | ar_bits = 64 ---
+Test Case 7: | instruction = 14000040
++++ Step 1: Pass: |sign_extended_output| time = 70 ns | er = 64 | ar = 64 | er_bits = 64 | ar_bits = 64 +++
+Test Case 8: | instruction = xxxxxxxx
+--- Step 1: Fail: |sign_extended_output| time = 80 ns | er = -55 | ar = 9223372036854775552 | er_bits = 64 | ar_bits = 64 ---
+Test Case 9: | instruction = aa150149
+--- Step 1: Fail: |sign_extended_output| time = 90 ns | er = 0 | ar = 9223372036854775552 | er_bits = 64 | ar_bits = 64 ---
+Test Case 10: | instruction = xxxxxxxx
+--- Step 1: Fail: |sign_extended_output| time = 100 ns | er = 0 | ar = 9223372036854775552 | er_bits = 64 | ar_bits = 64 ---
+
+Pass Count = 2
+Fail Count = 8
+
+******* END TEST RESULTS *******
+
+$finish called at time : 100 ns : File "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/2_decode/sign_extender_test.sv" Line 98
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'sign_extender_test_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'sign_extender_test'
+WARNING: [Vivado 12-12986] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj sign_extender_test_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'sign_extender_test'
+WARNING: [Vivado 12-12986] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot sign_extender_test_behav xil_defaultlib.sign_extender_test xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2021.2
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: C:/XilinxVitis/Vivado/2021.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot sign_extender_test_behav xil_defaultlib.sign_extender_test xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Time resolution is 1 ps
+WARNING: Simulation object /sign_extender_test/sign_extended_output_string was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of System Verilog Dynamic Type object.
+
+******* BEGIN TEST RESULTS *******
+
+Test Case 1: | instruction = f84402c9
++++ Step 1: Pass: |sign_extended_output| time = 10 ns | er = 64 | ar = 64 | er_bits = 64 | ar_bits = 64 +++
+Test Case 2: | instruction = xxxxxxxx
+--- Step 1: Fail: |sign_extended_output| time = 20 ns | er = 0 | ar = 9223372036854775552 | er_bits = 64 | ar_bits = 64 ---
+Test Case 3: | instruction = cb0a028b
+--- Step 1: Fail: |sign_extended_output| time = 30 ns | er = 0 | ar = 9223372036854775552 | er_bits = 64 | ar_bits = 64 ---
+Test Case 4: | instruction = xxxxxxxx
+--- Step 1: Fail: |sign_extended_output| time = 40 ns | er = 96 | ar = 9223372036854775552 | er_bits = 64 | ar_bits = 64 ---
+Test Case 5: | instruction = b4ffff6b
+--- Step 1: Fail: |sign_extended_output| time = 50 ns | er = -5 | ar = 9223372036854775803 | er_bits = 64 | ar_bits = 64 ---
+Test Case 6: | instruction = xxxxxxxx
+--- Step 1: Fail: |sign_extended_output| time = 60 ns | er = 8 | ar = 9223372036854775552 | er_bits = 64 | ar_bits = 64 ---
+Test Case 7: | instruction = 14000040
++++ Step 1: Pass: |sign_extended_output| time = 70 ns | er = 64 | ar = 64 | er_bits = 64 | ar_bits = 64 +++
+Test Case 8: | instruction = xxxxxxxx
+--- Step 1: Fail: |sign_extended_output| time = 80 ns | er = -55 | ar = 9223372036854775552 | er_bits = 64 | ar_bits = 64 ---
+Test Case 9: | instruction = aa150149
+--- Step 1: Fail: |sign_extended_output| time = 90 ns | er = 0 | ar = 9223372036854775552 | er_bits = 64 | ar_bits = 64 ---
+Test Case 10: | instruction = xxxxxxxx
+--- Step 1: Fail: |sign_extended_output| time = 100 ns | er = 0 | ar = 9223372036854775552 | er_bits = 64 | ar_bits = 64 ---
+
+Pass Count = 2
+Fail Count = 8
+
+******* END TEST RESULTS *******
+
+$finish called at time : 100 ns : File "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/2_decode/sign_extender_test.sv" Line 98
+save_wave_config {C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/sign_extender_test_behav.wcfg}
+add_files -fileset sim_1 -norecurse C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/sign_extender_test_behav.wcfg
+set_property xsim.view {C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/register_test_behav.wcfg C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/adder_test_behav.wcfg C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/mux_test_behav.wcfg C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/instr_mem_test_behav.wcfg C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/iFetch_test_behav.wcfg C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/instr_parse_test_behav.wcfg C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/regfile_test_behav.wcfg C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/control_test_behav.wcfg C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/sign_extender_test_behav.wcfg} [get_filesets sim_1]
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'sign_extender_test'
+WARNING: [Vivado 12-12986] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj sign_extender_test_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/2_decode/sign_extender.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sign_extender
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'sign_extender_test'
+WARNING: [Vivado 12-12986] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot sign_extender_test_behav xil_defaultlib.sign_extender_test xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2021.2
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: C:/XilinxVitis/Vivado/2021.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot sign_extender_test_behav xil_defaultlib.sign_extender_test xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package xil_defaultlib.verification
+Compiling module xil_defaultlib.sign_extender
+Compiling module xil_defaultlib.sign_extender_test
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot sign_extender_test_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Time resolution is 1 ps
+
+******* BEGIN TEST RESULTS *******
+
+Test Case 1: | instruction = f84402c9
++++ Step 1: Pass: |sign_extended_output| time = 10 ns | er = 64 | ar = 64 | er_bits = 64 | ar_bits = 64 +++
+Test Case 2: | instruction = xxxxxxxx
+--- Step 1: Fail: |sign_extended_output| time = 20 ns | er = 0 | ar = 9223372036854775552 | er_bits = 64 | ar_bits = 64 ---
+Test Case 3: | instruction = cb0a028b
++++ Step 1: Pass: |sign_extended_output| time = 30 ns | er = 0 | ar = 0 | er_bits = 64 | ar_bits = 64 +++
+Test Case 4: | instruction = xxxxxxxx
+--- Step 1: Fail: |sign_extended_output| time = 40 ns | er = 96 | ar = 9223372036854775552 | er_bits = 64 | ar_bits = 64 ---
+Test Case 5: | instruction = b4ffff6b
+--- Step 1: Fail: |sign_extended_output| time = 50 ns | er = -5 | ar = 9223372036854775803 | er_bits = 64 | ar_bits = 64 ---
+Test Case 6: | instruction = xxxxxxxx
+--- Step 1: Fail: |sign_extended_output| time = 60 ns | er = 8 | ar = 9223372036854775552 | er_bits = 64 | ar_bits = 64 ---
+Test Case 7: | instruction = 14000040
++++ Step 1: Pass: |sign_extended_output| time = 70 ns | er = 64 | ar = 64 | er_bits = 64 | ar_bits = 64 +++
+Test Case 8: | instruction = xxxxxxxx
+--- Step 1: Fail: |sign_extended_output| time = 80 ns | er = -55 | ar = 9223372036854775552 | er_bits = 64 | ar_bits = 64 ---
+Test Case 9: | instruction = aa150149
++++ Step 1: Pass: |sign_extended_output| time = 90 ns | er = 0 | ar = 0 | er_bits = 64 | ar_bits = 64 +++
+Test Case 10: | instruction = xxxxxxxx
+--- Step 1: Fail: |sign_extended_output| time = 100 ns | er = 0 | ar = 9223372036854775552 | er_bits = 64 | ar_bits = 64 ---
+
+Pass Count = 4
+Fail Count = 6
+
+******* END TEST RESULTS *******
+
+$finish called at time : 100 ns : File "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/2_decode/sign_extender_test.sv" Line 98
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'sign_extender_test'
+WARNING: [Vivado 12-12986] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj sign_extender_test_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/2_decode/sign_extender.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sign_extender
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'sign_extender_test'
+WARNING: [Vivado 12-12986] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot sign_extender_test_behav xil_defaultlib.sign_extender_test xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2021.2
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: C:/XilinxVitis/Vivado/2021.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot sign_extender_test_behav xil_defaultlib.sign_extender_test xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package xil_defaultlib.verification
+Compiling module xil_defaultlib.sign_extender
+Compiling module xil_defaultlib.sign_extender_test
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot sign_extender_test_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Time resolution is 1 ps
+
+******* BEGIN TEST RESULTS *******
+
+Test Case 1: | instruction = f84402c9
++++ Step 1: Pass: |sign_extended_output| time = 10 ns | er = 64 | ar = 64 | er_bits = 64 | ar_bits = 64 +++
+Test Case 2: | instruction = xxxxxxxx
+--- Step 1: Fail: |sign_extended_output| time = 20 ns | er = 0 | ar = -256 | er_bits = 64 | ar_bits = 64 ---
+Test Case 3: | instruction = cb0a028b
++++ Step 1: Pass: |sign_extended_output| time = 30 ns | er = 0 | ar = 0 | er_bits = 64 | ar_bits = 64 +++
+Test Case 4: | instruction = xxxxxxxx
+--- Step 1: Fail: |sign_extended_output| time = 40 ns | er = 96 | ar = -256 | er_bits = 64 | ar_bits = 64 ---
+Test Case 5: | instruction = b4ffff6b
++++ Step 1: Pass: |sign_extended_output| time = 50 ns | er = -5 | ar = -5 | er_bits = 64 | ar_bits = 64 +++
+Test Case 6: | instruction = xxxxxxxx
+--- Step 1: Fail: |sign_extended_output| time = 60 ns | er = 8 | ar = -256 | er_bits = 64 | ar_bits = 64 ---
+Test Case 7: | instruction = 14000040
++++ Step 1: Pass: |sign_extended_output| time = 70 ns | er = 64 | ar = 64 | er_bits = 64 | ar_bits = 64 +++
+Test Case 8: | instruction = xxxxxxxx
+--- Step 1: Fail: |sign_extended_output| time = 80 ns | er = -55 | ar = -256 | er_bits = 64 | ar_bits = 64 ---
+Test Case 9: | instruction = aa150149
++++ Step 1: Pass: |sign_extended_output| time = 90 ns | er = 0 | ar = 0 | er_bits = 64 | ar_bits = 64 +++
+Test Case 10: | instruction = xxxxxxxx
+--- Step 1: Fail: |sign_extended_output| time = 100 ns | er = 0 | ar = -256 | er_bits = 64 | ar_bits = 64 ---
+
+Pass Count = 5
+Fail Count = 5
+
+******* END TEST RESULTS *******
+
+$finish called at time : 100 ns : File "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/2_decode/sign_extender_test.sv" Line 98
+save_wave_config {C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/sign_extender_test_behav.wcfg}
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Feb 19 14:13:08 2024...

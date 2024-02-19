@@ -1,10 +1,10 @@
 # compile verilog/system verilog design source files
 verilog xil_defaultlib  --include "../../../../../ARM-Lab/code/0_common" \
-"../../../../../ARM-Lab/code/2_decode/control.v" \
+"../../../../../ARM-Lab/code/2_decode/sign_extender.v" \
 
 sv xil_defaultlib  --include "../../../../../ARM-Lab/code/0_common" \
 "../../../../../ARM-Lab/code/0_common/verification_functions.sv" \
-"../../../../../ARM-Lab/code/2_decode/control_test.sv" \
+"../../../../../ARM-Lab/code/2_decode/sign_extender_test.sv" \
 
 # compile glbl module
 verilog xil_defaultlib "glbl.v"
