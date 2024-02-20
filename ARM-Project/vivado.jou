@@ -2,64 +2,17 @@
 # Vivado v2021.2 (64-bit)
 # SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
 # IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
-# Start of session at: Mon Feb 19 12:30:08 2024
-# Process ID: 25700
+# Start of session at: Tue Feb 20 14:49:59 2024
+# Process ID: 13392
 # Current directory: C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent18512 C:\Users\reese_ford1\Documents\GitHub\ARM-Lab\ARM-Project\ARM-Project.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11444 C:\Users\reese_ford1\Documents\GitHub\ARM-Lab\ARM-Project\ARM-Project.xpr
 # Log file: C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/vivado.log
 # Journal file: C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project\vivado.jou
-# Running On: ROG-115-12, OS: Windows, CPU Frequency: 2112 MHz, CPU Physical cores: 12, Host memory: 34033 MB
+# Running On: ROG-112-05, OS: Windows, CPU Frequency: 3192 MHz, CPU Physical cores: 6, Host memory: 34145 MB
 #-----------------------------------------------------------
 start_gui
 open_project C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.xpr
 update_compile_order -fileset sources_1
-close [ open C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/2_decode/control.v w ]
-add_files C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/2_decode/control.v
-update_compile_order -fileset sources_1
-set_property top control_test [get_filesets sim_1]
-set_property top_lib xil_defaultlib [get_filesets sim_1]
-# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
-set_property source_mgmt_mode None [current_project]
-set_property top control_test [current_fileset]
-# Re-enabling previously disabled source management mode.
-set_property source_mgmt_mode All [current_project]
-update_compile_order -fileset sources_1
-launch_simulation
-open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/register_test_behav.wcfg
-open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/adder_test_behav.wcfg
-open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/mux_test_behav.wcfg
-open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/instr_mem_test_behav.wcfg
-open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/iFetch_test_behav.wcfg
-open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/instr_parse_test_behav.wcfg
-open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/regfile_test_behav.wcfg
-source control_test.tcl
-relaunch_sim
-save_wave_config {C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/control_test_behav.wcfg}
-add_files -fileset sim_1 -norecurse C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/control_test_behav.wcfg
-set_property xsim.view {C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/register_test_behav.wcfg C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/adder_test_behav.wcfg C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/mux_test_behav.wcfg C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/instr_mem_test_behav.wcfg C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/iFetch_test_behav.wcfg C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/instr_parse_test_behav.wcfg C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/regfile_test_behav.wcfg C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/control_test_behav.wcfg} [get_filesets sim_1]
-relaunch_sim
-relaunch_sim
-relaunch_sim
-relaunch_sim
-save_wave_config {C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/control_test_behav.wcfg}
-stop
-close_sim
-close [ open C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/2_decode/sign_extender.v w ]
-add_files C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/2_decode/sign_extender.v
-update_compile_order -fileset sources_1
-set_property top sign_extender_test [get_filesets sim_1]
-set_property top_lib xil_defaultlib [get_filesets sim_1]
-# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
-set_property source_mgmt_mode None [current_project]
-set_property top sign_extender_test [current_fileset]
-# Re-enabling previously disabled source management mode.
-set_property source_mgmt_mode All [current_project]
-update_compile_order -fileset sources_1
-launch_simulation
-update_compile_order -fileset sources_1
-launch_simulation
-launch_simulation
-launch_simulation
 launch_simulation
 open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/register_test_behav.wcfg
 open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/adder_test_behav.wcfg
@@ -69,11 +22,27 @@ open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/iFetc
 open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/instr_parse_test_behav.wcfg
 open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/regfile_test_behav.wcfg
 open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/control_test_behav.wcfg
+open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/sign_extender_test_behav.wcfg
 source sign_extender_test.tcl
 relaunch_sim
-save_wave_config {C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/sign_extender_test_behav.wcfg}
-add_files -fileset sim_1 -norecurse C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/sign_extender_test_behav.wcfg
-set_property xsim.view {C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/register_test_behav.wcfg C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/adder_test_behav.wcfg C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/mux_test_behav.wcfg C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/instr_mem_test_behav.wcfg C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/iFetch_test_behav.wcfg C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/instr_parse_test_behav.wcfg C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/regfile_test_behav.wcfg C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/control_test_behav.wcfg C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/sign_extender_test_behav.wcfg} [get_filesets sim_1]
+close_sim
+launch_simulation
+open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/register_test_behav.wcfg
+open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/adder_test_behav.wcfg
+open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/mux_test_behav.wcfg
+open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/instr_mem_test_behav.wcfg
+open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/iFetch_test_behav.wcfg
+open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/instr_parse_test_behav.wcfg
+open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/regfile_test_behav.wcfg
+open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/control_test_behav.wcfg
+open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/sign_extender_test_behav.wcfg
+source sign_extender_test.tcl
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
 relaunch_sim
 relaunch_sim
 save_wave_config {C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/sign_extender_test_behav.wcfg}

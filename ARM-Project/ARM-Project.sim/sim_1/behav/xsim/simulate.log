@@ -4,28 +4,28 @@ Time resolution is 1 ps
 
 Test Case 1: | instruction = f84402c9
 +++ Step 1: Pass: |sign_extended_output| time = 10 ns | er = 64 | ar = 64 | er_bits = 64 | ar_bits = 64 +++
-Test Case 2: | instruction = xxxxxxxx
---- Step 1: Fail: |sign_extended_output| time = 20 ns | er = 0 | ar = -256 | er_bits = 64 | ar_bits = 64 ---
+Test Case 2: | instruction = 8a09026a
++++ Step 1: Pass: |sign_extended_output| time = 20 ns | er = 0 | ar = 0 | er_bits = 64 | ar_bits = 64 +++
 Test Case 3: | instruction = cb0a028b
 +++ Step 1: Pass: |sign_extended_output| time = 30 ns | er = 0 | ar = 0 | er_bits = 64 | ar_bits = 64 +++
-Test Case 4: | instruction = xxxxxxxx
---- Step 1: Fail: |sign_extended_output| time = 40 ns | er = 96 | ar = -256 | er_bits = 64 | ar_bits = 64 ---
+Test Case 4: | instruction = f80602cb
++++ Step 1: Pass: |sign_extended_output| time = 40 ns | er = 96 | ar = 96 | er_bits = 64 | ar_bits = 64 +++
 Test Case 5: | instruction = b4ffff6b
 +++ Step 1: Pass: |sign_extended_output| time = 50 ns | er = -5 | ar = -5 | er_bits = 64 | ar_bits = 64 +++
-Test Case 6: | instruction = xxxxxxxx
---- Step 1: Fail: |sign_extended_output| time = 60 ns | er = 8 | ar = -256 | er_bits = 64 | ar_bits = 64 ---
+Test Case 6: | instruction = b4000109
++++ Step 1: Pass: |sign_extended_output| time = 60 ns | er = 8 | ar = 8 | er_bits = 64 | ar_bits = 64 +++
 Test Case 7: | instruction = 14000040
 +++ Step 1: Pass: |sign_extended_output| time = 70 ns | er = 64 | ar = 64 | er_bits = 64 | ar_bits = 64 +++
-Test Case 8: | instruction = xxxxxxxx
---- Step 1: Fail: |sign_extended_output| time = 80 ns | er = -55 | ar = -256 | er_bits = 64 | ar_bits = 64 ---
+Test Case 8: | instruction = 17ffffc9
++++ Step 1: Pass: |sign_extended_output| time = 80 ns | er = -55 | ar = -55 | er_bits = 64 | ar_bits = 64 +++
 Test Case 9: | instruction = aa150149
 +++ Step 1: Pass: |sign_extended_output| time = 90 ns | er = 0 | ar = 0 | er_bits = 64 | ar_bits = 64 +++
-Test Case 10: | instruction = xxxxxxxx
---- Step 1: Fail: |sign_extended_output| time = 100 ns | er = 0 | ar = -256 | er_bits = 64 | ar_bits = 64 ---
+Test Case 10: | instruction = 8a0a02c9
++++ Step 1: Pass: |sign_extended_output| time = 100 ns | er = 0 | ar = 0 | er_bits = 64 | ar_bits = 64 +++
 
-Pass Count = 5
-Fail Count = 5
+Pass Count = 10
+Fail Count = 0
 
 ******* END TEST RESULTS *******
 
-$finish called at time : 100 ns : File "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/2_decode/sign_extender_test.sv" Line 98
+$finish called at time : 100 ns : File "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/2_decode/sign_extender_test.sv" Line 103
