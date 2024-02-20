@@ -29,8 +29,10 @@ begin
     #(`CYCLE);
     verify(ts, sign_extended_output_string, er_sign_extended_output, $bits(er_sign_extended_output), sign_extended_output, $bits(sign_extended_output), `S_DEC);
 
-    // ADD X10, X19, X9 
-    instruction = `INSTR_LEN'bX;
+    // ADD X10, X19, X9
+    // 450 9 0 13 A
+    // 10001010000 01001 000000 10011 01010
+    instruction = `INSTR_LEN'b10001010000010010000001001101010;
     er_sign_extended_output = `WORD'd0;
     $display("Test Case %0d: | instruction = %0h", tc++, instruction);     
     #(`CYCLE);
@@ -44,7 +46,9 @@ begin
     verify(ts, sign_extended_output_string, er_sign_extended_output, $bits(er_sign_extended_output), sign_extended_output, $bits(sign_extended_output), `S_DEC);
 
     // STUR X11, [X22, #96]
-    instruction = `INSTR_LEN'bX;
+    // 1984 96 0 22 11
+    // 11111000000 001100000 00 10110 01011
+    instruction = `INSTR_LEN'b11111000000001100000001011001011;
     er_sign_extended_output = `WORD'd96;
     $display("Test Case %0d: | instruction = %0h", tc++, instruction);     
     #(`CYCLE);
@@ -59,7 +63,8 @@ begin
     verify(ts, sign_extended_output_string, er_sign_extended_output, $bits(er_sign_extended_output), sign_extended_output, $bits(sign_extended_output), `S_DEC);
 
     // CBZ X9, 8
-    instruction = `INSTR_LEN'bX;
+    // 
+    instruction = `INSTR_LEN'b10110100000000000000000100001001;
     er_sign_extended_output = `WORD'd8;
 
     $display("Test Case %0d: | instruction = %0h", tc++, instruction);     
@@ -74,7 +79,7 @@ begin
     verify(ts, sign_extended_output_string, er_sign_extended_output, $bits(er_sign_extended_output), sign_extended_output, $bits(sign_extended_output), `S_DEC);
 
     // B -55
-    instruction = `INSTR_LEN'bX;
+    instruction = `INSTR_LEN'b00010111111111111111111111001001;
     er_sign_extended_output = -`WORD'd55;
     #(`CYCLE);
     $display("Test Case %0d: | instruction = %0h", tc++, instruction);     
@@ -88,7 +93,7 @@ begin
     verify(ts, sign_extended_output_string, er_sign_extended_output, $bits(er_sign_extended_output), sign_extended_output, $bits(sign_extended_output), `S_DEC);
 
     // AND X9, X22, X10
-    instruction = `INSTR_LEN'bX;
+    instruction = `INSTR_LEN'b10001010000010100000001011001001;
     er_sign_extended_output = `WORD'd0;
     $display("Test Case %0d: | instruction = %0h", tc++, instruction);     
     #(`CYCLE);

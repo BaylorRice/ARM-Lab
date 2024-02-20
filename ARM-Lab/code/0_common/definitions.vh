@@ -9,3 +9,17 @@
 `define DMEMFILE  "H:/ELC3338/Spring2018/potter/ARM-Lab/testfiles/ramData.data"
 `define IMEMFILE  "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/testfiles/instrData.data"
 `define RMEMFILE  "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/testfiles/regData.data"
+
+// For Control Unit
+`define ADD 11'b10001011000
+`define SUB 11'b11001011000
+`define AND 11'h450
+`define ORR 11'b10101010000
+`define LDUR 11'b11111000010
+`define STUR 11'b11111000000
+`define CBZ 11'b10110100XXX
+`define B 11'b000101XXXXX
+`define ALUOp_RTYPE 2'b10
+`define ALUOp_DTYPE 2'b00
+`define ALUOp_B 2'b00
+`define ALUOp_CBZ 2'b01
