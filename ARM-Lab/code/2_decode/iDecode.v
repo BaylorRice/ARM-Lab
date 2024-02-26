@@ -51,14 +51,16 @@ module iDecode(
     wire reg2_loc_wire;
     wire reg_write_wire;
 
-    // Wire Assignments
-    assign opcode_wire = instruction[31:21];
-    assign read_reg1_wire = instruction[9:5];
-    assign read_mux_0_wire = instruction[20:16];
-    assign read_mux_1_wire = instruction[4:0];
-
 
     // Module Definitions
+    instr_parse IP (
+        .instruction(instruction),
+        .opcode(opcode_wire),
+        .rm_num(read_mux_o_wire),
+        .rn_num(read_reg1_wire),
+        .rd_num(read_mux_1_wire)
+    );
+
     control CTRL (
         .opcode(opcode_wire),
         .reg2_loc(reg2_loc_wire),
@@ -101,7 +103,5 @@ module iDecode(
         opcode = opcode_wire;
         reg2_loc = reg2_loc_wire;
     end
-
-
 
 endmodule
