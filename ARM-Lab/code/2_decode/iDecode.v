@@ -40,7 +40,68 @@ module iDecode(
     output reg [`WORD-1:0] read_data1,
     output reg [`WORD-1:0] read_data2,
     output reg [10:0] opcode
+);
+
+    // Wire Definitons
+    wire [10:0] opcode_wire;
+    wire [4:0] read_reg2_wire;
+    wire [4:0] read_reg1_wire;
+    wire [4:0] read_mux_0_wire;
+    wire [4:0] read_mux_1_wire;
+    wire reg2_loc_wire;
+    wire reg_write_wire;
+
+    // Wire Assignments
+    assign opcode_wire = instruction[31:21];
+    assign read_reg1_wire = instruction[9:5];
+    assign read_mux_0_wire = instruction[20:16];
+    assign read_mux_1_wire = instruction[4:0];
+
+
+    // Module Definitions
+    control CTRL (
+        .opcode(opcode_wire),
+        .reg2_loc(reg2_loc_wire),
+        .uncondbranch(uncondbranch),
+        .branch(branch),
+        .mem_read(mem_read),
+        .mem_to_reg(mem_to_reg),
+        .alu_op(alu_op),
+        .mem_write(mem_write),
+        .alu_src(alu_src),
+        .reg_write(reg_write_wire)
     );
-    
-    
+
+    regfile X_REG(
+        .read_clk(read_clk),
+        .write_clk(write_clk),
+        .read_register1(read_reg1_wire),
+        .read_register2(read_reg2_wire),
+        .write_register(read_mux_1_wire),
+        .write_data(write_data),
+        .reg_write(reg_write_wire),
+        .read_data1(read_data1),
+        .read_data2(read_data2)
+    );
+
+    sign_extender SE(
+        .instruction(iunstruction),
+        .sign_extended_output(sign_extended_output)
+    );
+
+    mux#(5) MUX(
+        .a_in(read_mux_0_wire),
+        .b_in(read_mux_1_wire),
+        .control(reg2_loc_wire),
+        .mux_out(read_reg2_wire)
+    );
+
+    // Wire to Output Definitions
+    always @(*) begin
+        opcode = opcode_wire;
+        reg2_loc = reg2_loc_wire;
+    end
+
+
+
 endmodule
