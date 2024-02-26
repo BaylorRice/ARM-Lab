@@ -1,4 +1,16 @@
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/0_common/verification_functions.sv" into library xil_defaultlib
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/2_decode/sign_extender_test.sv" into library xil_defaultlib
-WARNING: [VRFC 10-3264] design element 'verification' is previously defined, ignoring this definition [../../../../../ARM-Lab/code/0_common/verification_functions.sv:3]
-INFO: [VRFC 10-311] analyzing module sign_extender_test
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/2_decode/control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module control
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/0_common/delay.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module delay
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/2_decode/iDecode.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module iDecode
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/2_decode/instr_parse.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module instr_parse
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/0_common/mux.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/0_common/oscillator.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module oscillator
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/2_decode/regfile.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regfile
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/2_decode/sign_extender.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sign_extender

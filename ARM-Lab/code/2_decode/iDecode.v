@@ -27,19 +27,19 @@ module iDecode(
     input wire write_clk,
     input wire [`INSTR_LEN-1:0] instruction,
     input wire [`WORD-1:0] write_data,
-    output reg [`WORD-1:0] sign_extended_output,
-    output reg reg2_loc,
-    output reg uncondbranch,
-    output reg branch,
-    output reg mem_read,
-    output reg mem_to_reg,
-    output reg [1:0] alu_op,
-    output reg mem_write,
-    output reg alu_src,
-    output reg reg_write,
-    output reg [`WORD-1:0] read_data1,
-    output reg [`WORD-1:0] read_data2,
-    output reg [10:0] opcode
+    output wire [`WORD-1:0] sign_extended_output,
+    output wire reg2_loc,
+    output wire uncondbranch,
+    output wire branch,
+    output wire mem_read,
+    output wire mem_to_reg,
+    output wire [1:0] alu_op,
+    output wire mem_write,
+    output wire alu_src,
+    output wire reg_write,
+    output wire [`WORD-1:0] read_data1,
+    output wire [`WORD-1:0] read_data2,
+    output wire [10:0] opcode
 );
 
     // Wire Definitons
@@ -56,7 +56,7 @@ module iDecode(
     instr_parse IP (
         .instruction(instruction),
         .opcode(opcode_wire),
-        .rm_num(read_mux_o_wire),
+        .rm_num(read_mux_0_wire),
         .rn_num(read_reg1_wire),
         .rd_num(read_mux_1_wire)
     );
@@ -87,7 +87,7 @@ module iDecode(
     );
 
     sign_extender SE(
-        .instruction(iunstruction),
+        .instruction(instruction),
         .sign_extended_output(sign_extended_output)
     );
 
@@ -99,9 +99,7 @@ module iDecode(
     );
 
     // Wire to Output Definitions
-    always @(*) begin
-        opcode = opcode_wire;
-        reg2_loc = reg2_loc_wire;
-    end
+    assign opcode = opcode_wire;
+    assign reg2_loc = reg2_loc_wire;
 
 endmodule

@@ -115,20 +115,20 @@ begin_test();
     // LDUR X9, [X22, #64]
     $display("Test Case %0d: | LDUR X9, [X22, #64]", tc++);
 	ts = 1;
-    instruction = 0;
-    er_opcode = 0;    
-    er_sign_extended_output = 0;
-    er_reg2_loc = 0;        
+    instruction = 32'hF84402C9;
+    er_opcode = 11'b11111000010;    
+    er_sign_extended_output = 64'h40;
+    // er_reg2_loc = 0;        
     er_uncondbranch = 0;
     er_branch = 0;
-    er_mem_read = 0;
-    er_mem_to_reg = 0;
+    er_mem_read = 1;
+    er_mem_to_reg = 1;
     er_alu_op = 0;
     er_mem_write = 0;
-    er_alu_src = 0;
-    er_reg_write = 0;
-    er_read_data1 = 0;
-    er_read_data2 = 0;    
+    er_alu_src = 1;
+    er_reg_write = 1;
+    er_read_data1 = 16;
+    // er_read_data2 = 0;    
         
     #2;
     verify(ts++, opcode_string, er_opcode, $bits(er_opcode), opcode, $bits(opcode), `BINARY);    
@@ -139,7 +139,7 @@ begin_test();
 
     #4
     // Since we don't have data memory, provide the Write_data value
-    write_data = 0;
+    write_data = 20;
     #4;
     
     // ADD X10, X19, X9 

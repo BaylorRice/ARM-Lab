@@ -2,30 +2,149 @@ Time resolution is 1 ps
 
 ******* BEGIN TEST RESULTS *******
 
-Test Case 1: | instruction = f84402c9
-+++ Step 1: Pass: |sign_extended_output| time = 10 ns | er = 64 | ar = 64 | er_bits = 64 | ar_bits = 64 +++
-Test Case 2: | instruction = 8a09026a
-+++ Step 1: Pass: |sign_extended_output| time = 20 ns | er = 0 | ar = 0 | er_bits = 64 | ar_bits = 64 +++
-Test Case 3: | instruction = cb0a028b
-+++ Step 1: Pass: |sign_extended_output| time = 30 ns | er = 0 | ar = 0 | er_bits = 64 | ar_bits = 64 +++
-Test Case 4: | instruction = f80602cb
-+++ Step 1: Pass: |sign_extended_output| time = 40 ns | er = 96 | ar = 96 | er_bits = 64 | ar_bits = 64 +++
-Test Case 5: | instruction = b4ffff6b
-+++ Step 1: Pass: |sign_extended_output| time = 50 ns | er = -5 | ar = -5 | er_bits = 64 | ar_bits = 64 +++
-Test Case 6: | instruction = b4000109
-+++ Step 1: Pass: |sign_extended_output| time = 60 ns | er = 8 | ar = 8 | er_bits = 64 | ar_bits = 64 +++
-Test Case 7: | instruction = 14000040
-+++ Step 1: Pass: |sign_extended_output| time = 70 ns | er = 64 | ar = 64 | er_bits = 64 | ar_bits = 64 +++
-Test Case 8: | instruction = 17ffffc9
-+++ Step 1: Pass: |sign_extended_output| time = 80 ns | er = -55 | ar = -55 | er_bits = 64 | ar_bits = 64 +++
-Test Case 9: | instruction = aa150149
-+++ Step 1: Pass: |sign_extended_output| time = 90 ns | er = 0 | ar = 0 | er_bits = 64 | ar_bits = 64 +++
-Test Case 10: | instruction = 8a0a02c9
-+++ Step 1: Pass: |sign_extended_output| time = 100 ns | er = 0 | ar = 0 | er_bits = 64 | ar_bits = 64 +++
+Test Case 1: | LDUR X9, [X22, #64]
++++ Step 1: Pass: |opcode| time = 7 ns | er = 11111000010 | ar = 11111000010 | er_bits = 11 | ar_bits = 11 +++
++++ Step 2: Pass: |sign_extended_output| time = 7 ns | er = 40 | ar = 40 | er_bits = 64 | ar_bits = 64 +++
++++ Step 3: Pass: |reg2_loc| time = 7 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 4: Pass: |uncondbranch| time = 7 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 5: Pass: |branch| time = 7 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 6: Pass: |mem_read| time = 7 ns | er = 1 | ar = 1 | er_bits = 1 | ar_bits = 1 +++
++++ Step 7: Pass: |mem_to_reg| time = 7 ns | er = 1 | ar = 1 | er_bits = 1 | ar_bits = 1 +++
++++ Step 8: Pass: |alu_op| time = 7 ns | er = 0 | ar = 0 | er_bits = 2 | ar_bits = 2 +++
++++ Step 9: Pass: |mem_write| time = 7 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 10: Pass: |alu_src| time = 7 ns | er = 1 | ar = 1 | er_bits = 1 | ar_bits = 1 +++
+--- Step 11: Fail: |reg_write| time = 7 ns | er = 1 | ar = 0 | er_bits = 1 | ar_bits = 1 ---
++++ Step 12: Pass: |read_data1| time = 7 ns | er = 16 | ar = 16 | er_bits = 64 | ar_bits = 64 +++
+--- Step 13: Fail: |read_data2| time = 7 ns | er = 0 | ar = 8 | er_bits = 64 | ar_bits = 64 ---
+Test Case 2: | ADD X10, X19, X9
++++ Step 1: Pass: |opcode| time = 17 ns | er = 0 | ar = 0 | er_bits = 11 | ar_bits = 11 +++
++++ Step 2: Pass: |reg2_loc| time = 17 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 3: Pass: |uncondbranch| time = 17 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 4: Pass: |branch| time = 17 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 5: Pass: |mem_read| time = 17 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 6: Pass: |mem_to_reg| time = 17 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 7: Pass: |alu_op| time = 17 ns | er = 0 | ar = 0 | er_bits = 2 | ar_bits = 2 +++
++++ Step 8: Pass: |mem_write| time = 17 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 9: Pass: |alu_src| time = 17 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 10: Pass: |reg_write| time = 17 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+--- Step 11: Fail: |read_data1| time = 17 ns | er = 0 | ar = 256 | er_bits = 64 | ar_bits = 64 ---
+--- Step 12: Fail: |read_data2| time = 17 ns | er = 0 | ar = 256 | er_bits = 64 | ar_bits = 64 ---
+Test Case 3: | SUB X11, X20, X10
++++ Step 1: Pass: |opcode| time = 27 ns | er = 0 | ar = 0 | er_bits = 11 | ar_bits = 11 +++
++++ Step 2: Pass: |sign_extended_output| time = 27 ns | er = 0 | ar = 0 | er_bits = 64 | ar_bits = 64 +++
++++ Step 3: Pass: |reg2_loc| time = 27 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 4: Pass: |uncondbranch| time = 27 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 5: Pass: |branch| time = 27 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 6: Pass: |mem_read| time = 27 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 7: Pass: |mem_to_reg| time = 27 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 8: Pass: |alu_op| time = 27 ns | er = 0 | ar = 0 | er_bits = 2 | ar_bits = 2 +++
++++ Step 9: Pass: |mem_write| time = 27 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 10: Pass: |alu_src| time = 27 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 11: Pass: |reg_write| time = 27 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+--- Step 12: Fail: |read_data1| time = 27 ns | er = 0 | ar = 256 | er_bits = 64 | ar_bits = 64 ---
+--- Step 13: Fail: |read_data2| time = 27 ns | er = 0 | ar = 256 | er_bits = 64 | ar_bits = 64 ---
+Test Case 4: | STUR X11, [X22, #96]
++++ Step 1: Pass: |opcode| time = 37 ns | er = 0 | ar = 0 | er_bits = 11 | ar_bits = 11 +++
++++ Step 2: Pass: |sign_extended_output| time = 37 ns | er = 0 | ar = 0 | er_bits = 64 | ar_bits = 64 +++
++++ Step 3: Pass: |reg2_loc| time = 37 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 4: Pass: |uncondbranch| time = 37 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 5: Pass: |branch| time = 37 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 6: Pass: |mem_read| time = 37 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 7: Pass: |mem_to_reg| time = 37 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 8: Pass: |alu_op| time = 37 ns | er = 0 | ar = 0 | er_bits = 2 | ar_bits = 2 +++
++++ Step 9: Pass: |mem_write| time = 37 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 10: Pass: |alu_src| time = 37 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 11: Pass: |reg_write| time = 37 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+--- Step 12: Fail: |read_data1| time = 37 ns | er = 0 | ar = 256 | er_bits = 64 | ar_bits = 64 ---
+--- Step 13: Fail: |read_data2| time = 37 ns | er = 0 | ar = 256 | er_bits = 64 | ar_bits = 64 ---
+Test Case 5: | CBZ X11, -5
++++ Step 1: Pass: |opcode| time = 47 ns | er = 0 | ar = 0 | er_bits = 11 | ar_bits = 11 +++
++++ Step 2: Pass: |sign_extended_output| time = 47 ns | er = 0 | ar = 0 | er_bits = 64 | ar_bits = 64 +++
++++ Step 3: Pass: |reg2_loc| time = 47 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 4: Pass: |uncondbranch| time = 47 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 5: Pass: |branch| time = 47 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 6: Pass: |mem_read| time = 47 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 7: Pass: |mem_to_reg| time = 47 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 8: Pass: |alu_op| time = 47 ns | er = 0 | ar = 0 | er_bits = 2 | ar_bits = 2 +++
++++ Step 9: Pass: |mem_write| time = 47 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 10: Pass: |alu_src| time = 47 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 11: Pass: |reg_write| time = 47 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+--- Step 12: Fail: |read_data1| time = 47 ns | er = 0 | ar = 256 | er_bits = 64 | ar_bits = 64 ---
+--- Step 13: Fail: |read_data2| time = 47 ns | er = 0 | ar = 256 | er_bits = 64 | ar_bits = 64 ---
+Test Case 6: | CBZ X9, 8
++++ Step 1: Pass: |opcode| time = 57 ns | er = 0 | ar = 0 | er_bits = 11 | ar_bits = 11 +++
++++ Step 2: Pass: |sign_extended_output| time = 57 ns | er = 0 | ar = 0 | er_bits = 64 | ar_bits = 64 +++
++++ Step 3: Pass: |reg2_loc| time = 57 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 4: Pass: |uncondbranch| time = 57 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 5: Pass: |branch| time = 57 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 6: Pass: |mem_read| time = 57 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 7: Pass: |mem_to_reg| time = 57 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 8: Pass: |alu_op| time = 57 ns | er = 0 | ar = 0 | er_bits = 2 | ar_bits = 2 +++
++++ Step 9: Pass: |mem_write| time = 57 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 10: Pass: |alu_src| time = 57 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 11: Pass: |reg_write| time = 57 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+--- Step 12: Fail: |read_data1| time = 57 ns | er = 0 | ar = 256 | er_bits = 64 | ar_bits = 64 ---
+--- Step 13: Fail: |read_data2| time = 57 ns | er = 0 | ar = 256 | er_bits = 64 | ar_bits = 64 ---
+Test Case 7: | B 64
++++ Step 1: Pass: |opcode| time = 67 ns | er = 0 | ar = 0 | er_bits = 11 | ar_bits = 11 +++
++++ Step 2: Pass: |sign_extended_output| time = 67 ns | er = 0 | ar = 0 | er_bits = 64 | ar_bits = 64 +++
++++ Step 3: Pass: |reg2_loc| time = 67 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 4: Pass: |uncondbranch| time = 67 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 5: Pass: |branch| time = 67 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 6: Pass: |mem_read| time = 67 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 7: Pass: |mem_to_reg| time = 67 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 8: Pass: |alu_op| time = 67 ns | er = 0 | ar = 0 | er_bits = 2 | ar_bits = 2 +++
++++ Step 9: Pass: |mem_write| time = 67 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 10: Pass: |alu_src| time = 67 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 11: Pass: |reg_write| time = 67 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+--- Step 12: Fail: |read_data1| time = 67 ns | er = 0 | ar = 256 | er_bits = 64 | ar_bits = 64 ---
+--- Step 13: Fail: |read_data2| time = 67 ns | er = 0 | ar = 256 | er_bits = 64 | ar_bits = 64 ---
+Test Case 8: | B -55
++++ Step 1: Pass: |opcode| time = 77 ns | er = 0 | ar = 0 | er_bits = 11 | ar_bits = 11 +++
++++ Step 2: Pass: |sign_extended_output| time = 77 ns | er = 0 | ar = 0 | er_bits = 64 | ar_bits = 64 +++
++++ Step 3: Pass: |reg2_loc| time = 77 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 4: Pass: |uncondbranch| time = 77 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 5: Pass: |branch| time = 77 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 6: Pass: |mem_read| time = 77 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 7: Pass: |mem_to_reg| time = 77 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 8: Pass: |alu_op| time = 77 ns | er = 0 | ar = 0 | er_bits = 2 | ar_bits = 2 +++
++++ Step 9: Pass: |mem_write| time = 77 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 10: Pass: |alu_src| time = 77 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 11: Pass: |reg_write| time = 77 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+--- Step 12: Fail: |read_data1| time = 77 ns | er = 0 | ar = 256 | er_bits = 64 | ar_bits = 64 ---
+--- Step 13: Fail: |read_data2| time = 77 ns | er = 0 | ar = 256 | er_bits = 64 | ar_bits = 64 ---
+Test Case 9: | ORR X9, X10, X21
++++ Step 1: Pass: |opcode| time = 87 ns | er = 0 | ar = 0 | er_bits = 11 | ar_bits = 11 +++
++++ Step 2: Pass: |sign_extended_output| time = 87 ns | er = 0 | ar = 0 | er_bits = 64 | ar_bits = 64 +++
++++ Step 3: Pass: |reg2_loc| time = 87 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 4: Pass: |uncondbranch| time = 87 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 5: Pass: |branch| time = 87 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 6: Pass: |mem_read| time = 87 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 7: Pass: |mem_to_reg| time = 87 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 8: Pass: |alu_op| time = 87 ns | er = 0 | ar = 0 | er_bits = 2 | ar_bits = 2 +++
++++ Step 9: Pass: |mem_write| time = 87 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 10: Pass: |alu_src| time = 87 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 11: Pass: |reg_write| time = 87 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+--- Step 12: Fail: |read_data1| time = 87 ns | er = 0 | ar = 256 | er_bits = 64 | ar_bits = 64 ---
+--- Step 13: Fail: |read_data2| time = 87 ns | er = 0 | ar = 256 | er_bits = 64 | ar_bits = 64 ---
+Test Case 10: | AND X9, X22, X10
++++ Step 1: Pass: |opcode| time = 97 ns | er = 0 | ar = 0 | er_bits = 11 | ar_bits = 11 +++
++++ Step 2: Pass: |sign_extended_output| time = 97 ns | er = 0 | ar = 0 | er_bits = 64 | ar_bits = 64 +++
++++ Step 3: Pass: |reg2_loc| time = 97 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 4: Pass: |uncondbranch| time = 97 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 5: Pass: |branch| time = 97 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 6: Pass: |mem_read| time = 97 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 7: Pass: |mem_to_reg| time = 97 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 8: Pass: |alu_op| time = 97 ns | er = 0 | ar = 0 | er_bits = 2 | ar_bits = 2 +++
++++ Step 9: Pass: |mem_write| time = 97 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 10: Pass: |alu_src| time = 97 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 11: Pass: |reg_write| time = 97 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+--- Step 12: Fail: |read_data1| time = 97 ns | er = 0 | ar = 256 | er_bits = 64 | ar_bits = 64 ---
+--- Step 13: Fail: |read_data2| time = 97 ns | er = 0 | ar = 256 | er_bits = 64 | ar_bits = 64 ---
 
-Pass Count = 10
-Fail Count = 0
+Pass Count = 109
+Fail Count = 20
 
 ******* END TEST RESULTS *******
 
-$finish called at time : 100 ns : File "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/2_decode/sign_extender_test.sv" Line 103
+$finish called at time : 105 ns : File "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/2_decode/iDecode_test.sv" Line 389
