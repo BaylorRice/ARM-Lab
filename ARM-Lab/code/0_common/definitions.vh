@@ -6,6 +6,13 @@
 `define S_DEC 1
 `define US_DEC 2
 `define BINARY 3
+
+// School Computer
+//`define DMEMFILE  "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/testfiles/ramData.data"
+//`define IMEMFILE  "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/testfiles/instrData.data"
+//`define RMEMFILE  "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/testfiles/regData.data"
+
+// Personal Laptop
 `define DMEMFILE  "C:/Users/reese/Documents/GitHub/ARM-Lab/ARM-Lab/testfiles/ramData.data"
 `define IMEMFILE  "C:/Users/reese/Documents/GitHub/ARM-Lab/ARM-Lab/testfiles/instrData.data"
 `define RMEMFILE  "C:/Users/reese/Documents/GitHub/ARM-Lab/ARM-Lab/testfiles/regData.data"

@@ -15,4 +15,19 @@ WARNING: [VRFC 10-3597] non-void function 'verify_control_signals' called as a t
 WARNING: [VRFC 10-3597] non-void function 'verify_control_signals' called as a task without void casting [C:/Users/reese/Documents/GitHub/ARM-Lab/ARM-Lab/code/2_decode/iDecode_test.sv:354]
 WARNING: [VRFC 10-3597] non-void function 'verify_control_signals' called as a task without void casting [C:/Users/reese/Documents/GitHub/ARM-Lab/ARM-Lab/code/2_decode/iDecode_test.sv:381]
 Completed static elaboration
-INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package xil_defaultlib.verification
+Compiling module xil_defaultlib.instr_parse
+Compiling module xil_defaultlib.control
+Compiling module xil_defaultlib.regfile
+Compiling module xil_defaultlib.sign_extender
+Compiling module xil_defaultlib.mux(SIZE=5)
+Compiling module xil_defaultlib.iDecode
+Compiling module xil_defaultlib.oscillator
+Compiling module xil_defaultlib.delay
+Compiling module xil_defaultlib.delay(DELAYAMT=7)
+Compiling module xil_defaultlib.iDecode_test
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot iDecode_test_behav
