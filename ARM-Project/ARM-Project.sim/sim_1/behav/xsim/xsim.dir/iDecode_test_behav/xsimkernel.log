@@ -2,3 +2,6 @@ Running: xsim.dir/iDecode_test_behav/xsimk.exe -simmode gui -wdb iDecode_test_be
 Design successfully loaded
 Design Loading Memory Usage: 7896 KB (Peak: 7896 KB)
 Design Loading CPU Usage: 0 ms
+Simulation completed
+Simulation Memory Usage: 9932 KB (Peak: 9932 KB)
+Simulation CPU Usage: 0 ms

@@ -12,22 +12,24 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="104,994 ps"></ZoomStartTime>
-      <ZoomEndTime time="105,002 ps"></ZoomEndTime>
-      <Cursor1Time time="105,000 ps"></Cursor1Time>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="148.307 ns"></ZoomEndTime>
+      <Cursor1Time time="25.756 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="193"></NameColumnWidth>
-      <ValueColumnWidth column_width="100"></ValueColumnWidth>
+      <ValueColumnWidth column_width="96"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="33" />
    <wvobject fp_name="/iDecode_test/tc" type="array">
       <obj_property name="ElementShortName">tc[31:0]</obj_property>
       <obj_property name="ObjectShortName">tc[31:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/iDecode_test/ts" type="array">
       <obj_property name="ElementShortName">ts[31:0]</obj_property>
       <obj_property name="ObjectShortName">ts[31:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/iDecode_test/clk" type="logic">
       <obj_property name="ElementShortName">clk</obj_property>
@@ -48,6 +50,7 @@
    <wvobject fp_name="/iDecode_test/write_data" type="array">
       <obj_property name="ElementShortName">write_data[63:0]</obj_property>
       <obj_property name="ObjectShortName">write_data[63:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/iDecode_test/sign_extended_output" type="array">
       <obj_property name="ElementShortName">sign_extended_output[63:0]</obj_property>
@@ -76,6 +79,7 @@
    <wvobject fp_name="/iDecode_test/alu_op" type="array">
       <obj_property name="ElementShortName">alu_op[1:0]</obj_property>
       <obj_property name="ObjectShortName">alu_op[1:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/iDecode_test/mem_write" type="logic">
       <obj_property name="ElementShortName">mem_write</obj_property>
@@ -92,14 +96,17 @@
    <wvobject fp_name="/iDecode_test/read_data1" type="array">
       <obj_property name="ElementShortName">read_data1[63:0]</obj_property>
       <obj_property name="ObjectShortName">read_data1[63:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/iDecode_test/read_data2" type="array">
       <obj_property name="ElementShortName">read_data2[63:0]</obj_property>
       <obj_property name="ObjectShortName">read_data2[63:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/iDecode_test/opcode" type="array">
       <obj_property name="ElementShortName">opcode[10:0]</obj_property>
       <obj_property name="ObjectShortName">opcode[10:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/iDecode_test/er_uncondbranch" type="logic">
       <obj_property name="ElementShortName">er_uncondbranch</obj_property>
@@ -124,6 +131,7 @@
    <wvobject fp_name="/iDecode_test/er_alu_op" type="array">
       <obj_property name="ElementShortName">er_alu_op[1:0]</obj_property>
       <obj_property name="ObjectShortName">er_alu_op[1:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/iDecode_test/er_mem_write" type="logic">
       <obj_property name="ElementShortName">er_mem_write</obj_property>
@@ -140,17 +148,21 @@
    <wvobject fp_name="/iDecode_test/er_sign_extended_output" type="array">
       <obj_property name="ElementShortName">er_sign_extended_output[63:0]</obj_property>
       <obj_property name="ObjectShortName">er_sign_extended_output[63:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/iDecode_test/er_read_data1" type="array">
       <obj_property name="ElementShortName">er_read_data1[63:0]</obj_property>
       <obj_property name="ObjectShortName">er_read_data1[63:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/iDecode_test/er_read_data2" type="array">
       <obj_property name="ElementShortName">er_read_data2[63:0]</obj_property>
       <obj_property name="ObjectShortName">er_read_data2[63:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/iDecode_test/er_opcode" type="array">
       <obj_property name="ElementShortName">er_opcode[10:0]</obj_property>
       <obj_property name="ObjectShortName">er_opcode[10:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
    </wvobject>
 </wave_config>
