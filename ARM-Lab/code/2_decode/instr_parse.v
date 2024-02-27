@@ -30,10 +30,10 @@ module instr_parse(
     output wire [4:0] rd_num
     );
     
-    assign opcode = (instruction >> 21) & 11'h7FF;
-    assign address = (instruction >> 12) & 9'h1FF;
-    assign rm_num = (instruction >> 16) & 5'h1F;
-    assign rn_num = (instruction >> 5) & 5'h1F;
+    assign opcode = (instruction >> 32'd21) & 11'h7FF;
+    assign address = (instruction >> 32'd12) & 9'h1FF;
+    assign rm_num = (instruction >> 32'd16) & 5'h1F;
+    assign rn_num = (instruction >> 32'd5) & 5'h1F;
     assign rd_num = instruction & 5'h1F;
     
 endmodule

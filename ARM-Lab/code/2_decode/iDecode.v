@@ -101,5 +101,6 @@ module iDecode(
     // Wire to Output Definitions
     assign opcode = opcode_wire;
     assign reg2_loc = reg2_loc_wire;
+    assign reg_write = reg_write_wire;
 
 endmodule

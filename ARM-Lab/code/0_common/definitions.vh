@@ -6,9 +6,9 @@
 `define S_DEC 1
 `define US_DEC 2
 `define BINARY 3
-`define DMEMFILE  "H:/ELC3338/Spring2018/potter/ARM-Lab/testfiles/ramData.data"
-`define IMEMFILE  "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/testfiles/instrData.data"
-`define RMEMFILE  "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/testfiles/regData.data"
+`define DMEMFILE  "C:/Users/reese/Documents/GitHub/ARM-Lab/ARM-Lab/testfiles/ramData.data"
+`define IMEMFILE  "C:/Users/reese/Documents/GitHub/ARM-Lab/ARM-Lab/testfiles/instrData.data"
+`define RMEMFILE  "C:/Users/reese/Documents/GitHub/ARM-Lab/ARM-Lab/testfiles/regData.data"
 
 // For Control Unit
 `define ADD 11'b10001011000
