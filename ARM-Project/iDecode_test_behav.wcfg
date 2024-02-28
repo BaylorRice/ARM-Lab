@@ -13,12 +13,12 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0.000 ns"></ZoomStartTime>
-      <ZoomEndTime time="148.307 ns"></ZoomEndTime>
-      <Cursor1Time time="25.756 ns"></Cursor1Time>
+      <ZoomEndTime time="105.001 ns"></ZoomEndTime>
+      <Cursor1Time time="105.000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="193"></NameColumnWidth>
-      <ValueColumnWidth column_width="96"></ValueColumnWidth>
+      <NameColumnWidth column_width="201"></NameColumnWidth>
+      <ValueColumnWidth column_width="97"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="33" />
    <wvobject fp_name="/iDecode_test/tc" type="array">
