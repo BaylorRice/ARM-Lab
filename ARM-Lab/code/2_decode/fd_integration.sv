@@ -23,6 +23,80 @@ string read_data1_string = "|read_data1|";
 string read_data2_string = "|read_data2|";
 string opcode_string = "|opcode|";
 
+// iFetch
+wire clk;
+reg reset;
+reg pc_src;
+reg [`WORD-1:0] branch_target;
+wire [`WORD-1:0] cur_pc;
+wire [`INSTR_LEN-1:0] instruction;
+
+reg [`INSTR_LEN-1:0] er_instruction;
+reg [`WORD-1:0] er_cur_pc;
+
+iFetch#(.SIZE(16))  iF(
+    .clk(clk),
+    .clk_delayed(clk_plus_1),
+    .reset(reset),
+    .pc_src(pc_src),
+    .branch_target(branch_target),
+    .instruction(instruction),
+    .cur_pc(cur_pc)
+    );
+
+
+// iDecode
+wire read_clk;
+wire write_clk;
+reg [`WORD-1:0] write_data;
+wire [`WORD-1:0] sign_extended_output;
+wire reg2_loc;
+wire uncondbranch;
+wire branch;
+wire mem_read;
+wire mem_to_reg;
+wire [1:0] alu_op;
+wire mem_write;
+wire alu_src;
+wire reg_write;
+wire [`WORD-1:0]read_data1;
+wire [`WORD-1:0]read_data2;
+wire [10:0] opcode;
+
+reg er_uncondbranch;
+reg er_reg2_loc;
+reg er_branch;
+reg er_mem_read;
+reg er_mem_to_reg;
+reg [1:0] er_alu_op;
+reg er_mem_write;
+reg er_alu_src;
+reg er_reg_write;
+reg [`WORD-1:0] er_sign_extended_output;
+reg [`WORD -1:0] er_read_data1;
+reg [`WORD -1:0] er_read_data2;
+reg [10:0] er_opcode;
+
+iDecode iD(
+        .clk(clk),
+        .read_clk(read_clk),
+        .write_clk(write_clk),
+        .instruction(instruction),
+        .write_data(write_data), 
+        .opcode(opcode),
+        .sign_extended_output(sign_extended_output),
+        .reg2_loc(reg2_loc),        
+        .uncondbranch(uncondbranch),
+        .branch(branch),
+        .mem_read(mem_read),
+        .mem_to_reg(mem_to_reg),
+        .alu_op(alu_op),
+        .mem_write(mem_write),
+        .alu_src(alu_src),
+        .reg_write(reg_write),
+        .read_data1(read_data1),
+        .read_data2(read_data2)
+        ); 
 
 function void verify_control_signals();
     verify(ts++, reg2_loc_string, er_reg2_loc, $bits(er_reg2_loc), reg2_loc, $bits(reg2_loc), `BINARY);
