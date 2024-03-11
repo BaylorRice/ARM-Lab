@@ -79,7 +79,7 @@ module fd_integration;
     reg [10:0] er_opcode;
 
     iDecode iD(
-        .clk(clk),
+        .clk(decode_clk),
         .read_clk(read_clk),
         .write_clk(write_clk),
         .instruction(instruction),
@@ -101,17 +101,17 @@ module fd_integration;
 
     oscillator myOsc(clk);
     
-    delay #(1) clk_delay_read(
+    delay #(1) clk_delay_decode(
         .a(clk),
         .a_delayed(decode_clk)
     );
 
-    delay #(1) clk_delay_read(
+    delay #(1) clk_delay_decode_read(
         .a(decode_clk),
         .a_delayed(read_clk)
     );
 
-    delay #(7) clk_delay_write(
+    delay #(7) clk_delay_decode_write(
         .a(decode_clk),
         .a_delayed(write_clk)
     );
