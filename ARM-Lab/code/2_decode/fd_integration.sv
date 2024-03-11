@@ -36,7 +36,7 @@ module fd_integration;
 
     iFetch#(.SIZE(16))  iF(
         .clk(clk),
-        .clk_delayed(clk_plus_1),
+        .clk_delayed(decode_clk),
         .reset(reset),
         .pc_src(pc_src),
         .branch_target(branch_target),
