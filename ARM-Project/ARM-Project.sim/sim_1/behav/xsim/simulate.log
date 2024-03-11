@@ -89,4 +89,49 @@ Test Case 6: | CBZ X11, 8
 +++ Step 8: Pass: |mem_read| time = 60 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
 +++ Step 9: Pass: |mem_to_reg| time = 60 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
 +++ Step 10: Pass: |alu_op| time = 60 ns | er = 1 | ar = 1 | er_bits = 2 | ar_bits = 2 +++
-+++ Step 11: Pass: |mem_write| time = 60 ns | er = 0 | ar = 0 | er_b
++++ Step 11: Pass: |mem_write| time = 60 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 12: Pass: |alu_src| time = 60 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 13: Pass: |reg_write| time = 60 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 14: Pass: |read_data2| time = 60 ns | er = 20 | ar = 20 | er_bits = 64 | ar_bits = 64 +++
+Test Case 7: | B 64
++++ Step 1: Pass: |cur_pc| time = 70 ns | er = 24 | ar = 24 | er_bits = 64 | ar_bits = 64 +++
++++ Step 2: Pass: |instruction| time = 70 ns | er = 14000040 | ar = 14000040 | er_bits = 32 | ar_bits = 32 +++
++++ Step 3: Pass: |opcode| time = 70 ns | er = 10100000 | ar = 10100000 | er_bits = 11 | ar_bits = 11 +++
++++ Step 4: Pass: |sign_extended_output| time = 70 ns | er = 40 | ar = 40 | er_bits = 64 | ar_bits = 64 +++
++++ Step 5: Pass: |reg2_loc| time = 70 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 6: Pass: |uncondbranch| time = 70 ns | er = 1 | ar = 1 | er_bits = 1 | ar_bits = 1 +++
++++ Step 7: Pass: |branch| time = 70 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 8: Pass: |mem_read| time = 70 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 9: Pass: |mem_to_reg| time = 70 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 10: Pass: |alu_op| time = 70 ns | er = 0 | ar = 0 | er_bits = 2 | ar_bits = 2 +++
++++ Step 11: Pass: |mem_write| time = 70 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 12: Pass: |alu_src| time = 70 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 13: Pass: |reg_write| time = 70 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+Test Case 8: | B -55
++++ Step 1: Pass: |cur_pc| time = 80 ns | er = 28 | ar = 28 | er_bits = 64 | ar_bits = 64 +++
++++ Step 2: Pass: |instruction| time = 80 ns | er = 17ffffc9 | ar = 17ffffc9 | er_bits = 32 | ar_bits = 32 +++
++++ Step 3: Pass: |opcode| time = 80 ns | er = 10111111 | ar = 10111111 | er_bits = 11 | ar_bits = 11 +++
++++ Step 4: Pass: |sign_extended_output| time = 80 ns | er = ffffffffffffffc9 | ar = ffffffffffffffc9 | er_bits = 64 | ar_bits = 64 +++
++++ Step 5: Pass: |reg2_loc| time = 80 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 6: Pass: |uncondbranch| time = 80 ns | er = 1 | ar = 1 | er_bits = 1 | ar_bits = 1 +++
++++ Step 7: Pass: |branch| time = 80 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 8: Pass: |mem_read| time = 80 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 9: Pass: |mem_to_reg| time = 80 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 10: Pass: |alu_op| time = 80 ns | er = 0 | ar = 0 | er_bits = 2 | ar_bits = 2 +++
++++ Step 11: Pass: |mem_write| time = 80 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 12: Pass: |alu_src| time = 80 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 13: Pass: |reg_write| time = 80 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+Test Case 9: | ORR X9, X10, X21
++++ Step 1: Pass: |cur_pc| time = 90 ns | er = 32 | ar = 32 | er_bits = 64 | ar_bits = 64 +++
++++ Step 2: Pass: |instruction| time = 90 ns | er = aa150149 | ar = aa150149 | er_bits = 32 | ar_bits = 32 +++
++++ Step 3: Pass: |opcode| time = 90 ns | er = 10101010000 | ar = 10101010000 | er_bits = 11 | ar_bits = 11 +++
++++ Step 4: Pass: |reg2_loc| time = 90 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 5: Pass: |uncondbranch| time = 90 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 6: Pass: |branch| time = 90 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 7: Pass: |mem_read| time = 90 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 8: Pass: |mem_to_reg| time = 90 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 9: Pass: |alu_op| time = 90 ns | er = 10 | ar = 10 | er_bits = 2 | ar_bits = 2 +++
++++ Step 10: Pass: |mem_write| time = 90 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 11: Pass: |alu_src| time = 90 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 12: Pass: |reg_write| time = 90 ns | er = 1 | ar = 1 | er_bits = 1 | ar_bits = 1 +++
++++ Step 13: Pass: |rea
