@@ -239,7 +239,7 @@ module fd_integration;
         er_reg_write = 1;
         er_read_data1 = 30;
         er_read_data2 = 30;
-        
+
         #5;
         // verify that the signals match the er values 
         verify(ts++, pc_string, er_cur_pc, $bits(er_cur_pc), cur_pc, $bits(cur_pc), `S_DEC);
@@ -261,10 +261,37 @@ module fd_integration;
         ts = 1;
 
         // set er values for the fetch and decode stages 
+        er_cur_pc=`WORD'd12;
+        er_instruction = `INSTR_LEN'hF80602CB;
+
+        er_opcode = 11'b11111000000;
+        er_sign_extended_output = 64'h60;
+        er_reg2_loc = 1;
+        er_uncondbranch = 0;
+        er_branch = 0;
+        er_mem_read = 0;
+        // er_mem_to_reg = 0;
+        er_alu_op = 0;
+        er_mem_write = 1;
+        er_alu_src = 1;
+        er_reg_write = 0;
+        er_read_data1 = 16;
+        er_read_data2 = 0;
+
         #5;
         // verify that the signals match the er values 
+        verify(ts++, pc_string, er_cur_pc, $bits(er_cur_pc), cur_pc, $bits(cur_pc), `S_DEC);
+        verify(ts++, instr_string, er_instruction, $bits(er_instruction), instruction, $bits(instruction), `HEX);
+
+        verify(ts++, opcode_string, er_opcode, $bits(er_opcode), opcode, $bits(opcode), `BINARY);
+        verify(ts++, sign_extended_output_string, er_sign_extended_output, $bits(er_sign_extended_output), sign_extended_output, $bits(sign_extended_output), `HEX);
+        verify_control_signals();
+        verify(ts++, read_data1_string, er_read_data1, $bits(er_read_data1), read_data1, $bits(read_data1), `S_DEC);
+        verify(ts++, read_data2_string, er_read_data2, $bits(er_read_data2), read_data2, $bits(read_data2), `S_DEC);
+
         #2
         // since we don't have an ALU or data memory yet, provide the write_data value (if applicable)
+        //write_data = 0;
         #3;
 
         // CBZ X11, -5
