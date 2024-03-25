@@ -27,5 +27,18 @@ module alu_control(
     output reg [3:0] alu_control
     );
     
-    
+    always @(*) begin
+        casex(alu_op)
+        `ALUOp_B, `ALUOp_DTYPE: alu_control = `ALU_ADD;
+        `ALUOp_CBZ: alu_control = `ALU_PASS;
+        `ALUOp_RTYPE: begin
+            alu_control[3] = 0;
+            alu_control[2] = opcode[9];
+            alu_control[1] = opcode[3];
+            alu_control[0] = opcode[8];
+            end
+        default: alu_control = 4'b0000;
+        endcase
+    end
+            
 endmodule
