@@ -1,4 +1,5 @@
 `timescale 1ns / 1ps
+`include "definitions.vh"
 //////////////////////////////////////////////////////////////////////////////////
 // Company: Baylor University
 // Engineer: Reese Ford
@@ -21,6 +22,10 @@
 
 
 module alu(
-
+    input wire [`WORD-1:0] a_in,
+    input wire [`WORD-1:0] b_in,
+    input wire [3:0] alu_control,
+    output wire [`WORD-1:0] alu_result,
+    output wire zero
     );
 endmodule
