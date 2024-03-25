@@ -1,0 +1,186 @@
+/*
+
+Xilinx Vivado v2021.2 (64-bit) [Major: 2021, Minor: 2]
+SW Build: 3367213 on Tue Oct 19 02:48:09 MDT 2021
+IP Build: 3369179 on Thu Oct 21 08:25:16 MDT 2021
+
+Process ID (PID): 9140
+License: Customer
+Mode: GUI Mode
+
+Current time: 	Mon Mar 25 12:19:45 CDT 2024
+Time zone: 	Central Standard Time (America/Chicago)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 20
+
+Screen size: 1920x1080
+Screen resolution (DPI): 100
+Available screens: 1
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+Scale size: 12
+
+Java version: 	11.0.11 64-bit
+Java home: 	C:/XilinxVitis/Vivado/2021.2/tps/win64/jre11.0.11_9
+Java executable: 	C:/XilinxVitis/Vivado/2021.2/tps/win64/jre11.0.11_9/bin/java.exe
+Java arguments: 	[-Dsun.java2d.pmoffscreen=false, -Dhttps.protocols=TLSv1,TLSv1.1,TLSv1.2, -Dsun.java2d.xrender=false, -Dsun.java2d.d3d=false, -Dsun.awt.nopixfmt=true, -Dsun.java2d.dpiaware=true, -Dsun.java2d.uiScale.enabled=false, -Xverify:none, -Dswing.aatext=true, -XX:-UsePerfData, -Djdk.map.althashing.threshold=512, -XX:StringTableSize=4072, --add-opens=java.base/java.nio=ALL-UNNAMED, --add-opens=java.desktop/sun.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.desktop/com.sun.awt=ALL-UNNAMED, -XX:NewSize=60m, -XX:MaxNewSize=60m, -Xms256m, -Xmx3072m, -Xss5m]
+Java initial memory (-Xms): 	256 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	Reese_Ford1
+User home directory: C:/Users/reese_ford1
+User working directory: C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: C:/XilinxVitis/Vivado
+HDI_APPROOT: C:/XilinxVitis/Vivado/2021.2
+RDI_DATADIR: C:/XilinxVitis/Vivado/2021.2/data
+RDI_BINDIR: C:/XilinxVitis/Vivado/2021.2/bin
+
+Vivado preferences file: C:/Users/reese_ford1/AppData/Roaming/Xilinx/Vivado/2021.2/vivado.xml
+Vivado preferences directory: C:/Users/reese_ford1/AppData/Roaming/Xilinx/Vivado/2021.2/
+Vivado layouts directory: C:/Users/reese_ford1/AppData/Roaming/Xilinx/Vivado/2021.2/data/layouts
+PlanAhead jar file: 	C:/XilinxVitis/Vivado/2021.2/lib/classes/planAhead.jar
+Vivado log file: 	C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/vivado.log
+Vivado journal file: 	C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/vivado.jou
+Engine tmp dir: 	C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/.Xil/Vivado-9140-ROG-115-12
+
+Xilinx Environment Variables
+----------------------------
+XILINX: C:/XilinxVitis/Vivado/2021.2/ids_lite/ISE
+XILINX_DSP: C:/XilinxVitis/Vivado/2021.2/ids_lite/ISE
+XILINX_HLS: C:/XilinxVitis/Vitis_HLS/2021.2
+XILINX_PLANAHEAD: C:/XilinxVitis/Vivado/2021.2
+XILINX_SDK: C:/XilinxVitis/Vitis/2021.2
+XILINX_VITIS: C:/XilinxVitis/Vitis/2021.2
+XILINX_VIVADO: C:/XilinxVitis/Vivado/2021.2
+XILINX_VIVADO_HLS: C:/XilinxVitis/Vivado/2021.2
+
+
+GUI allocated memory:	256 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 1,501 MB
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// TclEventType: PROJECT_OPEN_DIALOG
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// [GUI Memory]: 68 MB (+69090kb) [00:00:04]
+// [Engine Memory]: 1,501 MB (+1422256kb) [00:00:04]
+// Opening Vivado Project: C:\Users\reese_ford1\Documents\GitHub\ARM-Lab\ARM-Project\ARM-Project.xpr. Version: Vivado v2021.2 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: FLOW_ADDED
+// Tcl Message: open_project C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 84 MB (+13291kb) [00:00:08]
+// [GUI Memory]: 110 MB (+22813kb) [00:00:08]
+// WARNING: HEventQueue.dispatchEvent() is taking  1073 ms.
+// Tcl Message: open_project C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.xpr 
+// Tcl Message: INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.gen/sources_1'. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/XilinxVitis/Vivado/2021.2/data/ip'. 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,501 MB. GUI used memory: 62 MB. Current time: 3/25/24, 12:19:47 PM CDT
+// Project name: ARM-Project; location: C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project; part: xc7k70tfbv676-1
+dismissDialog("Open Project"); // bA
+// Tcl Message: update_compile_order -fileset sources_1 
+// [GUI Memory]: 117 MB (+1112kb) [00:00:51]
+// [GUI Memory]: 126 MB (+3374kb) [00:03:15]
+// Elapsed time: 212 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files]", 3); // D
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files]", 3); // D
+// Elapsed time: 240 seconds
+selectButton(RDIResource.AbstractSearchablePanel_SHOW_SEARCH, "Sources_search"); // w: TRUE
+setText("PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE_SEARCH_FIELD", "alu"); // OverlayTextField
+selectButton(RDIResource.AbstractSearchablePanel_SHOW_SEARCH, "Sources_search"); // w: FALSE
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // D
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+selectRadioButton(PAResourceAtoD.AddSrcWizard_SPECIFY_OR_CREATE_CONSTRAINT_FILES, "Add or create constraints"); // a
+selectRadioButton(PAResourceAtoD.AddSrcWizard_SPECIFY_HDL_NETLIST_BLOCK_DESIGN, "Add or create design sources"); // a
+selectButton("NEXT", "Next >"); // JButton
+selectButton(PAResourceQtoS.SrcChooserPanel_CREATE_FILE, "Create File"); // a
+setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, "alu"); // aa
+selectComboBox(PAResourceAtoD.CreateSrcFileDialog_FILE_LOCATION, "Choose Location...", 1); // e
+// Elapsed time: 44 seconds
+setFolderChooser("C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/3_execute");
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Create Source File"); // F
+selectButton("FINISH", "Finish"); // JButton
+// 'g' command handler elapsed time: 56 seconds
+dismissDialog("Add Sources"); // c
+// Tcl Message: close [ open C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/3_execute/alu.v w ] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/3_execute/alu.v 
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, " ; input ; false ; 0 ; 0", 0, (String) null, 0); // ab
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "a_in ; input ; false ; 0 ; 0", 0, "false", 2); // ab
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, null, -1, null, -1); // ab
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "a_in ; input ; true ; 0 ; 0", 0, "0", 3); // ab
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, null, -1, null, -1); // ab
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "0", 0, "MSB", 3); // ab
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a
+selectButton("OptionPane.button", "No"); // JButton
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, " ; input ; false ; 0 ; 0", 1, "input", 1); // ab
+selectButton(RDIResource.AbstractCombinedPanel_REMOVE_SELECTED_ELEMENTS, "Remove"); // D
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "a_in ; input ; true ; 0 ; 0", 0, "a_in", 0); // ab
+selectButton(RDIResource.AbstractCombinedPanel_REMOVE_SELECTED_ELEMENTS, "Remove"); // D
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// TclEventType: FILE_SET_CHANGE
+dismissDialog("Define Module"); // I
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// [GUI Memory]: 133 MB (+495kb) [00:09:17]
+// Tcl Message: update_compile_order -fileset sources_1 
+selectButton(RDIResource.AbstractSearchablePanel_SHOW_SEARCH, "Sources_search"); // w: TRUE
+// [GUI Memory]: 140 MB (+302kb) [00:09:19]
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, alu_test (alu_test.sv), myALU : alu (alu.v)]", 7, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, alu_test (alu_test.sv), myALU : alu (alu.v)]", 7, false, false, false, false, false, true); // D - Double Click
+// WARNING: HEventQueue.dispatchEvent() is taking  1086 ms.
+dismissDialog("Opening Editor"); // bA
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "alu.v", 1); // m
+selectTab((HResource) null, "PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "alu.v", 1, false, true); // m - Double Click
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // N
+selectCodeEditor("alu.v", 140, 50); // be
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 12 seconds
+selectCodeEditor("alu.v", 124, 106); // be
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 12 seconds
+selectCodeEditor("alu.v", 129, 141); // be
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("alu.v", 138, 151); // be
+selectCodeEditor("alu.v", 144, 161); // be
+selectCodeEditor("alu.v", 156, 179); // be
+selectCodeEditor("alu.v", 163, 197); // be
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
