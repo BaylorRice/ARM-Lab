@@ -131,6 +131,7 @@ begin
     verify(ts++, zero_string, er_zero, $bits(er_zero), zero, $bits(zero), `BINARY);
                              
     final_result();    
+    $finish;
 end        
 
 endmodule
