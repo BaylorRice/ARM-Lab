@@ -32,7 +32,7 @@ module alu(
     always @(*) begin
         case(alu_control)
             `ALU_AND : alu_result = a_in & b_in;
-            `ALU_ORR : alu_result = a_in || b_in;
+            `ALU_ORR : alu_result = a_in | b_in;
             `ALU_ADD : alu_result = a_in + b_in;
             `ALU_SUB : alu_result = a_in - b_in;
             `ALU_PASS : alu_result = b_in;

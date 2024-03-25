@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="alu_test_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="alu_test" />
+            <top_module name="glbl" />
+            <top_module name="verification" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="999,994 ps"></ZoomStartTime>
+      <ZoomEndTime time="1,000,002 ps"></ZoomEndTime>
+      <Cursor1Time time="1,000,000 ps"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="145"></NameColumnWidth>
+      <ValueColumnWidth column_width="148"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="9" />
+   <wvobject fp_name="/alu_test/tc" type="array">
+      <obj_property name="ElementShortName">tc[31:0]</obj_property>
+      <obj_property name="ObjectShortName">tc[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/alu_test/ts" type="array">
+      <obj_property name="ElementShortName">ts[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ts[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/alu_test/a" type="array">
+      <obj_property name="ElementShortName">a[63:0]</obj_property>
+      <obj_property name="ObjectShortName">a[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/alu_test/b" type="array">
+      <obj_property name="ElementShortName">b[63:0]</obj_property>
+      <obj_property name="ObjectShortName">b[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/alu_test/alu_control" type="array">
+      <obj_property name="ElementShortName">alu_control[3:0]</obj_property>
+      <obj_property name="ObjectShortName">alu_control[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/alu_test/alu_result" type="array">
+      <obj_property name="ElementShortName">alu_result[63:0]</obj_property>
+      <obj_property name="ObjectShortName">alu_result[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/alu_test/zero" type="logic">
+      <obj_property name="ElementShortName">zero</obj_property>
+      <obj_property name="ObjectShortName">zero</obj_property>
+   </wvobject>
+   <wvobject fp_name="/alu_test/er_alu_result" type="array">
+      <obj_property name="ElementShortName">er_alu_result[63:0]</obj_property>
+      <obj_property name="ObjectShortName">er_alu_result[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/alu_test/er_zero" type="logic">
+      <obj_property name="ElementShortName">er_zero</obj_property>
+      <obj_property name="ObjectShortName">er_zero</obj_property>
+   </wvobject>
+</wave_config>
