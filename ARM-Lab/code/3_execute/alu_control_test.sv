@@ -113,7 +113,8 @@ begin
     #5;
     verify(ts, alu_control_string, er_alu_control, $bits(er_alu_control), alu_control, $bits(alu_control), `BINARY);      
                              
-    final_result();    
+    final_result();
+    $finish;
 end        
 
 endmodule
