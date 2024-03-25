@@ -25,7 +25,22 @@ module alu(
     input wire [`WORD-1:0] a_in,
     input wire [`WORD-1:0] b_in,
     input wire [3:0] alu_control,
-    output wire [`WORD-1:0] alu_result,
-    output wire zero
-    );
+    output reg [`WORD-1:0] alu_result,
+    output reg zero
+);
+
+    always @(*) begin
+        case(alu_control)
+            `ALU_AND : alu_result = a_in & b_in;
+            `ALU_ORR : alu_result = a_in || b_in;
+            `ALU_ADD : alu_result = a_in + b_in;
+            `ALU_SUB : alu_result = a_in - b_in;
+            `ALU_PASS : alu_result = b_in;
+            default: alu_result = a_in & b_in;
+        endcase
+
+        zero = (alu_result == 0);
+        
+    end
+
 endmodule
