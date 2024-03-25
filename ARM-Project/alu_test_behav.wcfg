@@ -12,13 +12,13 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="999,994 ps"></ZoomStartTime>
-      <ZoomEndTime time="1,000,002 ps"></ZoomEndTime>
-      <Cursor1Time time="1,000,000 ps"></Cursor1Time>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="50.000 ns"></ZoomEndTime>
+      <Cursor1Time time="50.000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="145"></NameColumnWidth>
-      <ValueColumnWidth column_width="148"></ValueColumnWidth>
+      <ValueColumnWidth column_width="144"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="9" />
    <wvobject fp_name="/alu_test/tc" type="array">
@@ -40,6 +40,7 @@
    <wvobject fp_name="/alu_test/alu_control" type="array">
       <obj_property name="ElementShortName">alu_control[3:0]</obj_property>
       <obj_property name="ObjectShortName">alu_control[3:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/alu_test/alu_result" type="array">
       <obj_property name="ElementShortName">alu_result[63:0]</obj_property>
