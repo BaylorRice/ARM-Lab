@@ -30,3 +30,10 @@
 `define ALUOp_DTYPE 2'b00
 `define ALUOp_B 2'b00
 `define ALUOp_CBZ 2'b01
+
+// For ALU
+`define ALU_AND 4'b0000
+`define ALU_ORR 4'b0001
+`define ALU_ADD 4'b0010
+`define ALU_SUB 4'b0110
+`define ALU_PASS 4'b0111
