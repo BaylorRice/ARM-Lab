@@ -29,7 +29,7 @@ module iExecute(
     input wire [1:0] alu_op,
     input wire [10:0] opcode,
     input wire alu_src,
-    output reg [`WORD-1:0] branch_target,
+    output wire [`WORD-1:0] branch_target,
     output wire [`WORD-1:0] alu_result,
     output wire zero
 );

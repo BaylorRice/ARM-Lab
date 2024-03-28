@@ -4,5 +4,5 @@ Running: C:/XilinxVitis/Vivado/2021.2/bin/unwrapped/win64.o/xelab.exe --incr --d
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
-ERROR: [VRFC 10-2063] Module <ALU_CONT> not found while processing module instance <alu_control> [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/3_execute/iExecute.v:68]
+ERROR: [VRFC 10-3236] concurrent assignment to a non-net 'branch_target' is not permitted [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/3_execute/iExecute.v:46]
 ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.

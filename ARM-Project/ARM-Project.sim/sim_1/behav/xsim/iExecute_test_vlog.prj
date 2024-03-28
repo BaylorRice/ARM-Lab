@@ -2,6 +2,7 @@
 verilog xil_defaultlib  --include "../../../../../ARM-Lab/code/0_common" \
 "../../../../../ARM-Lab/code/0_common/adder.v" \
 "../../../../../ARM-Lab/code/3_execute/alu.v" \
+"../../../../../ARM-Lab/code/3_execute/alu_control.v" \
 "../../../../../ARM-Lab/code/3_execute/iExecute.v" \
 "../../../../../ARM-Lab/code/0_common/mux.v" \
 
