@@ -361,7 +361,7 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../ARM-Lab/code/3_execute/iExecute.sv">
+      <File Path="$PPRDIR/../ARM-Lab/code/3_execute/iExecute.v">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
