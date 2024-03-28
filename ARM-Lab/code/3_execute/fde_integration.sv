@@ -43,25 +43,6 @@ module fde_integration;
     string read_data2_string = "|read_data2|";
     string opcode_string = "|opcode|";
 
-    // Clocks
-    oscillator myOsc(clk);
-
-    delay #(1) clk_delay_decode(
-        .a(clk),
-        .a_delayed(decode_clk)
-    );
-
-    delay #(1) clk_delay_decode_read(
-        .a(decode_clk),
-        .a_delayed(read_clk)
-    );
-
-    delay #(7) clk_delay_decode_write(
-        .a(decode_clk),
-        .a_delayed(write_clk)
-    );
-
-
     // iFetch
     wire clk;
     reg reset;
@@ -165,6 +146,22 @@ module fde_integration;
         .zero(zero)
     );
 
+    oscillator myOsc(clk);
+
+    delay #(1) clk_delay_decode(
+        .a(clk),
+        .a_delayed(decode_clk)
+    );
+
+    delay #(1) clk_delay_decode_read(
+        .a(decode_clk),
+        .a_delayed(read_clk)
+    );
+
+    delay #(6) clk_delay_decode_write(
+        .a(decode_clk),
+        .a_delayed(write_clk)
+    );
 
     function void verify_control_signals();
         verify(ts++, reg2_loc_string, er_reg2_loc, $bits(er_reg2_loc), reg2_loc, $bits(reg2_loc), `BINARY);
@@ -196,6 +193,7 @@ module fde_integration;
         $display("Test Case %0d: | LDUR X9, [X22, #64]", tc++);
         ts = 1;
 
+
         // Fetch
         er_cur_pc=`WORD'd0;
         er_instruction = `INSTR_LEN'hF84402C9;
@@ -219,7 +217,9 @@ module fde_integration;
         //er_branch_target = `WORD'hX;
         er_alu_result = `WORD'd80;
         er_zero = 1'b0;
-        #5;
+        
+        
+
 
 
         // verify that the signals match the er values   
@@ -235,6 +235,7 @@ module fde_integration;
         verify(ts++, zero_string, er_zero, $bits(er_zero), zero, $bits(zero), `BINARY);
 
 
+
         #2
         // since we don't have an ALU or data memory yet, provide the write_data value (if applicable)
         write_data = 20;
@@ -244,10 +245,11 @@ module fde_integration;
         $display("Test Case %0d: | ADD X10, X19, X9", tc++);
         ts = 1;
 
-        // set er values for the fetch and decode stages 
+        // Fetch
         er_cur_pc=`WORD'd4;
         er_instruction = `INSTR_LEN'h8B09026A;
 
+        // Decode
         er_opcode = 11'b10001011000;
         // er_sign_extended_output = 0;
         er_reg2_loc = 0;
@@ -262,7 +264,14 @@ module fde_integration;
         er_read_data1 = 10;
         er_read_data2 = 20;
 
+        // Execute
+        //er_branch_target = `WORD'dX;
+        er_alu_result = `WORD'd30;
+        er_zero = 1'b0;
         #5;
+
+
+
         // verify that the signals match the er values 
         verify(ts++, pc_string, er_cur_pc, $bits(er_cur_pc), cur_pc, $bits(cur_pc), `S_DEC);
         verify(ts++, instr_string, er_instruction, $bits(er_instruction), instruction, $bits(instruction), `HEX);
@@ -271,6 +280,9 @@ module fde_integration;
         verify_control_signals();
         verify(ts++, read_data1_string, er_read_data1, $bits(er_read_data1), read_data1, $bits(read_data1), `S_DEC);
         verify(ts++, read_data2_string, er_read_data2, $bits(er_read_data2), read_data2, $bits(read_data2), `S_DEC);
+        //verify(ts++, branch_target_string, er_branch_target, $bits(er_branch_target), branch_target, $bits(branch_target), `S_DEC);        
+        verify(ts++, alu_result_string, er_alu_result, $bits(er_alu_result), alu_result, $bits(alu_result), `S_DEC);
+        verify(ts++, zero_string, er_zero, $bits(er_zero), zero, $bits(zero), `BINARY);
 
         #2
         // since we don't have an ALU or data memory yet, provide the write_data value (if applicable)

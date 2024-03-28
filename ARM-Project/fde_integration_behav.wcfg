@@ -12,15 +12,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="109,994 ps"></ZoomStartTime>
-      <ZoomEndTime time="110,002 ps"></ZoomEndTime>
-      <Cursor1Time time="110,000 ps"></Cursor1Time>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="37.803 ns"></ZoomEndTime>
+      <Cursor1Time time="30.000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="145"></NameColumnWidth>
-      <ValueColumnWidth column_width="140"></ValueColumnWidth>
+      <ValueColumnWidth column_width="136"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="45" />
+   <WVObjectSize size="46" />
    <wvobject fp_name="/fde_integration/tc" type="array">
       <obj_property name="ElementShortName">tc[31:0]</obj_property>
       <obj_property name="ObjectShortName">tc[31:0]</obj_property>
@@ -124,6 +124,10 @@
    <wvobject fp_name="/fde_integration/read_data2" type="array">
       <obj_property name="ElementShortName">read_data2[63:0]</obj_property>
       <obj_property name="ObjectShortName">read_data2[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/fde_integration/iD/X_REG/read_register2" type="array">
+      <obj_property name="ElementShortName">read_register2[4:0]</obj_property>
+      <obj_property name="ObjectShortName">read_register2[4:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/fde_integration/opcode" type="array">
       <obj_property name="ElementShortName">opcode[10:0]</obj_property>
