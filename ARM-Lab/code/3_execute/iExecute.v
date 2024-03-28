@@ -55,7 +55,7 @@ module iExecute(
     );
 
 
-    ALU alu(
+    alu ALU(
         .a_in(read_data1),
         .b_in(ALU_bIN_wire),
         .alu_control(ALU_Cont_wire),
@@ -65,7 +65,7 @@ module iExecute(
 
     // ALU Control
     wire [3:0] ALU_Cont_wire;
-    ALU_CONT alu_control (
+    alu_control ALU_CONT(
         .alu_op(alu_op),
         .opcode(opcode),
         .alu_control(ALU_Cont_wire)

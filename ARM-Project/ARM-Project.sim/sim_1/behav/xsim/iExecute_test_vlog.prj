@@ -1,10 +1,13 @@
 # compile verilog/system verilog design source files
 verilog xil_defaultlib  --include "../../../../../ARM-Lab/code/0_common" \
+"../../../../../ARM-Lab/code/0_common/adder.v" \
 "../../../../../ARM-Lab/code/3_execute/alu.v" \
+"../../../../../ARM-Lab/code/3_execute/iExecute.v" \
+"../../../../../ARM-Lab/code/0_common/mux.v" \
 
 sv xil_defaultlib  --include "../../../../../ARM-Lab/code/0_common" \
 "../../../../../ARM-Lab/code/0_common/verification_functions.sv" \
-"../../../../../ARM-Lab/code/3_execute/alu_test.sv" \
+"../../../../../ARM-Lab/code/3_execute/iExecute_test.sv" \
 
 # compile glbl module
 verilog xil_defaultlib "glbl.v"
