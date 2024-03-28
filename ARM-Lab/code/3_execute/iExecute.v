@@ -51,6 +51,7 @@ module iExecute(
     mux#(`WORD) ALU_MUX(
         .a_in(read_data2),
         .b_in(sign_extended_output),
+        .control(alu_src),
         .mux_out(ALU_bIN_wire)
     );
 
