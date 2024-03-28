@@ -30,7 +30,49 @@ module iExecute(
     input wire [10:0] opcode,
     input wire alu_src,
     output reg [`WORD-1:0] branch_target,
-    output reg [`WORD-1:0] alu_result,
-    output reg zero
+    output wire [`WORD-1:0] alu_result,
+    output wire zero
+);
+
+    // Modules from Top to Bottom on Figure 9.1 (pg 39 of manual)
+    // Branch Target "Calculator"
+
+    wire [`WORD-1:0] bADD_bIN_wire;
+    assign bADD_bIN_wire = sign_extended_output << 2;
+
+    adder bADD(
+        .a_in(cur_pc),
+        .b_in(bADD_bIN_wire),
+        .add_out(branch_target)
     );
+
+    // ALU
+    wire [`WORD-1:0] ALU_bIN_wire;
+    mux#(`WORD) ALU_MUX(
+        .a_in(read_data2),
+        .b_in(sign_extended_output),
+        .mux_out(ALU_bIN_wire)
+    );
+
+
+    ALU alu(
+        .a_in(read_data1),
+        .b_in(ALU_bIN_wire),
+        .alu_control(ALU_Cont_wire),
+        .alu_result(alu_result),
+        .zero(zero)
+    );
+
+    // ALU Control
+    wire [3:0] ALU_Cont_wire;
+    ALU_CONT alu_control (
+        .alu_op(alu_op),
+        .opcode(opcode),
+        .alu_control(ALU_Cont_wire)
+    );
+    
+    
+
+
+
 endmodule
