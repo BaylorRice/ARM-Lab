@@ -406,6 +406,10 @@ module fde_integration;
         //er_read_data1 = 0;
         er_read_data2 = 0;
 
+        er_branch_target = -`WORD'd4;
+        er_alu_result = `WORD'd0;
+        er_zero = 1'b1;
+
         #5;
         // verify that the signals match the er values 
         verify(ts++, pc_string, er_cur_pc, $bits(er_cur_pc), cur_pc, $bits(cur_pc), `S_DEC);
@@ -417,6 +421,9 @@ module fde_integration;
         //verify(ts++, read_data1_string, er_read_data1, $bits(er_read_data1), read_data1, $bits(read_data1), `S_DEC);
         verify(ts++, read_data2_string, er_read_data2, $bits(er_read_data2), read_data2, $bits(read_data2), `S_DEC);
 
+        verify(ts++, branch_target_string, er_branch_target, $bits(er_branch_target), branch_target, $bits(branch_target), `S_DEC);
+        verify(ts++, alu_result_string, er_alu_result, $bits(er_alu_result), alu_result, $bits(alu_result), `S_DEC);
+        verify(ts++, zero_string, er_zero, $bits(er_zero), zero, $bits(zero), `BINARY);
         #2
         // since we don't have an ALU or data memory yet, provide the write_data value (if applicable)
         //write_data = 0;
