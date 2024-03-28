@@ -3,22 +3,12 @@ verilog xil_defaultlib  --include "../../../../../ARM-Lab/code/0_common" \
 "../../../../../ARM-Lab/code/0_common/adder.v" \
 "../../../../../ARM-Lab/code/3_execute/alu.v" \
 "../../../../../ARM-Lab/code/3_execute/alu_control.v" \
-"../../../../../ARM-Lab/code/2_decode/control.v" \
-"../../../../../ARM-Lab/code/0_common/delay.v" \
-"../../../../../ARM-Lab/code/2_decode/iDecode.v" \
 "../../../../../ARM-Lab/code/3_execute/iExecute.v" \
-"../../../../../ARM-Lab/code/1_fetch/iFetch.v" \
-"../../../../../ARM-Lab/code/1_fetch/instr_mem.v" \
-"../../../../../ARM-Lab/code/2_decode/instr_parse.v" \
 "../../../../../ARM-Lab/code/0_common/mux.v" \
-"../../../../../ARM-Lab/code/0_common/oscillator.v" \
-"../../../../../ARM-Lab/code/2_decode/regfile.v" \
-"../../../../../ARM-Lab/code/1_fetch/register.v" \
-"../../../../../ARM-Lab/code/2_decode/sign_extender.v" \
 
 sv xil_defaultlib  --include "../../../../../ARM-Lab/code/0_common" \
 "../../../../../ARM-Lab/code/0_common/verification_functions.sv" \
-"../../../../../ARM-Lab/code/3_execute/fde_integration.sv" \
+"../../../../../ARM-Lab/code/3_execute/iExecute_test.sv" \
 
 # compile glbl module
 verilog xil_defaultlib "glbl.v"

@@ -1,8 +1,0 @@
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/0_common/verification_functions.sv" into library xil_defaultlib
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/3_execute/fde_integration.sv" into library xil_defaultlib
-WARNING: [VRFC 10-3264] design element 'verification' is previously defined, ignoring this definition [../../../../../ARM-Lab/code/0_common/verification_functions.sv:3]
-INFO: [VRFC 10-311] analyzing module fde_integration
-INFO: [VRFC 10-2458] undeclared symbol decode_clk, assumed default net type wire [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/3_execute/fde_integration.sv:60]
-WARNING: [VRFC 10-2938] 'decode_clk' is already implicitly declared on line 60 [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/3_execute/fde_integration.sv:70]
-WARNING: [VRFC 10-3248] data object 'branch_target' is already declared [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/3_execute/fde_integration.sv:125]
-WARNING: [VRFC 10-3703] second declaration of 'branch_target' ignored [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/3_execute/fde_integration.sv:125]

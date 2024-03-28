@@ -12,8 +12,8 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="82.208 ns"></ZoomStartTime>
-      <ZoomEndTime time="109.559 ns"></ZoomEndTime>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="105.001 ns"></ZoomEndTime>
       <Cursor1Time time="105.000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
@@ -52,10 +52,12 @@
    <wvobject fp_name="/fde_integration/instruction" type="array">
       <obj_property name="ElementShortName">instruction[31:0]</obj_property>
       <obj_property name="ObjectShortName">instruction[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/fde_integration/er_instruction" type="array">
       <obj_property name="ElementShortName">er_instruction[31:0]</obj_property>
       <obj_property name="ObjectShortName">er_instruction[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/fde_integration/er_cur_pc" type="array">
       <obj_property name="ElementShortName">er_cur_pc[63:0]</obj_property>
@@ -104,6 +106,7 @@
    <wvobject fp_name="/fde_integration/alu_op" type="array">
       <obj_property name="ElementShortName">alu_op[1:0]</obj_property>
       <obj_property name="ObjectShortName">alu_op[1:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/fde_integration/mem_write" type="logic">
       <obj_property name="ElementShortName">mem_write</obj_property>
@@ -132,6 +135,7 @@
    <wvobject fp_name="/fde_integration/opcode" type="array">
       <obj_property name="ElementShortName">opcode[10:0]</obj_property>
       <obj_property name="ObjectShortName">opcode[10:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/fde_integration/er_uncondbranch" type="logic">
       <obj_property name="ElementShortName">er_uncondbranch</obj_property>
@@ -156,6 +160,7 @@
    <wvobject fp_name="/fde_integration/er_alu_op" type="array">
       <obj_property name="ElementShortName">er_alu_op[1:0]</obj_property>
       <obj_property name="ObjectShortName">er_alu_op[1:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/fde_integration/er_mem_write" type="logic">
       <obj_property name="ElementShortName">er_mem_write</obj_property>
@@ -184,6 +189,7 @@
    <wvobject fp_name="/fde_integration/er_opcode" type="array">
       <obj_property name="ElementShortName">er_opcode[10:0]</obj_property>
       <obj_property name="ObjectShortName">er_opcode[10:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/fde_integration/alu_result" type="array">
       <obj_property name="ElementShortName">alu_result[63:0]</obj_property>
