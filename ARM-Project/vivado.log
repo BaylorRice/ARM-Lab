@@ -31,3 +31,1001 @@ update_compile_order -fileset sources_1
 close [ open C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/3_execute/iExecute.sv w ]
 add_files C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/3_execute/iExecute.sv
 update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/3_execute/iExecute.sv] -no_script -reset -force -quiet
+remove_files  C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/3_execute/iExecute.sv
+add_files -norecurse C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/3_execute/iExecute.v
+update_compile_order -fileset sources_1
+set_property top iExecute_test [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+set_property top iExecute_test [current_fileset]
+update_compile_order -fileset sources_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'iExecute_test'
+WARNING: [Vivado 12-12986] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/XilinxVitis/Vivado/2021.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'iExecute_test' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj iExecute_test_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/0_common/adder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/3_execute/alu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/3_execute/iExecute.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module iExecute
+INFO: [VRFC 10-2458] undeclared symbol ALU_Cont_wire, assumed default net type wire [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/3_execute/iExecute.v:61]
+WARNING: [VRFC 10-2938] 'ALU_Cont_wire' is already implicitly declared on line 61 [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/3_execute/iExecute.v:67]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/0_common/mux.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/0_common/verification_functions.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/3_execute/iExecute_test.sv" into library xil_defaultlib
+WARNING: [VRFC 10-3264] design element 'verification' is previously defined, ignoring this definition [../../../../../ARM-Lab/code/0_common/verification_functions.sv:3]
+INFO: [VRFC 10-311] analyzing module iExecute_test
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot iExecute_test_behav xil_defaultlib.iExecute_test xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2021.2
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: C:/XilinxVitis/Vivado/2021.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot iExecute_test_behav xil_defaultlib.iExecute_test xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+ERROR: [VRFC 10-2063] Module <ALU_CONT> not found while processing module instance <alu_control> [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/3_execute/iExecute.v:68]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 1533.219 ; gain = 0.000
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'iExecute_test'
+WARNING: [Vivado 12-12986] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/XilinxVitis/Vivado/2021.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'iExecute_test' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj iExecute_test_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/0_common/adder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/3_execute/alu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/3_execute/iExecute.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module iExecute
+INFO: [VRFC 10-2458] undeclared symbol ALU_Cont_wire, assumed default net type wire [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/3_execute/iExecute.v:61]
+WARNING: [VRFC 10-2938] 'ALU_Cont_wire' is already implicitly declared on line 61 [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/3_execute/iExecute.v:67]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/0_common/mux.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/3_execute/iExecute_test.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module iExecute_test
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot iExecute_test_behav xil_defaultlib.iExecute_test xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2021.2
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: C:/XilinxVitis/Vivado/2021.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot iExecute_test_behav xil_defaultlib.iExecute_test xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+ERROR: [VRFC 10-2063] Module <ALU_CONT> not found while processing module instance <alu_control> [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/3_execute/iExecute.v:68]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+update_compile_order -fileset sources_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'iExecute_test'
+WARNING: [Vivado 12-12986] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/XilinxVitis/Vivado/2021.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'iExecute_test' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj iExecute_test_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/0_common/adder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/3_execute/alu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/3_execute/alu_control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu_control
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/3_execute/iExecute.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module iExecute
+INFO: [VRFC 10-2458] undeclared symbol ALU_Cont_wire, assumed default net type wire [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/3_execute/iExecute.v:61]
+WARNING: [VRFC 10-2938] 'ALU_Cont_wire' is already implicitly declared on line 61 [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/3_execute/iExecute.v:67]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/0_common/mux.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot iExecute_test_behav xil_defaultlib.iExecute_test xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2021.2
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: C:/XilinxVitis/Vivado/2021.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot iExecute_test_behav xil_defaultlib.iExecute_test xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+ERROR: [VRFC 10-3236] concurrent assignment to a non-net 'branch_target' is not permitted [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/3_execute/iExecute.v:46]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'iExecute_test'
+WARNING: [Vivado 12-12986] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/XilinxVitis/Vivado/2021.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'iExecute_test' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj iExecute_test_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/0_common/adder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/3_execute/alu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/3_execute/alu_control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu_control
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/3_execute/iExecute.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module iExecute
+INFO: [VRFC 10-2458] undeclared symbol ALU_Cont_wire, assumed default net type wire [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/3_execute/iExecute.v:61]
+WARNING: [VRFC 10-2938] 'ALU_Cont_wire' is already implicitly declared on line 61 [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/3_execute/iExecute.v:67]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/0_common/mux.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot iExecute_test_behav xil_defaultlib.iExecute_test xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2021.2
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: C:/XilinxVitis/Vivado/2021.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot iExecute_test_behav xil_defaultlib.iExecute_test xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package xil_defaultlib.verification
+Compiling module xil_defaultlib.adder
+Compiling module xil_defaultlib.mux(SIZE=64)
+Compiling module xil_defaultlib.alu
+Compiling module xil_defaultlib.alu_control
+Compiling module xil_defaultlib.iExecute
+Compiling module xil_defaultlib.iExecute_test
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot iExecute_test_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "iExecute_test_behav -key {Behavioral:sim_1:Functional:iExecute_test} -tclbatch {iExecute_test.tcl} -view {C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/register_test_behav.wcfg} -view {C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/adder_test_behav.wcfg} -view {C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/mux_test_behav.wcfg} -view {C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/instr_mem_test_behav.wcfg} -view {C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/iFetch_test_behav.wcfg} -view {C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/instr_parse_test_behav.wcfg} -view {C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/regfile_test_behav.wcfg} -view {C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/control_test_behav.wcfg} -view {C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/sign_extender_test_behav.wcfg} -view {C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/iDecode_test_behav.wcfg} -view {C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/fd_integration_behav.wcfg} -view {C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/alu_test_behav.wcfg} -view {C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/alu_control_test_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/register_test_behav.wcfg
+WARNING: Simulation object /register_test/tc was not found in the design.
+WARNING: Simulation object /register_test/ts was not found in the design.
+WARNING: Simulation object /register_test/clk was not found in the design.
+WARNING: Simulation object /register_test/rst was not found in the design.
+WARNING: Simulation object /register_test/d was not found in the design.
+WARNING: Simulation object /register_test/er_q was not found in the design.
+WARNING: Simulation object /register_test/q was not found in the design.
+open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/adder_test_behav.wcfg
+WARNING: Simulation object /adder_test/a was not found in the design.
+WARNING: Simulation object /adder_test/b was not found in the design.
+WARNING: Simulation object /adder_test/sum was not found in the design.
+WARNING: Simulation object /adder_test/er_sum was not found in the design.
+WARNING: Simulation object /adder_test/tc was not found in the design.
+WARNING: Simulation object /adder_test/ts was not found in the design.
+open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/mux_test_behav.wcfg
+WARNING: Simulation object /mux_test/a_64 was not found in the design.
+WARNING: Simulation object /mux_test/b_64 was not found in the design.
+WARNING: Simulation object /mux_test/ctl was not found in the design.
+WARNING: Simulation object /mux_test/out_64 was not found in the design.
+WARNING: Simulation object /mux_test/a_5 was not found in the design.
+WARNING: Simulation object /mux_test/b_5 was not found in the design.
+WARNING: Simulation object /mux_test/out_5 was not found in the design.
+WARNING: Simulation object /mux_test/er_out_64 was not found in the design.
+WARNING: Simulation object /mux_test/er_out_5 was not found in the design.
+WARNING: Simulation object /mux_test/tc was not found in the design.
+WARNING: Simulation object /mux_test/ts was not found in the design.
+open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/instr_mem_test_behav.wcfg
+WARNING: Simulation object /instr_mem_test/clk was not found in the design.
+WARNING: Simulation object /instr_mem_test/pc was not found in the design.
+WARNING: Simulation object /instr_mem_test/instr was not found in the design.
+WARNING: Simulation object /instr_mem_test/er was not found in the design.
+WARNING: Simulation object /instr_mem_test/tc was not found in the design.
+WARNING: Simulation object /instr_mem_test/ts was not found in the design.
+open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/iFetch_test_behav.wcfg
+WARNING: Simulation object /iFetch_test/clk was not found in the design.
+WARNING: Simulation object /iFetch_test/reset was not found in the design.
+WARNING: Simulation object /iFetch_test/pc_src was not found in the design.
+WARNING: Simulation object /iFetch_test/branch_target was not found in the design.
+WARNING: Simulation object /iFetch_test/cur_pc was not found in the design.
+WARNING: Simulation object /iFetch_test/er_cur_pc was not found in the design.
+WARNING: Simulation object /iFetch_test/instruction was not found in the design.
+WARNING: Simulation object /iFetch_test/er_instruction was not found in the design.
+WARNING: Simulation object /iFetch_test/ts was not found in the design.
+WARNING: Simulation object /iFetch_test/tc was not found in the design.
+WARNING: Simulation object /iFetch_test/clk_plus_1 was not found in the design.
+open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/instr_parse_test_behav.wcfg
+WARNING: Simulation object /instr_parse_test/tc was not found in the design.
+WARNING: Simulation object /instr_parse_test/instruction was not found in the design.
+WARNING: Simulation object /instr_parse_test/ts was not found in the design.
+WARNING: Simulation object /instr_parse_test/er_opcode was not found in the design.
+WARNING: Simulation object /instr_parse_test/opcode was not found in the design.
+WARNING: Simulation object /instr_parse_test/er_address was not found in the design.
+WARNING: Simulation object /instr_parse_test/address was not found in the design.
+WARNING: Simulation object /instr_parse_test/er_rm_num was not found in the design.
+WARNING: Simulation object /instr_parse_test/rm_num was not found in the design.
+WARNING: Simulation object /instr_parse_test/er_rn_num was not found in the design.
+WARNING: Simulation object /instr_parse_test/rn_num was not found in the design.
+WARNING: Simulation object /instr_parse_test/er_rd_num was not found in the design.
+WARNING: Simulation object /instr_parse_test/rd_num was not found in the design.
+open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/regfile_test_behav.wcfg
+WARNING: Simulation object /regfile_test/read_clk was not found in the design.
+WARNING: Simulation object /regfile_test/write_clk was not found in the design.
+WARNING: Simulation object /regfile_test/read_register1 was not found in the design.
+WARNING: Simulation object /regfile_test/read_register2 was not found in the design.
+WARNING: Simulation object /regfile_test/write_register was not found in the design.
+WARNING: Simulation object /regfile_test/write_data was not found in the design.
+WARNING: Simulation object /regfile_test/reg_write was not found in the design.
+WARNING: Simulation object /regfile_test/read_data1 was not found in the design.
+WARNING: Simulation object /regfile_test/er_read_data1 was not found in the design.
+WARNING: Simulation object /regfile_test/read_data2 was not found in the design.
+WARNING: Simulation object /regfile_test/er_read_data2 was not found in the design.
+WARNING: Simulation object /regfile_test/tc was not found in the design.
+WARNING: Simulation object /regfile_test/ts was not found in the design.
+open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/control_test_behav.wcfg
+WARNING: Simulation object /control_test/tc was not found in the design.
+WARNING: Simulation object /control_test/ts was not found in the design.
+WARNING: Simulation object /control_test/opcode was not found in the design.
+WARNING: Simulation object /control_test/reg2_loc was not found in the design.
+WARNING: Simulation object /control_test/uncondbranch was not found in the design.
+WARNING: Simulation object /control_test/branch was not found in the design.
+WARNING: Simulation object /control_test/mem_read was not found in the design.
+WARNING: Simulation object /control_test/mem_to_reg was not found in the design.
+WARNING: Simulation object /control_test/alu_op was not found in the design.
+WARNING: Simulation object /control_test/mem_write was not found in the design.
+WARNING: Simulation object /control_test/alu_src was not found in the design.
+WARNING: Simulation object /control_test/reg_write was not found in the design.
+WARNING: Simulation object /control_test/er_reg2_loc was not found in the design.
+WARNING: Simulation object /control_test/er_uncondbranch was not found in the design.
+WARNING: Simulation object /control_test/er_branch was not found in the design.
+WARNING: Simulation object /control_test/er_mem_read was not found in the design.
+WARNING: Simulation object /control_test/er_mem_to_reg was not found in the design.
+WARNING: Simulation object /control_test/er_alu_op was not found in the design.
+WARNING: Simulation object /control_test/er_mem_write was not found in the design.
+WARNING: Simulation object /control_test/er_alu_src was not found in the design.
+WARNING: Simulation object /control_test/er_reg_write was not found in the design.
+open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/sign_extender_test_behav.wcfg
+WARNING: Simulation object /sign_extender_test/tc was not found in the design.
+WARNING: Simulation object /sign_extender_test/ts was not found in the design.
+WARNING: Simulation object /sign_extender_test/instruction was not found in the design.
+WARNING: Simulation object /sign_extender_test/sign_extended_output was not found in the design.
+WARNING: Simulation object /sign_extender_test/er_sign_extended_output was not found in the design.
+open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/iDecode_test_behav.wcfg
+WARNING: Simulation object /iDecode_test/tc was not found in the design.
+WARNING: Simulation object /iDecode_test/ts was not found in the design.
+WARNING: Simulation object /iDecode_test/clk was not found in the design.
+WARNING: Simulation object /iDecode_test/read_clk was not found in the design.
+WARNING: Simulation object /iDecode_test/write_clk was not found in the design.
+WARNING: Simulation object /iDecode_test/instruction was not found in the design.
+WARNING: Simulation object /iDecode_test/write_data was not found in the design.
+WARNING: Simulation object /iDecode_test/sign_extended_output was not found in the design.
+WARNING: Simulation object /iDecode_test/reg2_loc was not found in the design.
+WARNING: Simulation object /iDecode_test/uncondbranch was not found in the design.
+WARNING: Simulation object /iDecode_test/branch was not found in the design.
+WARNING: Simulation object /iDecode_test/mem_read was not found in the design.
+WARNING: Simulation object /iDecode_test/mem_to_reg was not found in the design.
+WARNING: Simulation object /iDecode_test/alu_op was not found in the design.
+WARNING: Simulation object /iDecode_test/mem_write was not found in the design.
+WARNING: Simulation object /iDecode_test/alu_src was not found in the design.
+WARNING: Simulation object /iDecode_test/reg_write was not found in the design.
+WARNING: Simulation object /iDecode_test/read_data1 was not found in the design.
+WARNING: Simulation object /iDecode_test/read_data2 was not found in the design.
+WARNING: Simulation object /iDecode_test/opcode was not found in the design.
+WARNING: Simulation object /iDecode_test/er_uncondbranch was not found in the design.
+WARNING: Simulation object /iDecode_test/er_reg2_loc was not found in the design.
+WARNING: Simulation object /iDecode_test/er_branch was not found in the design.
+WARNING: Simulation object /iDecode_test/er_mem_read was not found in the design.
+WARNING: Simulation object /iDecode_test/er_mem_to_reg was not found in the design.
+WARNING: Simulation object /iDecode_test/er_alu_op was not found in the design.
+WARNING: Simulation object /iDecode_test/er_mem_write was not found in the design.
+WARNING: Simulation object /iDecode_test/er_alu_src was not found in the design.
+WARNING: Simulation object /iDecode_test/er_reg_write was not found in the design.
+WARNING: Simulation object /iDecode_test/er_sign_extended_output was not found in the design.
+WARNING: Simulation object /iDecode_test/er_read_data1 was not found in the design.
+WARNING: Simulation object /iDecode_test/er_read_data2 was not found in the design.
+WARNING: Simulation object /iDecode_test/er_opcode was not found in the design.
+open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/fd_integration_behav.wcfg
+WARNING: Simulation object /fd_integration/tc was not found in the design.
+WARNING: Simulation object /fd_integration/ts was not found in the design.
+WARNING: Simulation object /fd_integration/clk was not found in the design.
+WARNING: Simulation object /fd_integration/reset was not found in the design.
+WARNING: Simulation object /fd_integration/pc_src was not found in the design.
+WARNING: Simulation object /fd_integration/branch_target was not found in the design.
+WARNING: Simulation object /fd_integration/cur_pc was not found in the design.
+WARNING: Simulation object /fd_integration/instruction was not found in the design.
+WARNING: Simulation object /fd_integration/er_instruction was not found in the design.
+WARNING: Simulation object /fd_integration/er_cur_pc was not found in the design.
+WARNING: Simulation object /fd_integration/decode_clk was not found in the design.
+WARNING: Simulation object /fd_integration/read_clk was not found in the design.
+WARNING: Simulation object /fd_integration/write_clk was not found in the design.
+WARNING: Simulation object /fd_integration/write_data was not found in the design.
+WARNING: Simulation object /fd_integration/sign_extended_output was not found in the design.
+WARNING: Simulation object /fd_integration/reg2_loc was not found in the design.
+WARNING: Simulation object /fd_integration/uncondbranch was not found in the design.
+WARNING: Simulation object /fd_integration/branch was not found in the design.
+WARNING: Simulation object /fd_integration/mem_read was not found in the design.
+WARNING: Simulation object /fd_integration/mem_to_reg was not found in the design.
+WARNING: Simulation object /fd_integration/alu_op was not found in the design.
+WARNING: Simulation object /fd_integration/mem_write was not found in the design.
+WARNING: Simulation object /fd_integration/alu_src was not found in the design.
+WARNING: Simulation object /fd_integration/reg_write was not found in the design.
+WARNING: Simulation object /fd_integration/read_data1 was not found in the design.
+WARNING: Simulation object /fd_integration/read_data2 was not found in the design.
+WARNING: Simulation object /fd_integration/opcode was not found in the design.
+WARNING: Simulation object /fd_integration/er_uncondbranch was not found in the design.
+WARNING: Simulation object /fd_integration/er_reg2_loc was not found in the design.
+WARNING: Simulation object /fd_integration/er_branch was not found in the design.
+WARNING: Simulation object /fd_integration/er_mem_read was not found in the design.
+WARNING: Simulation object /fd_integration/er_mem_to_reg was not found in the design.
+WARNING: Simulation object /fd_integration/er_alu_op was not found in the design.
+WARNING: Simulation object /fd_integration/er_mem_write was not found in the design.
+WARNING: Simulation object /fd_integration/er_alu_src was not found in the design.
+WARNING: Simulation object /fd_integration/er_reg_write was not found in the design.
+WARNING: Simulation object /fd_integration/er_sign_extended_output was not found in the design.
+WARNING: Simulation object /fd_integration/er_read_data1 was not found in the design.
+WARNING: Simulation object /fd_integration/er_read_data2 was not found in the design.
+WARNING: Simulation object /fd_integration/er_opcode was not found in the design.
+open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/alu_test_behav.wcfg
+WARNING: Simulation object /alu_test/tc was not found in the design.
+WARNING: Simulation object /alu_test/ts was not found in the design.
+WARNING: Simulation object /alu_test/a was not found in the design.
+WARNING: Simulation object /alu_test/b was not found in the design.
+WARNING: Simulation object /alu_test/alu_control was not found in the design.
+WARNING: Simulation object /alu_test/alu_result was not found in the design.
+WARNING: Simulation object /alu_test/zero was not found in the design.
+WARNING: Simulation object /alu_test/er_alu_result was not found in the design.
+WARNING: Simulation object /alu_test/er_zero was not found in the design.
+open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/alu_control_test_behav.wcfg
+WARNING: Simulation object /alu_control_test/tc was not found in the design.
+WARNING: Simulation object /alu_control_test/ts was not found in the design.
+WARNING: Simulation object /alu_control_test/alu_op was not found in the design.
+WARNING: Simulation object /alu_control_test/opcode was not found in the design.
+WARNING: Simulation object /alu_control_test/alu_control was not found in the design.
+WARNING: Simulation object /alu_control_test/er_alu_control was not found in the design.
+source iExecute_test.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+
+******* BEGIN TEST RESULTS *******
+
+Test Case 1: | LDUR X9, [X22, #64]
+--- Step 1: Fail: |branch_target| time = 5 ns | er = 0 | ar = 256 | er_bits = 64 | ar_bits = 64 ---
++++ Step 2: Pass: |alu_result| time = 5 ns | er = 0 | ar = 0 | er_bits = 64 | ar_bits = 64 +++
++++ Step 3: Pass: |zero| time = 5 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+Test Case 2: | ADD X10, X19, X9
+--- Step 1: Fail: |branch_target| time = 15 ns | er = 0 | ar = 356 | er_bits = 64 | ar_bits = 64 ---
++++ Step 2: Pass: |alu_result| time = 15 ns | er = 0 | ar = 0 | er_bits = 64 | ar_bits = 64 +++
++++ Step 3: Pass: |zero| time = 15 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+Test Case 3: | SUB X11, X20, X10
+--- Step 1: Fail: |branch_target| time = 25 ns | er = 0 | ar = 360 | er_bits = 64 | ar_bits = 64 ---
++++ Step 2: Pass: |alu_result| time = 25 ns | er = 0 | ar = 0 | er_bits = 64 | ar_bits = 64 +++
++++ Step 3: Pass: |zero| time = 25 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+Test Case 4: | STUR X11, [X22, #96]
+--- Step 1: Fail: |branch_target| time = 35 ns | er = 0 | ar = 396 | er_bits = 64 | ar_bits = 64 ---
++++ Step 2: Pass: |alu_result| time = 35 ns | er = 0 | ar = 0 | er_bits = 64 | ar_bits = 64 +++
++++ Step 3: Pass: |zero| time = 35 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+Test Case 5: | CBZ X11, -5
+--- Step 1: Fail: |branch_target| time = 45 ns | er = 0 | ar = -4 | er_bits = 64 | ar_bits = 64 ---
++++ Step 2: Pass: |alu_result| time = 45 ns | er = 0 | ar = 0 | er_bits = 64 | ar_bits = 64 +++
++++ Step 3: Pass: |zero| time = 45 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+Test Case 6: | CBZ X9, 8
+--- Step 1: Fail: |branch_target| time = 55 ns | er = 0 | ar = 52 | er_bits = 64 | ar_bits = 64 ---
++++ Step 2: Pass: |alu_result| time = 55 ns | er = 0 | ar = 0 | er_bits = 64 | ar_bits = 64 +++
++++ Step 3: Pass: |zero| time = 55 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+Test Case 7: | B 64
+--- Step 1: Fail: |branch_target| time = 65 ns | er = 0 | ar = 280 | er_bits = 64 | ar_bits = 64 ---
++++ Step 2: Pass: |alu_result| time = 65 ns | er = 0 | ar = 0 | er_bits = 64 | ar_bits = 64 +++
++++ Step 3: Pass: |zero| time = 65 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+Test Case 8: | B -55
+--- Step 1: Fail: |branch_target| time = 75 ns | er = 0 | ar = -192 | er_bits = 64 | ar_bits = 64 ---
++++ Step 2: Pass: |alu_result| time = 75 ns | er = 0 | ar = 0 | er_bits = 64 | ar_bits = 64 +++
++++ Step 3: Pass: |zero| time = 75 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+Test Case 9: | ORR X9, X10, X21
+--- Step 1: Fail: |branch_target| time = 85 ns | er = 0 | ar = 384 | er_bits = 64 | ar_bits = 64 ---
+--- Step 2: Fail: |alu_result| time = 85 ns | er = 0 | ar = 30 | er_bits = 64 | ar_bits = 64 ---
++++ Step 3: Pass: |zero| time = 85 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+Test Case 10: | AND X9, X22, X10
+--- Step 1: Fail: |branch_target| time = 95 ns | er = 0 | ar = 388 | er_bits = 64 | ar_bits = 64 ---
+--- Step 2: Fail: |alu_result| time = 95 ns | er = 0 | ar = 16 | er_bits = 64 | ar_bits = 64 ---
++++ Step 3: Pass: |zero| time = 95 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+
+Pass Count = 18
+Fail Count = 12
+
+******* END TEST RESULTS *******
+
+$finish called at time : 100 ns : File "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/3_execute/iExecute_test.sv" Line 259
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'iExecute_test_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1550.750 ; gain = 17.531
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'iExecute_test'
+WARNING: [Vivado 12-12986] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/XilinxVitis/Vivado/2021.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'iExecute_test' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj iExecute_test_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'iExecute_test'
+WARNING: [Vivado 12-12986] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot iExecute_test_behav xil_defaultlib.iExecute_test xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2021.2
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: C:/XilinxVitis/Vivado/2021.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot iExecute_test_behav xil_defaultlib.iExecute_test xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Time resolution is 1 ps
+WARNING: Simulation object /iExecute_test/branch_target_string was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of System Verilog Dynamic Type object.
+WARNING: Simulation object /iExecute_test/alu_result_string was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of System Verilog Dynamic Type object.
+WARNING: Simulation object /iExecute_test/zero_string was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of System Verilog Dynamic Type object.
+
+******* BEGIN TEST RESULTS *******
+
+Test Case 1: | LDUR X9, [X22, #64]
+--- Step 1: Fail: |branch_target| time = 5 ns | er = 0 | ar = 256 | er_bits = 64 | ar_bits = 64 ---
++++ Step 2: Pass: |alu_result| time = 5 ns | er = 0 | ar = 0 | er_bits = 64 | ar_bits = 64 +++
++++ Step 3: Pass: |zero| time = 5 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+Test Case 2: | ADD X10, X19, X9
+--- Step 1: Fail: |branch_target| time = 15 ns | er = 0 | ar = 356 | er_bits = 64 | ar_bits = 64 ---
++++ Step 2: Pass: |alu_result| time = 15 ns | er = 0 | ar = 0 | er_bits = 64 | ar_bits = 64 +++
++++ Step 3: Pass: |zero| time = 15 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+Test Case 3: | SUB X11, X20, X10
+--- Step 1: Fail: |branch_target| time = 25 ns | er = 0 | ar = 360 | er_bits = 64 | ar_bits = 64 ---
++++ Step 2: Pass: |alu_result| time = 25 ns | er = 0 | ar = 0 | er_bits = 64 | ar_bits = 64 +++
++++ Step 3: Pass: |zero| time = 25 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+Test Case 4: | STUR X11, [X22, #96]
+--- Step 1: Fail: |branch_target| time = 35 ns | er = 0 | ar = 396 | er_bits = 64 | ar_bits = 64 ---
++++ Step 2: Pass: |alu_result| time = 35 ns | er = 0 | ar = 0 | er_bits = 64 | ar_bits = 64 +++
++++ Step 3: Pass: |zero| time = 35 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+Test Case 5: | CBZ X11, -5
+--- Step 1: Fail: |branch_target| time = 45 ns | er = 0 | ar = -4 | er_bits = 64 | ar_bits = 64 ---
++++ Step 2: Pass: |alu_result| time = 45 ns | er = 0 | ar = 0 | er_bits = 64 | ar_bits = 64 +++
++++ Step 3: Pass: |zero| time = 45 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+Test Case 6: | CBZ X9, 8
+--- Step 1: Fail: |branch_target| time = 55 ns | er = 0 | ar = 52 | er_bits = 64 | ar_bits = 64 ---
++++ Step 2: Pass: |alu_result| time = 55 ns | er = 0 | ar = 0 | er_bits = 64 | ar_bits = 64 +++
++++ Step 3: Pass: |zero| time = 55 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+Test Case 7: | B 64
+--- Step 1: Fail: |branch_target| time = 65 ns | er = 0 | ar = 280 | er_bits = 64 | ar_bits = 64 ---
++++ Step 2: Pass: |alu_result| time = 65 ns | er = 0 | ar = 0 | er_bits = 64 | ar_bits = 64 +++
++++ Step 3: Pass: |zero| time = 65 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+Test Case 8: | B -55
+--- Step 1: Fail: |branch_target| time = 75 ns | er = 0 | ar = -192 | er_bits = 64 | ar_bits = 64 ---
++++ Step 2: Pass: |alu_result| time = 75 ns | er = 0 | ar = 0 | er_bits = 64 | ar_bits = 64 +++
++++ Step 3: Pass: |zero| time = 75 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+Test Case 9: | ORR X9, X10, X21
+--- Step 1: Fail: |branch_target| time = 85 ns | er = 0 | ar = 384 | er_bits = 64 | ar_bits = 64 ---
+--- Step 2: Fail: |alu_result| time = 85 ns | er = 0 | ar = 30 | er_bits = 64 | ar_bits = 64 ---
++++ Step 3: Pass: |zero| time = 85 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+Test Case 10: | AND X9, X22, X10
+--- Step 1: Fail: |branch_target| time = 95 ns | er = 0 | ar = 388 | er_bits = 64 | ar_bits = 64 ---
+--- Step 2: Fail: |alu_result| time = 95 ns | er = 0 | ar = 16 | er_bits = 64 | ar_bits = 64 ---
++++ Step 3: Pass: |zero| time = 95 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+
+Pass Count = 18
+Fail Count = 12
+
+******* END TEST RESULTS *******
+
+$finish called at time : 100 ns : File "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/3_execute/iExecute_test.sv" Line 259
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 1591.703 ; gain = 24.766
+save_wave_config {C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/iExecute_test_behav.wcfg}
+add_files -fileset sim_1 -norecurse C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/iExecute_test_behav.wcfg
+set_property xsim.view {C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/register_test_behav.wcfg C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/adder_test_behav.wcfg C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/mux_test_behav.wcfg C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/instr_mem_test_behav.wcfg C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/iFetch_test_behav.wcfg C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/instr_parse_test_behav.wcfg C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/regfile_test_behav.wcfg C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/control_test_behav.wcfg C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/sign_extender_test_behav.wcfg C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/iDecode_test_behav.wcfg C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/fd_integration_behav.wcfg C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/alu_test_behav.wcfg C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/alu_control_test_behav.wcfg C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/iExecute_test_behav.wcfg} [get_filesets sim_1]
+add_bp {C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/3_execute/iExecute_test.sv} 154
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'iExecute_test'
+WARNING: [Vivado 12-12986] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj iExecute_test_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'iExecute_test'
+WARNING: [Vivado 12-12986] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot iExecute_test_behav xil_defaultlib.iExecute_test xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2021.2
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: C:/XilinxVitis/Vivado/2021.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot iExecute_test_behav xil_defaultlib.iExecute_test xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Time resolution is 1 ps
+
+******* BEGIN TEST RESULTS *******
+
+Test Case 1: | LDUR X9, [X22, #64]
+--- Step 1: Fail: |branch_target| time = 5 ns | er = 0 | ar = 256 | er_bits = 64 | ar_bits = 64 ---
++++ Step 2: Pass: |alu_result| time = 5 ns | er = 0 | ar = 0 | er_bits = 64 | ar_bits = 64 +++
++++ Step 3: Pass: |zero| time = 5 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+Test Case 2: | ADD X10, X19, X9
+--- Step 1: Fail: |branch_target| time = 15 ns | er = 0 | ar = 356 | er_bits = 64 | ar_bits = 64 ---
++++ Step 2: Pass: |alu_result| time = 15 ns | er = 0 | ar = 0 | er_bits = 64 | ar_bits = 64 +++
++++ Step 3: Pass: |zero| time = 15 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+Test Case 3: | SUB X11, X20, X10
+--- Step 1: Fail: |branch_target| time = 25 ns | er = 0 | ar = 360 | er_bits = 64 | ar_bits = 64 ---
++++ Step 2: Pass: |alu_result| time = 25 ns | er = 0 | ar = 0 | er_bits = 64 | ar_bits = 64 +++
++++ Step 3: Pass: |zero| time = 25 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+Test Case 4: | STUR X11, [X22, #96]
+--- Step 1: Fail: |branch_target| time = 35 ns | er = 0 | ar = 396 | er_bits = 64 | ar_bits = 64 ---
++++ Step 2: Pass: |alu_result| time = 35 ns | er = 0 | ar = 0 | er_bits = 64 | ar_bits = 64 +++
++++ Step 3: Pass: |zero| time = 35 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+Test Case 5: | CBZ X11, -5
+--- Step 1: Fail: |branch_target| time = 45 ns | er = 0 | ar = -4 | er_bits = 64 | ar_bits = 64 ---
++++ Step 2: Pass: |alu_result| time = 45 ns | er = 0 | ar = 0 | er_bits = 64 | ar_bits = 64 +++
++++ Step 3: Pass: |zero| time = 45 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+Stopped at time : 50 ns : File "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/3_execute/iExecute_test.sv" Line 154
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 1594.344 ; gain = 0.000
+remove_bps -file {C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/3_execute/iExecute_test.sv} -line 154
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'iExecute_test'
+WARNING: [Vivado 12-12986] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj iExecute_test_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/0_common/verification_functions.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/3_execute/iExecute_test.sv" into library xil_defaultlib
+WARNING: [VRFC 10-3264] design element 'verification' is previously defined, ignoring this definition [../../../../../ARM-Lab/code/0_common/verification_functions.sv:3]
+INFO: [VRFC 10-311] analyzing module iExecute_test
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'iExecute_test'
+WARNING: [Vivado 12-12986] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot iExecute_test_behav xil_defaultlib.iExecute_test xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2021.2
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: C:/XilinxVitis/Vivado/2021.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot iExecute_test_behav xil_defaultlib.iExecute_test xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package xil_defaultlib.verification
+Compiling module xil_defaultlib.adder
+Compiling module xil_defaultlib.mux(SIZE=64)
+Compiling module xil_defaultlib.alu
+Compiling module xil_defaultlib.alu_control
+Compiling module xil_defaultlib.iExecute
+Compiling module xil_defaultlib.iExecute_test
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot iExecute_test_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+Time resolution is 1 ps
+
+******* BEGIN TEST RESULTS *******
+
+Test Case 1: | LDUR X9, [X22, #64]
+--- Step 1: Fail: |alu_result| time = 5 ns | er = 80 | ar = 0 | er_bits = 64 | ar_bits = 64 ---
++++ Step 2: Pass: |zero| time = 5 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+Test Case 2: | ADD X10, X19, X9
+--- Step 1: Fail: |alu_result| time = 15 ns | er = 30 | ar = 0 | er_bits = 64 | ar_bits = 64 ---
++++ Step 2: Pass: |zero| time = 15 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+Test Case 3: | SUB X11, X20, X10
++++ Step 1: Pass: |alu_result| time = 25 ns | er = 0 | ar = 0 | er_bits = 64 | ar_bits = 64 +++
+--- Step 2: Fail: |zero| time = 25 ns | er = 1 | ar = 0 | er_bits = 1 | ar_bits = 1 ---
+Test Case 4: | STUR X11, [X22, #96]
+--- Step 1: Fail: |alu_result| time = 35 ns | er = 112 | ar = 0 | er_bits = 64 | ar_bits = 64 ---
++++ Step 2: Pass: |zero| time = 35 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+Test Case 5: | CBZ X11, -5
++++ Step 1: Pass: |branch_target| time = 45 ns | er = -4 | ar = -4 | er_bits = 64 | ar_bits = 64 +++
++++ Step 2: Pass: |alu_result| time = 45 ns | er = 0 | ar = 0 | er_bits = 64 | ar_bits = 64 +++
+--- Step 3: Fail: |zero| time = 45 ns | er = 1 | ar = 0 | er_bits = 1 | ar_bits = 1 ---
+Test Case 6: | CBZ X9, 8
++++ Step 1: Pass: |branch_target| time = 55 ns | er = 52 | ar = 52 | er_bits = 64 | ar_bits = 64 +++
+--- Step 2: Fail: |alu_result| time = 55 ns | er = 20 | ar = 0 | er_bits = 64 | ar_bits = 64 ---
++++ Step 3: Pass: |zero| time = 55 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+Test Case 7: | B 64
+--- Step 1: Fail: |branch_target| time = 65 ns | er = 184 | ar = 280 | er_bits = 64 | ar_bits = 64 ---
+Test Case 8: | B -55
++++ Step 1: Pass: |branch_target| time = 75 ns | er = -192 | ar = -192 | er_bits = 64 | ar_bits = 64 +++
+Test Case 9: | ORR X9, X10, X21
++++ Step 1: Pass: |alu_result| time = 85 ns | er = 30 | ar = 30 | er_bits = 64 | ar_bits = 64 +++
++++ Step 2: Pass: |zero| time = 85 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+Test Case 10: | AND X9, X22, X10
++++ Step 1: Pass: |alu_result| time = 95 ns | er = 16 | ar = 16 | er_bits = 64 | ar_bits = 64 +++
++++ Step 2: Pass: |zero| time = 95 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+
+Pass Count = 13
+Fail Count = 7
+
+******* END TEST RESULTS *******
+
+$finish called at time : 100 ns : File "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/3_execute/iExecute_test.sv" Line 259
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 1597.660 ; gain = 0.000
+add_bp {C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/3_execute/iExecute_test.sv} 70
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'iExecute_test'
+WARNING: [Vivado 12-12986] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj iExecute_test_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'iExecute_test'
+WARNING: [Vivado 12-12986] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot iExecute_test_behav xil_defaultlib.iExecute_test xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2021.2
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: C:/XilinxVitis/Vivado/2021.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot iExecute_test_behav xil_defaultlib.iExecute_test xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Time resolution is 1 ps
+
+******* BEGIN TEST RESULTS *******
+
+Test Case 1: | LDUR X9, [X22, #64]
+--- Step 1: Fail: |alu_result| time = 5 ns | er = 80 | ar = 0 | er_bits = 64 | ar_bits = 64 ---
++++ Step 2: Pass: |zero| time = 5 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+Stopped at time : 10 ns : File "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/3_execute/iExecute_test.sv" Line 70
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 1597.660 ; gain = 0.000
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'iExecute_test'
+WARNING: [Vivado 12-12986] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj iExecute_test_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/0_common/adder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/3_execute/alu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/3_execute/alu_control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu_control
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/3_execute/iExecute.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module iExecute
+INFO: [VRFC 10-2458] undeclared symbol ALU_Cont_wire, assumed default net type wire [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/3_execute/iExecute.v:62]
+WARNING: [VRFC 10-2938] 'ALU_Cont_wire' is already implicitly declared on line 62 [C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/3_execute/iExecute.v:68]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/0_common/mux.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'iExecute_test'
+WARNING: [Vivado 12-12986] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot iExecute_test_behav xil_defaultlib.iExecute_test xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2021.2
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: C:/XilinxVitis/Vivado/2021.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot iExecute_test_behav xil_defaultlib.iExecute_test xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package xil_defaultlib.verification
+Compiling module xil_defaultlib.adder
+Compiling module xil_defaultlib.mux(SIZE=64)
+Compiling module xil_defaultlib.alu
+Compiling module xil_defaultlib.alu_control
+Compiling module xil_defaultlib.iExecute
+Compiling module xil_defaultlib.iExecute_test
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot iExecute_test_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+Time resolution is 1 ps
+
+******* BEGIN TEST RESULTS *******
+
+Test Case 1: | LDUR X9, [X22, #64]
++++ Step 1: Pass: |alu_result| time = 5 ns | er = 80 | ar = 80 | er_bits = 64 | ar_bits = 64 +++
++++ Step 2: Pass: |zero| time = 5 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+Stopped at time : 10 ns : File "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/3_execute/iExecute_test.sv" Line 70
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 1597.660 ; gain = 0.000
+remove_bps -file {C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/3_execute/iExecute_test.sv} -line 70
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'iExecute_test'
+WARNING: [Vivado 12-12986] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj iExecute_test_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'iExecute_test'
+WARNING: [Vivado 12-12986] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot iExecute_test_behav xil_defaultlib.iExecute_test xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2021.2
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: C:/XilinxVitis/Vivado/2021.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot iExecute_test_behav xil_defaultlib.iExecute_test xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Time resolution is 1 ps
+
+******* BEGIN TEST RESULTS *******
+
+Test Case 1: | LDUR X9, [X22, #64]
++++ Step 1: Pass: |alu_result| time = 5 ns | er = 80 | ar = 80 | er_bits = 64 | ar_bits = 64 +++
++++ Step 2: Pass: |zero| time = 5 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+Test Case 2: | ADD X10, X19, X9
++++ Step 1: Pass: |alu_result| time = 15 ns | er = 30 | ar = 30 | er_bits = 64 | ar_bits = 64 +++
++++ Step 2: Pass: |zero| time = 15 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+Test Case 3: | SUB X11, X20, X10
++++ Step 1: Pass: |alu_result| time = 25 ns | er = 0 | ar = 0 | er_bits = 64 | ar_bits = 64 +++
++++ Step 2: Pass: |zero| time = 25 ns | er = 1 | ar = 1 | er_bits = 1 | ar_bits = 1 +++
+Test Case 4: | STUR X11, [X22, #96]
++++ Step 1: Pass: |alu_result| time = 35 ns | er = 112 | ar = 112 | er_bits = 64 | ar_bits = 64 +++
++++ Step 2: Pass: |zero| time = 35 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+Test Case 5: | CBZ X11, -5
++++ Step 1: Pass: |branch_target| time = 45 ns | er = -4 | ar = -4 | er_bits = 64 | ar_bits = 64 +++
++++ Step 2: Pass: |alu_result| time = 45 ns | er = 0 | ar = 0 | er_bits = 64 | ar_bits = 64 +++
++++ Step 3: Pass: |zero| time = 45 ns | er = 1 | ar = 1 | er_bits = 1 | ar_bits = 1 +++
+Test Case 6: | CBZ X9, 8
++++ Step 1: Pass: |branch_target| time = 55 ns | er = 52 | ar = 52 | er_bits = 64 | ar_bits = 64 +++
++++ Step 2: Pass: |alu_result| time = 55 ns | er = 20 | ar = 20 | er_bits = 64 | ar_bits = 64 +++
++++ Step 3: Pass: |zero| time = 55 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+Test Case 7: | B 64
+--- Step 1: Fail: |branch_target| time = 65 ns | er = 184 | ar = 280 | er_bits = 64 | ar_bits = 64 ---
+Test Case 8: | B -55
++++ Step 1: Pass: |branch_target| time = 75 ns | er = -192 | ar = -192 | er_bits = 64 | ar_bits = 64 +++
+Test Case 9: | ORR X9, X10, X21
++++ Step 1: Pass: |alu_result| time = 85 ns | er = 30 | ar = 30 | er_bits = 64 | ar_bits = 64 +++
++++ Step 2: Pass: |zero| time = 85 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+Test Case 10: | AND X9, X22, X10
++++ Step 1: Pass: |alu_result| time = 95 ns | er = 16 | ar = 16 | er_bits = 64 | ar_bits = 64 +++
++++ Step 2: Pass: |zero| time = 95 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+
+Pass Count = 19
+Fail Count = 1
+
+******* END TEST RESULTS *******
+
+$finish called at time : 100 ns : File "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/3_execute/iExecute_test.sv" Line 259
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 1597.660 ; gain = 0.000
+add_bp {C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/3_execute/iExecute_test.sv} 196
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'iExecute_test'
+WARNING: [Vivado 12-12986] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj iExecute_test_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'iExecute_test'
+WARNING: [Vivado 12-12986] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot iExecute_test_behav xil_defaultlib.iExecute_test xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2021.2
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: C:/XilinxVitis/Vivado/2021.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot iExecute_test_behav xil_defaultlib.iExecute_test xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Time resolution is 1 ps
+
+******* BEGIN TEST RESULTS *******
+
+Test Case 1: | LDUR X9, [X22, #64]
++++ Step 1: Pass: |alu_result| time = 5 ns | er = 80 | ar = 80 | er_bits = 64 | ar_bits = 64 +++
++++ Step 2: Pass: |zero| time = 5 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+Test Case 2: | ADD X10, X19, X9
++++ Step 1: Pass: |alu_result| time = 15 ns | er = 30 | ar = 30 | er_bits = 64 | ar_bits = 64 +++
++++ Step 2: Pass: |zero| time = 15 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+Test Case 3: | SUB X11, X20, X10
++++ Step 1: Pass: |alu_result| time = 25 ns | er = 0 | ar = 0 | er_bits = 64 | ar_bits = 64 +++
++++ Step 2: Pass: |zero| time = 25 ns | er = 1 | ar = 1 | er_bits = 1 | ar_bits = 1 +++
+Test Case 4: | STUR X11, [X22, #96]
++++ Step 1: Pass: |alu_result| time = 35 ns | er = 112 | ar = 112 | er_bits = 64 | ar_bits = 64 +++
++++ Step 2: Pass: |zero| time = 35 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+Test Case 5: | CBZ X11, -5
++++ Step 1: Pass: |branch_target| time = 45 ns | er = -4 | ar = -4 | er_bits = 64 | ar_bits = 64 +++
++++ Step 2: Pass: |alu_result| time = 45 ns | er = 0 | ar = 0 | er_bits = 64 | ar_bits = 64 +++
++++ Step 3: Pass: |zero| time = 45 ns | er = 1 | ar = 1 | er_bits = 1 | ar_bits = 1 +++
+Test Case 6: | CBZ X9, 8
++++ Step 1: Pass: |branch_target| time = 55 ns | er = 52 | ar = 52 | er_bits = 64 | ar_bits = 64 +++
++++ Step 2: Pass: |alu_result| time = 55 ns | er = 20 | ar = 20 | er_bits = 64 | ar_bits = 64 +++
++++ Step 3: Pass: |zero| time = 55 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+Test Case 7: | B 64
+--- Step 1: Fail: |branch_target| time = 65 ns | er = 184 | ar = 280 | er_bits = 64 | ar_bits = 64 ---
+Stopped at time : 70 ns : File "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/3_execute/iExecute_test.sv" Line 196
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 1597.660 ; gain = 0.000
+remove_bps -file {C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/3_execute/iExecute_test.sv} -line 196
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'iExecute_test'
+WARNING: [Vivado 12-12986] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj iExecute_test_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/0_common/verification_functions.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/3_execute/iExecute_test.sv" into library xil_defaultlib
+WARNING: [VRFC 10-3264] design element 'verification' is previously defined, ignoring this definition [../../../../../ARM-Lab/code/0_common/verification_functions.sv:3]
+INFO: [VRFC 10-311] analyzing module iExecute_test
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'iExecute_test'
+WARNING: [Vivado 12-12986] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/ARM-Project.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot iExecute_test_behav xil_defaultlib.iExecute_test xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2021.2
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: C:/XilinxVitis/Vivado/2021.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot iExecute_test_behav xil_defaultlib.iExecute_test xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package xil_defaultlib.verification
+Compiling module xil_defaultlib.adder
+Compiling module xil_defaultlib.mux(SIZE=64)
+Compiling module xil_defaultlib.alu
+Compiling module xil_defaultlib.alu_control
+Compiling module xil_defaultlib.iExecute
+Compiling module xil_defaultlib.iExecute_test
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot iExecute_test_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+Time resolution is 1 ps
+
+******* BEGIN TEST RESULTS *******
+
+Test Case 1: | LDUR X9, [X22, #64]
++++ Step 1: Pass: |alu_result| time = 5 ns | er = 80 | ar = 80 | er_bits = 64 | ar_bits = 64 +++
++++ Step 2: Pass: |zero| time = 5 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+Test Case 2: | ADD X10, X19, X9
++++ Step 1: Pass: |alu_result| time = 15 ns | er = 30 | ar = 30 | er_bits = 64 | ar_bits = 64 +++
++++ Step 2: Pass: |zero| time = 15 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+Test Case 3: | SUB X11, X20, X10
++++ Step 1: Pass: |alu_result| time = 25 ns | er = 0 | ar = 0 | er_bits = 64 | ar_bits = 64 +++
++++ Step 2: Pass: |zero| time = 25 ns | er = 1 | ar = 1 | er_bits = 1 | ar_bits = 1 +++
+Test Case 4: | STUR X11, [X22, #96]
++++ Step 1: Pass: |alu_result| time = 35 ns | er = 112 | ar = 112 | er_bits = 64 | ar_bits = 64 +++
++++ Step 2: Pass: |zero| time = 35 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+Test Case 5: | CBZ X11, -5
++++ Step 1: Pass: |branch_target| time = 45 ns | er = -4 | ar = -4 | er_bits = 64 | ar_bits = 64 +++
++++ Step 2: Pass: |alu_result| time = 45 ns | er = 0 | ar = 0 | er_bits = 64 | ar_bits = 64 +++
++++ Step 3: Pass: |zero| time = 45 ns | er = 1 | ar = 1 | er_bits = 1 | ar_bits = 1 +++
+Test Case 6: | CBZ X9, 8
++++ Step 1: Pass: |branch_target| time = 55 ns | er = 52 | ar = 52 | er_bits = 64 | ar_bits = 64 +++
++++ Step 2: Pass: |alu_result| time = 55 ns | er = 20 | ar = 20 | er_bits = 64 | ar_bits = 64 +++
++++ Step 3: Pass: |zero| time = 55 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+Test Case 7: | B 64
++++ Step 1: Pass: |branch_target| time = 65 ns | er = 280 | ar = 280 | er_bits = 64 | ar_bits = 64 +++
+Test Case 8: | B -55
++++ Step 1: Pass: |branch_target| time = 75 ns | er = -192 | ar = -192 | er_bits = 64 | ar_bits = 64 +++
+Test Case 9: | ORR X9, X10, X21
++++ Step 1: Pass: |alu_result| time = 85 ns | er = 30 | ar = 30 | er_bits = 64 | ar_bits = 64 +++
++++ Step 2: Pass: |zero| time = 85 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+Test Case 10: | AND X9, X22, X10
++++ Step 1: Pass: |alu_result| time = 95 ns | er = 16 | ar = 16 | er_bits = 64 | ar_bits = 64 +++
++++ Step 2: Pass: |zero| time = 95 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+
+Pass Count = 20
+Fail Count = 0
+
+******* END TEST RESULTS *******
+
+$finish called at time : 100 ns : File "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/3_execute/iExecute_test.sv" Line 259
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 1597.660 ; gain = 0.000
+close [ open C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/3_execute/fde_integration.sv w ]
+add_files C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/3_execute/fde_integration.sv
+update_compile_order -fileset sources_1
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Mar 28 13:52:01 2024...

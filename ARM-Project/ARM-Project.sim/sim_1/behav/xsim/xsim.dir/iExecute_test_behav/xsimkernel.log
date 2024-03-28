@@ -2,3 +2,6 @@ Running: xsim.dir/iExecute_test_behav/xsimk.exe -simmode gui -wdb iExecute_test_
 Design successfully loaded
 Design Loading Memory Usage: 7156 KB (Peak: 7156 KB)
 Design Loading CPU Usage: 15 ms
+Simulation completed
+Simulation Memory Usage: 9136 KB (Peak: 9136 KB)
+Simulation CPU Usage: 15 ms
