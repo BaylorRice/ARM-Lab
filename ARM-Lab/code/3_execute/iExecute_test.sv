@@ -182,7 +182,7 @@ begin
     read_data2<=`WORD'd99;
     opcode<=`B;    
     
-    er_branch_target = `WORD'd184;
+    er_branch_target = `WORD'd280;
     //er_alu_result = `WORD'dX;
     //er_zero = 1'bX;
     #5;
