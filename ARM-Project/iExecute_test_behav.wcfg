@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="iExecute_test_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="iExecute_test" />
+            <top_module name="verification" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="99,989 ps"></ZoomStartTime>
+      <ZoomEndTime time="100,003 ps"></ZoomEndTime>
+      <Cursor1Time time="100,000 ps"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="145"></NameColumnWidth>
+      <ValueColumnWidth column_width="144"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="15" />
+   <wvobject fp_name="/iExecute_test/tc" type="array">
+      <obj_property name="ElementShortName">tc[31:0]</obj_property>
+      <obj_property name="ObjectShortName">tc[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/iExecute_test/ts" type="array">
+      <obj_property name="ElementShortName">ts[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ts[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/iExecute_test/cur_pc" type="array">
+      <obj_property name="ElementShortName">cur_pc[63:0]</obj_property>
+      <obj_property name="ObjectShortName">cur_pc[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/iExecute_test/read_data1" type="array">
+      <obj_property name="ElementShortName">read_data1[63:0]</obj_property>
+      <obj_property name="ObjectShortName">read_data1[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/iExecute_test/read_data2" type="array">
+      <obj_property name="ElementShortName">read_data2[63:0]</obj_property>
+      <obj_property name="ObjectShortName">read_data2[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/iExecute_test/sign_extended_output" type="array">
+      <obj_property name="ElementShortName">sign_extended_output[63:0]</obj_property>
+      <obj_property name="ObjectShortName">sign_extended_output[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/iExecute_test/branch_target" type="array">
+      <obj_property name="ElementShortName">branch_target[63:0]</obj_property>
+      <obj_property name="ObjectShortName">branch_target[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/iExecute_test/alu_result" type="array">
+      <obj_property name="ElementShortName">alu_result[63:0]</obj_property>
+      <obj_property name="ObjectShortName">alu_result[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/iExecute_test/zero" type="logic">
+      <obj_property name="ElementShortName">zero</obj_property>
+      <obj_property name="ObjectShortName">zero</obj_property>
+   </wvobject>
+   <wvobject fp_name="/iExecute_test/alu_op" type="array">
+      <obj_property name="ElementShortName">alu_op[1:0]</obj_property>
+      <obj_property name="ObjectShortName">alu_op[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/iExecute_test/opcode" type="array">
+      <obj_property name="ElementShortName">opcode[10:0]</obj_property>
+      <obj_property name="ObjectShortName">opcode[10:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/iExecute_test/alu_src" type="logic">
+      <obj_property name="ElementShortName">alu_src</obj_property>
+      <obj_property name="ObjectShortName">alu_src</obj_property>
+   </wvobject>
+   <wvobject fp_name="/iExecute_test/er_branch_target" type="array">
+      <obj_property name="ElementShortName">er_branch_target[63:0]</obj_property>
+      <obj_property name="ObjectShortName">er_branch_target[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/iExecute_test/er_alu_result" type="array">
+      <obj_property name="ElementShortName">er_alu_result[63:0]</obj_property>
+      <obj_property name="ObjectShortName">er_alu_result[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/iExecute_test/er_zero" type="logic">
+      <obj_property name="ElementShortName">er_zero</obj_property>
+      <obj_property name="ObjectShortName">er_zero</obj_property>
+   </wvobject>
+</wave_config>

@@ -56,11 +56,11 @@ begin
     read_data2<=`WORD'd10;
     opcode<=`LDUR;
 
-    er_branch_target = `WORD'dX;
-    er_alu_result = `WORD'dX;
-    er_zero = 1'bX;
+    //er_branch_target = `WORD'hX;
+    er_alu_result = `WORD'd80;
+    er_zero = 1'b0;
     #5;
-    verify(ts++, branch_target_string, er_branch_target, $bits(er_branch_target), branch_target, $bits(branch_target), `S_DEC);        
+    //verify(ts++, branch_target_string, er_branch_target, $bits(er_branch_target), branch_target, $bits(branch_target), `S_DEC);        
     verify(ts++, alu_result_string, er_alu_result, $bits(er_alu_result), alu_result, $bits(alu_result), `S_DEC);    
     verify(ts++, zero_string, er_zero, $bits(er_zero), zero, $bits(zero), `BINARY);    
     
@@ -77,11 +77,11 @@ begin
     read_data2<=`WORD'd20;
     opcode<=`ADD;
     
-    er_branch_target = `WORD'dX;
-    er_alu_result = `WORD'dX;
-    er_zero = 1'bX;
+    //er_branch_target = `WORD'dX;
+    er_alu_result = `WORD'd30;
+    er_zero = 1'b0;
     #5;
-    verify(ts++, branch_target_string, er_branch_target, $bits(er_branch_target), branch_target, $bits(branch_target), `S_DEC);        
+    //verify(ts++, branch_target_string, er_branch_target, $bits(er_branch_target), branch_target, $bits(branch_target), `S_DEC);        
     verify(ts++, alu_result_string, er_alu_result, $bits(er_alu_result), alu_result, $bits(alu_result), `S_DEC);    
     verify(ts++, zero_string, er_zero, $bits(er_zero), zero, $bits(zero), `BINARY);    
     
@@ -98,11 +98,11 @@ begin
     read_data2<=`WORD'd30;
     opcode<=`SUB;
     
-    er_branch_target = `WORD'dX;
-    er_alu_result = `WORD'dX;
-    er_zero = 1'bX;
+    //er_branch_target = `WORD'dX;
+    er_alu_result = `WORD'd0;
+    er_zero = 1'b1;
     #5;
-    verify(ts++, branch_target_string, er_branch_target, $bits(er_branch_target), branch_target, $bits(branch_target), `S_DEC);        
+    //verify(ts++, branch_target_string, er_branch_target, $bits(er_branch_target), branch_target, $bits(branch_target), `S_DEC);        
     verify(ts++, alu_result_string, er_alu_result, $bits(er_alu_result), alu_result, $bits(alu_result), `S_DEC);    
     verify(ts++, zero_string, er_zero, $bits(er_zero), zero, $bits(zero), `BINARY);    
     
@@ -119,11 +119,11 @@ begin
     read_data2<=`WORD'd0;
     opcode<=`STUR;
     
-    er_branch_target = `WORD'dX;
-    er_alu_result = `WORD'dX;
-    er_zero = 1'bX;
+    //er_branch_target = `WORD'dX;
+    er_alu_result = `WORD'd112;
+    er_zero = 1'b0;
     #5;
-    verify(ts++, branch_target_string, er_branch_target, $bits(er_branch_target), branch_target, $bits(branch_target), `S_DEC);        
+    //verify(ts++, branch_target_string, er_branch_target, $bits(er_branch_target), branch_target, $bits(branch_target), `S_DEC);        
     verify(ts++, alu_result_string, er_alu_result, $bits(er_alu_result), alu_result, $bits(alu_result), `S_DEC);    
     verify(ts++, zero_string, er_zero, $bits(er_zero), zero, $bits(zero), `BINARY);    
     
@@ -140,9 +140,9 @@ begin
     read_data2<=`WORD'd0;
     opcode<=`CBZ;
     
-    er_branch_target = -`WORD'dX;
-    er_alu_result = `WORD'dX;
-    er_zero = 1'bX;
+    er_branch_target = -`WORD'd4;
+    er_alu_result = `WORD'd0;
+    er_zero = 1'b1;
     #5;
     verify(ts++, branch_target_string, er_branch_target, $bits(er_branch_target), branch_target, $bits(branch_target), `S_DEC);        
     verify(ts++, alu_result_string, er_alu_result, $bits(er_alu_result), alu_result, $bits(alu_result), `S_DEC);    
@@ -161,9 +161,9 @@ begin
     read_data2<=`WORD'd20;
     opcode<=`CBZ;
     
-    er_branch_target = `WORD'dX;
-    er_alu_result = `WORD'dX;
-    er_zero = 1'bX;
+    er_branch_target = `WORD'd52;
+    er_alu_result = `WORD'd20;
+    er_zero = 1'b0;
     #5;
     verify(ts++, branch_target_string, er_branch_target, $bits(er_branch_target), branch_target, $bits(branch_target), `S_DEC);            
     verify(ts++, alu_result_string, er_alu_result, $bits(er_alu_result), alu_result, $bits(alu_result), `S_DEC);    
@@ -182,13 +182,13 @@ begin
     read_data2<=`WORD'd99;
     opcode<=`B;    
     
-    er_branch_target = `WORD'dX;
-    er_alu_result = `WORD'dX;
-    er_zero = 1'bX;
+    er_branch_target = `WORD'd184;
+    //er_alu_result = `WORD'dX;
+    //er_zero = 1'bX;
     #5;
     verify(ts++, branch_target_string, er_branch_target, $bits(er_branch_target), branch_target, $bits(branch_target), `S_DEC);            
-    verify(ts++, alu_result_string, er_alu_result, $bits(er_alu_result), alu_result, $bits(alu_result), `S_DEC);    
-    verify(ts++, zero_string, er_zero, $bits(er_zero), zero, $bits(zero), `BINARY);    
+    //verify(ts++, alu_result_string, er_alu_result, $bits(er_alu_result), alu_result, $bits(alu_result), `S_DEC);    
+    //verify(ts++, zero_string, er_zero, $bits(er_zero), zero, $bits(zero), `BINARY);    
    
     #5;
         
@@ -203,13 +203,13 @@ begin
     read_data2<=`WORD'd99;
     opcode<=`B;    
     
-    er_branch_target = -`WORD'dX;
-    er_alu_result = `WORD'dX;
-    er_zero = 1'bX;
+    er_branch_target = -`WORD'd192;
+    //er_alu_result = `WORD'dX;
+    //er_zero = 1'bX;
     #5;
     verify(ts++, branch_target_string, er_branch_target, $bits(er_branch_target), branch_target, $bits(branch_target), `S_DEC);                
-    verify(ts++, alu_result_string, er_alu_result, $bits(er_alu_result), alu_result, $bits(alu_result), `S_DEC);    
-    verify(ts++, zero_string, er_zero, $bits(er_zero), zero, $bits(zero), `BINARY);    
+    //verify(ts++, alu_result_string, er_alu_result, $bits(er_alu_result), alu_result, $bits(alu_result), `S_DEC);    
+    //verify(ts++, zero_string, er_zero, $bits(er_zero), zero, $bits(zero), `BINARY);    
     
     #5;
     
@@ -224,11 +224,11 @@ begin
     read_data2<=`WORD'd0;
     opcode<=`ORR;
     
-    er_branch_target = `WORD'dX;
-    er_alu_result = `WORD'dX;
-    er_zero = 1'bX;
+    //er_branch_target = `WORD'dX;
+    er_alu_result = `WORD'd30;
+    er_zero = 1'b0;
     #5;
-    verify(ts++, branch_target_string, er_branch_target, $bits(er_branch_target), branch_target, $bits(branch_target), `S_DEC);        
+    //verify(ts++, branch_target_string, er_branch_target, $bits(er_branch_target), branch_target, $bits(branch_target), `S_DEC);        
     verify(ts++, alu_result_string, er_alu_result, $bits(er_alu_result), alu_result, $bits(alu_result), `S_DEC);    
     verify(ts++, zero_string, er_zero, $bits(er_zero), zero, $bits(zero), `BINARY);    
     
@@ -245,11 +245,11 @@ begin
     read_data2<=`WORD'd30;
     opcode<=`AND;
        
-    er_branch_target = `WORD'dX;
-    er_alu_result = `WORD'dX;
-    er_zero = 1'bX;
+    //er_branch_target = `WORD'dX;
+    er_alu_result = `WORD'd16;
+    er_zero = 1'b0;
     #5;
-    verify(ts++, branch_target_string, er_branch_target, $bits(er_branch_target), branch_target, $bits(branch_target), `S_DEC);        
+    //verify(ts++, branch_target_string, er_branch_target, $bits(er_branch_target), branch_target, $bits(branch_target), `S_DEC);        
     verify(ts++, alu_result_string, er_alu_result, $bits(er_alu_result), alu_result, $bits(alu_result), `S_DEC);    
     verify(ts++, zero_string, er_zero, $bits(er_zero), zero, $bits(zero), `BINARY);    
     
