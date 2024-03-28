@@ -22,6 +22,15 @@
 
 
 module iExecute(
-
+    input wire [`WORD-1:0] cur_pc,
+    input wire [`WORD-1:0] read_data1,
+    input wire [`WORD-1:0] read_data2,
+    input wire [`WORD-1:0] sign_extended_output,
+    input wire [1:0] alu_op,
+    input wire [10:0] opcode,
+    input wire alu_src,
+    output reg [`WORD-1:0] branch_target,
+    output reg [`WORD-1:0] alu_result,
+    output reg zero
     );
 endmodule
