@@ -49,7 +49,7 @@ initial
     address=`WORD'd0; 
     mem_write_data=`WORD'd0; 
     #(`CYCLE/2);
-    er_mem_read_data = `WORD'dX;
+    er_mem_read_data = `WORD'dZ;
     verify(ts, mem_read_data_string, er_mem_read_data, $bits(er_mem_read_data), mem_read_data, $bits(mem_read_data), `S_DEC);        
     #(`CYCLE/2);
  
@@ -59,7 +59,7 @@ initial
     address=`WORD'd64; 
     mem_write_data=`WORD'd1; 
     #(`CYCLE/2);
-    er_mem_read_data = `WORD'dX;
+    er_mem_read_data = `WORD'd8;
     verify(ts, mem_read_data_string, er_mem_read_data, $bits(er_mem_read_data), mem_read_data, $bits(mem_read_data), `S_DEC);        
     #(`CYCLE/2);
 
@@ -69,7 +69,7 @@ initial
     address=`WORD'd16; 
     mem_write_data=`WORD'd1; 
     #(`CYCLE/2);
-    er_mem_read_data = `WORD'dX;
+    er_mem_read_data = `WORD'd2;
     verify(ts, mem_read_data_string, er_mem_read_data, $bits(er_mem_read_data), mem_read_data, $bits(mem_read_data), `S_DEC);        
     #(`CYCLE/2);
 
@@ -80,7 +80,7 @@ initial
     address=`WORD'd16; 
     mem_write_data= -`WORD'd168; 
     #(`CYCLE/2);
-    er_mem_read_data = `WORD'dX;
+    er_mem_read_data = `WORD'dZ;
     verify(ts, mem_read_data_string, er_mem_read_data, $bits(er_mem_read_data), mem_read_data, $bits(mem_read_data), `S_DEC);        
     #(`CYCLE/2);
 
@@ -90,7 +90,7 @@ initial
     address=`WORD'd64; 
     mem_write_data=`WORD'd12345; 
     #(`CYCLE/2);
-    er_mem_read_data = `WORD'dX;
+    er_mem_read_data = `WORD'dZ;
     verify(ts, mem_read_data_string, er_mem_read_data, $bits(er_mem_read_data), mem_read_data, $bits(mem_read_data), `S_DEC);        
     #(`CYCLE/2);
      
@@ -100,7 +100,7 @@ initial
     address=`WORD'd16; 
     mem_write_data=`WORD'd4; 
     #(`CYCLE/2);
-    er_mem_read_data = `WORD'dX;
+    er_mem_read_data = -`WORD'd168;
     verify(ts, mem_read_data_string, er_mem_read_data, $bits(er_mem_read_data), mem_read_data, $bits(mem_read_data), `S_DEC);        
     #(`CYCLE/2);
      
@@ -110,7 +110,7 @@ initial
     address=`WORD'd64; 
     mem_write_data=`WORD'd4; 
     #(`CYCLE/2);
-    er_mem_read_data = `WORD'dX;
+    er_mem_read_data = `WORD'd12345;
     verify(ts, mem_read_data_string, er_mem_read_data, $bits(er_mem_read_data), mem_read_data, $bits(mem_read_data), `S_DEC);        
     #(`CYCLE/2);
         
@@ -120,7 +120,7 @@ initial
     address=`WORD'd32; 
     mem_write_data=`WORD'd2345; 
     #(`CYCLE/2);
-    er_mem_read_data = `WORD'dX;
+    er_mem_read_data = `WORD'd4;
     verify(ts, mem_read_data_string, er_mem_read_data, $bits(er_mem_read_data), mem_read_data, $bits(mem_read_data), `S_DEC);        
     #(`CYCLE/2);
      
@@ -130,7 +130,7 @@ initial
     address=`WORD'd32; 
     mem_write_data=`WORD'd2345; 
     #(`CYCLE/2);
-    er_mem_read_data = `WORD'dX;
+    er_mem_read_data = `WORD'd4;
     verify(ts, mem_read_data_string, er_mem_read_data, $bits(er_mem_read_data), mem_read_data, $bits(mem_read_data), `S_DEC);        
     #(`CYCLE/2);
  
@@ -139,7 +139,7 @@ initial
     branch = 0;
     zero = 0; 
     #(`CYCLE/2);
-    er_pc_src = X;
+    er_pc_src = 1;
     verify(ts, pc_src_string, er_pc_src, $bits(er_pc_src), pc_src, $bits(pc_src), `BINARY);        
     #(`CYCLE/2);
 
@@ -148,7 +148,7 @@ initial
     branch = 0;
     zero = 0; 
     #(`CYCLE/2);
-    er_pc_src = X;
+    er_pc_src = 0;
     verify(ts, pc_src_string, er_pc_src, $bits(er_pc_src), pc_src, $bits(pc_src), `BINARY);        
     #(`CYCLE/2);
  
@@ -157,7 +157,7 @@ initial
     branch = 1;
     zero = 0; 
     #(`CYCLE/2);
-    er_pc_src = X;
+    er_pc_src = 0;
     verify(ts, pc_src_string, er_pc_src, $bits(er_pc_src), pc_src, $bits(pc_src), `BINARY);        
     #(`CYCLE/2); 
 
@@ -166,7 +166,7 @@ initial
     branch = 1;
     zero = 1; 
     #(`CYCLE/2);
-    er_pc_src = X;
+    er_pc_src = 1;
     verify(ts, pc_src_string, er_pc_src, $bits(er_pc_src), pc_src, $bits(pc_src), `BINARY);        
     #(`CYCLE/2); 
 
@@ -175,7 +175,7 @@ initial
     branch = 0;
     zero = 1; 
     #(`CYCLE/2);
-    er_pc_src = X;
+    er_pc_src = 0;
     verify(ts, pc_src_string, er_pc_src, $bits(er_pc_src), pc_src, $bits(pc_src), `BINARY);        
     #(`CYCLE/2); 
          
