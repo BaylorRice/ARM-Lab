@@ -32,11 +32,16 @@ module iMemory(
     input wire [`WORD-1:0] mem_address,
     input wire [`WORD-1:0] mem_write_data,
     output reg [`WORD-1:0] mem_read_data,
-    output reg pc_src
+    output wire pc_src
     );
     
-    reg[`WORD-1:0] dmem [99:0];
+    // PC Control
+    assign pc_src = (branch && zero) || uncondbranch;
 
+
+    // Memory Module
+    reg[`WORD-1:0] dmem [99:0];
+    
     initial
     $readmemb(`DMEMFILE, dmem);
 
