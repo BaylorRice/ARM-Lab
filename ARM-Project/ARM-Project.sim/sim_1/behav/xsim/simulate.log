@@ -2,42 +2,40 @@ Time resolution is 1 ps
 
 ******* BEGIN TEST RESULTS *******
 
-
-Test Case 1: | (10 + 15)
-+++ Step 1: Pass: |alu_result| time = 5 ns | er = 25 | ar = 25 | er_bits = 64 | ar_bits = 64 +++
+Test Case 1: | LDUR X9, [X22, #64]
++++ Step 1: Pass: |alu_result| time = 5 ns | er = 80 | ar = 80 | er_bits = 64 | ar_bits = 64 +++
 +++ Step 2: Pass: |zero| time = 5 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
-
-Test Case 2: | (10 - 15)
-+++ Step 1: Pass: |alu_result| time = 15 ns | er = -5 | ar = -5 | er_bits = 64 | ar_bits = 64 +++
+Test Case 2: | ADD X10, X19, X9
++++ Step 1: Pass: |alu_result| time = 15 ns | er = 30 | ar = 30 | er_bits = 64 | ar_bits = 64 +++
 +++ Step 2: Pass: |zero| time = 15 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+Test Case 3: | SUB X11, X20, X10
++++ Step 1: Pass: |alu_result| time = 25 ns | er = 0 | ar = 0 | er_bits = 64 | ar_bits = 64 +++
++++ Step 2: Pass: |zero| time = 25 ns | er = 1 | ar = 1 | er_bits = 1 | ar_bits = 1 +++
+Test Case 4: | STUR X11, [X22, #96]
++++ Step 1: Pass: |alu_result| time = 35 ns | er = 112 | ar = 112 | er_bits = 64 | ar_bits = 64 +++
++++ Step 2: Pass: |zero| time = 35 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+Test Case 5: | CBZ X11, -5
++++ Step 1: Pass: |branch_target| time = 45 ns | er = -4 | ar = -4 | er_bits = 64 | ar_bits = 64 +++
++++ Step 2: Pass: |alu_result| time = 45 ns | er = 0 | ar = 0 | er_bits = 64 | ar_bits = 64 +++
++++ Step 3: Pass: |zero| time = 45 ns | er = 1 | ar = 1 | er_bits = 1 | ar_bits = 1 +++
+Test Case 6: | CBZ X9, 8
++++ Step 1: Pass: |branch_target| time = 55 ns | er = 52 | ar = 52 | er_bits = 64 | ar_bits = 64 +++
++++ Step 2: Pass: |alu_result| time = 55 ns | er = 20 | ar = 20 | er_bits = 64 | ar_bits = 64 +++
++++ Step 3: Pass: |zero| time = 55 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+Test Case 7: | B 64
++++ Step 1: Pass: |branch_target| time = 65 ns | er = 280 | ar = 280 | er_bits = 64 | ar_bits = 64 +++
+Test Case 8: | B -55
++++ Step 1: Pass: |branch_target| time = 75 ns | er = -192 | ar = -192 | er_bits = 64 | ar_bits = 64 +++
+Test Case 9: | ORR X9, X10, X21
++++ Step 1: Pass: |alu_result| time = 85 ns | er = 30 | ar = 30 | er_bits = 64 | ar_bits = 64 +++
++++ Step 2: Pass: |zero| time = 85 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+Test Case 10: | AND X9, X22, X10
++++ Step 1: Pass: |alu_result| time = 95 ns | er = 16 | ar = 16 | er_bits = 64 | ar_bits = 64 +++
++++ Step 2: Pass: |zero| time = 95 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
 
-Test Case 3: | (10 & 15)
-+++ Step 1: Pass: |alu_result| time = 20 ns | er = 10 | ar = 10 | er_bits = 64 | ar_bits = 64 +++
-+++ Step 2: Pass: |zero| time = 20 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
-
-Test Case 4: | (10 | 15)
-+++ Step 1: Pass: |alu_result| time = 25 ns | er = 15 | ar = 15 | er_bits = 64 | ar_bits = 64 +++
-+++ Step 2: Pass: |zero| time = 25 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
-
-Test Case 5: | PASS b=15
-+++ Step 1: Pass: |alu_result| time = 30 ns | er = 15 | ar = 15 | er_bits = 64 | ar_bits = 64 +++
-+++ Step 2: Pass: |zero| time = 30 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
-
-Test Case 6: | PASS b=0
-+++ Step 1: Pass: |alu_result| time = 35 ns | er = 0 | ar = 0 | er_bits = 64 | ar_bits = 64 +++
-+++ Step 2: Pass: |zero| time = 35 ns | er = 1 | ar = 1 | er_bits = 1 | ar_bits = 1 +++
-
-Test Case 7: | (65536 + 65536)
-+++ Step 1: Pass: |alu_result| time = 40 ns | er = 131072 | ar = 131072 | er_bits = 64 | ar_bits = 64 +++
-+++ Step 2: Pass: |zero| time = 40 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
-
-Test Case 8: | (65536 - 65536)
-+++ Step 1: Pass: |alu_result| time = 50 ns | er = 0 | ar = 0 | er_bits = 64 | ar_bits = 64 +++
-+++ Step 2: Pass: |zero| time = 50 ns | er = 1 | ar = 1 | er_bits = 1 | ar_bits = 1 +++
-
-Pass Count = 16
+Pass Count = 20
 Fail Count = 0
 
 ******* END TEST RESULTS *******
 
-$finish called at time : 50 ns : File "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/3_execute/alu_test.sv" Line 134
+$finish called at time : 100 ns : File "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/3_execute/iExecute_test.sv" Line 259

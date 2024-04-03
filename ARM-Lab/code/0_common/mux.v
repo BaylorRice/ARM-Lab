@@ -8,6 +8,8 @@ module mux#(
     output [SIZE-1:0] mux_out
 );
 
+    // 0 -> a, 1 -> b
+
     // DONE: Add body of mux here
     assign mux_out = control ? b_in : a_in;
 
