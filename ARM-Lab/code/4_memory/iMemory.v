@@ -45,7 +45,7 @@ module iMemory(
     $readmemb(`DMEMFILE, dmem);
 
     always @(posedge clk) begin
-        mem_read_data = mem_read ? dmem[mem_address/8] : Z;
+        mem_read_data = mem_read ? (dmem[mem_address/8]) : (`WORD-1'bZ);
         
         if (mem_write == 1) begin
             dmem[mem_address/8] = mem_write_data;
