@@ -1,4 +1,6 @@
 `timescale 1ns / 1ps
+`include "definitions.vh"
+
 //////////////////////////////////////////////////////////////////////////////////
 // Company: Baylor University
 // Engineer: Reese Ford
@@ -32,4 +34,7 @@ module iMemory(
     output reg [`WORD-1:0] mem_read_data,
     output reg pc_src
     );
+    
+    
+    
 endmodule
