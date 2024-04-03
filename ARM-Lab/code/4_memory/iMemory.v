@@ -35,20 +35,18 @@ module iMemory(
     output reg pc_src
     );
     
-    reg[`WORD-1:0] rmem [99:0];
+    reg[`WORD-1:0] dmem [99:0];
 
     initial
     $readmemb(`DMEMFILE, dmem);
 
-    always @(posedge read_clk) begin
-        read_data1 = dmem[read_register1];
-        read_data2 = dmem[read_register2];
-    end
-
-    always @(posedge write_clk) begin
-        if (reg_write == 1) begin
-            dmem[write_register] = write_data;
+    always @(posedge clk) begin
+        mem_read_data = mem_read ? dmem[mem_address] : Z;
+        
+        if (mem_write == 1) begin
+            dmem[mem_address] = mem_write_data;
         end
+        
     end
     
 endmodule
