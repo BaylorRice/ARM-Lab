@@ -21,6 +21,15 @@
 
 
 module iMemory(
-
+    input wire clk,
+    input wire zero,
+    input wire uncondbranch,
+    input wire branch,
+    input wire mem_read,
+    input wire mem_write,
+    input wire [`WORD-1:0] mem_address,
+    input wire [`WORD-1:0] mem_write_data,
+    output reg [`WORD-1:0] mem_read_data,
+    output reg pc_src
     );
 endmodule
