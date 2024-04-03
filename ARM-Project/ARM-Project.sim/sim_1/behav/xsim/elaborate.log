@@ -1,6 +1,6 @@
 Vivado Simulator v2021.2
 Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
-Running: C:/XilinxVitis/Vivado/2021.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot iExecute_test_behav xil_defaultlib.iExecute_test xil_defaultlib.glbl -log elaborate.log 
+Running: C:/Xilinx/Vivado/2021.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot iMemory_test_behav xil_defaultlib.iMemory_test xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
@@ -9,11 +9,8 @@ Starting simulation data flow analysis
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
 Compiling package xil_defaultlib.verification
-Compiling module xil_defaultlib.adder
-Compiling module xil_defaultlib.mux(SIZE=64)
-Compiling module xil_defaultlib.alu
-Compiling module xil_defaultlib.alu_control
-Compiling module xil_defaultlib.iExecute
-Compiling module xil_defaultlib.iExecute_test
+Compiling module xil_defaultlib.oscillator
+Compiling module xil_defaultlib.iMemory
+Compiling module xil_defaultlib.iMemory_test
 Compiling module xil_defaultlib.glbl
-Built simulation snapshot iExecute_test_behav
+Built simulation snapshot iMemory_test_behav
