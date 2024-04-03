@@ -38,7 +38,6 @@ module iMemory(
     // PC Control
     assign pc_src = (branch && zero) || uncondbranch;
 
-
     // Memory Module
     reg[`WORD-1:0] dmem [99:0];
     
