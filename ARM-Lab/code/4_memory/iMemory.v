@@ -41,10 +41,10 @@ module iMemory(
     $readmemb(`DMEMFILE, dmem);
 
     always @(posedge clk) begin
-        mem_read_data = mem_read ? dmem[mem_address] : Z;
+        mem_read_data = mem_read ? dmem[mem_address/8] : Z;
         
         if (mem_write == 1) begin
-            dmem[mem_address] = mem_write_data;
+            dmem[mem_address/8] = mem_write_data;
         end
         
     end
