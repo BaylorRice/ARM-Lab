@@ -483,6 +483,13 @@ module datapath;
     er_branch_target = -`WORD'd4;
     er_alu_result = `WORD'd0;
     er_zero = 1'b1;
+    
+    // Memory
+    //er_mem_read_data = `WORD'dZ;
+    er_pc_src = 1;
+    
+    // Writeback
+    //er_write_data = `WORD'dZ;
 
     #5;
     // verify that the signals match the er values 
@@ -498,6 +505,11 @@ module datapath;
     verify(ts++, branch_target_string, er_branch_target, $bits(er_branch_target), branch_target, $bits(branch_target), `S_DEC);
     verify(ts++, alu_result_string, er_alu_result, $bits(er_alu_result), alu_result, $bits(alu_result), `S_DEC);
     verify(ts++, zero_string, er_zero, $bits(er_zero), zero, $bits(zero), `BINARY);
+    
+    //verify(ts++, mem_read_data_string, er_mem_read_data, $bits(er_mem_read_data), mem_read_data, $bits(mem_read_data), `S_DEC);
+    verify(ts++, pc_src_string, er_pc_src, $bits(er_pc_src), pc_src, $bits(pc_src), `S_DEC);
+    //verify(ts++, write_data_string, er_write_data, $bits(er_write_data), write_data, $bits(write_data), `S_DEC);
+    
     #2
     // since we don't have an ALU or data memory yet, provide the write_data value (if applicable)
     //write_data = 0;
@@ -529,6 +541,13 @@ module datapath;
     er_alu_result = `WORD'd20;
     er_zero = 1'b0;
 
+    // Memory
+    //er_mem_read_data = `WORD'dZ;
+    er_pc_src = 0;
+    
+    // Writeback
+    //er_write_data = `WORD'dZ;
+
     #5;
     // verify that the signals match the er values 
     verify(ts++, pc_string, er_cur_pc, $bits(er_cur_pc), cur_pc, $bits(cur_pc), `S_DEC);
@@ -543,6 +562,10 @@ module datapath;
     verify(ts++, branch_target_string, er_branch_target, $bits(er_branch_target), branch_target, $bits(branch_target), `S_DEC);
     verify(ts++, alu_result_string, er_alu_result, $bits(er_alu_result), alu_result, $bits(alu_result), `S_DEC);
     verify(ts++, zero_string, er_zero, $bits(er_zero), zero, $bits(zero), `BINARY);
+    
+    //verify(ts++, mem_read_data_string, er_mem_read_data, $bits(er_mem_read_data), mem_read_data, $bits(mem_read_data), `S_DEC);
+    verify(ts++, pc_src_string, er_pc_src, $bits(er_pc_src), pc_src, $bits(pc_src), `S_DEC);
+    //verify(ts++, write_data_string, er_write_data, $bits(er_write_data), write_data, $bits(write_data), `S_DEC);
 
     #2
     // since we don't have an ALU or data memory yet, provide the write_data value (if applicable)
@@ -574,6 +597,13 @@ module datapath;
     er_branch_target = `WORD'd280;
     //er_alu_result = `WORD'dX;
     //er_zero = 1'bX;
+    
+    // Memory
+    //er_mem_read_data = `WORD'dZ;
+    er_pc_src = 1;
+    
+    // Writeback
+    //er_write_data = `WORD'dZ;
 
     #5;
     // verify that the signals match the er values 
@@ -589,6 +619,10 @@ module datapath;
     verify(ts++, branch_target_string, er_branch_target, $bits(er_branch_target), branch_target, $bits(branch_target), `S_DEC);
     //verify(ts++, alu_result_string, er_alu_result, $bits(er_alu_result), alu_result, $bits(alu_result), `S_DEC);    
     //verify(ts++, zero_string, er_zero, $bits(er_zero), zero, $bits(zero), `BINARY);
+    
+    //verify(ts++, mem_read_data_string, er_mem_read_data, $bits(er_mem_read_data), mem_read_data, $bits(mem_read_data), `S_DEC);
+    verify(ts++, pc_src_string, er_pc_src, $bits(er_pc_src), pc_src, $bits(pc_src), `S_DEC);
+    //verify(ts++, write_data_string, er_write_data, $bits(er_write_data), write_data, $bits(write_data), `S_DEC);
 
     #2
     // since we don't have an ALU or data memory yet, provide the write_data value (if applicable)
@@ -620,6 +654,13 @@ module datapath;
     er_branch_target = -`WORD'd192;
     //er_alu_result = `WORD'dX;
     //er_zero = 1'bX;
+    
+    // Memory
+    //er_mem_read_data = `WORD'dZ;
+    er_pc_src = 1;
+    
+    // Writeback
+    //er_write_data = `WORD'dZ;
 
     #5;
     // verify that the signals match the er values 
@@ -635,6 +676,10 @@ module datapath;
     verify(ts++, branch_target_string, er_branch_target, $bits(er_branch_target), branch_target, $bits(branch_target), `S_DEC);
     //verify(ts++, alu_result_string, er_alu_result, $bits(er_alu_result), alu_result, $bits(alu_result), `S_DEC);    
     //verify(ts++, zero_string, er_zero, $bits(er_zero), zero, $bits(zero), `BINARY);    
+    
+    //verify(ts++, mem_read_data_string, er_mem_read_data, $bits(er_mem_read_data), mem_read_data, $bits(mem_read_data), `S_DEC);
+    verify(ts++, pc_src_string, er_pc_src, $bits(er_pc_src), pc_src, $bits(pc_src), `S_DEC);
+    //verify(ts++, write_data_string, er_write_data, $bits(er_write_data), write_data, $bits(write_data), `S_DEC);
 
     #2
     // since we don't have an ALU or data memory yet, provide the write_data value (if applicable)
@@ -666,6 +711,13 @@ module datapath;
     //er_branch_target = `WORD'dX;
     er_alu_result = `WORD'd30;
     er_zero = 1'b0;
+    
+    // Memory
+    //er_mem_read_data = `WORD'dZ;
+    er_pc_src = 0;
+    
+    // Writeback
+    er_write_data = `WORD'd30;
 
     #5;
     // verify that the signals match the er values 
@@ -681,6 +733,10 @@ module datapath;
     //verify(ts++, branch_target_string, er_branch_target, $bits(er_branch_target), branch_target, $bits(branch_target), `S_DEC);        
     verify(ts++, alu_result_string, er_alu_result, $bits(er_alu_result), alu_result, $bits(alu_result), `S_DEC);
     verify(ts++, zero_string, er_zero, $bits(er_zero), zero, $bits(zero), `BINARY);
+    
+    //verify(ts++, mem_read_data_string, er_mem_read_data, $bits(er_mem_read_data), mem_read_data, $bits(mem_read_data), `S_DEC);
+    verify(ts++, pc_src_string, er_pc_src, $bits(er_pc_src), pc_src, $bits(pc_src), `S_DEC);
+    verify(ts++, write_data_string, er_write_data, $bits(er_write_data), write_data, $bits(write_data), `S_DEC);
 
     #2
     // since we don't have an ALU or data memory yet, provide the write_data value (if applicable)
@@ -712,6 +768,13 @@ module datapath;
     //er_branch_target = `WORD'dX;
     er_alu_result = `WORD'd16;
     er_zero = 1'b0;
+    
+    // Memory
+    //er_mem_read_data = `WORD'dZ;
+    er_pc_src = 0;
+    
+    // Writeback
+    er_write_data = `WORD'd16;
 
     #5;
     // verify that the signals match the er values 
@@ -727,6 +790,10 @@ module datapath;
     //verify(ts++, branch_target_string, er_branch_target, $bits(er_branch_target), branch_target, $bits(branch_target), `S_DEC);        
     verify(ts++, alu_result_string, er_alu_result, $bits(er_alu_result), alu_result, $bits(alu_result), `S_DEC);
     verify(ts++, zero_string, er_zero, $bits(er_zero), zero, $bits(zero), `BINARY);
+    
+    //verify(ts++, mem_read_data_string, er_mem_read_data, $bits(er_mem_read_data), mem_read_data, $bits(mem_read_data), `S_DEC);
+    verify(ts++, pc_src_string, er_pc_src, $bits(er_pc_src), pc_src, $bits(pc_src), `S_DEC);
+    verify(ts++, write_data_string, er_write_data, $bits(er_write_data), write_data, $bits(write_data), `S_DEC);
 
     #2
     // since we don't have an ALU or data memory yet, provide the write_data value (if applicable)
@@ -734,6 +801,6 @@ module datapath;
     #3;
     final_result();
 
-    $finish;
+        $finish;
     end
 endmodule 
