@@ -1,4 +1,5 @@
 `timescale 1ns / 1ps
+`include "definitions.vh"
 //////////////////////////////////////////////////////////////////////////////////
 // Company: Baylor University
 // Engineer: Reese Ford
@@ -25,8 +26,13 @@ module iWriteBack(
     input wire [`WORD-1:0] read_data,
     input wire [`WORD-1:0] alu_result,
     output wire [`WORD-1:0] write_back
+);
+
+    mux# (`WORD) WRITEBACK_MUX(
+        .b_in(read_data),
+        .a_in(alu_result),
+        .control(mem_to_reg),
+        .mux_out(write_back)
     );
-    
-    
-    
+
 endmodule
