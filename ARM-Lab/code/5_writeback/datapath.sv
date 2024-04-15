@@ -51,6 +51,7 @@ module datapath;
     wire clk;
     reg reset;
     reg pc_src;
+    reg pc_src_tmp;
     reg [`WORD-1:0] branch_target;
     wire [`WORD-1:0] cur_pc;
     wire [`INSTR_LEN-1:0] instruction;
@@ -62,7 +63,7 @@ module datapath;
         .clk(clk),
         .clk_delayed(decode_clk),
         .reset(reset),
-        .pc_src(pc_src),
+        .pc_src(pc_src_tmp),
         .branch_target(branch_target),
         .instruction(instruction),
         .cur_pc(cur_pc)
@@ -73,7 +74,7 @@ module datapath;
     wire decode_clk;
     wire read_clk;
     wire write_clk;
-    reg [`WORD-1:0] write_data;
+    wire [`WORD-1:0] write_data;
     wire [`WORD-1:0] sign_extended_output;
     wire reg2_loc;
     wire uncondbranch;
@@ -156,7 +157,7 @@ module datapath;
     wire [`WORD-1:0] mem_read_data;
     
     reg [`WORD - 1:0] er_mem_read_data;
-    //reg er_pc_src;
+    reg er_pc_src;
 
     iMemory myMemory(
         .clk(data_clk),
@@ -167,8 +168,8 @@ module datapath;
         .mem_write(mem_write),
         .mem_address(alu_result),
         .mem_write_data(read_data2),
-        .mem_read_data(mem_read_data)
-        //.pc_src(pc_src)
+        .mem_read_data(mem_read_data),
+        .pc_src(pc_src)
     );
     
     
@@ -200,7 +201,7 @@ module datapath;
     );
     
     delay #(1) clk_delay_data(
-        .a(write_clk),
+        .a(read_clk),
         .a_delayed(data_clk)
     );
 
@@ -222,7 +223,7 @@ module datapath;
 
     begin_test();
     // we will keep pc_src set to 0 for the entire test...we are not ready to branch yet
-    pc_src = 0;
+    pc_src_tmp = 0;
 
     // set reset to 1 to make sure that the PC doesn't increment on the first positive clock edge, 
     // then set it back to 0 after that first positive clock edge
@@ -260,12 +261,10 @@ module datapath;
 
     // Memory
     er_mem_read_data = `WORD'd20;
+    er_pc_src = 0;
     
     // Writeback
     er_write_data = `WORD'd20;
-
-
-
 
     // verify that the signals match the er values   
     verify(ts++, pc_string, er_cur_pc, $bits(er_cur_pc), cur_pc, $bits(cur_pc), `S_DEC);
@@ -278,14 +277,15 @@ module datapath;
     //verify(ts++, branch_target_string, er_branch_target, $bits(er_branch_target), branch_target, $bits(branch_target), `S_DEC);        
     verify(ts++, alu_result_string, er_alu_result, $bits(er_alu_result), alu_result, $bits(alu_result), `S_DEC);
     verify(ts++, zero_string, er_zero, $bits(er_zero), zero, $bits(zero), `BINARY);
-    verify(ts++, mem_read_data_string, er_mem_read_data, $bits(er_mem_read_data), mem_read_data, $bits(mem_read_data), `S_DEC);        
+    verify(ts++, mem_read_data_string, er_mem_read_data, $bits(er_mem_read_data), mem_read_data, $bits(mem_read_data), `S_DEC);
+    verify(ts++, pc_src_string, er_pc_src, $bits(er_pc_src), pc_src, $bits(pc_src), `S_DEC);
     verify(ts++, write_data_string, er_write_data, $bits(er_write_data), write_data, $bits(write_data), `S_DEC);
 
 
-//    #2
+   #2
 //    // since we don't have an ALU or data memory yet, provide the write_data value (if applicable)
 //    write_data = 20;
-//    #3;
+   #3;
 
     // ADD X10, X19, X9
     $display("Test Case %0d: | ADD X10, X19, X9", tc++);
@@ -316,7 +316,13 @@ module datapath;
     er_zero = 1'b0;
     #5;
 
-
+    // Memory
+    //er_mem_read_data = `WORD'dZ;
+    er_pc_src = 0;
+    
+    // Writeback
+    //er_write_data = `WORD'dZ;
+    
 
     // verify that the signals match the er values 
     verify(ts++, pc_string, er_cur_pc, $bits(er_cur_pc), cur_pc, $bits(cur_pc), `S_DEC);
@@ -329,10 +335,13 @@ module datapath;
     //verify(ts++, branch_target_string, er_branch_target, $bits(er_branch_target), branch_target, $bits(branch_target), `S_DEC);        
     verify(ts++, alu_result_string, er_alu_result, $bits(er_alu_result), alu_result, $bits(alu_result), `S_DEC);
     verify(ts++, zero_string, er_zero, $bits(er_zero), zero, $bits(zero), `BINARY);
+    //verify(ts++, mem_read_data_string, er_mem_read_data, $bits(er_mem_read_data), mem_read_data, $bits(mem_read_data), `S_DEC);
+    verify(ts++, pc_src_string, er_pc_src, $bits(er_pc_src), pc_src, $bits(pc_src), `S_DEC);
+    //verify(ts++, write_data_string, er_write_data, $bits(er_write_data), write_data, $bits(write_data), `S_DEC);
 
     #2
     // since we don't have an ALU or data memory yet, provide the write_data value (if applicable)
-    write_data = 30;
+    //write_data = 30;
     #3;
 
     // SUB X11, X20, X10
@@ -378,7 +387,7 @@ module datapath;
 
     #2
     // since we don't have an ALU or data memory yet, provide the write_data value (if applicable)
-    write_data = 0;
+    //write_data = 0;
     #3;
 
     // STUR X11, [X22, #96]
@@ -654,7 +663,7 @@ module datapath;
 
     #2
     // since we don't have an ALU or data memory yet, provide the write_data value (if applicable)
-    write_data = 1;
+    //write_data = 1;
     #3;
 
     // AND X9, X22, X10
@@ -700,7 +709,7 @@ module datapath;
 
     #2
     // since we don't have an ALU or data memory yet, provide the write_data value (if applicable)
-    write_data = 1;
+    //write_data = 1;
     #3;
     final_result();
 
