@@ -12,15 +12,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="99,998 ps"></ZoomStartTime>
-      <ZoomEndTime time="100,006 ps"></ZoomEndTime>
-      <Cursor1Time time="100,000 ps"></Cursor1Time>
+      <ZoomStartTime time="88.334 ns"></ZoomStartTime>
+      <ZoomEndTime time="120.479 ns"></ZoomEndTime>
+      <Cursor1Time time="105.000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="145"></NameColumnWidth>
-      <ValueColumnWidth column_width="126"></ValueColumnWidth>
+      <ValueColumnWidth column_width="122"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="49" />
+   <WVObjectSize size="51" />
    <wvobject fp_name="/datapath/tc" type="array">
       <obj_property name="ElementShortName">tc[31:0]</obj_property>
       <obj_property name="ObjectShortName">tc[31:0]</obj_property>
@@ -40,6 +40,10 @@
    <wvobject fp_name="/datapath/pc_src" type="logic">
       <obj_property name="ElementShortName">pc_src</obj_property>
       <obj_property name="ObjectShortName">pc_src</obj_property>
+   </wvobject>
+   <wvobject fp_name="/datapath/pc_src_tmp" type="logic">
+      <obj_property name="ElementShortName">pc_src_tmp</obj_property>
+      <obj_property name="ObjectShortName">pc_src_tmp</obj_property>
    </wvobject>
    <wvobject fp_name="/datapath/branch_target" type="array">
       <obj_property name="ElementShortName">branch_target[63:0]</obj_property>
@@ -212,6 +216,10 @@
    <wvobject fp_name="/datapath/er_mem_read_data" type="array">
       <obj_property name="ElementShortName">er_mem_read_data[63:0]</obj_property>
       <obj_property name="ObjectShortName">er_mem_read_data[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/datapath/er_pc_src" type="logic">
+      <obj_property name="ElementShortName">er_pc_src</obj_property>
+      <obj_property name="ObjectShortName">er_pc_src</obj_property>
    </wvobject>
    <wvobject fp_name="/datapath/er_write_data" type="array">
       <obj_property name="ElementShortName">er_write_data[64:1]</obj_property>

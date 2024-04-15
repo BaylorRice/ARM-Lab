@@ -512,6 +512,7 @@
         <Option Name="XSimWcfgFile" Val="$PPRDIR/fde_integration_behav.wcfg"/>
         <Option Name="XSimWcfgFile" Val="$PPRDIR/iMemory_test_behav.wcfg"/>
         <Option Name="XSimWcfgFile" Val="$PPRDIR/datapath_behav.wcfg"/>
+        <Option Name="XSimWcfgFile" Val="$PPRDIR/datapath_behav.wcfg"/>
       </Config>
     </FileSet>
     <FileSet Name="utils_1" Type="Utils" RelSrcDir="$PSRCDIR/utils_1" RelGenDir="$PGENDIR/utils_1">
