@@ -1,53 +1,176 @@
 Time resolution is 1 ps
+WARNING: File C:/Users/reese/Documents/GitHub/ARM-Lab/ARM-Lab/testfiles/instrData.data referenced on C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/1_fetch/instr_mem.v at line 22 cannot be opened for reading. Please ensure that this file is available in the current working directory.
+WARNING: File C:/Users/reese/Documents/GitHub/ARM-Lab/ARM-Lab/testfiles/regData.data referenced on C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/2_decode/regfile.v at line 39 cannot be opened for reading. Please ensure that this file is available in the current working directory.
+WARNING: File C:/Users/reese/Documents/GitHub/ARM-Lab/ARM-Lab/testfiles/ramData.data referenced on C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/4_memory/iMemory.v at line 45 cannot be opened for reading. Please ensure that this file is available in the current working directory.
 
 ******* BEGIN TEST RESULTS *******
 
-
-Test Case 1
-+++ Step 1: Pass: |mem_read_data| time = 10 ns | er = 0 | ar = 0 | er_bits = 64 | ar_bits = 64 +++
-
-Test Case 2
-+++ Step 1: Pass: |mem_read_data| time = 20 ns | er = 8 | ar = 8 | er_bits = 64 | ar_bits = 64 +++
-
-Test Case 3
-+++ Step 1: Pass: |mem_read_data| time = 30 ns | er = 2 | ar = 2 | er_bits = 64 | ar_bits = 64 +++
-
-Test Case 4
-+++ Step 1: Pass: |mem_read_data| time = 40 ns | er = 0 | ar = 0 | er_bits = 64 | ar_bits = 64 +++
-
-Test Case 5
-+++ Step 1: Pass: |mem_read_data| time = 50 ns | er = 0 | ar = 0 | er_bits = 64 | ar_bits = 64 +++
-
-Test Case 6
-+++ Step 1: Pass: |mem_read_data| time = 60 ns | er = -168 | ar = -168 | er_bits = 64 | ar_bits = 64 +++
-
-Test Case 7
-+++ Step 1: Pass: |mem_read_data| time = 70 ns | er = 12345 | ar = 12345 | er_bits = 64 | ar_bits = 64 +++
-
-Test Case 8
-+++ Step 1: Pass: |mem_read_data| time = 80 ns | er = 4 | ar = 4 | er_bits = 64 | ar_bits = 64 +++
-
-Test Case 9
-+++ Step 1: Pass: |mem_read_data| time = 90 ns | er = 4 | ar = 4 | er_bits = 64 | ar_bits = 64 +++
-
-Test Case 10
-+++ Step 1: Pass: |pc_src| time = 100 ns | er = 1 | ar = 1 | er_bits = 1 | ar_bits = 1 +++
-
-Test Case 11
-+++ Step 1: Pass: |pc_src| time = 110 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
-
-Test Case 12
-+++ Step 1: Pass: |pc_src| time = 120 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
-
-Test Case 13
-+++ Step 1: Pass: |pc_src| time = 130 ns | er = 1 | ar = 1 | er_bits = 1 | ar_bits = 1 +++
-
-Test Case 14
-+++ Step 1: Pass: |pc_src| time = 140 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
-
-Pass Count = 14
-Fail Count = 0
-
-******* END TEST RESULTS *******
-
-$finish called at time : 145 ns : File "C:/Users/reese/Documents/GitHub/ARM-Lab/ARM-Lab/code/4_memory/iMemory_test.sv" Line 183
+Test Case 1: | LDUR X9, [X22, #64]
++++ Step 1: Pass: |cur_pc| time = 10 ns | er = 0 | ar = 0 | er_bits = 64 | ar_bits = 64 +++
+--- Step 2: Fail: |instruction| time = 10 ns | er = f84402c9 | ar = 0 | er_bits = 32 | ar_bits = 32 ---
+--- Step 3: Fail: |opcode| time = 10 ns | er = 11111000010 | ar = 0 | er_bits = 11 | ar_bits = 11 ---
+--- Step 4: Fail: |sign_extended_output| time = 10 ns | er = 40 | ar = 0 | er_bits = 64 | ar_bits = 64 ---
++++ Step 5: Pass: |reg2_loc| time = 10 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 6: Pass: |uncondbranch| time = 10 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 7: Pass: |branch| time = 10 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+--- Step 8: Fail: |mem_read| time = 10 ns | er = 1 | ar = 0 | er_bits = 1 | ar_bits = 1 ---
+--- Step 9: Fail: |mem_to_reg| time = 10 ns | er = 1 | ar = 0 | er_bits = 1 | ar_bits = 1 ---
++++ Step 10: Pass: |alu_op| time = 10 ns | er = 0 | ar = 0 | er_bits = 2 | ar_bits = 2 +++
++++ Step 11: Pass: |mem_write| time = 10 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+--- Step 12: Fail: |alu_src| time = 10 ns | er = 1 | ar = 0 | er_bits = 1 | ar_bits = 1 ---
+--- Step 13: Fail: |reg_write| time = 10 ns | er = 1 | ar = 0 | er_bits = 1 | ar_bits = 1 ---
+--- Step 14: Fail: |read_data1| time = 10 ns | er = 16 | ar = 0 | er_bits = 64 | ar_bits = 64 ---
+--- Step 15: Fail: |alu_result| time = 10 ns | er = 80 | ar = 0 | er_bits = 64 | ar_bits = 64 ---
++++ Step 16: Pass: |zero| time = 10 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+--- Step 17: Fail: |mem_read_data| time = 10 ns | er = 20 | ar = 0 | er_bits = 64 | ar_bits = 64 ---
+--- Step 18: Fail: |write_data| time = 10 ns | er = 20 | ar = 0 | er_bits = 64 | ar_bits = 64 ---
+Test Case 2: | ADD X10, X19, X9
+--- Step 1: Fail: |cur_pc| time = 15 ns | er = 4 | ar = 0 | er_bits = 64 | ar_bits = 64 ---
+--- Step 2: Fail: |instruction| time = 15 ns | er = 8b09026a | ar = 0 | er_bits = 32 | ar_bits = 32 ---
+--- Step 3: Fail: |opcode| time = 15 ns | er = 10001011000 | ar = 0 | er_bits = 11 | ar_bits = 11 ---
++++ Step 4: Pass: |reg2_loc| time = 15 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 5: Pass: |uncondbranch| time = 15 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 6: Pass: |branch| time = 15 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 7: Pass: |mem_read| time = 15 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 8: Pass: |mem_to_reg| time = 15 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+--- Step 9: Fail: |alu_op| time = 15 ns | er = 10 | ar = 0 | er_bits = 2 | ar_bits = 2 ---
++++ Step 10: Pass: |mem_write| time = 15 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 11: Pass: |alu_src| time = 15 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+--- Step 12: Fail: |reg_write| time = 15 ns | er = 1 | ar = 0 | er_bits = 1 | ar_bits = 1 ---
+--- Step 13: Fail: |read_data1| time = 15 ns | er = 10 | ar = 0 | er_bits = 64 | ar_bits = 64 ---
+--- Step 14: Fail: |read_data2| time = 15 ns | er = 20 | ar = 0 | er_bits = 64 | ar_bits = 64 ---
+--- Step 15: Fail: |alu_result| time = 15 ns | er = 30 | ar = 0 | er_bits = 64 | ar_bits = 64 ---
++++ Step 16: Pass: |zero| time = 15 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+Test Case 3: | SUB X11, X20, X10
+--- Step 1: Fail: |cur_pc| time = 25 ns | er = 8 | ar = 4 | er_bits = 64 | ar_bits = 64 ---
+--- Step 2: Fail: |instruction| time = 25 ns | er = cb0a028b | ar = 0 | er_bits = 32 | ar_bits = 32 ---
+--- Step 3: Fail: |opcode| time = 25 ns | er = 11001011000 | ar = 0 | er_bits = 11 | ar_bits = 11 ---
++++ Step 4: Pass: |reg2_loc| time = 25 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 5: Pass: |uncondbranch| time = 25 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 6: Pass: |branch| time = 25 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 7: Pass: |mem_read| time = 25 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 8: Pass: |mem_to_reg| time = 25 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+--- Step 9: Fail: |alu_op| time = 25 ns | er = 10 | ar = 0 | er_bits = 2 | ar_bits = 2 ---
++++ Step 10: Pass: |mem_write| time = 25 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 11: Pass: |alu_src| time = 25 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+--- Step 12: Fail: |reg_write| time = 25 ns | er = 1 | ar = 0 | er_bits = 1 | ar_bits = 1 ---
+--- Step 13: Fail: |read_data1| time = 25 ns | er = 30 | ar = 0 | er_bits = 64 | ar_bits = 64 ---
+--- Step 14: Fail: |read_data2| time = 25 ns | er = 30 | ar = 0 | er_bits = 64 | ar_bits = 64 ---
++++ Step 15: Pass: |alu_result| time = 25 ns | er = 0 | ar = 0 | er_bits = 64 | ar_bits = 64 +++
+--- Step 16: Fail: |zero| time = 25 ns | er = 1 | ar = 0 | er_bits = 1 | ar_bits = 1 ---
+Test Case 4: | STUR X11, [X22, #96]
+--- Step 1: Fail: |cur_pc| time = 35 ns | er = 12 | ar = 8 | er_bits = 64 | ar_bits = 64 ---
+--- Step 2: Fail: |instruction| time = 35 ns | er = f80602cb | ar = 0 | er_bits = 32 | ar_bits = 32 ---
+--- Step 3: Fail: |opcode| time = 35 ns | er = 11111000000 | ar = 0 | er_bits = 11 | ar_bits = 11 ---
+--- Step 4: Fail: |sign_extended_output| time = 35 ns | er = 60 | ar = 0 | er_bits = 64 | ar_bits = 64 ---
+--- Step 5: Fail: |reg2_loc| time = 35 ns | er = 1 | ar = 0 | er_bits = 1 | ar_bits = 1 ---
++++ Step 6: Pass: |uncondbranch| time = 35 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 7: Pass: |branch| time = 35 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 8: Pass: |mem_read| time = 35 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 9: Pass: |mem_to_reg| time = 35 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 10: Pass: |alu_op| time = 35 ns | er = 0 | ar = 0 | er_bits = 2 | ar_bits = 2 +++
+--- Step 11: Fail: |mem_write| time = 35 ns | er = 1 | ar = 0 | er_bits = 1 | ar_bits = 1 ---
+--- Step 12: Fail: |alu_src| time = 35 ns | er = 1 | ar = 0 | er_bits = 1 | ar_bits = 1 ---
++++ Step 13: Pass: |reg_write| time = 35 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+--- Step 14: Fail: |read_data1| time = 35 ns | er = 16 | ar = 0 | er_bits = 64 | ar_bits = 64 ---
++++ Step 15: Pass: |read_data2| time = 35 ns | er = 0 | ar = 0 | er_bits = 64 | ar_bits = 64 +++
+--- Step 16: Fail: |alu_result| time = 35 ns | er = 112 | ar = 0 | er_bits = 64 | ar_bits = 64 ---
++++ Step 17: Pass: |zero| time = 35 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+Test Case 5: | CBZ X11, -5
+--- Step 1: Fail: |cur_pc| time = 45 ns | er = 16 | ar = 12 | er_bits = 64 | ar_bits = 64 ---
+--- Step 2: Fail: |instruction| time = 45 ns | er = b4ffff6b | ar = 0 | er_bits = 32 | ar_bits = 32 ---
+--- Step 3: Fail: |opcode| time = 45 ns | er = 10110100111 | ar = 0 | er_bits = 11 | ar_bits = 11 ---
+--- Step 4: Fail: |sign_extended_output| time = 45 ns | er = fffffffffffffffb | ar = 0 | er_bits = 64 | ar_bits = 64 ---
+--- Step 5: Fail: |reg2_loc| time = 45 ns | er = 1 | ar = 0 | er_bits = 1 | ar_bits = 1 ---
++++ Step 6: Pass: |uncondbranch| time = 45 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+--- Step 7: Fail: |branch| time = 45 ns | er = 1 | ar = 0 | er_bits = 1 | ar_bits = 1 ---
++++ Step 8: Pass: |mem_read| time = 45 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 9: Pass: |mem_to_reg| time = 45 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+--- Step 10: Fail: |alu_op| time = 45 ns | er = 1 | ar = 0 | er_bits = 2 | ar_bits = 2 ---
++++ Step 11: Pass: |mem_write| time = 45 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 12: Pass: |alu_src| time = 45 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 13: Pass: |reg_write| time = 45 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 14: Pass: |read_data2| time = 45 ns | er = 0 | ar = 0 | er_bits = 64 | ar_bits = 64 +++
+--- Step 15: Fail: |branch_target| time = 45 ns | er = -4 | ar = 0 | er_bits = 64 | ar_bits = 64 ---
++++ Step 16: Pass: |alu_result| time = 45 ns | er = 0 | ar = 0 | er_bits = 64 | ar_bits = 64 +++
+--- Step 17: Fail: |zero| time = 45 ns | er = 1 | ar = 0 | er_bits = 1 | ar_bits = 1 ---
+Test Case 6: | CBZ X11, 8
+--- Step 1: Fail: |cur_pc| time = 55 ns | er = 20 | ar = 16 | er_bits = 64 | ar_bits = 64 ---
+--- Step 2: Fail: |instruction| time = 55 ns | er = b4000109 | ar = 0 | er_bits = 32 | ar_bits = 32 ---
+--- Step 3: Fail: |opcode| time = 55 ns | er = 10110100000 | ar = 0 | er_bits = 11 | ar_bits = 11 ---
+--- Step 4: Fail: |sign_extended_output| time = 55 ns | er = 8 | ar = 0 | er_bits = 64 | ar_bits = 64 ---
+--- Step 5: Fail: |reg2_loc| time = 55 ns | er = 1 | ar = 0 | er_bits = 1 | ar_bits = 1 ---
++++ Step 6: Pass: |uncondbranch| time = 55 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+--- Step 7: Fail: |branch| time = 55 ns | er = 1 | ar = 0 | er_bits = 1 | ar_bits = 1 ---
++++ Step 8: Pass: |mem_read| time = 55 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 9: Pass: |mem_to_reg| time = 55 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+--- Step 10: Fail: |alu_op| time = 55 ns | er = 1 | ar = 0 | er_bits = 2 | ar_bits = 2 ---
++++ Step 11: Pass: |mem_write| time = 55 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 12: Pass: |alu_src| time = 55 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 13: Pass: |reg_write| time = 55 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+--- Step 14: Fail: |read_data2| time = 55 ns | er = 20 | ar = 0 | er_bits = 64 | ar_bits = 64 ---
+--- Step 15: Fail: |branch_target| time = 55 ns | er = 52 | ar = 0 | er_bits = 64 | ar_bits = 64 ---
+--- Step 16: Fail: |alu_result| time = 55 ns | er = 20 | ar = 0 | er_bits = 64 | ar_bits = 64 ---
++++ Step 17: Pass: |zero| time = 55 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+Test Case 7: | B 64
+--- Step 1: Fail: |cur_pc| time = 65 ns | er = 24 | ar = 20 | er_bits = 64 | ar_bits = 64 ---
+--- Step 2: Fail: |instruction| time = 65 ns | er = 14000040 | ar = 0 | er_bits = 32 | ar_bits = 32 ---
+--- Step 3: Fail: |opcode| time = 65 ns | er = 10100000 | ar = 0 | er_bits = 11 | ar_bits = 11 ---
+--- Step 4: Fail: |sign_extended_output| time = 65 ns | er = 40 | ar = 0 | er_bits = 64 | ar_bits = 64 ---
++++ Step 5: Pass: |reg2_loc| time = 65 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+--- Step 6: Fail: |uncondbranch| time = 65 ns | er = 1 | ar = 0 | er_bits = 1 | ar_bits = 1 ---
++++ Step 7: Pass: |branch| time = 65 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 8: Pass: |mem_read| time = 65 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 9: Pass: |mem_to_reg| time = 65 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 10: Pass: |alu_op| time = 65 ns | er = 0 | ar = 0 | er_bits = 2 | ar_bits = 2 +++
++++ Step 11: Pass: |mem_write| time = 65 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 12: Pass: |alu_src| time = 65 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 13: Pass: |reg_write| time = 65 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+--- Step 14: Fail: |branch_target| time = 65 ns | er = 280 | ar = 0 | er_bits = 64 | ar_bits = 64 ---
+Test Case 8: | B -55
+--- Step 1: Fail: |cur_pc| time = 75 ns | er = 28 | ar = 24 | er_bits = 64 | ar_bits = 64 ---
+--- Step 2: Fail: |instruction| time = 75 ns | er = 17ffffc9 | ar = 0 | er_bits = 32 | ar_bits = 32 ---
+--- Step 3: Fail: |opcode| time = 75 ns | er = 10111111 | ar = 0 | er_bits = 11 | ar_bits = 11 ---
+--- Step 4: Fail: |sign_extended_output| time = 75 ns | er = ffffffffffffffc9 | ar = 0 | er_bits = 64 | ar_bits = 64 ---
++++ Step 5: Pass: |reg2_loc| time = 75 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+--- Step 6: Fail: |uncondbranch| time = 75 ns | er = 1 | ar = 0 | er_bits = 1 | ar_bits = 1 ---
++++ Step 7: Pass: |branch| time = 75 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 8: Pass: |mem_read| time = 75 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 9: Pass: |mem_to_reg| time = 75 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 10: Pass: |alu_op| time = 75 ns | er = 0 | ar = 0 | er_bits = 2 | ar_bits = 2 +++
++++ Step 11: Pass: |mem_write| time = 75 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 12: Pass: |alu_src| time = 75 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 13: Pass: |reg_write| time = 75 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+--- Step 14: Fail: |branch_target| time = 75 ns | er = -192 | ar = 0 | er_bits = 64 | ar_bits = 64 ---
+Test Case 9: | ORR X9, X10, X21
+--- Step 1: Fail: |cur_pc| time = 85 ns | er = 32 | ar = 28 | er_bits = 64 | ar_bits = 64 ---
+--- Step 2: Fail: |instruction| time = 85 ns | er = aa150149 | ar = 0 | er_bits = 32 | ar_bits = 32 ---
+--- Step 3: Fail: |opcode| time = 85 ns | er = 10101010000 | ar = 0 | er_bits = 11 | ar_bits = 11 ---
++++ Step 4: Pass: |reg2_loc| time = 85 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 5: Pass: |uncondbranch| time = 85 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 6: Pass: |branch| time = 85 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 7: Pass: |mem_read| time = 85 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 8: Pass: |mem_to_reg| time = 85 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+--- Step 9: Fail: |alu_op| time = 85 ns | er = 10 | ar = 0 | er_bits = 2 | ar_bits = 2 ---
++++ Step 10: Pass: |mem_write| time = 85 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 11: Pass: |alu_src| time = 85 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+--- Step 12: Fail: |reg_write| time = 85 ns | er = 1 | ar = 0 | er_bits = 1 | ar_bits = 1 ---
+--- Step 13: Fail: |read_data1| time = 85 ns | er = 30 | ar = 0 | er_bits = 64 | ar_bits = 64 ---
++++ Step 14: Pass: |read_data2| time = 85 ns | er = 0 | ar = 0 | er_bits = 64 | ar_bits = 64 +++
+--- Step 15: Fail: |alu_result| time = 85 ns | er = 30 | ar = 0 | er_bits = 64 | ar_bits = 64 ---
++++ Step 16: Pass: |zero| time = 85 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+Test Case 10: | AND X9, X22, X10
+--- Step 1: Fail: |cur_pc| time = 95 ns | er = 36 | ar = 32 | er_bits = 64 | ar_bits = 64 ---
+--- Step 2: Fail: |instruction| time = 95 ns | er = 8a0a02c9 | ar = 0 | er_bits = 32 | ar_bits = 32 ---
+--- Step 3: Fail: |opcode| time = 95 ns | er = 10001010000 | ar = 0 | er_bits = 11 | ar_bits = 11 ---
++++ Step 4: Pass: |reg2_loc| time = 95 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 5: Pass: |uncondbranch| time = 95 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 6: Pass: |branch| time = 95 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 7: Pass: |mem_read| time = 95 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 8: Pass: |mem_to_reg| time = 95 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+--- Step 9: Fail: |alu_op| time = 95 ns | er = 10 | ar = 0 | er_bits = 2 | ar_bits = 2 ---
++++ Step 10: Pass: |mem_write| time = 95 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
++++ Step 11: Pass: |alu_src| time = 95 ns | er = 0 | ar = 0 | er_bits = 1 | ar_bits = 1 +++
+--- Step 12: Fail: |reg_write| time = 95 ns | er = 1 | ar = 0 | er_bits = 1 | ar_bits = 1 ---
+--- Step 13: Fail: |read_data1| time = 95 ns | er = 16 | ar = 0 | er_bits = 64 | ar_bits = 64 ---
+--- Step 14: Fail: |read_data2| time = 95 ns | er 

@@ -155,7 +155,7 @@ module datapath;
     wire data_clk;
     wire [`WORD-1:0] mem_read_data;
     
-    wire[`WORD - 1:0] er_mem_read_data;
+    reg [`WORD - 1:0] er_mem_read_data;
     //reg er_pc_src;
 
     iMemory myMemory(
@@ -167,19 +167,19 @@ module datapath;
         .mem_write(mem_write),
         .mem_address(alu_result),
         .mem_write_data(read_data2),
-        .mem_read_data(mem_read_data),
+        .mem_read_data(mem_read_data)
         //.pc_src(pc_src)
     );
     
     
     // iWriteBack
-    wire [`WORD:1-0] er_write_data;
+    reg [`WORD:1-0] er_write_data;
     
     iWriteBack myWriteBack(
         .mem_to_reg(mem_to_reg),
-        .read_data(read_data),
+        .read_data(mem_read_data),
         .alu_result(alu_result),
-        .write_back(write_back)
+        .write_back(write_data)
     );
 
     oscillator myOsc(clk);
