@@ -706,4 +706,5 @@ module datapath;
 
     $finish;
     end
+
 endmodule 
