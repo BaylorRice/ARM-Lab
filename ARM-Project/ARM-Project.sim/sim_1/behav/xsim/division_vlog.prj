@@ -20,7 +20,7 @@ verilog xil_defaultlib  --include "../../../../../ARM-Lab/code/0_common" \
 
 sv xil_defaultlib  --include "../../../../../ARM-Lab/code/0_common" \
 "../../../../../ARM-Lab/code/0_common/verification_functions.sv" \
-"../../../../../ARM-Lab/code/5_writeback/datapath.sv" \
+"../../../../../ARM-Lab/code/division.sv" \
 
 # compile glbl module
 verilog xil_defaultlib "glbl.v"

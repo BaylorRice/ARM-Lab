@@ -234,8 +234,11 @@ module division;
     
     er_read_data2 = 7;
     
-    #345;
+    #335;
     verify(ts++, read_data2_string, er_read_data2, $bits(er_read_data2), read_data2, $bits(read_data2), `S_DEC);
     
+    final_result();
+
+        $finish;
     end
 endmodule
