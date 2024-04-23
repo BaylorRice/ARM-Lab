@@ -194,12 +194,12 @@ module division;
         .a_delayed(read_clk)
     );
 
-    delay #(6) clk_delay_decode_write(
+    delay #(2) clk_delay_decode_write(
         .a(decode_clk),
         .a_delayed(write_clk)
     );
     
-    delay #(1) clk_delay_data(
+    delay #(2) clk_delay_data(
         .a(read_clk),
         .a_delayed(data_clk)
     );
