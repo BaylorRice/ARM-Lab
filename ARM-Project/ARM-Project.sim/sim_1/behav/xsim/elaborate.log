@@ -5,4 +5,31 @@ Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
 Completed static elaboration
-INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package xil_defaultlib.verification
+Compiling module xil_defaultlib.mux(SIZE=64)
+Compiling module xil_defaultlib.register
+Compiling module xil_defaultlib.instr_mem(SIZE=16)
+Compiling module xil_defaultlib.adder
+Compiling module xil_defaultlib.iFetch(SIZE=16)
+Compiling module xil_defaultlib.instr_parse
+Compiling module xil_defaultlib.control
+Compiling module xil_defaultlib.regfile
+Compiling module xil_defaultlib.sign_extender
+Compiling module xil_defaultlib.mux(SIZE=5)
+Compiling module xil_defaultlib.iDecode
+Compiling module xil_defaultlib.alu
+Compiling module xil_defaultlib.alu_control
+Compiling module xil_defaultlib.iExecute
+Compiling module xil_defaultlib.iMemory
+Compiling module xil_defaultlib.iWriteBack
+Compiling module xil_defaultlib.oscillator
+Compiling module xil_defaultlib.delay
+Compiling module xil_defaultlib.delay(DELAYAMT=2)
+Compiling module xil_defaultlib.delay(DELAYAMT=4)
+Compiling module xil_defaultlib.delay(DELAYAMT=3)
+Compiling module xil_defaultlib.division
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot division_behav
