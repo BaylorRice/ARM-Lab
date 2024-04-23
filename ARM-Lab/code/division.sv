@@ -51,6 +51,7 @@ module division;
     wire clk;
     reg reset;
     reg pc_src;
+
     reg [`WORD-1:0] branch_target;
     wire [`WORD-1:0] cur_pc;
     wire [`INSTR_LEN-1:0] instruction;
@@ -149,12 +150,12 @@ module division;
         .alu_result(alu_result),
         .zero(zero)
     );
-    
-    
+
+
     // iMemory
     wire data_clk;
     wire [`WORD-1:0] mem_read_data;
-    
+
     reg [`WORD - 1:0] er_mem_read_data;
     reg er_pc_src;
 
@@ -170,11 +171,11 @@ module division;
         .mem_read_data(mem_read_data),
         .pc_src(pc_src)
     );
-    
-    
+
+
     // iWriteBack
     reg [`WORD:1-0] er_write_data;
-    
+
     iWriteBack myWriteBack(
         .mem_to_reg(mem_to_reg),
         .read_data(mem_read_data),
@@ -198,7 +199,7 @@ module division;
         .a(clk),
         .a_delayed(write_clk)
     );
-    
+
     delay #(3) clk_delay_data(
         .a(clk),
         .a_delayed(data_clk)
@@ -220,24 +221,25 @@ module division;
     initial
     begin
 
-    begin_test();
+        begin_test();
 
-    // set reset to 1 to make sure that the PC doesn't increment on the first positive clock edge, 
-    // then set it back to 0 after that first positive clock edge
-    reset = 1;
-    #`CYCLE;
-    reset = 0;
-    
-    // DIVIDE TEST
-    $display("Test Case %0d: | DIVIDE 57/8", tc++);
-    ts = 1;
-    
-    er_read_data2 = 7;
-    
-    #335;
-    verify(ts++, read_data2_string, er_read_data2, $bits(er_read_data2), read_data2, $bits(read_data2), `S_DEC);
-    
-    final_result();
+
+        // set reset to 1 to make sure that the PC doesn't increment on the first positive clock edge, 
+        // then set it back to 0 after that first positive clock edge
+        reset = 1;
+        #`CYCLE;
+        reset = 0;
+
+        // DIVIDE TEST
+        $display("Test Case %0d: | DIVIDE 56/8", tc++);
+        ts = 1;
+
+        er_read_data2 = 7;
+
+        #335;
+        verify(ts++, read_data2_string, er_read_data2, $bits(er_read_data2), read_data2, $bits(read_data2), `S_DEC);
+
+        final_result();
 
         $finish;
     end

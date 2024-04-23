@@ -1,0 +1,13 @@
+Time resolution is 1 ps
+
+******* BEGIN TEST RESULTS *******
+
+Test Case 1: | DIVIDE 56/8
++++ Step 1: Pass: |read_data2| time = 345 ns | er = 7 | ar = 7 | er_bits = 64 | ar_bits = 64 +++
+
+Pass Count = 1
+Fail Count = 0
+
+******* END TEST RESULTS *******
+
+$finish called at time : 345 ns : File "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/division.sv" Line 244

@@ -16,3 +16,117 @@ update_compile_order -fileset sources_1
 close [ open C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/division.sv w ]
 add_files C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/division.sv
 update_compile_order -fileset sources_1
+set_property top division [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top division [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+launch_simulation
+open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/register_test_behav.wcfg
+open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/adder_test_behav.wcfg
+open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/mux_test_behav.wcfg
+open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/instr_mem_test_behav.wcfg
+open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/iFetch_test_behav.wcfg
+open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/instr_parse_test_behav.wcfg
+open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/regfile_test_behav.wcfg
+open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/control_test_behav.wcfg
+open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/sign_extender_test_behav.wcfg
+open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/iDecode_test_behav.wcfg
+open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/fd_integration_behav.wcfg
+open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/alu_test_behav.wcfg
+open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/alu_control_test_behav.wcfg
+open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/iExecute_test_behav.wcfg
+open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/fde_integration_behav.wcfg
+open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/iMemory_test_behav.wcfg
+open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/datapath_behav.wcfg
+source division.tcl
+relaunch_sim
+save_wave_config {C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/division_behav.wcfg}
+add_files -fileset sim_1 -norecurse C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/division_behav.wcfg
+set_property xsim.view {C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/register_test_behav.wcfg C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/adder_test_behav.wcfg C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/mux_test_behav.wcfg C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/instr_mem_test_behav.wcfg C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/iFetch_test_behav.wcfg C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/instr_parse_test_behav.wcfg C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/regfile_test_behav.wcfg C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/control_test_behav.wcfg C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/sign_extender_test_behav.wcfg C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/iDecode_test_behav.wcfg C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/fd_integration_behav.wcfg C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/alu_test_behav.wcfg C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/alu_control_test_behav.wcfg C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/iExecute_test_behav.wcfg C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/fde_integration_behav.wcfg C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/iMemory_test_behav.wcfg C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/datapath_behav.wcfg C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/datapath_behav.wcfg C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/division_behav.wcfg} [get_filesets sim_1]
+close_sim
+launch_simulation
+open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/register_test_behav.wcfg
+open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/adder_test_behav.wcfg
+open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/mux_test_behav.wcfg
+open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/instr_mem_test_behav.wcfg
+open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/iFetch_test_behav.wcfg
+open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/instr_parse_test_behav.wcfg
+open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/regfile_test_behav.wcfg
+open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/control_test_behav.wcfg
+open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/sign_extender_test_behav.wcfg
+open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/iDecode_test_behav.wcfg
+open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/fd_integration_behav.wcfg
+open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/alu_test_behav.wcfg
+open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/alu_control_test_behav.wcfg
+open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/iExecute_test_behav.wcfg
+open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/fde_integration_behav.wcfg
+open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/iMemory_test_behav.wcfg
+open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/datapath_behav.wcfg
+open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/division_behav.wcfg
+source division.tcl
+relaunch_sim
+add_bp {C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/1_fetch/instr_mem.v} 17
+relaunch_sim
+step
+close_sim
+save_wave_config {C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/division_behav.wcfg}
+close_sim
+launch_simulation
+open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/register_test_behav.wcfg
+open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/adder_test_behav.wcfg
+open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/mux_test_behav.wcfg
+open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/instr_mem_test_behav.wcfg
+open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/iFetch_test_behav.wcfg
+open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/instr_parse_test_behav.wcfg
+open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/regfile_test_behav.wcfg
+open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/control_test_behav.wcfg
+open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/sign_extender_test_behav.wcfg
+open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/iDecode_test_behav.wcfg
+open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/fd_integration_behav.wcfg
+open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/alu_test_behav.wcfg
+open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/alu_control_test_behav.wcfg
+open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/iExecute_test_behav.wcfg
+open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/fde_integration_behav.wcfg
+open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/iMemory_test_behav.wcfg
+open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/datapath_behav.wcfg
+open_wave_config C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/division_behav.wcfg
+source division.tcl
+remove_bps -all
+relaunch_sim
+relaunch_sim
+save_wave_config {C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/division_behav.wcfg}
+relaunch_sim
+relaunch_sim
+save_wave_config {C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/division_behav.wcfg}
+relaunch_sim
+relaunch_sim
+relaunch_sim
+save_wave_config {C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/division_behav.wcfg}
+relaunch_sim
+relaunch_sim
+relaunch_sim
+add_bp {C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/code/4_memory/iMemory.v} 48
+relaunch_sim
+relaunch_sim
+step
+run all
+remove_bps -all
+relaunch_sim
+save_wave_config {C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Project/division_behav.wcfg}
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+close_sim
