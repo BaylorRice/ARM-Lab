@@ -8,14 +8,24 @@
 `define BINARY 3
 
 // School Computer
-`define DMEMFILE  "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/testfiles/ramData.data"
-`define IMEMFILE  "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/testfiles/instrData.data"
-`define RMEMFILE  "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/testfiles/regData.data"
+// Design
+//`define DMEMFILE  "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/testfiles/ramData.data"
+//`define IMEMFILE  "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/testfiles/instrData.data"
+//`define RMEMFILE  "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/testfiles/regData.data"
+
+// Division.sv
+`define DMEMFILE  "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/testfiles/ramData_division.data"
+`define IMEMFILE  "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/testfiles/instrData_division.data"
+`define RMEMFILE  "C:/Users/reese_ford1/Documents/GitHub/ARM-Lab/ARM-Lab/testfiles/regData_division.data"
+
 
 // Personal Laptop
+// Design
 //`define DMEMFILE  "C:/Users/reese/Documents/GitHub/ARM-Lab/ARM-Lab/testfiles/ramData.data"
 //`define IMEMFILE  "C:/Users/reese/Documents/GitHub/ARM-Lab/ARM-Lab/testfiles/instrData.data"
 //`define RMEMFILE  "C:/Users/reese/Documents/GitHub/ARM-Lab/ARM-Lab/testfiles/regData.data"
+
+
 
 // For Control Unit
 `define ADD 11'b10001011000

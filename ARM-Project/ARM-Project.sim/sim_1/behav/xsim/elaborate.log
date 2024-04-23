@@ -1,6 +1,6 @@
 Vivado Simulator v2021.2
 Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
-Running: C:/XilinxVitis/Vivado/2021.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot datapath_behav xil_defaultlib.datapath xil_defaultlib.glbl -log elaborate.log 
+Running: C:/XilinxVitis/Vivado/2021.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot division_behav xil_defaultlib.division xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
@@ -27,7 +27,9 @@ Compiling module xil_defaultlib.iMemory
 Compiling module xil_defaultlib.iWriteBack
 Compiling module xil_defaultlib.oscillator
 Compiling module xil_defaultlib.delay
-Compiling module xil_defaultlib.delay(DELAYAMT=6)
-Compiling module xil_defaultlib.datapath
+Compiling module xil_defaultlib.delay(DELAYAMT=2)
+Compiling module xil_defaultlib.delay(DELAYAMT=4)
+Compiling module xil_defaultlib.delay(DELAYAMT=3)
+Compiling module xil_defaultlib.division
 Compiling module xil_defaultlib.glbl
-Built simulation snapshot datapath_behav
+Built simulation snapshot division_behav

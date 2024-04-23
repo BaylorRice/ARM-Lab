@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="division_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="division" />
+            <top_module name="glbl" />
+            <top_module name="verification" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="36.201 ns"></ZoomEndTime>
+      <Cursor1Time time="43.000 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="189"></NameColumnWidth>
+      <ValueColumnWidth column_width="118"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="34" />
+   <wvobject fp_name="/division/tc" type="array">
+      <obj_property name="ElementShortName">tc[31:0]</obj_property>
+      <obj_property name="ObjectShortName">tc[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/division/ts" type="array">
+      <obj_property name="ElementShortName">ts[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ts[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/division/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/division/decode_clk" type="logic">
+      <obj_property name="ElementShortName">decode_clk</obj_property>
+      <obj_property name="ObjectShortName">decode_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/division/read_clk" type="logic">
+      <obj_property name="ElementShortName">read_clk</obj_property>
+      <obj_property name="ObjectShortName">read_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/division/write_clk" type="logic">
+      <obj_property name="ElementShortName">write_clk</obj_property>
+      <obj_property name="ObjectShortName">write_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/division/data_clk" type="logic">
+      <obj_property name="ElementShortName">data_clk</obj_property>
+      <obj_property name="ObjectShortName">data_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/division/reset" type="logic">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/division/pc_src" type="logic">
+      <obj_property name="ElementShortName">pc_src</obj_property>
+      <obj_property name="ObjectShortName">pc_src</obj_property>
+   </wvobject>
+   <wvobject fp_name="/division/cur_pc" type="array">
+      <obj_property name="ElementShortName">cur_pc[63:0]</obj_property>
+      <obj_property name="ObjectShortName">cur_pc[63:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/division/branch_target" type="array">
+      <obj_property name="ElementShortName">branch_target[63:0]</obj_property>
+      <obj_property name="ObjectShortName">branch_target[63:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/division/instruction" type="array">
+      <obj_property name="ElementShortName">instruction[31:0]</obj_property>
+      <obj_property name="ObjectShortName">instruction[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/division/iD/X_REG/read_register1" type="array">
+      <obj_property name="ElementShortName">read_register1[4:0]</obj_property>
+      <obj_property name="ObjectShortName">read_register1[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/division/iD/X_REG/read_register2" type="array">
+      <obj_property name="ElementShortName">read_register2[4:0]</obj_property>
+      <obj_property name="ObjectShortName">read_register2[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/division/read_data1" type="array">
+      <obj_property name="ElementShortName">read_data1[63:0]</obj_property>
+      <obj_property name="ObjectShortName">read_data1[63:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/division/read_data2" type="array">
+      <obj_property name="ElementShortName">read_data2[63:0]</obj_property>
+      <obj_property name="ObjectShortName">read_data2[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/division/write_data" type="array">
+      <obj_property name="ElementShortName">write_data[63:0]</obj_property>
+      <obj_property name="ObjectShortName">write_data[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/division/sign_extended_output" type="array">
+      <obj_property name="ElementShortName">sign_extended_output[63:0]</obj_property>
+      <obj_property name="ObjectShortName">sign_extended_output[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/division/opcode" type="array">
+      <obj_property name="ElementShortName">opcode[10:0]</obj_property>
+      <obj_property name="ObjectShortName">opcode[10:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/division/reg2_loc" type="logic">
+      <obj_property name="ElementShortName">reg2_loc</obj_property>
+      <obj_property name="ObjectShortName">reg2_loc</obj_property>
+   </wvobject>
+   <wvobject fp_name="/division/uncondbranch" type="logic">
+      <obj_property name="ElementShortName">uncondbranch</obj_property>
+      <obj_property name="ObjectShortName">uncondbranch</obj_property>
+   </wvobject>
+   <wvobject fp_name="/division/branch" type="logic">
+      <obj_property name="ElementShortName">branch</obj_property>
+      <obj_property name="ObjectShortName">branch</obj_property>
+   </wvobject>
+   <wvobject fp_name="/division/mem_read" type="logic">
+      <obj_property name="ElementShortName">mem_read</obj_property>
+      <obj_property name="ObjectShortName">mem_read</obj_property>
+   </wvobject>
+   <wvobject fp_name="/division/mem_to_reg" type="logic">
+      <obj_property name="ElementShortName">mem_to_reg</obj_property>
+      <obj_property name="ObjectShortName">mem_to_reg</obj_property>
+   </wvobject>
+   <wvobject fp_name="/division/alu_op" type="array">
+      <obj_property name="ElementShortName">alu_op[1:0]</obj_property>
+      <obj_property name="ObjectShortName">alu_op[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/division/mem_write" type="logic">
+      <obj_property name="ElementShortName">mem_write</obj_property>
+      <obj_property name="ObjectShortName">mem_write</obj_property>
+   </wvobject>
+   <wvobject fp_name="/division/alu_src" type="logic">
+      <obj_property name="ElementShortName">alu_src</obj_property>
+      <obj_property name="ObjectShortName">alu_src</obj_property>
+   </wvobject>
+   <wvobject fp_name="/division/reg_write" type="logic">
+      <obj_property name="ElementShortName">reg_write</obj_property>
+      <obj_property name="ObjectShortName">reg_write</obj_property>
+   </wvobject>
+   <wvobject fp_name="/division/alu_result" type="array">
+      <obj_property name="ElementShortName">alu_result[63:0]</obj_property>
+      <obj_property name="ObjectShortName">alu_result[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/division/zero" type="logic">
+      <obj_property name="ElementShortName">zero</obj_property>
+      <obj_property name="ObjectShortName">zero</obj_property>
+   </wvobject>
+   <wvobject fp_name="/division/myMemory/mem_address" type="array">
+      <obj_property name="ElementShortName">mem_address[63:0]</obj_property>
+      <obj_property name="ObjectShortName">mem_address[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/division/mem_read_data" type="array">
+      <obj_property name="ElementShortName">mem_read_data[63:0]</obj_property>
+      <obj_property name="ObjectShortName">mem_read_data[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/division/myMemory/dmem" type="array">
+      <obj_property name="ElementShortName">dmem[99:0][63:0]</obj_property>
+      <obj_property name="ObjectShortName">dmem[99:0][63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/division/iD/X_REG/rmem" type="array">
+      <obj_property name="ElementShortName">rmem[31:0][63:0]</obj_property>
+      <obj_property name="ObjectShortName">rmem[31:0][63:0]</obj_property>
+   </wvobject>
+</wave_config>
