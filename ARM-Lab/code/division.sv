@@ -21,7 +21,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module division(
+module division;
     import verification::*;
 
     int tc = 1;
@@ -230,5 +230,7 @@ module division(
     reset = 1;
     #`CYCLE;
     reset = 0;
-    );
+    
+    
+    end
 endmodule
