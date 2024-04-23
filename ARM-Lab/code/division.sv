@@ -51,7 +51,6 @@ module division;
     wire clk;
     reg reset;
     reg pc_src;
-    reg pc_src_tmp;
     reg [`WORD-1:0] branch_target;
     wire [`WORD-1:0] cur_pc;
     wire [`INSTR_LEN-1:0] instruction;
@@ -63,7 +62,7 @@ module division;
         .clk(clk),
         .clk_delayed(decode_clk),
         .reset(reset),
-        .pc_src(pc_src_tmp),
+        .pc_src(pc_src),
         .branch_target(branch_target),
         .instruction(instruction),
         .cur_pc(cur_pc)
@@ -222,8 +221,6 @@ module division;
     begin
 
     begin_test();
-    // we will keep pc_src set to 0 for the entire test...we are not ready to branch yet
-    pc_src_tmp = 0;
 
     // set reset to 1 to make sure that the PC doesn't increment on the first positive clock edge, 
     // then set it back to 0 after that first positive clock edge
@@ -231,6 +228,14 @@ module division;
     #`CYCLE;
     reset = 0;
     
+    // DIVIDE TEST
+    $display("Test Case %0d: | DIVIDE 57/8", tc++);
+    ts = 1;
+    
+    er_read_data2 = 7;
+    
+    #345;
+    verify(ts++, read_data2_string, er_read_data2, $bits(er_read_data2), read_data2, $bits(read_data2), `S_DEC);
     
     end
 endmodule
